@@ -23,7 +23,7 @@ Everything runs locally in your browser. The extension talks only to `mail.googl
 
 ## Install
 
-- **Chrome Web Store**: coming soon.
+- **Chrome Web Store**: [Pigeon Post for Gmail](https://chromewebstore.google.com/detail/pigeon-post-for-gmail/adflaplgialinhjpiiggopbhebjjiddd)
 - **From source**:
   1. Run `scripts/pack.sh` to copy the extension into `payload/`.
   2. Open `chrome://extensions`, turn on *Developer mode*, click *Load unpacked* and pick `payload/`.

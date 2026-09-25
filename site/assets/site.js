@@ -1,7 +1,7 @@
 // Project site: store link, language choice and the Off/Count/Notify demo.
 
 // Chrome Web Store listing. Leave empty until the item is public; the pages then show "coming soon" instead of the button.
-const STORE_URL = '';
+const STORE_URL = 'https://chromewebstore.google.com/detail/pigeon-post-for-gmail/adflaplgialinhjpiiggopbhebjjiddd';
 
 if (STORE_URL) {
   for (const a of document.querySelectorAll('[data-store]')) { a.href = STORE_URL; a.hidden = false; }
