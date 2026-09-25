@@ -684,9 +684,15 @@
     "message": "Gesendet. Falls du sie nicht siehst, erlaube Benachrichtigungen in $1 und prüfe, ob „Nicht stören“ oder der Fokus-Modus aus ist."
   },
   "supportText": {
-    "message": "Wenn du sie nützlich findest, würde ich mich über einen Kaffee freuen."
+    "message": "Wenn es dir hilft, kannst du mir einen Bubble Tea spendieren oder mich über PayPal unterstützen."
   },
   "supportLink": {
-    "message": "Spendier mir einen Kaffee (PayPal)"
+    "message": "Über PayPal unterstützen"
+  },
+  "supportBoba": {
+    "message": "Spendier mir einen Bubble Tea"
+  },
+  "supportCard": {
+    "message": "Den Bubble Tea bezahlst du per Karte, ohne PayPal-Konto."
   }
 }

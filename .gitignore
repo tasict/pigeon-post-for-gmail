@@ -23,5 +23,6 @@ node_modules/
 
 # Private notes
 README.zh-TW.md
+docs/store-listing.md
 CLAUDE.md
 CLAUDE.local.md

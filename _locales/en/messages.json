@@ -684,9 +684,15 @@
     "message": "Sent. If you don't see it, allow notifications in $1 and make sure Do Not Disturb or Focus is off."
   },
   "supportText": {
-    "message": "If you find it useful, I'd love it if you bought me a coffee."
+    "message": "If you find it useful, you can buy me a boba or send a tip with PayPal."
   },
   "supportLink": {
-    "message": "Buy me a coffee (PayPal)"
+    "message": "Tip with PayPal"
+  },
+  "supportBoba": {
+    "message": "Buy me a boba"
+  },
+  "supportCard": {
+    "message": "Boba is paid by card. No PayPal account needed."
   }
 }

@@ -684,9 +684,15 @@
     "message": "Enviada. Si no la ves, permite las notificaciones en $1 y asegúrate de que No molestar o Concentración estén desactivados."
   },
   "supportText": {
-    "message": "Si te resulta útil, me encantaría que me invitaras a un café."
+    "message": "Si te resulta útil, puedes invitarme a un bubble tea o apoyarme con PayPal."
   },
   "supportLink": {
-    "message": "Invítame a un café (PayPal)"
+    "message": "Apoyar con PayPal"
+  },
+  "supportBoba": {
+    "message": "Invítame a un bubble tea"
+  },
+  "supportCard": {
+    "message": "El bubble tea se paga con tarjeta, sin cuenta de PayPal."
   }
 }

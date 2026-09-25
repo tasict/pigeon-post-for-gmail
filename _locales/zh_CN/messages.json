@@ -642,9 +642,15 @@
     "message": "已发送。如果没有看到，请在$1中允许通知，并确认未开启勿扰或专注模式。"
   },
   "supportText": {
-    "message": "如果你觉得好用，希望你能赞助我喝杯咖啡。"
+    "message": "如果你觉得好用，欢迎请我喝杯珍奶，或用 PayPal 赞助。"
   },
   "supportLink": {
-    "message": "通过 PayPal 请我喝咖啡"
+    "message": "用 PayPal 赞助"
+  },
+  "supportBoba": {
+    "message": "请我喝珍奶"
+  },
+  "supportCard": {
+    "message": "珍奶赞助直接刷卡，无需 PayPal 账号。"
   }
 }

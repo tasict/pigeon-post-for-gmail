@@ -2,7 +2,7 @@
   "text": {
     "en": {
       "title": "Pigeon Post for Gmail: unread counts and notifications in Chrome",
-      "h1": "New mail, at a glance.",
+      "h1": "New mail,\nat a glance.",
       "lede": "Unread counts on the toolbar and desktop notifications for every Gmail account you're signed in to in Chrome. No extra login, no OAuth, no server.",
       "cta": "Add to Chrome",
       "soon": "Coming soon to the Chrome Web Store.",
@@ -93,18 +93,22 @@
         ]
       ],
       "made": "Made by tasict. Released under the GPL-3.0 license.",
-      "coffee": "If you find it useful, I'd love it if you bought me a coffee.",
-      "paypal": "Buy me a coffee on PayPal",
+      "coffee": "If you find it useful, you can buy me a boba or send a tip with PayPal.",
+      "paypal": "Tip with PayPal",
       "privacy": "Privacy policy",
       "issues": "Report a problem",
       "tm": "Gmail is a trademark of Google LLC. This extension is not affiliated with or endorsed by Google.",
       "loading": "Loading the privacy policy…",
       "policy_other": "Read this policy in {lang}",
-      "load_error": "The privacy policy couldn't be loaded here. Read it on GitHub instead."
+      "load_error": "The privacy policy couldn't be loaded here. Read it on GitHub instead.",
+      "boba": "Buy me a boba",
+      "support_h2": "Keep Pigeon Post free",
+      "support_p": "Pigeon Post has no ads, no tracking and no paid version. If it saves you time, a boba or a small tip helps me keep it working through every Gmail and Chrome change, and build what comes next.",
+      "support_card": "Boba is paid by card. No PayPal account needed."
     },
     "zh-TW": {
       "title": "Pigeon Post for Gmail：在 Chrome 顯示 Gmail 未讀數與通知",
-      "h1": "新信件，一眼看到。",
+      "h1": "新信件，\n一眼看到。",
       "lede": "工具列顯示未讀數，並為你在 Chrome 已登入的每個 Gmail 帳號跳出桌面通知。不需另外登入、不需 OAuth、沒有伺服器。",
       "cta": "加到 Chrome",
       "soon": "即將在 Chrome 線上應用程式商店推出。",
@@ -195,18 +199,22 @@
         ]
       ],
       "made": "由 tasict 製作，以 GPL-3.0 授權釋出。",
-      "coffee": "如果你覺得好用，希望你能贊助我喝杯咖啡。",
-      "paypal": "用 PayPal 請我喝咖啡",
+      "coffee": "如果你覺得好用，歡迎請我喝杯珍奶，或用 PayPal 贊助。",
+      "paypal": "用 PayPal 贊助",
       "privacy": "隱私權政策",
       "issues": "回報問題",
       "tm": "Gmail 是 Google LLC 的商標。本擴充功能與 Google 無關，也未經 Google 背書。",
       "loading": "正在載入隱私權政策…",
       "policy_other": "閱讀 {lang} 版本",
-      "load_error": "無法在這裡載入隱私權政策，請改到 GitHub 閱讀。"
+      "load_error": "無法在這裡載入隱私權政策，請改到 GitHub 閱讀。",
+      "boba": "請我喝珍奶",
+      "support_h2": "讓 Pigeon Post 保持免費",
+      "support_p": "Pigeon Post 沒有廣告、沒有追蹤，也沒有付費版。如果它幫你省下時間，請我喝杯珍奶或小額贊助，能讓我持續跟上 Gmail 和 Chrome 的每次變動，也能做出下一個工具。",
+      "support_card": "珍奶贊助直接刷卡，不需要 PayPal 帳號。"
     },
     "zh-CN": {
       "title": "Pigeon Post for Gmail：在 Chrome 中显示 Gmail 未读数与通知",
-      "h1": "新邮件，一眼看到。",
+      "h1": "新邮件，\n一眼看到。",
       "lede": "工具栏显示未读数，并为你在 Chrome 中已登录的每个 Gmail 账号弹出桌面通知。无需另外登录、无需 OAuth、没有服务器。",
       "cta": "添加至 Chrome",
       "soon": "即将在 Chrome 应用商店上架。",
@@ -297,19 +305,23 @@
         ]
       ],
       "made": "由 tasict 制作，以 GPL-3.0 许可证发布。",
-      "coffee": "如果你觉得好用，希望你能请我喝杯咖啡。",
-      "paypal": "用 PayPal 请我喝咖啡",
+      "coffee": "如果你觉得好用，欢迎请我喝杯珍奶，或用 PayPal 赞助。",
+      "paypal": "用 PayPal 赞助",
       "privacy": "隐私政策",
       "issues": "报告问题",
       "tm": "Gmail 是 Google LLC 的商标。本扩展程序与 Google 无关，也未获得 Google 认可。",
       "loading": "正在加载隐私政策…",
       "policy_other": "阅读 {lang} 版本",
       "load_error": "无法在此加载隐私政策，请改到 GitHub 阅读。",
-      "policy_note": "隐私政策提供英文与繁体中文版本，以下显示繁体中文版。"
+      "policy_note": "隐私政策提供英文与繁体中文版本，以下显示繁体中文版。",
+      "boba": "请我喝珍奶",
+      "support_h2": "让 Pigeon Post 保持免费",
+      "support_p": "Pigeon Post 没有广告、没有跟踪，也没有付费版。如果它帮你节省了时间，请我喝杯珍奶或小额赞助，能让我持续跟上 Gmail 和 Chrome 的每次变动，也能做出下一个工具。",
+      "support_card": "珍奶赞助直接刷卡，无需 PayPal 账号。"
     },
     "ja": {
       "title": "Pigeon Post for Gmail：Chrome で Gmail の未読件数と通知",
-      "h1": "新着メールを、ひと目で。",
+      "h1": "新着メールを、\nひと目で。",
       "lede": "Chrome でログインしているすべての Gmail アカウントについて、ツールバーに未読件数を表示し、デスクトップ通知でお知らせします。追加のログインも OAuth もサーバーも不要です。",
       "cta": "Chrome に追加",
       "soon": "Chrome ウェブストアで近日公開予定です。",
@@ -400,18 +412,22 @@
         ]
       ],
       "made": "作者 tasict。GPL-3.0 ライセンスで公開しています。",
-      "coffee": "気に入っていただけたら、コーヒー 1 杯分の支援をいただけるとうれしいです。",
-      "paypal": "PayPal でコーヒーをおごる",
+      "coffee": "気に入っていただけたら、タピオカミルクティーをおごるか、PayPal で支援していただけるとうれしいです。",
+      "paypal": "PayPal で支援",
       "privacy": "プライバシーポリシー",
       "issues": "問題を報告",
       "tm": "Gmail は Google LLC の商標です。この拡張機能は Google とは関係がなく、Google の承認を受けたものではありません。",
       "loading": "プライバシーポリシーを読み込んでいます…",
       "load_error": "プライバシーポリシーを読み込めませんでした。GitHub でご覧ください。",
-      "policy_note": "プライバシーポリシーは英語版と繁体字中国語版のみ提供しています。以下は英語版です。"
+      "policy_note": "プライバシーポリシーは英語版と繁体字中国語版のみ提供しています。以下は英語版です。",
+      "boba": "タピオカをおごる",
+      "support_h2": "Pigeon Post を無料のままに",
+      "support_p": "Pigeon Post には広告もトラッキングも有料版もありません。時間の節約に役立っていたら、タピオカや少額の支援で、Gmail や Chrome の変更への対応と次のツールづくりを続けられます。",
+      "support_card": "タピオカはクレジットカードで支払えます。PayPal アカウントは不要です。"
     },
     "ko": {
       "title": "Pigeon Post for Gmail: Chrome에서 Gmail 읽지 않은 메일 수와 알림",
-      "h1": "새 메일을 한눈에.",
+      "h1": "새 메일을\n한눈에.",
       "lede": "Chrome에 로그인된 모든 Gmail 계정의 읽지 않은 메일 수를 툴바에 표시하고 데스크톱 알림으로 알려 줍니다. 추가 로그인, OAuth, 서버가 필요 없습니다.",
       "cta": "Chrome에 추가",
       "soon": "곧 Chrome 웹 스토어에 출시됩니다.",
@@ -502,18 +518,22 @@
         ]
       ],
       "made": "tasict가 만들었으며 GPL-3.0 라이선스로 배포합니다.",
-      "coffee": "유용하셨다면 커피 한 잔 사 주시면 정말 기쁘겠습니다.",
-      "paypal": "PayPal로 커피 사 주기",
+      "coffee": "유용하셨다면 버블티 한 잔 사 주시거나 PayPal로 후원해 주시면 정말 기쁘겠습니다.",
+      "paypal": "PayPal로 후원",
       "privacy": "개인정보처리방침",
       "issues": "문제 신고",
       "tm": "Gmail은 Google LLC의 상표입니다. 이 확장 프로그램은 Google과 관련이 없으며 Google의 보증을 받지 않았습니다.",
       "loading": "개인정보처리방침을 불러오는 중…",
       "load_error": "개인정보처리방침을 불러오지 못했습니다. GitHub에서 확인해 주세요.",
-      "policy_note": "개인정보처리방침은 영어와 번체 중국어로만 제공됩니다. 아래는 영어 버전입니다."
+      "policy_note": "개인정보처리방침은 영어와 번체 중국어로만 제공됩니다. 아래는 영어 버전입니다.",
+      "boba": "버블티 사 주기",
+      "support_h2": "Pigeon Post를 계속 무료로",
+      "support_p": "Pigeon Post에는 광고도, 추적도, 유료 버전도 없습니다. 시간을 아끼는 데 도움이 되었다면 버블티 한 잔이나 작은 후원이 Gmail과 Chrome의 변화에 맞춰 계속 관리하고 다음 도구를 만드는 데 힘이 됩니다.",
+      "support_card": "버블티 후원은 카드로 결제하며 PayPal 계정이 필요 없습니다."
     },
     "es": {
       "title": "Pigeon Post for Gmail: correos sin leer y notificaciones en Chrome",
-      "h1": "Tu correo nuevo, de un vistazo.",
+      "h1": "Tu correo nuevo,\nde un vistazo.",
       "lede": "Número de no leídos en la barra de herramientas y notificaciones de escritorio para cada cuenta de Gmail con la que hayas iniciado sesión en Chrome. Sin inicios de sesión extra, sin OAuth y sin servidor.",
       "cta": "Añadir a Chrome",
       "soon": "Muy pronto en Chrome Web Store.",
@@ -604,18 +624,22 @@
         ]
       ],
       "made": "Hecho por tasict. Publicado con la licencia GPL-3.0.",
-      "coffee": "Si te resulta útil, me encantaría que me invitaras a un café.",
-      "paypal": "Invítame a un café con PayPal",
+      "coffee": "Si te resulta útil, puedes invitarme a un bubble tea o apoyarme con PayPal.",
+      "paypal": "Apoyar con PayPal",
       "privacy": "Política de privacidad",
       "issues": "Informar de un problema",
       "tm": "Gmail es una marca comercial de Google LLC. Esta extensión no está afiliada a Google ni cuenta con su respaldo.",
       "loading": "Cargando la política de privacidad…",
       "load_error": "No se ha podido cargar la política de privacidad aquí. Léela en GitHub.",
-      "policy_note": "La política de privacidad solo está disponible en inglés y chino tradicional. A continuación se muestra la versión en inglés."
+      "policy_note": "La política de privacidad solo está disponible en inglés y chino tradicional. A continuación se muestra la versión en inglés.",
+      "boba": "Invítame a un bubble tea",
+      "support_h2": "Mantén Pigeon Post gratis",
+      "support_p": "Pigeon Post no tiene anuncios, ni rastreo, ni versión de pago. Si te ahorra tiempo, un bubble tea o una pequeña aportación me ayuda a mantenerlo al día con cada cambio de Gmail y Chrome, y a crear lo siguiente.",
+      "support_card": "El bubble tea se paga con tarjeta, sin cuenta de PayPal."
     },
     "fr": {
       "title": "Pigeon Post for Gmail : messages non lus et notifications dans Chrome",
-      "h1": "Vos nouveaux e-mails, en un coup d’œil.",
+      "h1": "Vos nouveaux e-mails,\nen un coup d’œil.",
       "lede": "Le nombre de messages non lus dans la barre d’outils et des notifications sur le bureau pour chaque compte Gmail connecté dans Chrome. Sans connexion supplémentaire, sans OAuth, sans serveur.",
       "cta": "Ajouter à Chrome",
       "soon": "Bientôt disponible sur le Chrome Web Store.",
@@ -706,18 +730,22 @@
         ]
       ],
       "made": "Créé par tasict. Publié sous licence GPL-3.0.",
-      "coffee": "S’il vous est utile, vous pouvez m’offrir un café.",
-      "paypal": "M’offrir un café avec PayPal",
+      "coffee": "S’il vous est utile, vous pouvez m’offrir un bubble tea ou me soutenir via PayPal.",
+      "paypal": "Soutenir via PayPal",
       "privacy": "Politique de confidentialité",
       "issues": "Signaler un problème",
       "tm": "Gmail est une marque de Google LLC. Cette extension n’est ni affiliée à Google ni approuvée par Google.",
       "loading": "Chargement de la politique de confidentialité…",
       "load_error": "Impossible de charger la politique de confidentialité ici. Lisez-la sur GitHub.",
-      "policy_note": "La politique de confidentialité est disponible uniquement en anglais et en chinois traditionnel. Voici la version anglaise."
+      "policy_note": "La politique de confidentialité est disponible uniquement en anglais et en chinois traditionnel. Voici la version anglaise.",
+      "boba": "M’offrir un bubble tea",
+      "support_h2": "Gardez Pigeon Post gratuit",
+      "support_p": "Pigeon Post n’a ni publicité, ni pistage, ni version payante. S’il vous fait gagner du temps, un bubble tea ou un petit don m’aide à le maintenir à jour à chaque changement de Gmail et de Chrome, et à créer la suite.",
+      "support_card": "Le bubble tea se paie par carte, sans compte PayPal."
     },
     "de": {
       "title": "Pigeon Post for Gmail: ungelesene E-Mails und Benachrichtigungen in Chrome",
-      "h1": "Neue E-Mails auf einen Blick.",
+      "h1": "Neue E-Mails\nauf einen Blick.",
       "lede": "Die Zahl ungelesener E-Mails in der Symbolleiste und Desktopbenachrichtigungen für jedes Gmail-Konto, mit dem du in Chrome angemeldet bist. Ohne zusätzliche Anmeldung, ohne OAuth, ohne Server.",
       "cta": "Zu Chrome hinzufügen",
       "soon": "Bald im Chrome Web Store.",
@@ -808,14 +836,18 @@
         ]
       ],
       "made": "Erstellt von tasict. Veröffentlicht unter der GPL-3.0-Lizenz.",
-      "coffee": "Wenn es dir hilft, freue ich mich, wenn du mir einen Kaffee spendierst.",
-      "paypal": "Spendier mir einen Kaffee über PayPal",
+      "coffee": "Wenn es dir hilft, kannst du mir einen Bubble Tea spendieren oder mich über PayPal unterstützen.",
+      "paypal": "Über PayPal unterstützen",
       "privacy": "Datenschutzerklärung",
       "issues": "Problem melden",
       "tm": "Gmail ist eine Marke von Google LLC. Diese Erweiterung steht in keiner Verbindung zu Google und wird nicht von Google unterstützt.",
       "loading": "Datenschutzerklärung wird geladen…",
       "load_error": "Die Datenschutzerklärung konnte hier nicht geladen werden. Lies sie auf GitHub.",
-      "policy_note": "Die Datenschutzerklärung gibt es nur auf Englisch und traditionellem Chinesisch. Unten steht die englische Fassung."
+      "policy_note": "Die Datenschutzerklärung gibt es nur auf Englisch und traditionellem Chinesisch. Unten steht die englische Fassung.",
+      "boba": "Spendier mir einen Bubble Tea",
+      "support_h2": "Damit Pigeon Post kostenlos bleibt",
+      "support_p": "Pigeon Post hat keine Werbung, kein Tracking und keine Bezahlversion. Wenn es dir Zeit spart, hilft mir ein Bubble Tea oder ein kleiner Beitrag, es bei jeder Änderung an Gmail und Chrome aktuell zu halten und das Nächste zu bauen.",
+      "support_card": "Den Bubble Tea bezahlst du per Karte, ohne PayPal-Konto."
     }
   },
   "samples": {

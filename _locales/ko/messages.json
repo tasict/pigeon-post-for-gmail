@@ -642,9 +642,15 @@
     "message": "전송했습니다. 알림이 보이지 않으면 $1에서 알림을 허용하고 방해 금지 모드나 집중 모드가 꺼져 있는지 확인하세요."
   },
   "supportText": {
-    "message": "유용하다고 느끼셨다면 커피 한 잔 후원해 주시면 감사하겠습니다."
+    "message": "유용하셨다면 버블티 한 잔 사 주시거나 PayPal로 후원해 주시면 정말 기쁘겠습니다."
   },
   "supportLink": {
-    "message": "PayPal로 커피 한 잔 후원하기"
+    "message": "PayPal로 후원"
+  },
+  "supportBoba": {
+    "message": "버블티 사 주기"
+  },
+  "supportCard": {
+    "message": "버블티 후원은 카드로 결제하며 PayPal 계정이 필요 없습니다."
   }
 }

@@ -684,9 +684,15 @@
     "message": "Envoyée. Si vous ne la voyez pas, autorisez les notifications dans $1 et vérifiez que le mode Ne pas déranger ou Concentration est désactivé."
   },
   "supportText": {
-    "message": "Si vous la trouvez utile, vous pouvez m'offrir un café."
+    "message": "S’il vous est utile, vous pouvez m’offrir un bubble tea ou me soutenir via PayPal."
   },
   "supportLink": {
-    "message": "Offrez-moi un café (PayPal)"
+    "message": "Soutenir via PayPal"
+  },
+  "supportBoba": {
+    "message": "M’offrir un bubble tea"
+  },
+  "supportCard": {
+    "message": "Le bubble tea se paie par carte, sans compte PayPal."
   }
 }

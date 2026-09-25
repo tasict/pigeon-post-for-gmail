@@ -1,6 +1,6 @@
 // Builds the project site pages (site/<lang>/index.html and privacy.html) from scripts/site_text.json and _locales.
 // Usage: node scripts/build_site.js
-// Page copy lives in site_text.json; UI terms (levels, folder names, "Mark as read"…) come from the extension's own _locales,
+// Page copy lives in site_text.json (a \n in the headline marks where it breaks); UI terms (levels, folder names, "Mark as read"…) come from the extension's own _locales,
 // so the site always uses the same words as the extension. Shared CSS/JS and images are in site/assets/ and are edited directly.
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
@@ -11,6 +11,7 @@ const REPO = 'https://github.com/tasict/pigeon-post-for-gmail';
 const PRIVACY = `${REPO}/blob/master/PRIVACY.md`;
 const RAW_PRIVACY = 'https://raw.githubusercontent.com/tasict/pigeon-post-for-gmail/master/PRIVACY.md';
 const PAYPAL = 'https://paypal.me/tasict';
+const BOBA = 'https://tasict.bobaboba.me';
 // Which top-level section of PRIVACY.md each page shows (0 = English, 1 = 繁體中文), and the link to the other one.
 const POLICY_SECTION = { 'zh-TW': '1', 'zh-CN': '1' };
 const POLICY_OTHER = { en: ['繁體中文', '1'], 'zh-TW': ['English', '0'], 'zh-CN': ['English', '0'] };
@@ -102,7 +103,7 @@ function page([code, d, htmlLang, native, og, folder], kind) {
   <section class="envelope" aria-labelledby="hero-title">
     <div class="letter">
       <div class="hero-copy">
-        <h1 id="hero-title">${e(t.h1)}</h1>
+        <h1 id="hero-title">${e(t.h1).replace(/\n/g, '<br>')}</h1>
         <p class="lede">${e(t.lede)}</p>
         <div class="actions">
           ${storeButton.replace('\n      ', '\n          ')}
@@ -182,6 +183,21 @@ function page([code, d, htmlLang, native, og, folder], kind) {
       ${storeButton}
     </div>
   </section>
+
+  <section class="band" aria-labelledby="h-support">
+    <div class="tipjar">
+      <img src="${a}boba.png" alt="" width="120" height="120">
+      <div>
+        <h2 id="h-support">${e(t.support_h2)}</h2>
+        <p>${e(t.support_p)}</p>
+        <div class="actions">
+          <a class="btn" href="${BOBA}"><img src="${a}boba.png" alt="" width="22" height="22">${e(t.boba)}</a>
+          <a class="tip" href="${PAYPAL}">${e(t.paypal)}</a>
+        </div>
+        <p class="fine">${e(t.support_card)}</p>
+      </div>
+    </div>
+  </section>
 </div>
 </main>`;
   } else {
@@ -227,6 +243,7 @@ ${d ? '' : REDIRECT.replace('FILE', f)}</head>
 <header class="wrap masthead">
   <a class="wordmark" href="./"><img src="${a}icon128.png" alt="" width="30" height="30">Pigeon Post</a>
   <a href="${REPO}">${e(t.source)}</a>
+  <a class="tip head-tip" href="${BOBA}" aria-label="${e(t.boba)}"><img src="${a}boba.png" alt="" width="24" height="24"><span>${e(t.boba)}</span></a>
   <details class="lang">
     <summary aria-label="${e(t.lang_menu)}">${GLOBE}${e(native)}</summary>
     <ul>${menu}</ul>
@@ -239,9 +256,12 @@ ${main}
   <div class="wrap">
     <div class="foot">
       <div>
-        <p>${e(t.made)} ${e(t.coffee)}</p>
+        ${kind === 'home' ? `<p>${e(t.made)}</p>` : `<p>${e(t.made)}${/^(zh|ja)/.test(code) ? '' : ' '}${e(t.coffee)}</p>
+        <div class="support">
+          <a class="tip" href="${BOBA}"><img src="${a}boba.png" alt="" width="24" height="24">${e(t.boba)}</a>
+          <a class="tip" href="${PAYPAL}">${e(t.paypal)}</a>
+        </div>`}
         <ul>
-          <li><a href="${PAYPAL}">${e(t.paypal)}</a></li>
           <li><a href="privacy.html">${e(t.privacy)}</a></li>
           <li><a href="${REPO}">${e(t.source)}</a></li>
           <li><a href="${REPO}/issues">${e(t.issues)}</a></li>

@@ -2,6 +2,8 @@
 
 **Website: [tasict.github.io/pigeon-post-for-gmail](https://tasict.github.io/pigeon-post-for-gmail/)**
 
+Free, with no ads and no tracking. If it saves you time, you can [buy me a boba](https://tasict.bobaboba.me) (by card, no PayPal account needed) or [tip with PayPal](https://paypal.me/tasict).
+
 A Chrome extension that shows unread counts and desktop notifications for the Gmail accounts you are already signed in to in Chrome. It needs no OAuth, no Google Cloud project and no server.
 
 ## Features
@@ -51,7 +53,10 @@ The project site lives in `site/`: static HTML, one folder per language (`site/i
 
 ## Support
 
-If you find it useful, I'd love it if you bought me a coffee: **[PayPal.Me/tasict](https://paypal.me/tasict)**
+If you find it useful, I'd love it if you bought me a boba:
+
+- **[Buy me a boba](https://tasict.bobaboba.me)**: pay by card, no PayPal account needed
+- **[Tip with PayPal](https://paypal.me/tasict)**
 
 ## License
 
