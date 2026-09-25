@@ -1,6 +1,6 @@
 # Privacy Policy — Pigeon Post for Gmail
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifications for the Gmail accounts you are already signed in to in Chrome. This policy explains what data the extension handles and what it does with it.
 
@@ -49,13 +49,13 @@ Uninstalling the extension removes all data it stored on your computer.
 
 ## Contact
 
-Questions about this policy: tasict@gmail.com
+Questions about this policy: tasict+webstore@gmail.com
 
 ---
 
 # 隱私權政策（繁體中文）
 
-最後更新：2026-09-24
+最後更新：2026-09-25
 
 Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已登入的 Gmail 帳號，顯示未讀數與桌面通知。
 
@@ -75,4 +75,4 @@ Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已
 本擴充功能不讀取郵件全文。除了在你要求時把郵件標為已讀，不會寄出、刪除或修改任何郵件。
 不出售、不轉移、不分享任何使用者資料。移除本擴充功能即刪除它在本機儲存的所有資料。
 
-聯絡：tasict@gmail.com
+聯絡：tasict+webstore@gmail.com

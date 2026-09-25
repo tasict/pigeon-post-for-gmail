@@ -81,11 +81,11 @@ Gmail 是 Google LLC 的商標。本擴充功能與 Google 無關，也未經 Go
 | 項目 | 規格 | 狀態 |
 |---|---|---|
 | Store icon | 128×128 PNG | `icons/icon128.png` |
-| Screenshots | 1280×800 或 640×400，1–5 張 | 待製作：popup 清單、設定頁與即時預覽、桌面通知、多信箱徽章 |
-| Small promo tile | 440×280 | 待製作 |
-| Marquee promo tile | 1400×560 | 選用 |
+| Screenshots | 1280×800 或 640×400，1–5 張 | 4 張：popup 清單、設定頁與即時預覽、桌面通知與一鍵已讀、隱私與多語系 |
+| Small promo tile | 440×280 | 已製作 |
+| Marquee promo tile | 1400×560 | 已製作（選用） |
 
-截圖請用測試帳號，避免露出真實郵件內容。
+截圖與宣傳圖都是示意圖：用擴充功能本身的頁面搭配假資料（`example.com` 信箱、虛構寄件者）渲染，不使用真實帳號畫面，避免露出個人 email 與郵件內容。
 
 ## Privacy practices
 
@@ -122,7 +122,11 @@ Shows unread counts and desktop notifications for the Gmail accounts the user is
 - [x] I do not use or transfer user data for purposes that are unrelated to my item's single purpose
 - [x] I do not use or transfer user data to determine creditworthiness or for lending purposes
 
-**Privacy policy URL**：https://github.com/tasict/pigeon-post-for-gmail/blob/main/PRIVACY.md（或之後改用 GitHub Pages 網址）
+**Privacy policy URL**：https://tasict.github.io/pigeon-post-for-gmail/privacy.html
+
+**Homepage URL**：https://tasict.github.io/pigeon-post-for-gmail/
+
+**Support URL**：https://github.com/tasict/pigeon-post-for-gmail/issues
 
 ## Test instructions（給審查員）
 

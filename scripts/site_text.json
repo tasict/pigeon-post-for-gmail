@@ -1,0 +1,935 @@
+{
+  "text": {
+    "en": {
+      "title": "Pigeon Post for Gmail: unread counts and notifications in Chrome",
+      "h1": "New mail, at a glance.",
+      "lede": "Unread counts on the toolbar and desktop notifications for every Gmail account you're signed in to in Chrome. No extra login, no OAuth, no server.",
+      "cta": "Add to Chrome",
+      "soon": "Coming soon to the Chrome Web Store.",
+      "github": "View on GitHub",
+      "fine": "Free and open source. Available in 8 languages.",
+      "popup_alt": "The Pigeon Post popup listing unread mail from two mailboxes, Personal and Work.",
+      "lang_menu": "Language",
+      "source": "Source code",
+      "demo_h2": "You decide what matters",
+      "demo_p": "Set each inbox, inbox tab, Starred, Important or any of your labels to one of three levels. Try it here: the icon and the notification follow your choices, just like the live preview on the settings page.",
+      "label_name": "Family",
+      "label_hint": "One of your labels",
+      "acct": "Personal",
+      "t_badge": "The icon shows {n}: unread mail in folders set to Count or Notify.",
+      "t_badge_none": "Nothing is counted, so the icon shows no number.",
+      "t_note": "New mail in {folders} brings up a notification like this.",
+      "t_note_none": "No folder is set to Notify, so no notifications appear.",
+      "sep": ", ",
+      "acct_h2": "Several mailboxes, clearly apart",
+      "acct_p": "Every Gmail account you're signed in to in Chrome is found automatically and gets its own section in the list.",
+      "acct_pts": [
+        [
+          "A name, a color and a sound for each",
+          "Tell mailboxes apart at a glance, and by ear when a notification arrives."
+        ],
+        [
+          "One total, or one number per mailbox",
+          "Show 15 on the icon, or 3/12 to see each mailbox separately."
+        ],
+        [
+          "Your labels, picked from a list",
+          "Labels are read from Gmail itself, so you never have to type a label name."
+        ]
+      ],
+      "act_h2": "Act without opening Gmail",
+      "act_p": "Deal with new mail from wherever you are in Chrome.",
+      "act_pts": [
+        [
+          "Mark as read from the notification",
+          "One click on the notification, and the message is marked as read in Gmail too."
+        ],
+        [
+          "Clear a whole mailbox",
+          "Mark every unread message in a mailbox as read in one step, after a quick confirmation."
+        ],
+        [
+          "Open the right message",
+          "Clicking a message opens it in the right Gmail account, reusing an open Gmail tab."
+        ]
+      ],
+      "work": "Work",
+      "work_from": "Priya Nair",
+      "work_subject": "Roadmap review moved to Thursday",
+      "priv_h2": "Private by design",
+      "priv_p": "Pigeon Post uses the Gmail session you already have in Chrome. There's no account to create and nothing extra to sign in to.",
+      "facts": [
+        [
+          "Talks only to mail.google.com",
+          "No server, no analytics, no ads and no tracking. Nothing is ever sent to the developer."
+        ],
+        [
+          "Mail stays in memory",
+          "Senders, subjects and snippets of unread mail are kept in memory only and cleared when Chrome closes."
+        ],
+        [
+          "Reads only what it needs",
+          "It reads Gmail's unread-mail feed, never full messages, and changes nothing except marking mail as read when you ask."
+        ],
+        [
+          "Open source",
+          "Every line is on GitHub under the GPL-3.0 license, so you can check exactly what it does."
+        ]
+      ],
+      "priv_link": "Read the full privacy policy",
+      "start_h2": "Get started in a minute",
+      "steps": [
+        [
+          "Add it to Chrome",
+          "Install Pigeon Post from the Chrome Web Store."
+        ],
+        [
+          "Stay signed in to Gmail",
+          "Every Gmail account you're signed in to in Chrome is found on its own."
+        ],
+        [
+          "Choose what matters",
+          "The settings page opens right away. Pick what counts and what notifies you."
+        ]
+      ],
+      "made": "Made by tasict. Released under the GPL-3.0 license.",
+      "coffee": "If you find it useful, I'd love it if you bought me a coffee.",
+      "paypal": "Buy me a coffee on PayPal",
+      "privacy": "Privacy policy",
+      "issues": "Report a problem",
+      "tm": "Gmail is a trademark of Google LLC. This extension is not affiliated with or endorsed by Google.",
+      "loading": "Loading the privacy policy…",
+      "policy_other": "Read this policy in {lang}",
+      "load_error": "The privacy policy couldn't be loaded here. Read it on GitHub instead."
+    },
+    "zh-TW": {
+      "title": "Pigeon Post for Gmail：在 Chrome 顯示 Gmail 未讀數與通知",
+      "h1": "新信件，一眼看到。",
+      "lede": "工具列顯示未讀數，並為你在 Chrome 已登入的每個 Gmail 帳號跳出桌面通知。不需另外登入、不需 OAuth、沒有伺服器。",
+      "cta": "加到 Chrome",
+      "soon": "即將在 Chrome 線上應用程式商店推出。",
+      "github": "在 GitHub 查看",
+      "fine": "免費、開放原始碼，支援 8 種語言。",
+      "popup_alt": "Pigeon Post 的彈出視窗，列出「個人」與「工作」兩個信箱的未讀信。",
+      "lang_menu": "語言",
+      "source": "原始碼",
+      "demo_h2": "哪些信重要，由你決定",
+      "demo_p": "每個收件匣、分頁、已加星號、重要或任何標籤，都能設成三種層級之一。在這裡試試看：圖示和通知會跟著你的選擇改變，就像設定頁的即時預覽。",
+      "label_name": "家人",
+      "label_hint": "你的標籤",
+      "acct": "個人",
+      "t_badge": "圖示顯示 {n}：設為「計數」或「通知」的資料夾中的未讀信。",
+      "t_badge_none": "沒有任何資料夾計數，圖示不顯示數字。",
+      "t_note": "{folders}有新信時，會跳出像這樣的通知。",
+      "t_note_none": "沒有資料夾設為「通知」，所以不會跳出通知。",
+      "sep": "、",
+      "acct_h2": "多個信箱，一眼分清",
+      "acct_p": "你在 Chrome 登入的每個 Gmail 帳號都會自動偵測，在清單中各自一區。",
+      "acct_pts": [
+        [
+          "每個信箱有自己的名稱、顏色與音效",
+          "看一眼就分得出是哪個信箱，聽通知音效也分得出來。"
+        ],
+        [
+          "顯示加總，或各信箱分開",
+          "圖示可以顯示 15，也可以顯示 3/12，各信箱分開看。"
+        ],
+        [
+          "標籤用選的就好",
+          "標籤直接從 Gmail 讀取，不必手動輸入名稱。"
+        ]
+      ],
+      "act_h2": "不開 Gmail 也能處理",
+      "act_p": "不管你在 Chrome 的哪個分頁，都能直接處理新信。",
+      "act_pts": [
+        [
+          "在通知上標為已讀",
+          "在通知上按一下，Gmail 裡的這封信也會變成已讀。"
+        ],
+        [
+          "一鍵清空整個信箱",
+          "確認一次，就把信箱裡所有未讀信標為已讀。"
+        ],
+        [
+          "打開正確的那封信",
+          "點信件會在對應的 Gmail 帳號開啟，並沿用已開啟的 Gmail 分頁。"
+        ]
+      ],
+      "work": "工作",
+      "work_from": "王佩琪",
+      "work_subject": "產品規劃會議改到週四",
+      "priv_h2": "重視隱私",
+      "priv_p": "Pigeon Post 直接使用你在 Chrome 已登入的 Gmail，不必註冊帳號，也不必另外登入。",
+      "facts": [
+        [
+          "只與 mail.google.com 連線",
+          "沒有伺服器、沒有分析、沒有廣告、沒有追蹤。任何資料都不會傳給開發者。"
+        ],
+        [
+          "郵件只存在記憶體",
+          "未讀信的寄件者、主旨和摘要只放在記憶體中，關閉 Chrome 就清除。"
+        ],
+        [
+          "只讀取需要的資料",
+          "只讀取 Gmail 的未讀信摘要，不讀完整內文；除了你要求的標為已讀，不做任何更動。"
+        ],
+        [
+          "開放原始碼",
+          "所有程式碼都以 GPL-3.0 授權公開在 GitHub，做了什麼都能自己檢查。"
+        ]
+      ],
+      "priv_link": "閱讀完整的隱私權政策",
+      "start_h2": "一分鐘開始使用",
+      "steps": [
+        [
+          "加到 Chrome",
+          "從 Chrome 線上應用程式商店安裝 Pigeon Post。"
+        ],
+        [
+          "保持登入 Gmail",
+          "你在 Chrome 登入的每個 Gmail 帳號都會自動找到。"
+        ],
+        [
+          "選擇重要的信",
+          "設定頁會立刻開啟，選好哪些要計數、哪些要通知。"
+        ]
+      ],
+      "made": "由 tasict 製作，以 GPL-3.0 授權釋出。",
+      "coffee": "如果你覺得好用，希望你能贊助我喝杯咖啡。",
+      "paypal": "用 PayPal 請我喝咖啡",
+      "privacy": "隱私權政策",
+      "issues": "回報問題",
+      "tm": "Gmail 是 Google LLC 的商標。本擴充功能與 Google 無關，也未經 Google 背書。",
+      "loading": "正在載入隱私權政策…",
+      "policy_other": "閱讀 {lang} 版本",
+      "load_error": "無法在這裡載入隱私權政策，請改到 GitHub 閱讀。"
+    },
+    "zh-CN": {
+      "title": "Pigeon Post for Gmail：在 Chrome 中显示 Gmail 未读数与通知",
+      "h1": "新邮件，一眼看到。",
+      "lede": "工具栏显示未读数，并为你在 Chrome 中已登录的每个 Gmail 账号弹出桌面通知。无需另外登录、无需 OAuth、没有服务器。",
+      "cta": "添加至 Chrome",
+      "soon": "即将在 Chrome 应用商店上架。",
+      "github": "在 GitHub 查看",
+      "fine": "免费、开源，支持 8 种语言。",
+      "popup_alt": "Pigeon Post 的弹出窗口，列出“个人”和“工作”两个邮箱的未读邮件。",
+      "lang_menu": "语言",
+      "source": "源代码",
+      "demo_h2": "哪些邮件重要，由你决定",
+      "demo_p": "每个收件箱、分类标签页、已加星标、重要邮件或任何标签，都可以设为三种级别之一。在这里试试：图标和通知会随你的选择变化，就像设置页上的实时预览。",
+      "label_name": "家人",
+      "label_hint": "你的标签",
+      "acct": "个人",
+      "t_badge": "图标显示 {n}：设为“计数”或“通知”的文件夹中的未读邮件。",
+      "t_badge_none": "没有任何文件夹计数，图标不显示数字。",
+      "t_note": "{folders}有新邮件时，会弹出这样的通知。",
+      "t_note_none": "没有文件夹设为“通知”，所以不会弹出通知。",
+      "sep": "、",
+      "acct_h2": "多个邮箱，一眼分清",
+      "acct_p": "你在 Chrome 中登录的每个 Gmail 账号都会被自动检测到，并在列表中各占一栏。",
+      "acct_pts": [
+        [
+          "每个邮箱都有自己的名称、颜色和提示音",
+          "一眼就能分清是哪个邮箱，听提示音也能分辨。"
+        ],
+        [
+          "显示总数，或各邮箱分开显示",
+          "图标可以显示 15，也可以显示 3/12，分别查看每个邮箱。"
+        ],
+        [
+          "从列表中选择标签",
+          "标签直接从 Gmail 读取，无需手动输入名称。"
+        ]
+      ],
+      "act_h2": "不打开 Gmail 也能处理",
+      "act_p": "无论你在 Chrome 的哪个页面，都能直接处理新邮件。",
+      "act_pts": [
+        [
+          "在通知上标为已读",
+          "在通知上点一下，Gmail 中的这封邮件也会变为已读。"
+        ],
+        [
+          "一键清空整个邮箱",
+          "确认一次，就把邮箱中的所有未读邮件标为已读。"
+        ],
+        [
+          "打开正确的邮件",
+          "点击邮件会在对应的 Gmail 账号中打开，并沿用已打开的 Gmail 标签页。"
+        ]
+      ],
+      "work": "工作",
+      "work_from": "王佩琪",
+      "work_subject": "产品规划会议改到周四",
+      "priv_h2": "注重隐私",
+      "priv_p": "Pigeon Post 直接使用你在 Chrome 中已登录的 Gmail，无需注册账号，也无需另外登录。",
+      "facts": [
+        [
+          "只连接 mail.google.com",
+          "没有服务器、没有统计分析、没有广告、没有跟踪。任何数据都不会发送给开发者。"
+        ],
+        [
+          "邮件只保存在内存中",
+          "未读邮件的发件人、主题和摘要只保存在内存中，关闭 Chrome 即清除。"
+        ],
+        [
+          "只读取需要的数据",
+          "只读取 Gmail 的未读邮件摘要，不读取完整正文；除了你要求的标为已读，不做任何更改。"
+        ],
+        [
+          "开源",
+          "所有代码都以 GPL-3.0 许可证公开在 GitHub 上，做了什么都可以自己检查。"
+        ]
+      ],
+      "priv_link": "阅读完整的隐私政策",
+      "start_h2": "一分钟开始使用",
+      "steps": [
+        [
+          "添加至 Chrome",
+          "从 Chrome 应用商店安装 Pigeon Post。"
+        ],
+        [
+          "保持登录 Gmail",
+          "你在 Chrome 中登录的每个 Gmail 账号都会被自动找到。"
+        ],
+        [
+          "选择重要的邮件",
+          "设置页会立即打开，选好哪些计数、哪些通知。"
+        ]
+      ],
+      "made": "由 tasict 制作，以 GPL-3.0 许可证发布。",
+      "coffee": "如果你觉得好用，希望你能请我喝杯咖啡。",
+      "paypal": "用 PayPal 请我喝咖啡",
+      "privacy": "隐私政策",
+      "issues": "报告问题",
+      "tm": "Gmail 是 Google LLC 的商标。本扩展程序与 Google 无关，也未获得 Google 认可。",
+      "loading": "正在加载隐私政策…",
+      "policy_other": "阅读 {lang} 版本",
+      "load_error": "无法在此加载隐私政策，请改到 GitHub 阅读。",
+      "policy_note": "隐私政策提供英文与繁体中文版本，以下显示繁体中文版。"
+    },
+    "ja": {
+      "title": "Pigeon Post for Gmail：Chrome で Gmail の未読件数と通知",
+      "h1": "新着メールを、ひと目で。",
+      "lede": "Chrome でログインしているすべての Gmail アカウントについて、ツールバーに未読件数を表示し、デスクトップ通知でお知らせします。追加のログインも OAuth もサーバーも不要です。",
+      "cta": "Chrome に追加",
+      "soon": "Chrome ウェブストアで近日公開予定です。",
+      "github": "GitHub で見る",
+      "fine": "無料のオープンソース。8 言語に対応しています。",
+      "popup_alt": "「個人」と「仕事」の 2 つのメールボックスの未読メールを一覧表示した Pigeon Post のポップアップ。",
+      "lang_menu": "言語",
+      "source": "ソースコード",
+      "demo_h2": "大事なメールは自分で決める",
+      "demo_p": "受信トレイ、各タブ、スター付き、重要、そして任意のラベルを、3 つのレベルから選んで設定できます。ここで試してみてください。設定ページのライブプレビューと同じように、アイコンと通知が選択に合わせて変わります。",
+      "label_name": "家族",
+      "label_hint": "あなたのラベル",
+      "acct": "個人",
+      "t_badge": "アイコンに {n} と表示されます。「カウント」か「通知」にしたフォルダの未読メールの数です。",
+      "t_badge_none": "カウントするフォルダがないため、アイコンに数字は表示されません。",
+      "t_note": "{folders}に新着メールが届くと、このような通知が表示されます。",
+      "t_note_none": "「通知」にしたフォルダがないため、通知は表示されません。",
+      "sep": "、",
+      "acct_h2": "複数のメールボックスも、はっきり区別",
+      "acct_p": "Chrome でログインしている Gmail アカウントは自動で見つかり、一覧でそれぞれに分かれて表示されます。",
+      "acct_pts": [
+        [
+          "それぞれに名前・色・通知音",
+          "ひと目で、そして通知音でもどのメールボックスか分かります。"
+        ],
+        [
+          "合計でも、メールボックスごとでも",
+          "アイコンに 15 と表示することも、3/12 のように分けて表示することもできます。"
+        ],
+        [
+          "ラベルは一覧から選ぶだけ",
+          "ラベルは Gmail から読み込むので、名前を入力する必要はありません。"
+        ]
+      ],
+      "act_h2": "Gmail を開かずに処理",
+      "act_p": "Chrome のどのページにいても、新着メールをその場で処理できます。",
+      "act_pts": [
+        [
+          "通知から既読にする",
+          "通知をワンクリックするだけで、Gmail 側でも既読になります。"
+        ],
+        [
+          "メールボックスをまとめて既読に",
+          "一度確認するだけで、メールボックスの未読メールをすべて既読にできます。"
+        ],
+        [
+          "正しいメールを開く",
+          "メールをクリックすると対応する Gmail アカウントで開き、開いている Gmail タブを再利用します。"
+        ]
+      ],
+      "work": "仕事",
+      "work_from": "山本 彩",
+      "work_subject": "ロードマップ会議は木曜日に変更",
+      "priv_h2": "プライバシーを第一に",
+      "priv_p": "Pigeon Post は Chrome でログイン済みの Gmail をそのまま使います。アカウント登録も追加のログインも必要ありません。",
+      "facts": [
+        [
+          "通信先は mail.google.com だけ",
+          "サーバーも、アクセス解析も、広告も、トラッキングもありません。開発者には何も送信されません。"
+        ],
+        [
+          "メールはメモリ上だけに",
+          "未読メールの差出人・件名・スニペットはメモリ上にのみ保持され、Chrome を閉じると消去されます。"
+        ],
+        [
+          "必要なものだけを読む",
+          "Gmail の未読メールフィードだけを読み、本文全体は読みません。依頼された既読処理以外は何も変更しません。"
+        ],
+        [
+          "オープンソース",
+          "すべてのコードを GPL-3.0 ライセンスで GitHub に公開しているので、何をしているか自分で確認できます。"
+        ]
+      ],
+      "priv_link": "プライバシーポリシーを読む",
+      "start_h2": "1 分ではじめられます",
+      "steps": [
+        [
+          "Chrome に追加",
+          "Chrome ウェブストアから Pigeon Post をインストールします。"
+        ],
+        [
+          "Gmail にログインしたまま",
+          "Chrome でログインしている Gmail アカウントは自動で見つかります。"
+        ],
+        [
+          "大事なものを選ぶ",
+          "すぐに設定ページが開きます。カウントするものと通知するものを選びましょう。"
+        ]
+      ],
+      "made": "作者 tasict。GPL-3.0 ライセンスで公開しています。",
+      "coffee": "気に入っていただけたら、コーヒー 1 杯分の支援をいただけるとうれしいです。",
+      "paypal": "PayPal でコーヒーをおごる",
+      "privacy": "プライバシーポリシー",
+      "issues": "問題を報告",
+      "tm": "Gmail は Google LLC の商標です。この拡張機能は Google とは関係がなく、Google の承認を受けたものではありません。",
+      "loading": "プライバシーポリシーを読み込んでいます…",
+      "load_error": "プライバシーポリシーを読み込めませんでした。GitHub でご覧ください。",
+      "policy_note": "プライバシーポリシーは英語版と繁体字中国語版のみ提供しています。以下は英語版です。"
+    },
+    "ko": {
+      "title": "Pigeon Post for Gmail: Chrome에서 Gmail 읽지 않은 메일 수와 알림",
+      "h1": "새 메일을 한눈에.",
+      "lede": "Chrome에 로그인된 모든 Gmail 계정의 읽지 않은 메일 수를 툴바에 표시하고 데스크톱 알림으로 알려 줍니다. 추가 로그인, OAuth, 서버가 필요 없습니다.",
+      "cta": "Chrome에 추가",
+      "soon": "곧 Chrome 웹 스토어에 출시됩니다.",
+      "github": "GitHub에서 보기",
+      "fine": "무료 오픈 소스이며 8개 언어를 지원합니다.",
+      "popup_alt": "개인과 업무 두 메일함의 읽지 않은 메일을 보여 주는 Pigeon Post 팝업.",
+      "lang_menu": "언어",
+      "source": "소스 코드",
+      "demo_h2": "중요한 메일은 직접 정하세요",
+      "demo_p": "받은편지함, 각 탭, 별표편지함, 중요, 그리고 원하는 라벨을 세 가지 단계 중 하나로 설정할 수 있습니다. 여기서 직접 해 보세요. 설정 페이지의 실시간 미리보기처럼 아이콘과 알림이 선택에 따라 바뀝니다.",
+      "label_name": "가족",
+      "label_hint": "내 라벨",
+      "acct": "개인",
+      "t_badge": "아이콘에 {n}이(가) 표시됩니다. 개수 또는 알림으로 설정한 폴더의 읽지 않은 메일 수입니다.",
+      "t_badge_none": "개수를 세는 폴더가 없어 아이콘에 숫자가 표시되지 않습니다.",
+      "t_note": "{folders}에 새 메일이 오면 이런 알림이 표시됩니다.",
+      "t_note_none": "알림으로 설정한 폴더가 없어 알림이 표시되지 않습니다.",
+      "sep": ", ",
+      "acct_h2": "여러 메일함도 확실하게 구분",
+      "acct_p": "Chrome에 로그인된 Gmail 계정을 자동으로 찾아 목록에서 각각 따로 보여 줍니다.",
+      "acct_pts": [
+        [
+          "메일함마다 이름, 색상, 알림음",
+          "한눈에, 그리고 알림음으로도 어느 메일함인지 알 수 있습니다."
+        ],
+        [
+          "합계 또는 메일함별 숫자",
+          "아이콘에 15를 표시하거나 3/12처럼 메일함별로 나눠 표시할 수 있습니다."
+        ],
+        [
+          "라벨은 목록에서 선택",
+          "라벨을 Gmail에서 직접 읽어 오므로 이름을 입력할 필요가 없습니다."
+        ]
+      ],
+      "act_h2": "Gmail을 열지 않고 처리",
+      "act_p": "Chrome 어디에 있든 새 메일을 바로 처리하세요.",
+      "act_pts": [
+        [
+          "알림에서 읽음으로 표시",
+          "알림을 한 번 클릭하면 Gmail에서도 읽음으로 표시됩니다."
+        ],
+        [
+          "메일함 한 번에 비우기",
+          "한 번 확인하면 메일함의 읽지 않은 메일을 모두 읽음으로 표시합니다."
+        ],
+        [
+          "정확한 메일 열기",
+          "메일을 클릭하면 해당 Gmail 계정에서 열리며, 열려 있는 Gmail 탭을 다시 사용합니다."
+        ]
+      ],
+      "work": "업무",
+      "work_from": "이서연",
+      "work_subject": "로드맵 회의가 목요일로 변경됐습니다",
+      "priv_h2": "개인정보 보호를 우선으로",
+      "priv_p": "Pigeon Post는 Chrome에 이미 로그인된 Gmail을 그대로 사용합니다. 계정을 만들거나 따로 로그인할 필요가 없습니다.",
+      "facts": [
+        [
+          "mail.google.com하고만 통신",
+          "서버, 분석, 광고, 추적이 없습니다. 개발자에게 아무것도 전송되지 않습니다."
+        ],
+        [
+          "메일은 메모리에만",
+          "읽지 않은 메일의 보낸 사람, 제목, 미리보기는 메모리에만 보관되며 Chrome을 닫으면 지워집니다."
+        ],
+        [
+          "필요한 것만 읽기",
+          "Gmail의 읽지 않은 메일 피드만 읽고 본문 전체는 읽지 않습니다. 요청한 읽음 표시 외에는 아무것도 변경하지 않습니다."
+        ],
+        [
+          "오픈 소스",
+          "모든 코드가 GPL-3.0 라이선스로 GitHub에 공개되어 있어 무엇을 하는지 직접 확인할 수 있습니다."
+        ]
+      ],
+      "priv_link": "전체 개인정보처리방침 읽기",
+      "start_h2": "1분이면 시작할 수 있습니다",
+      "steps": [
+        [
+          "Chrome에 추가",
+          "Chrome 웹 스토어에서 Pigeon Post를 설치합니다."
+        ],
+        [
+          "Gmail 로그인 유지",
+          "Chrome에 로그인된 Gmail 계정을 자동으로 찾습니다."
+        ],
+        [
+          "중요한 것 선택",
+          "설정 페이지가 바로 열립니다. 개수를 셀 것과 알림을 받을 것을 고르세요."
+        ]
+      ],
+      "made": "tasict가 만들었으며 GPL-3.0 라이선스로 배포합니다.",
+      "coffee": "유용하셨다면 커피 한 잔 사 주시면 정말 기쁘겠습니다.",
+      "paypal": "PayPal로 커피 사 주기",
+      "privacy": "개인정보처리방침",
+      "issues": "문제 신고",
+      "tm": "Gmail은 Google LLC의 상표입니다. 이 확장 프로그램은 Google과 관련이 없으며 Google의 보증을 받지 않았습니다.",
+      "loading": "개인정보처리방침을 불러오는 중…",
+      "load_error": "개인정보처리방침을 불러오지 못했습니다. GitHub에서 확인해 주세요.",
+      "policy_note": "개인정보처리방침은 영어와 번체 중국어로만 제공됩니다. 아래는 영어 버전입니다."
+    },
+    "es": {
+      "title": "Pigeon Post for Gmail: correos sin leer y notificaciones en Chrome",
+      "h1": "Tu correo nuevo, de un vistazo.",
+      "lede": "Número de no leídos en la barra de herramientas y notificaciones de escritorio para cada cuenta de Gmail con la que hayas iniciado sesión en Chrome. Sin inicios de sesión extra, sin OAuth y sin servidor.",
+      "cta": "Añadir a Chrome",
+      "soon": "Muy pronto en Chrome Web Store.",
+      "github": "Ver en GitHub",
+      "fine": "Gratis y de código abierto. Disponible en 8 idiomas.",
+      "popup_alt": "La ventana de Pigeon Post con el correo sin leer de dos buzones, Personal y Trabajo.",
+      "lang_menu": "Idioma",
+      "source": "Código fuente",
+      "demo_h2": "Tú decides qué importa",
+      "demo_p": "Asigna a cada bandeja, pestaña, Destacados, Importantes o cualquiera de tus etiquetas uno de tres niveles. Pruébalo aquí: el icono y la notificación siguen tus elecciones, igual que la vista previa en directo de la página de configuración.",
+      "label_name": "Familia",
+      "label_hint": "Una de tus etiquetas",
+      "acct": "Personal",
+      "t_badge": "El icono muestra {n}: el correo sin leer de las carpetas en Contar o Notificar.",
+      "t_badge_none": "No se cuenta nada, así que el icono no muestra ningún número.",
+      "t_note": "El correo nuevo en {folders} muestra una notificación como esta.",
+      "t_note_none": "Ninguna carpeta está en Notificar, así que no aparecen notificaciones.",
+      "sep": ", ",
+      "acct_h2": "Varios buzones, bien diferenciados",
+      "acct_p": "Cada cuenta de Gmail con la que has iniciado sesión en Chrome se detecta sola y tiene su propia sección en la lista.",
+      "acct_pts": [
+        [
+          "Un nombre, un color y un sonido para cada uno",
+          "Distingue los buzones de un vistazo, y de oído cuando llega una notificación."
+        ],
+        [
+          "Un total o un número por buzón",
+          "Muestra 15 en el icono, o 3/12 para ver cada buzón por separado."
+        ],
+        [
+          "Tus etiquetas, elegidas de una lista",
+          "Las etiquetas se leen del propio Gmail, así que nunca tienes que escribir su nombre."
+        ]
+      ],
+      "act_h2": "Actúa sin abrir Gmail",
+      "act_p": "Gestiona el correo nuevo estés donde estés en Chrome.",
+      "act_pts": [
+        [
+          "Marca como leído desde la notificación",
+          "Un clic en la notificación y el mensaje también queda leído en Gmail."
+        ],
+        [
+          "Vacía un buzón entero",
+          "Marca como leídos todos los mensajes de un buzón de una vez, tras una confirmación rápida."
+        ],
+        [
+          "Abre el mensaje correcto",
+          "Al hacer clic en un mensaje se abre en la cuenta de Gmail adecuada, reutilizando una pestaña de Gmail abierta."
+        ]
+      ],
+      "work": "Trabajo",
+      "work_from": "Carmen Vidal",
+      "work_subject": "La revisión del plan pasa al jueves",
+      "priv_h2": "Privado desde el diseño",
+      "priv_p": "Pigeon Post usa la sesión de Gmail que ya tienes en Chrome. No hay que crear ninguna cuenta ni iniciar sesión en nada más.",
+      "facts": [
+        [
+          "Solo se comunica con mail.google.com",
+          "Sin servidor, sin analíticas, sin anuncios y sin rastreo. Nunca se envía nada al desarrollador."
+        ],
+        [
+          "El correo se queda en memoria",
+          "Los remitentes, asuntos y fragmentos del correo sin leer se guardan solo en memoria y se borran al cerrar Chrome."
+        ],
+        [
+          "Lee solo lo necesario",
+          "Lee el feed de correo sin leer de Gmail, nunca los mensajes completos, y no cambia nada salvo marcar como leído cuando se lo pides."
+        ],
+        [
+          "Código abierto",
+          "Todo el código está en GitHub con licencia GPL-3.0, así que puedes comprobar exactamente qué hace."
+        ]
+      ],
+      "priv_link": "Lee la política de privacidad completa",
+      "start_h2": "Empieza en un minuto",
+      "steps": [
+        [
+          "Añádelo a Chrome",
+          "Instala Pigeon Post desde Chrome Web Store."
+        ],
+        [
+          "Mantén abierta tu sesión de Gmail",
+          "Cada cuenta de Gmail con la que has iniciado sesión en Chrome se detecta sola."
+        ],
+        [
+          "Elige lo que importa",
+          "La página de configuración se abre al instante. Elige qué se cuenta y qué te avisa."
+        ]
+      ],
+      "made": "Hecho por tasict. Publicado con la licencia GPL-3.0.",
+      "coffee": "Si te resulta útil, me encantaría que me invitaras a un café.",
+      "paypal": "Invítame a un café con PayPal",
+      "privacy": "Política de privacidad",
+      "issues": "Informar de un problema",
+      "tm": "Gmail es una marca comercial de Google LLC. Esta extensión no está afiliada a Google ni cuenta con su respaldo.",
+      "loading": "Cargando la política de privacidad…",
+      "load_error": "No se ha podido cargar la política de privacidad aquí. Léela en GitHub.",
+      "policy_note": "La política de privacidad solo está disponible en inglés y chino tradicional. A continuación se muestra la versión en inglés."
+    },
+    "fr": {
+      "title": "Pigeon Post for Gmail : messages non lus et notifications dans Chrome",
+      "h1": "Vos nouveaux e-mails, en un coup d’œil.",
+      "lede": "Le nombre de messages non lus dans la barre d’outils et des notifications sur le bureau pour chaque compte Gmail connecté dans Chrome. Sans connexion supplémentaire, sans OAuth, sans serveur.",
+      "cta": "Ajouter à Chrome",
+      "soon": "Bientôt disponible sur le Chrome Web Store.",
+      "github": "Voir sur GitHub",
+      "fine": "Gratuit et open source. Disponible en 8 langues.",
+      "popup_alt": "La fenêtre de Pigeon Post avec les messages non lus de deux boîtes, Perso et Travail.",
+      "lang_menu": "Langue",
+      "source": "Code source",
+      "demo_h2": "C’est vous qui décidez",
+      "demo_p": "Réglez chaque boîte de réception, onglet, Messages suivis, Importants ou n’importe lequel de vos libellés sur l’un des trois niveaux. Essayez ici : l’icône et la notification suivent vos choix, comme l’aperçu en direct de la page des paramètres.",
+      "label_name": "Famille",
+      "label_hint": "Un de vos libellés",
+      "acct": "Perso",
+      "t_badge": "L’icône affiche {n} : les messages non lus des dossiers réglés sur Compter ou Notifier.",
+      "t_badge_none": "Rien n’est compté, l’icône n’affiche donc aucun nombre.",
+      "t_note": "Un nouveau message dans {folders} affiche une notification comme celle-ci.",
+      "t_note_none": "Aucun dossier n’est réglé sur Notifier, aucune notification n’apparaît donc.",
+      "sep": ", ",
+      "acct_h2": "Plusieurs boîtes, bien distinctes",
+      "acct_p": "Chaque compte Gmail connecté dans Chrome est détecté automatiquement et a sa propre section dans la liste.",
+      "acct_pts": [
+        [
+          "Un nom, une couleur et un son pour chacune",
+          "Distinguez vos boîtes d’un coup d’œil, et à l’oreille quand une notification arrive."
+        ],
+        [
+          "Un total ou un nombre par boîte",
+          "Affichez 15 sur l’icône, ou 3/12 pour voir chaque boîte séparément."
+        ],
+        [
+          "Vos libellés, choisis dans une liste",
+          "Les libellés sont lus directement dans Gmail : inutile de taper leur nom."
+        ]
+      ],
+      "act_h2": "Agissez sans ouvrir Gmail",
+      "act_p": "Traitez vos nouveaux messages où que vous soyez dans Chrome.",
+      "act_pts": [
+        [
+          "Marquer comme lu depuis la notification",
+          "Un clic sur la notification, et le message est aussi marqué comme lu dans Gmail."
+        ],
+        [
+          "Vider une boîte entière",
+          "Marquez comme lus tous les messages d’une boîte en une fois, après une rapide confirmation."
+        ],
+        [
+          "Ouvrir le bon message",
+          "Un clic sur un message l’ouvre dans le bon compte Gmail, en réutilisant un onglet Gmail ouvert."
+        ]
+      ],
+      "work": "Travail",
+      "work_from": "Claire Moreau",
+      "work_subject": "La revue de la feuille de route passe à jeudi",
+      "priv_h2": "Confidentiel par conception",
+      "priv_p": "Pigeon Post utilise la session Gmail que vous avez déjà dans Chrome. Aucun compte à créer, aucune connexion supplémentaire.",
+      "facts": [
+        [
+          "Ne communique qu’avec mail.google.com",
+          "Pas de serveur, pas de statistiques, pas de publicité, pas de pistage. Rien n’est jamais envoyé au développeur."
+        ],
+        [
+          "Les messages restent en mémoire",
+          "Expéditeurs, objets et extraits des messages non lus sont gardés en mémoire uniquement et effacés à la fermeture de Chrome."
+        ],
+        [
+          "Ne lit que le nécessaire",
+          "Il lit le flux des messages non lus de Gmail, jamais les messages complets, et ne modifie rien, sauf pour marquer comme lu à votre demande."
+        ],
+        [
+          "Open source",
+          "Tout le code est sur GitHub sous licence GPL-3.0 : vous pouvez vérifier exactement ce qu’il fait."
+        ]
+      ],
+      "priv_link": "Lire la politique de confidentialité complète",
+      "start_h2": "Prêt en une minute",
+      "steps": [
+        [
+          "Ajoutez-le à Chrome",
+          "Installez Pigeon Post depuis le Chrome Web Store."
+        ],
+        [
+          "Restez connecté à Gmail",
+          "Chaque compte Gmail connecté dans Chrome est détecté automatiquement."
+        ],
+        [
+          "Choisissez l’essentiel",
+          "La page des paramètres s’ouvre aussitôt. Choisissez ce qui est compté et ce qui vous notifie."
+        ]
+      ],
+      "made": "Créé par tasict. Publié sous licence GPL-3.0.",
+      "coffee": "S’il vous est utile, vous pouvez m’offrir un café.",
+      "paypal": "M’offrir un café avec PayPal",
+      "privacy": "Politique de confidentialité",
+      "issues": "Signaler un problème",
+      "tm": "Gmail est une marque de Google LLC. Cette extension n’est ni affiliée à Google ni approuvée par Google.",
+      "loading": "Chargement de la politique de confidentialité…",
+      "load_error": "Impossible de charger la politique de confidentialité ici. Lisez-la sur GitHub.",
+      "policy_note": "La politique de confidentialité est disponible uniquement en anglais et en chinois traditionnel. Voici la version anglaise."
+    },
+    "de": {
+      "title": "Pigeon Post for Gmail: ungelesene E-Mails und Benachrichtigungen in Chrome",
+      "h1": "Neue E-Mails auf einen Blick.",
+      "lede": "Die Zahl ungelesener E-Mails in der Symbolleiste und Desktopbenachrichtigungen für jedes Gmail-Konto, mit dem du in Chrome angemeldet bist. Ohne zusätzliche Anmeldung, ohne OAuth, ohne Server.",
+      "cta": "Zu Chrome hinzufügen",
+      "soon": "Bald im Chrome Web Store.",
+      "github": "Auf GitHub ansehen",
+      "fine": "Kostenlos und Open Source. In 8 Sprachen verfügbar.",
+      "popup_alt": "Das Pigeon-Post-Fenster mit ungelesenen E-Mails aus zwei Postfächern, Privat und Arbeit.",
+      "lang_menu": "Sprache",
+      "source": "Quellcode",
+      "demo_h2": "Du entscheidest, was wichtig ist",
+      "demo_p": "Stelle jeden Posteingang, jeden Tab, Markiert, Wichtig oder eines deiner Labels auf eine von drei Stufen. Probier es hier aus: Symbol und Benachrichtigung folgen deiner Auswahl, genau wie die Live-Vorschau auf der Einstellungsseite.",
+      "label_name": "Familie",
+      "label_hint": "Eines deiner Labels",
+      "acct": "Privat",
+      "t_badge": "Das Symbol zeigt {n}: ungelesene E-Mails in Ordnern auf Zählen oder Benachrichtigen.",
+      "t_badge_none": "Es wird nichts gezählt, daher zeigt das Symbol keine Zahl.",
+      "t_note": "Neue E-Mails in {folders} lösen eine Benachrichtigung wie diese aus.",
+      "t_note_none": "Kein Ordner steht auf Benachrichtigen, daher erscheinen keine Benachrichtigungen.",
+      "sep": ", ",
+      "acct_h2": "Mehrere Postfächer, klar getrennt",
+      "acct_p": "Jedes Gmail-Konto, mit dem du in Chrome angemeldet bist, wird automatisch erkannt und hat in der Liste einen eigenen Bereich.",
+      "acct_pts": [
+        [
+          "Name, Farbe und Ton für jedes Postfach",
+          "Unterscheide Postfächer auf einen Blick und am Ton, wenn eine Benachrichtigung kommt."
+        ],
+        [
+          "Eine Summe oder eine Zahl pro Postfach",
+          "Zeige 15 am Symbol oder 3/12, um jedes Postfach einzeln zu sehen."
+        ],
+        [
+          "Deine Labels, aus einer Liste gewählt",
+          "Labels werden direkt aus Gmail gelesen, du musst also nie einen Namen eintippen."
+        ]
+      ],
+      "act_h2": "Handeln, ohne Gmail zu öffnen",
+      "act_p": "Erledige neue E-Mails, egal wo du gerade in Chrome bist.",
+      "act_pts": [
+        [
+          "Aus der Benachrichtigung als gelesen markieren",
+          "Ein Klick auf die Benachrichtigung, und die E-Mail ist auch in Gmail gelesen."
+        ],
+        [
+          "Ein ganzes Postfach leeren",
+          "Markiere alle ungelesenen E-Mails eines Postfachs auf einmal als gelesen, nach einer kurzen Bestätigung."
+        ],
+        [
+          "Die richtige E-Mail öffnen",
+          "Ein Klick öffnet die E-Mail im passenden Gmail-Konto und nutzt dafür einen offenen Gmail-Tab."
+        ]
+      ],
+      "work": "Arbeit",
+      "work_from": "Sophie Keller",
+      "work_subject": "Roadmap-Termin auf Donnerstag verschoben",
+      "priv_h2": "Datenschutz von Anfang an",
+      "priv_p": "Pigeon Post nutzt die Gmail-Sitzung, die du in Chrome schon hast. Kein Konto anlegen, keine zusätzliche Anmeldung.",
+      "facts": [
+        [
+          "Spricht nur mit mail.google.com",
+          "Kein Server, keine Analyse, keine Werbung, kein Tracking. An den Entwickler wird nie etwas gesendet."
+        ],
+        [
+          "E-Mails bleiben im Arbeitsspeicher",
+          "Absender, Betreff und Vorschau ungelesener E-Mails liegen nur im Arbeitsspeicher und verschwinden, wenn Chrome geschlossen wird."
+        ],
+        [
+          "Liest nur, was nötig ist",
+          "Es liest den Feed ungelesener E-Mails von Gmail, nie ganze Nachrichten, und ändert nichts außer dem Markieren als gelesen, wenn du es willst."
+        ],
+        [
+          "Open Source",
+          "Der gesamte Code liegt unter der GPL-3.0-Lizenz auf GitHub, sodass du genau prüfen kannst, was er tut."
+        ]
+      ],
+      "priv_link": "Vollständige Datenschutzerklärung lesen",
+      "start_h2": "In einer Minute startklar",
+      "steps": [
+        [
+          "Zu Chrome hinzufügen",
+          "Installiere Pigeon Post aus dem Chrome Web Store."
+        ],
+        [
+          "Bei Gmail angemeldet bleiben",
+          "Jedes Gmail-Konto, mit dem du in Chrome angemeldet bist, wird von selbst gefunden."
+        ],
+        [
+          "Wählen, was wichtig ist",
+          "Die Einstellungsseite öffnet sich sofort. Lege fest, was zählt und was dich benachrichtigt."
+        ]
+      ],
+      "made": "Erstellt von tasict. Veröffentlicht unter der GPL-3.0-Lizenz.",
+      "coffee": "Wenn es dir hilft, freue ich mich, wenn du mir einen Kaffee spendierst.",
+      "paypal": "Spendier mir einen Kaffee über PayPal",
+      "privacy": "Datenschutzerklärung",
+      "issues": "Problem melden",
+      "tm": "Gmail ist eine Marke von Google LLC. Diese Erweiterung steht in keiner Verbindung zu Google und wird nicht von Google unterstützt.",
+      "loading": "Datenschutzerklärung wird geladen…",
+      "load_error": "Die Datenschutzerklärung konnte hier nicht geladen werden. Lies sie auf GitHub.",
+      "policy_note": "Die Datenschutzerklärung gibt es nur auf Englisch und traditionellem Chinesisch. Unten steht die englische Fassung."
+    }
+  },
+  "samples": {
+    "en": [
+      [
+        "Maya Chen",
+        "Weekend hike: still on for Saturday?"
+      ],
+      [
+        "City Library",
+        "Your hold is ready for pickup"
+      ],
+      [
+        "Ben Ortiz",
+        "Photos from the reunion"
+      ]
+    ],
+    "zh-TW": [
+      [
+        "陳美雅",
+        "週六登山還去嗎？"
+      ],
+      [
+        "市立圖書館",
+        "您預約的書已可取書"
+      ],
+      [
+        "林柏宇",
+        "同學會的照片"
+      ]
+    ],
+    "zh-CN": [
+      [
+        "陈美雅",
+        "周六爬山还去吗？"
+      ],
+      [
+        "市图书馆",
+        "您预约的书已可领取"
+      ],
+      [
+        "林柏宇",
+        "同学会的照片"
+      ]
+    ],
+    "ja": [
+      [
+        "佐藤 美咲",
+        "土曜日のハイキング、予定どおり？"
+      ],
+      [
+        "市立図書館",
+        "予約の本がご用意できました"
+      ],
+      [
+        "高橋 健",
+        "同窓会の写真"
+      ]
+    ],
+    "ko": [
+      [
+        "김민지",
+        "토요일 등산 그대로 가는 거지?"
+      ],
+      [
+        "시립도서관",
+        "예약하신 도서가 도착했습니다"
+      ],
+      [
+        "박준호",
+        "동창회 사진"
+      ]
+    ],
+    "es": [
+      [
+        "Lucía Romero",
+        "¿Sigue en pie la excursión del sábado?"
+      ],
+      [
+        "Biblioteca Municipal",
+        "Tu reserva ya está disponible"
+      ],
+      [
+        "Diego Martín",
+        "Fotos del reencuentro"
+      ]
+    ],
+    "fr": [
+      [
+        "Camille Durand",
+        "La rando de samedi, toujours partante ?"
+      ],
+      [
+        "Médiathèque",
+        "Votre réservation est disponible"
+      ],
+      [
+        "Hugo Lefèvre",
+        "Les photos des retrouvailles"
+      ]
+    ],
+    "de": [
+      [
+        "Lena Wagner",
+        "Wanderung am Samstag, bleibt es dabei?"
+      ],
+      [
+        "Stadtbibliothek",
+        "Ihre Vormerkung liegt bereit"
+      ],
+      [
+        "Jonas Becker",
+        "Fotos vom Klassentreffen"
+      ]
+    ]
+  }
+}

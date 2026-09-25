@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pigeon Post for Gmail：在 Chrome 中显示 Gmail 未读数与通知</title>
+<meta name="description" content="通过浏览器已登录的 Gmail 检查新邮件。由你决定哪些文件夹要通知、哪些只计数。">
+<link rel="canonical" href="https://tasict.github.io/pigeon-post-for-gmail/zh-CN/">
+<link rel="alternate" hreflang="en" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<link rel="alternate" hreflang="zh-TW" href="https://tasict.github.io/pigeon-post-for-gmail/zh-TW/">
+<link rel="alternate" hreflang="zh-CN" href="https://tasict.github.io/pigeon-post-for-gmail/zh-CN/">
+<link rel="alternate" hreflang="ja" href="https://tasict.github.io/pigeon-post-for-gmail/ja/">
+<link rel="alternate" hreflang="ko" href="https://tasict.github.io/pigeon-post-for-gmail/ko/">
+<link rel="alternate" hreflang="es" href="https://tasict.github.io/pigeon-post-for-gmail/es/">
+<link rel="alternate" hreflang="fr" href="https://tasict.github.io/pigeon-post-for-gmail/fr/">
+<link rel="alternate" hreflang="de" href="https://tasict.github.io/pigeon-post-for-gmail/de/">
+<link rel="alternate" hreflang="x-default" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pigeon Post for Gmail：在 Chrome 中显示 Gmail 未读数与通知">
+<meta property="og:description" content="通过浏览器已登录的 Gmail 检查新邮件。由你决定哪些文件夹要通知、哪些只计数。">
+<meta property="og:url" content="https://tasict.github.io/pigeon-post-for-gmail/zh-CN/">
+<meta property="og:image" content="https://tasict.github.io/pigeon-post-for-gmail/assets/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f5f9">
+<link rel="icon" href="../assets/icon32.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon128.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <a class="wordmark" href="./"><img src="../assets/icon128.png" alt="" width="30" height="30">Pigeon Post</a>
+  <a href="https://github.com/tasict/pigeon-post-for-gmail">源代码</a>
+  <details class="lang">
+    <summary aria-label="语言"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></svg>简体中文</summary>
+    <ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="../zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN" aria-current="page">简体中文</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+  </details>
+</header>
+
+<main>
+<div class="wrap">
+  <section class="envelope" aria-labelledby="hero-title">
+    <div class="letter">
+      <div class="hero-copy">
+        <h1 id="hero-title">新邮件，一眼看到。</h1>
+        <p class="lede">工具栏显示未读数，并为你在 Chrome 中已登录的每个 Gmail 账号弹出桌面通知。无需另外登录、无需 OAuth、没有服务器。</p>
+        <div class="actions">
+          <a class="btn" data-store hidden><img src="../assets/icon128.png" alt="" width="22" height="22">添加至 Chrome</a>
+          <span class="soon" data-store-soon>即将在 Chrome 应用商店上架。</span>
+          <a href="https://github.com/tasict/pigeon-post-for-gmail">在 GitHub 查看</a>
+        </div>
+        <p class="fine">免费、开源，支持 8 种语言。</p>
+      </div>
+      <figure class="hero-shot"><img src="../assets/popup-zh_CN.png" width="390" height="560" alt="Pigeon Post 的弹出窗口，列出“个人”和“工作”两个邮箱的未读邮件。"></figure>
+      <div class="stamp" data-badge aria-hidden="true"><div><img src="../assets/icon128.png" alt=""><b>4</b></div></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-demo">
+    <div class="intro">
+      <h2 id="h-demo">哪些邮件重要，由你决定</h2>
+      <p>每个收件箱、分类标签页、已加星标、重要邮件或任何标签，都可以设为三种级别之一。在这里试试：图标和通知会随你的选择变化，就像设置页上的实时预览。</p>
+    </div>
+    <div class="demo" data-demo data-t-badge="图标显示 {n}：设为“计数”或“通知”的文件夹中的未读邮件。" data-t-badge-none="没有任何文件夹计数，图标不显示数字。"
+      data-t-note="{folders}有新邮件时，会弹出这样的通知。" data-t-note-none="没有文件夹设为“通知”，所以不会弹出通知。" data-t-context="个人｜{folder}" data-sep="、">
+      <div>
+        <div class="folders">
+          <div class="folder" data-folder="inbox" data-level="notify" data-n="3" data-name="收件箱" data-from="陈美雅" data-subject="周六爬山还去吗？"><div class="folder-name"><strong>收件箱</strong><small>收件箱中的未读邮件</small></div><span class="n">3</span><fieldset class="seg"><legend>收件箱</legend><label><input type="radio" name="lv-inbox" value="off"><span>关</span></label><label><input type="radio" name="lv-inbox" value="count"><span>计数</span></label><label><input type="radio" name="lv-inbox" value="notify" checked><span>通知</span></label></fieldset></div><div class="folder" data-folder="starred" data-level="count" data-n="1" data-name="已加星标" data-from="市图书馆" data-subject="您预约的书已可领取"><div class="folder-name"><strong>已加星标</strong><small>已加星标的未读邮件</small></div><span class="n">1</span><fieldset class="seg"><legend>已加星标</legend><label><input type="radio" name="lv-starred" value="off"><span>关</span></label><label><input type="radio" name="lv-starred" value="count" checked><span>计数</span></label><label><input type="radio" name="lv-starred" value="notify"><span>通知</span></label></fieldset></div><div class="folder" data-folder="label" data-level="off" data-n="2" data-name="家人" data-from="林柏宇" data-subject="同学会的照片"><div class="folder-name"><strong>家人</strong><small>你的标签</small></div><span class="n">2</span><fieldset class="seg"><legend>家人</legend><label><input type="radio" name="lv-label" value="off" checked><span>关</span></label><label><input type="radio" name="lv-label" value="count"><span>计数</span></label><label><input type="radio" name="lv-label" value="notify"><span>通知</span></label></fieldset></div>
+        </div>
+        <ul class="legend">
+          <li><b>关</b>不检查</li><li><b>计数</b>计入工具栏图标上的未读数</li><li><b>通知</b>计数，并弹出桌面通知</li>
+        </ul>
+      </div>
+      <div class="preview" aria-live="polite">
+        <h3>效果预览</h3>
+        <div class="toolbar" aria-hidden="true"><i></i><i></i><i></i><span></span><span class="tb" data-badge><img src="../assets/toolbar-badge32.png" alt=""><b>4</b></span></div>
+        <p class="caption" data-badge-caption></p>
+        <div class="note" aria-hidden="true">
+          <img src="../assets/icon128.png" alt="">
+          <strong>陈美雅</strong>
+          <span class="subject">周六爬山还去吗？</span>
+          <small>个人｜收件箱</small>
+          <span class="act">标为已读</span>
+        </div>
+        <p class="caption" data-note-caption></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-acct">
+    <div class="split">
+      <div class="shot"><img src="../assets/popup-zh_CN.png" width="390" height="560" alt="Pigeon Post 的弹出窗口，列出“个人”和“工作”两个邮箱的未读邮件。" loading="lazy"></div>
+      <div>
+        <div class="intro"><h2 id="h-acct">多个邮箱，一眼分清</h2><p>你在 Chrome 中登录的每个 Gmail 账号都会被自动检测到，并在列表中各占一栏。</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>每个邮箱都有自己的名称、颜色和提示音</h3><p>一眼就能分清是哪个邮箱，听提示音也能分辨。</p></li><li><h3>显示总数，或各邮箱分开显示</h3><p>图标可以显示 15，也可以显示 3/12，分别查看每个邮箱。</p></li><li><h3>从列表中选择标签</h3><p>标签直接从 Gmail 读取，无需手动输入名称。</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-act">
+    <div class="split">
+      <div>
+        <div class="intro"><h2 id="h-act">不打开 Gmail 也能处理</h2><p>无论你在 Chrome 的哪个页面，都能直接处理新邮件。</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>在通知上标为已读</h3><p>在通知上点一下，Gmail 中的这封邮件也会变为已读。</p></li><li><h3>一键清空整个邮箱</h3><p>确认一次，就把邮箱中的所有未读邮件标为已读。</p></li><li><h3>打开正确的邮件</h3><p>点击邮件会在对应的 Gmail 账号中打开，并沿用已打开的 Gmail 标签页。</p></li></ul>
+      </div>
+      <div class="notes" aria-hidden="true">
+        <div class="note"><img src="../assets/icon128.png" alt=""><strong>王佩琪</strong><span class="subject">产品规划会议改到周四</span><small>工作｜主要</small><span class="act">标为已读</span></div>
+        <div class="note"><img src="../assets/icon128.png" alt=""><strong>陈美雅</strong><span class="subject">周六爬山还去吗？</span><small>个人｜收件箱</small><span class="act">标为已读</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-priv">
+    <div class="intro"><h2 id="h-priv">注重隐私</h2><p>Pigeon Post 直接使用你在 Chrome 中已登录的 Gmail，无需注册账号，也无需另外登录。</p></div>
+    <div class="facts"><div><h3>只连接 mail.google.com</h3><p>没有服务器、没有统计分析、没有广告、没有跟踪。任何数据都不会发送给开发者。</p></div><div><h3>邮件只保存在内存中</h3><p>未读邮件的发件人、主题和摘要只保存在内存中，关闭 Chrome 即清除。</p></div><div><h3>只读取需要的数据</h3><p>只读取 Gmail 的未读邮件摘要，不读取完整正文；除了你要求的标为已读，不做任何更改。</p></div><div><h3>开源</h3><p>所有代码都以 GPL-3.0 许可证公开在 GitHub 上，做了什么都可以自己检查。</p></div></div>
+    <p><a href="privacy.html">阅读完整的隐私政策</a></p>
+  </section>
+
+  <section class="band" aria-labelledby="h-start">
+    <h2 id="h-start">一分钟开始使用</h2>
+    <ol class="steps"><li><h3>添加至 Chrome</h3><p>从 Chrome 应用商店安装 Pigeon Post。</p></li><li><h3>保持登录 Gmail</h3><p>你在 Chrome 中登录的每个 Gmail 账号都会被自动找到。</p></li><li><h3>选择重要的邮件</h3><p>设置页会立即打开，选好哪些计数、哪些通知。</p></li></ol>
+    <div class="actions">
+      <a class="btn" data-store hidden><img src="../assets/icon128.png" alt="" width="22" height="22">添加至 Chrome</a>
+      <span class="soon" data-store-soon>即将在 Chrome 应用商店上架。</span>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p>由 tasict 制作，以 GPL-3.0 许可证发布。 如果你觉得好用，希望你能请我喝杯咖啡。</p>
+        <ul>
+          <li><a href="https://paypal.me/tasict">用 PayPal 请我喝咖啡</a></li>
+          <li><a href="privacy.html">隐私政策</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail">源代码</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail/issues">报告问题</a></li>
+        </ul>
+      </div>
+      <ul class="langs"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="../zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN" aria-current="page">简体中文</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+    </div>
+    <p class="tm">Gmail 是 Google LLC 的商标。本扩展程序与 Google 无关，也未获得 Google 认可。</p>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

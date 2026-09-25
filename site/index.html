@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pigeon Post for Gmail: unread counts and notifications in Chrome</title>
+<meta name="description" content="Checks for new mail in the Gmail accounts you&#x27;re signed in to in Chrome. You choose which folders notify you and which only count.">
+<link rel="canonical" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<link rel="alternate" hreflang="en" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<link rel="alternate" hreflang="zh-TW" href="https://tasict.github.io/pigeon-post-for-gmail/zh-TW/">
+<link rel="alternate" hreflang="zh-CN" href="https://tasict.github.io/pigeon-post-for-gmail/zh-CN/">
+<link rel="alternate" hreflang="ja" href="https://tasict.github.io/pigeon-post-for-gmail/ja/">
+<link rel="alternate" hreflang="ko" href="https://tasict.github.io/pigeon-post-for-gmail/ko/">
+<link rel="alternate" hreflang="es" href="https://tasict.github.io/pigeon-post-for-gmail/es/">
+<link rel="alternate" hreflang="fr" href="https://tasict.github.io/pigeon-post-for-gmail/fr/">
+<link rel="alternate" hreflang="de" href="https://tasict.github.io/pigeon-post-for-gmail/de/">
+<link rel="alternate" hreflang="x-default" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pigeon Post for Gmail: unread counts and notifications in Chrome">
+<meta property="og:description" content="Checks for new mail in the Gmail accounts you&#x27;re signed in to in Chrome. You choose which folders notify you and which only count.">
+<meta property="og:url" content="https://tasict.github.io/pigeon-post-for-gmail/">
+<meta property="og:image" content="https://tasict.github.io/pigeon-post-for-gmail/assets/og.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f5f9">
+<link rel="icon" href="assets/icon32.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon128.png">
+<link rel="stylesheet" href="assets/site.css">
+<script>
+try {
+  if (!localStorage.getItem('lang')) {
+    const pick = tag => {
+      const t = tag.toLowerCase();
+      if (/^zh-(tw|hk|mo)|^zh-hant/.test(t)) return 'zh-TW';
+      if (t.startsWith('zh')) return 'zh-CN';
+      return ['ja', 'ko', 'es', 'fr', 'de', 'en'].find(l => t.startsWith(l));
+    };
+    const lang = (navigator.languages || [navigator.language]).map(pick).find(Boolean);
+    if (lang && lang !== 'en') location.replace(lang + '/' + location.search + location.hash);
+  }
+} catch { /* storage blocked: stay on English */ }
+</script></head>
+<body>
+<header class="wrap masthead">
+  <a class="wordmark" href="./"><img src="assets/icon128.png" alt="" width="30" height="30">Pigeon Post</a>
+  <a href="https://github.com/tasict/pigeon-post-for-gmail">Source code</a>
+  <details class="lang">
+    <summary aria-label="Language"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></svg>English</summary>
+    <ul><li><a href="" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN">简体中文</a></li><li><a href="ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="es/" hreflang="es" lang="es">Español</a></li><li><a href="fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+  </details>
+</header>
+
+<main>
+<div class="wrap">
+  <section class="envelope" aria-labelledby="hero-title">
+    <div class="letter">
+      <div class="hero-copy">
+        <h1 id="hero-title">New mail, at a glance.</h1>
+        <p class="lede">Unread counts on the toolbar and desktop notifications for every Gmail account you&#x27;re signed in to in Chrome. No extra login, no OAuth, no server.</p>
+        <div class="actions">
+          <a class="btn" data-store hidden><img src="assets/icon128.png" alt="" width="22" height="22">Add to Chrome</a>
+          <span class="soon" data-store-soon>Coming soon to the Chrome Web Store.</span>
+          <a href="https://github.com/tasict/pigeon-post-for-gmail">View on GitHub</a>
+        </div>
+        <p class="fine">Free and open source. Available in 8 languages.</p>
+      </div>
+      <figure class="hero-shot"><img src="assets/popup-en.png" width="390" height="560" alt="The Pigeon Post popup listing unread mail from two mailboxes, Personal and Work."></figure>
+      <div class="stamp" data-badge aria-hidden="true"><div><img src="assets/icon128.png" alt=""><b>4</b></div></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-demo">
+    <div class="intro">
+      <h2 id="h-demo">You decide what matters</h2>
+      <p>Set each inbox, inbox tab, Starred, Important or any of your labels to one of three levels. Try it here: the icon and the notification follow your choices, just like the live preview on the settings page.</p>
+    </div>
+    <div class="demo" data-demo data-t-badge="The icon shows {n}: unread mail in folders set to Count or Notify." data-t-badge-none="Nothing is counted, so the icon shows no number."
+      data-t-note="New mail in {folders} brings up a notification like this." data-t-note-none="No folder is set to Notify, so no notifications appear." data-t-context="Personal | {folder}" data-sep=", ">
+      <div>
+        <div class="folders">
+          <div class="folder" data-folder="inbox" data-level="notify" data-n="3" data-name="Inbox" data-from="Maya Chen" data-subject="Weekend hike: still on for Saturday?"><div class="folder-name"><strong>Inbox</strong><small>Unread mail in your inbox</small></div><span class="n">3</span><fieldset class="seg"><legend>Inbox</legend><label><input type="radio" name="lv-inbox" value="off"><span>Off</span></label><label><input type="radio" name="lv-inbox" value="count"><span>Count</span></label><label><input type="radio" name="lv-inbox" value="notify" checked><span>Notify</span></label></fieldset></div><div class="folder" data-folder="starred" data-level="count" data-n="1" data-name="Starred" data-from="City Library" data-subject="Your hold is ready for pickup"><div class="folder-name"><strong>Starred</strong><small>Starred mail that&#x27;s unread</small></div><span class="n">1</span><fieldset class="seg"><legend>Starred</legend><label><input type="radio" name="lv-starred" value="off"><span>Off</span></label><label><input type="radio" name="lv-starred" value="count" checked><span>Count</span></label><label><input type="radio" name="lv-starred" value="notify"><span>Notify</span></label></fieldset></div><div class="folder" data-folder="label" data-level="off" data-n="2" data-name="Family" data-from="Ben Ortiz" data-subject="Photos from the reunion"><div class="folder-name"><strong>Family</strong><small>One of your labels</small></div><span class="n">2</span><fieldset class="seg"><legend>Family</legend><label><input type="radio" name="lv-label" value="off" checked><span>Off</span></label><label><input type="radio" name="lv-label" value="count"><span>Count</span></label><label><input type="radio" name="lv-label" value="notify"><span>Notify</span></label></fieldset></div>
+        </div>
+        <ul class="legend">
+          <li><b>Off</b>Not checked</li><li><b>Count</b>Added to the unread count on the toolbar icon</li><li><b>Notify</b>Counted, plus a desktop notification</li>
+        </ul>
+      </div>
+      <div class="preview" aria-live="polite">
+        <h3>What you&#x27;ll see</h3>
+        <div class="toolbar" aria-hidden="true"><i></i><i></i><i></i><span></span><span class="tb" data-badge><img src="assets/toolbar-badge32.png" alt=""><b>4</b></span></div>
+        <p class="caption" data-badge-caption></p>
+        <div class="note" aria-hidden="true">
+          <img src="assets/icon128.png" alt="">
+          <strong>Maya Chen</strong>
+          <span class="subject">Weekend hike: still on for Saturday?</span>
+          <small>Personal | Inbox</small>
+          <span class="act">Mark as read</span>
+        </div>
+        <p class="caption" data-note-caption></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-acct">
+    <div class="split">
+      <div class="shot"><img src="assets/popup-en.png" width="390" height="560" alt="The Pigeon Post popup listing unread mail from two mailboxes, Personal and Work." loading="lazy"></div>
+      <div>
+        <div class="intro"><h2 id="h-acct">Several mailboxes, clearly apart</h2><p>Every Gmail account you&#x27;re signed in to in Chrome is found automatically and gets its own section in the list.</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>A name, a color and a sound for each</h3><p>Tell mailboxes apart at a glance, and by ear when a notification arrives.</p></li><li><h3>One total, or one number per mailbox</h3><p>Show 15 on the icon, or 3/12 to see each mailbox separately.</p></li><li><h3>Your labels, picked from a list</h3><p>Labels are read from Gmail itself, so you never have to type a label name.</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-act">
+    <div class="split">
+      <div>
+        <div class="intro"><h2 id="h-act">Act without opening Gmail</h2><p>Deal with new mail from wherever you are in Chrome.</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>Mark as read from the notification</h3><p>One click on the notification, and the message is marked as read in Gmail too.</p></li><li><h3>Clear a whole mailbox</h3><p>Mark every unread message in a mailbox as read in one step, after a quick confirmation.</p></li><li><h3>Open the right message</h3><p>Clicking a message opens it in the right Gmail account, reusing an open Gmail tab.</p></li></ul>
+      </div>
+      <div class="notes" aria-hidden="true">
+        <div class="note"><img src="assets/icon128.png" alt=""><strong>Priya Nair</strong><span class="subject">Roadmap review moved to Thursday</span><small>Work | Primary</small><span class="act">Mark as read</span></div>
+        <div class="note"><img src="assets/icon128.png" alt=""><strong>Maya Chen</strong><span class="subject">Weekend hike: still on for Saturday?</span><small>Personal | Inbox</small><span class="act">Mark as read</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-priv">
+    <div class="intro"><h2 id="h-priv">Private by design</h2><p>Pigeon Post uses the Gmail session you already have in Chrome. There&#x27;s no account to create and nothing extra to sign in to.</p></div>
+    <div class="facts"><div><h3>Talks only to mail.google.com</h3><p>No server, no analytics, no ads and no tracking. Nothing is ever sent to the developer.</p></div><div><h3>Mail stays in memory</h3><p>Senders, subjects and snippets of unread mail are kept in memory only and cleared when Chrome closes.</p></div><div><h3>Reads only what it needs</h3><p>It reads Gmail&#x27;s unread-mail feed, never full messages, and changes nothing except marking mail as read when you ask.</p></div><div><h3>Open source</h3><p>Every line is on GitHub under the GPL-3.0 license, so you can check exactly what it does.</p></div></div>
+    <p><a href="privacy.html">Read the full privacy policy</a></p>
+  </section>
+
+  <section class="band" aria-labelledby="h-start">
+    <h2 id="h-start">Get started in a minute</h2>
+    <ol class="steps"><li><h3>Add it to Chrome</h3><p>Install Pigeon Post from the Chrome Web Store.</p></li><li><h3>Stay signed in to Gmail</h3><p>Every Gmail account you&#x27;re signed in to in Chrome is found on its own.</p></li><li><h3>Choose what matters</h3><p>The settings page opens right away. Pick what counts and what notifies you.</p></li></ol>
+    <div class="actions">
+      <a class="btn" data-store hidden><img src="assets/icon128.png" alt="" width="22" height="22">Add to Chrome</a>
+      <span class="soon" data-store-soon>Coming soon to the Chrome Web Store.</span>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p>Made by tasict. Released under the GPL-3.0 license. If you find it useful, I&#x27;d love it if you bought me a coffee.</p>
+        <ul>
+          <li><a href="https://paypal.me/tasict">Buy me a coffee on PayPal</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail">Source code</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail/issues">Report a problem</a></li>
+        </ul>
+      </div>
+      <ul class="langs"><li><a href="" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN">简体中文</a></li><li><a href="ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="es/" hreflang="es" lang="es">Español</a></li><li><a href="fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+    </div>
+    <p class="tm">Gmail is a trademark of Google LLC. This extension is not affiliated with or endorsed by Google.</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

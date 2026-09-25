@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pigeon Post for Gmail：Chrome で Gmail の未読件数と通知</title>
+<meta name="description" content="Chrome でログインしている Gmail アカウントの新着メールをチェックします。通知するフォルダと件数だけ数えるフォルダを選べます。">
+<link rel="canonical" href="https://tasict.github.io/pigeon-post-for-gmail/ja/">
+<link rel="alternate" hreflang="en" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<link rel="alternate" hreflang="zh-TW" href="https://tasict.github.io/pigeon-post-for-gmail/zh-TW/">
+<link rel="alternate" hreflang="zh-CN" href="https://tasict.github.io/pigeon-post-for-gmail/zh-CN/">
+<link rel="alternate" hreflang="ja" href="https://tasict.github.io/pigeon-post-for-gmail/ja/">
+<link rel="alternate" hreflang="ko" href="https://tasict.github.io/pigeon-post-for-gmail/ko/">
+<link rel="alternate" hreflang="es" href="https://tasict.github.io/pigeon-post-for-gmail/es/">
+<link rel="alternate" hreflang="fr" href="https://tasict.github.io/pigeon-post-for-gmail/fr/">
+<link rel="alternate" hreflang="de" href="https://tasict.github.io/pigeon-post-for-gmail/de/">
+<link rel="alternate" hreflang="x-default" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pigeon Post for Gmail：Chrome で Gmail の未読件数と通知">
+<meta property="og:description" content="Chrome でログインしている Gmail アカウントの新着メールをチェックします。通知するフォルダと件数だけ数えるフォルダを選べます。">
+<meta property="og:url" content="https://tasict.github.io/pigeon-post-for-gmail/ja/">
+<meta property="og:image" content="https://tasict.github.io/pigeon-post-for-gmail/assets/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f5f9">
+<link rel="icon" href="../assets/icon32.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon128.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <a class="wordmark" href="./"><img src="../assets/icon128.png" alt="" width="30" height="30">Pigeon Post</a>
+  <a href="https://github.com/tasict/pigeon-post-for-gmail">ソースコード</a>
+  <details class="lang">
+    <summary aria-label="言語"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></svg>日本語</summary>
+    <ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="../zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN">简体中文</a></li><li><a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+  </details>
+</header>
+
+<main>
+<div class="wrap">
+  <section class="envelope" aria-labelledby="hero-title">
+    <div class="letter">
+      <div class="hero-copy">
+        <h1 id="hero-title">新着メールを、ひと目で。</h1>
+        <p class="lede">Chrome でログインしているすべての Gmail アカウントについて、ツールバーに未読件数を表示し、デスクトップ通知でお知らせします。追加のログインも OAuth もサーバーも不要です。</p>
+        <div class="actions">
+          <a class="btn" data-store hidden><img src="../assets/icon128.png" alt="" width="22" height="22">Chrome に追加</a>
+          <span class="soon" data-store-soon>Chrome ウェブストアで近日公開予定です。</span>
+          <a href="https://github.com/tasict/pigeon-post-for-gmail">GitHub で見る</a>
+        </div>
+        <p class="fine">無料のオープンソース。8 言語に対応しています。</p>
+      </div>
+      <figure class="hero-shot"><img src="../assets/popup-ja.png" width="390" height="560" alt="「個人」と「仕事」の 2 つのメールボックスの未読メールを一覧表示した Pigeon Post のポップアップ。"></figure>
+      <div class="stamp" data-badge aria-hidden="true"><div><img src="../assets/icon128.png" alt=""><b>4</b></div></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-demo">
+    <div class="intro">
+      <h2 id="h-demo">大事なメールは自分で決める</h2>
+      <p>受信トレイ、各タブ、スター付き、重要、そして任意のラベルを、3 つのレベルから選んで設定できます。ここで試してみてください。設定ページのライブプレビューと同じように、アイコンと通知が選択に合わせて変わります。</p>
+    </div>
+    <div class="demo" data-demo data-t-badge="アイコンに {n} と表示されます。「カウント」か「通知」にしたフォルダの未読メールの数です。" data-t-badge-none="カウントするフォルダがないため、アイコンに数字は表示されません。"
+      data-t-note="{folders}に新着メールが届くと、このような通知が表示されます。" data-t-note-none="「通知」にしたフォルダがないため、通知は表示されません。" data-t-context="個人 | {folder}" data-sep="、">
+      <div>
+        <div class="folders">
+          <div class="folder" data-folder="inbox" data-level="notify" data-n="3" data-name="受信トレイ" data-from="佐藤 美咲" data-subject="土曜日のハイキング、予定どおり？"><div class="folder-name"><strong>受信トレイ</strong><small>受信トレイの未読メール</small></div><span class="n">3</span><fieldset class="seg"><legend>受信トレイ</legend><label><input type="radio" name="lv-inbox" value="off"><span>オフ</span></label><label><input type="radio" name="lv-inbox" value="count"><span>カウント</span></label><label><input type="radio" name="lv-inbox" value="notify" checked><span>通知</span></label></fieldset></div><div class="folder" data-folder="starred" data-level="count" data-n="1" data-name="スター付き" data-from="市立図書館" data-subject="予約の本がご用意できました"><div class="folder-name"><strong>スター付き</strong><small>スター付きの未読メール</small></div><span class="n">1</span><fieldset class="seg"><legend>スター付き</legend><label><input type="radio" name="lv-starred" value="off"><span>オフ</span></label><label><input type="radio" name="lv-starred" value="count" checked><span>カウント</span></label><label><input type="radio" name="lv-starred" value="notify"><span>通知</span></label></fieldset></div><div class="folder" data-folder="label" data-level="off" data-n="2" data-name="家族" data-from="高橋 健" data-subject="同窓会の写真"><div class="folder-name"><strong>家族</strong><small>あなたのラベル</small></div><span class="n">2</span><fieldset class="seg"><legend>家族</legend><label><input type="radio" name="lv-label" value="off" checked><span>オフ</span></label><label><input type="radio" name="lv-label" value="count"><span>カウント</span></label><label><input type="radio" name="lv-label" value="notify"><span>通知</span></label></fieldset></div>
+        </div>
+        <ul class="legend">
+          <li><b>オフ</b>チェックしない</li><li><b>カウント</b>ツールバー アイコンの未読件数に含める</li><li><b>通知</b>カウントし、デスクトップ通知も表示する</li>
+        </ul>
+      </div>
+      <div class="preview" aria-live="polite">
+        <h3>表示の例</h3>
+        <div class="toolbar" aria-hidden="true"><i></i><i></i><i></i><span></span><span class="tb" data-badge><img src="../assets/toolbar-badge32.png" alt=""><b>4</b></span></div>
+        <p class="caption" data-badge-caption></p>
+        <div class="note" aria-hidden="true">
+          <img src="../assets/icon128.png" alt="">
+          <strong>佐藤 美咲</strong>
+          <span class="subject">土曜日のハイキング、予定どおり？</span>
+          <small>個人 | 受信トレイ</small>
+          <span class="act">既読にする</span>
+        </div>
+        <p class="caption" data-note-caption></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-acct">
+    <div class="split">
+      <div class="shot"><img src="../assets/popup-ja.png" width="390" height="560" alt="「個人」と「仕事」の 2 つのメールボックスの未読メールを一覧表示した Pigeon Post のポップアップ。" loading="lazy"></div>
+      <div>
+        <div class="intro"><h2 id="h-acct">複数のメールボックスも、はっきり区別</h2><p>Chrome でログインしている Gmail アカウントは自動で見つかり、一覧でそれぞれに分かれて表示されます。</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>それぞれに名前・色・通知音</h3><p>ひと目で、そして通知音でもどのメールボックスか分かります。</p></li><li><h3>合計でも、メールボックスごとでも</h3><p>アイコンに 15 と表示することも、3/12 のように分けて表示することもできます。</p></li><li><h3>ラベルは一覧から選ぶだけ</h3><p>ラベルは Gmail から読み込むので、名前を入力する必要はありません。</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-act">
+    <div class="split">
+      <div>
+        <div class="intro"><h2 id="h-act">Gmail を開かずに処理</h2><p>Chrome のどのページにいても、新着メールをその場で処理できます。</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>通知から既読にする</h3><p>通知をワンクリックするだけで、Gmail 側でも既読になります。</p></li><li><h3>メールボックスをまとめて既読に</h3><p>一度確認するだけで、メールボックスの未読メールをすべて既読にできます。</p></li><li><h3>正しいメールを開く</h3><p>メールをクリックすると対応する Gmail アカウントで開き、開いている Gmail タブを再利用します。</p></li></ul>
+      </div>
+      <div class="notes" aria-hidden="true">
+        <div class="note"><img src="../assets/icon128.png" alt=""><strong>山本 彩</strong><span class="subject">ロードマップ会議は木曜日に変更</span><small>仕事 | メイン</small><span class="act">既読にする</span></div>
+        <div class="note"><img src="../assets/icon128.png" alt=""><strong>佐藤 美咲</strong><span class="subject">土曜日のハイキング、予定どおり？</span><small>個人 | 受信トレイ</small><span class="act">既読にする</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-priv">
+    <div class="intro"><h2 id="h-priv">プライバシーを第一に</h2><p>Pigeon Post は Chrome でログイン済みの Gmail をそのまま使います。アカウント登録も追加のログインも必要ありません。</p></div>
+    <div class="facts"><div><h3>通信先は mail.google.com だけ</h3><p>サーバーも、アクセス解析も、広告も、トラッキングもありません。開発者には何も送信されません。</p></div><div><h3>メールはメモリ上だけに</h3><p>未読メールの差出人・件名・スニペットはメモリ上にのみ保持され、Chrome を閉じると消去されます。</p></div><div><h3>必要なものだけを読む</h3><p>Gmail の未読メールフィードだけを読み、本文全体は読みません。依頼された既読処理以外は何も変更しません。</p></div><div><h3>オープンソース</h3><p>すべてのコードを GPL-3.0 ライセンスで GitHub に公開しているので、何をしているか自分で確認できます。</p></div></div>
+    <p><a href="privacy.html">プライバシーポリシーを読む</a></p>
+  </section>
+
+  <section class="band" aria-labelledby="h-start">
+    <h2 id="h-start">1 分ではじめられます</h2>
+    <ol class="steps"><li><h3>Chrome に追加</h3><p>Chrome ウェブストアから Pigeon Post をインストールします。</p></li><li><h3>Gmail にログインしたまま</h3><p>Chrome でログインしている Gmail アカウントは自動で見つかります。</p></li><li><h3>大事なものを選ぶ</h3><p>すぐに設定ページが開きます。カウントするものと通知するものを選びましょう。</p></li></ol>
+    <div class="actions">
+      <a class="btn" data-store hidden><img src="../assets/icon128.png" alt="" width="22" height="22">Chrome に追加</a>
+      <span class="soon" data-store-soon>Chrome ウェブストアで近日公開予定です。</span>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p>作者 tasict。GPL-3.0 ライセンスで公開しています。 気に入っていただけたら、コーヒー 1 杯分の支援をいただけるとうれしいです。</p>
+        <ul>
+          <li><a href="https://paypal.me/tasict">PayPal でコーヒーをおごる</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail">ソースコード</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail/issues">問題を報告</a></li>
+        </ul>
+      </div>
+      <ul class="langs"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="../zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN">简体中文</a></li><li><a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+    </div>
+    <p class="tm">Gmail は Google LLC の商標です。この拡張機能は Google とは関係がなく、Google の承認を受けたものではありません。</p>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

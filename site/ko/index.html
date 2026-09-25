@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pigeon Post for Gmail: Chrome에서 Gmail 읽지 않은 메일 수와 알림</title>
+<meta name="description" content="Chrome에 로그인된 Gmail 계정의 새 메일을 확인합니다. 알림을 받을 폴더와 개수만 셀 폴더를 직접 선택할 수 있습니다.">
+<link rel="canonical" href="https://tasict.github.io/pigeon-post-for-gmail/ko/">
+<link rel="alternate" hreflang="en" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<link rel="alternate" hreflang="zh-TW" href="https://tasict.github.io/pigeon-post-for-gmail/zh-TW/">
+<link rel="alternate" hreflang="zh-CN" href="https://tasict.github.io/pigeon-post-for-gmail/zh-CN/">
+<link rel="alternate" hreflang="ja" href="https://tasict.github.io/pigeon-post-for-gmail/ja/">
+<link rel="alternate" hreflang="ko" href="https://tasict.github.io/pigeon-post-for-gmail/ko/">
+<link rel="alternate" hreflang="es" href="https://tasict.github.io/pigeon-post-for-gmail/es/">
+<link rel="alternate" hreflang="fr" href="https://tasict.github.io/pigeon-post-for-gmail/fr/">
+<link rel="alternate" hreflang="de" href="https://tasict.github.io/pigeon-post-for-gmail/de/">
+<link rel="alternate" hreflang="x-default" href="https://tasict.github.io/pigeon-post-for-gmail/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pigeon Post for Gmail: Chrome에서 Gmail 읽지 않은 메일 수와 알림">
+<meta property="og:description" content="Chrome에 로그인된 Gmail 계정의 새 메일을 확인합니다. 알림을 받을 폴더와 개수만 셀 폴더를 직접 선택할 수 있습니다.">
+<meta property="og:url" content="https://tasict.github.io/pigeon-post-for-gmail/ko/">
+<meta property="og:image" content="https://tasict.github.io/pigeon-post-for-gmail/assets/og.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f5f9">
+<link rel="icon" href="../assets/icon32.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon128.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="wrap masthead">
+  <a class="wordmark" href="./"><img src="../assets/icon128.png" alt="" width="30" height="30">Pigeon Post</a>
+  <a href="https://github.com/tasict/pigeon-post-for-gmail">소스 코드</a>
+  <details class="lang">
+    <summary aria-label="언어"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></svg>한국어</summary>
+    <ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="../zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN">简体中文</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" aria-current="page">한국어</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+  </details>
+</header>
+
+<main>
+<div class="wrap">
+  <section class="envelope" aria-labelledby="hero-title">
+    <div class="letter">
+      <div class="hero-copy">
+        <h1 id="hero-title">새 메일을 한눈에.</h1>
+        <p class="lede">Chrome에 로그인된 모든 Gmail 계정의 읽지 않은 메일 수를 툴바에 표시하고 데스크톱 알림으로 알려 줍니다. 추가 로그인, OAuth, 서버가 필요 없습니다.</p>
+        <div class="actions">
+          <a class="btn" data-store hidden><img src="../assets/icon128.png" alt="" width="22" height="22">Chrome에 추가</a>
+          <span class="soon" data-store-soon>곧 Chrome 웹 스토어에 출시됩니다.</span>
+          <a href="https://github.com/tasict/pigeon-post-for-gmail">GitHub에서 보기</a>
+        </div>
+        <p class="fine">무료 오픈 소스이며 8개 언어를 지원합니다.</p>
+      </div>
+      <figure class="hero-shot"><img src="../assets/popup-ko.png" width="390" height="560" alt="개인과 업무 두 메일함의 읽지 않은 메일을 보여 주는 Pigeon Post 팝업."></figure>
+      <div class="stamp" data-badge aria-hidden="true"><div><img src="../assets/icon128.png" alt=""><b>4</b></div></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-demo">
+    <div class="intro">
+      <h2 id="h-demo">중요한 메일은 직접 정하세요</h2>
+      <p>받은편지함, 각 탭, 별표편지함, 중요, 그리고 원하는 라벨을 세 가지 단계 중 하나로 설정할 수 있습니다. 여기서 직접 해 보세요. 설정 페이지의 실시간 미리보기처럼 아이콘과 알림이 선택에 따라 바뀝니다.</p>
+    </div>
+    <div class="demo" data-demo data-t-badge="아이콘에 {n}이(가) 표시됩니다. 개수 또는 알림으로 설정한 폴더의 읽지 않은 메일 수입니다." data-t-badge-none="개수를 세는 폴더가 없어 아이콘에 숫자가 표시되지 않습니다."
+      data-t-note="{folders}에 새 메일이 오면 이런 알림이 표시됩니다." data-t-note-none="알림으로 설정한 폴더가 없어 알림이 표시되지 않습니다." data-t-context="개인 | {folder}" data-sep=", ">
+      <div>
+        <div class="folders">
+          <div class="folder" data-folder="inbox" data-level="notify" data-n="3" data-name="받은편지함" data-from="김민지" data-subject="토요일 등산 그대로 가는 거지?"><div class="folder-name"><strong>받은편지함</strong><small>받은편지함의 읽지 않은 메일</small></div><span class="n">3</span><fieldset class="seg"><legend>받은편지함</legend><label><input type="radio" name="lv-inbox" value="off"><span>끄기</span></label><label><input type="radio" name="lv-inbox" value="count"><span>개수</span></label><label><input type="radio" name="lv-inbox" value="notify" checked><span>알림</span></label></fieldset></div><div class="folder" data-folder="starred" data-level="count" data-n="1" data-name="별표편지함" data-from="시립도서관" data-subject="예약하신 도서가 도착했습니다"><div class="folder-name"><strong>별표편지함</strong><small>별표가 표시된 읽지 않은 메일</small></div><span class="n">1</span><fieldset class="seg"><legend>별표편지함</legend><label><input type="radio" name="lv-starred" value="off"><span>끄기</span></label><label><input type="radio" name="lv-starred" value="count" checked><span>개수</span></label><label><input type="radio" name="lv-starred" value="notify"><span>알림</span></label></fieldset></div><div class="folder" data-folder="label" data-level="off" data-n="2" data-name="가족" data-from="박준호" data-subject="동창회 사진"><div class="folder-name"><strong>가족</strong><small>내 라벨</small></div><span class="n">2</span><fieldset class="seg"><legend>가족</legend><label><input type="radio" name="lv-label" value="off" checked><span>끄기</span></label><label><input type="radio" name="lv-label" value="count"><span>개수</span></label><label><input type="radio" name="lv-label" value="notify"><span>알림</span></label></fieldset></div>
+        </div>
+        <ul class="legend">
+          <li><b>끄기</b>확인하지 않음</li><li><b>개수</b>툴바 아이콘의 읽지 않은 메일 수에 포함</li><li><b>알림</b>개수에 포함하고 데스크톱 알림도 표시</li>
+        </ul>
+      </div>
+      <div class="preview" aria-live="polite">
+        <h3>미리보기</h3>
+        <div class="toolbar" aria-hidden="true"><i></i><i></i><i></i><span></span><span class="tb" data-badge><img src="../assets/toolbar-badge32.png" alt=""><b>4</b></span></div>
+        <p class="caption" data-badge-caption></p>
+        <div class="note" aria-hidden="true">
+          <img src="../assets/icon128.png" alt="">
+          <strong>김민지</strong>
+          <span class="subject">토요일 등산 그대로 가는 거지?</span>
+          <small>개인 | 받은편지함</small>
+          <span class="act">읽음으로 표시</span>
+        </div>
+        <p class="caption" data-note-caption></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-acct">
+    <div class="split">
+      <div class="shot"><img src="../assets/popup-ko.png" width="390" height="560" alt="개인과 업무 두 메일함의 읽지 않은 메일을 보여 주는 Pigeon Post 팝업." loading="lazy"></div>
+      <div>
+        <div class="intro"><h2 id="h-acct">여러 메일함도 확실하게 구분</h2><p>Chrome에 로그인된 Gmail 계정을 자동으로 찾아 목록에서 각각 따로 보여 줍니다.</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>메일함마다 이름, 색상, 알림음</h3><p>한눈에, 그리고 알림음으로도 어느 메일함인지 알 수 있습니다.</p></li><li><h3>합계 또는 메일함별 숫자</h3><p>아이콘에 15를 표시하거나 3/12처럼 메일함별로 나눠 표시할 수 있습니다.</p></li><li><h3>라벨은 목록에서 선택</h3><p>라벨을 Gmail에서 직접 읽어 오므로 이름을 입력할 필요가 없습니다.</p></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-act">
+    <div class="split">
+      <div>
+        <div class="intro"><h2 id="h-act">Gmail을 열지 않고 처리</h2><p>Chrome 어디에 있든 새 메일을 바로 처리하세요.</p></div>
+        <ul class="points" style="margin-top:32px"><li><h3>알림에서 읽음으로 표시</h3><p>알림을 한 번 클릭하면 Gmail에서도 읽음으로 표시됩니다.</p></li><li><h3>메일함 한 번에 비우기</h3><p>한 번 확인하면 메일함의 읽지 않은 메일을 모두 읽음으로 표시합니다.</p></li><li><h3>정확한 메일 열기</h3><p>메일을 클릭하면 해당 Gmail 계정에서 열리며, 열려 있는 Gmail 탭을 다시 사용합니다.</p></li></ul>
+      </div>
+      <div class="notes" aria-hidden="true">
+        <div class="note"><img src="../assets/icon128.png" alt=""><strong>이서연</strong><span class="subject">로드맵 회의가 목요일로 변경됐습니다</span><small>업무 | 기본</small><span class="act">읽음으로 표시</span></div>
+        <div class="note"><img src="../assets/icon128.png" alt=""><strong>김민지</strong><span class="subject">토요일 등산 그대로 가는 거지?</span><small>개인 | 받은편지함</small><span class="act">읽음으로 표시</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="h-priv">
+    <div class="intro"><h2 id="h-priv">개인정보 보호를 우선으로</h2><p>Pigeon Post는 Chrome에 이미 로그인된 Gmail을 그대로 사용합니다. 계정을 만들거나 따로 로그인할 필요가 없습니다.</p></div>
+    <div class="facts"><div><h3>mail.google.com하고만 통신</h3><p>서버, 분석, 광고, 추적이 없습니다. 개발자에게 아무것도 전송되지 않습니다.</p></div><div><h3>메일은 메모리에만</h3><p>읽지 않은 메일의 보낸 사람, 제목, 미리보기는 메모리에만 보관되며 Chrome을 닫으면 지워집니다.</p></div><div><h3>필요한 것만 읽기</h3><p>Gmail의 읽지 않은 메일 피드만 읽고 본문 전체는 읽지 않습니다. 요청한 읽음 표시 외에는 아무것도 변경하지 않습니다.</p></div><div><h3>오픈 소스</h3><p>모든 코드가 GPL-3.0 라이선스로 GitHub에 공개되어 있어 무엇을 하는지 직접 확인할 수 있습니다.</p></div></div>
+    <p><a href="privacy.html">전체 개인정보처리방침 읽기</a></p>
+  </section>
+
+  <section class="band" aria-labelledby="h-start">
+    <h2 id="h-start">1분이면 시작할 수 있습니다</h2>
+    <ol class="steps"><li><h3>Chrome에 추가</h3><p>Chrome 웹 스토어에서 Pigeon Post를 설치합니다.</p></li><li><h3>Gmail 로그인 유지</h3><p>Chrome에 로그인된 Gmail 계정을 자동으로 찾습니다.</p></li><li><h3>중요한 것 선택</h3><p>설정 페이지가 바로 열립니다. 개수를 셀 것과 알림을 받을 것을 고르세요.</p></li></ol>
+    <div class="actions">
+      <a class="btn" data-store hidden><img src="../assets/icon128.png" alt="" width="22" height="22">Chrome에 추가</a>
+      <span class="soon" data-store-soon>곧 Chrome 웹 스토어에 출시됩니다.</span>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p>tasict가 만들었으며 GPL-3.0 라이선스로 배포합니다. 유용하셨다면 커피 한 잔 사 주시면 정말 기쁘겠습니다.</p>
+        <ul>
+          <li><a href="https://paypal.me/tasict">PayPal로 커피 사 주기</a></li>
+          <li><a href="privacy.html">개인정보처리방침</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail">소스 코드</a></li>
+          <li><a href="https://github.com/tasict/pigeon-post-for-gmail/issues">문제 신고</a></li>
+        </ul>
+      </div>
+      <ul class="langs"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../zh-TW/" hreflang="zh-TW" lang="zh-Hant-TW">繁體中文</a></li><li><a href="../zh-CN/" hreflang="zh-CN" lang="zh-Hans-CN">简体中文</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" aria-current="page">한국어</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+    </div>
+    <p class="tm">Gmail은 Google LLC의 상표입니다. 이 확장 프로그램은 Google과 관련이 없으며 Google의 보증을 받지 않았습니다.</p>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
