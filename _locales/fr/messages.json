@@ -1,0 +1,692 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "Vérifie les nouveaux e-mails de vos comptes Gmail dans Chrome. Vous choisissez les dossiers qui notifient et ceux qui sont comptés."
+  },
+  "langTag": {
+    "message": "fr"
+  },
+  "listSeparator": {
+    "message": ", "
+  },
+  "quoted": {
+    "message": "« $1 »"
+  },
+  "justNow": {
+    "message": "à l'instant"
+  },
+  "loading": {
+    "message": "Chargement…"
+  },
+  "checkNow": {
+    "message": "Vérifier maintenant"
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "stripLabel": {
+    "message": "Nombre de messages non lus par boîte. Cliquez sur une boîte pour l'ouvrir."
+  },
+  "markReadFailed": {
+    "message": "Impossible de marquer comme lu : $1"
+  },
+  "unknownError": {
+    "message": "Erreur inconnue"
+  },
+  "reauthOpen": {
+    "message": "Ouvrir Gmail pour valider à nouveau"
+  },
+  "markAllRead": {
+    "message": "Tout marquer comme lu"
+  },
+  "bulkTooMany_one": {
+    "message": "Il y a $1 message non lu, plus que ce qui peut être traité en une fois"
+  },
+  "bulkTooMany_other": {
+    "message": "Il y a $1 messages non lus, plus que ce qui peut être traité en une fois"
+  },
+  "bulkTooManyNote": {
+    "message": "Seuls les 20 messages les plus récents de chaque dossier peuvent être traités en une fois, et $1 en contient davantage. Ouvrir ces messages non lus dans Gmail pour les sélectionner et les traiter vous-même ?"
+  },
+  "openInGmail": {
+    "message": "Ouvrir dans Gmail"
+  },
+  "cancel": {
+    "message": "Annuler"
+  },
+  "bulkConfirm_one": {
+    "message": "Marquer $1 message non lu comme lu ?"
+  },
+  "bulkConfirm_other": {
+    "message": "Marquer les $1 messages non lus comme lus ?"
+  },
+  "bulkScope": {
+    "message": "Inclut : $1"
+  },
+  "bulkProgress": {
+    "message": "Marquage comme lu : $1 sur $2"
+  },
+  "bulkKeepsRunning": {
+    "message": "L'opération continue même si vous fermez cette fenêtre."
+  },
+  "bulkProgressLabel": {
+    "message": "Progression du marquage comme lu"
+  },
+  "close": {
+    "message": "Fermer"
+  },
+  "bulkFailed": {
+    "message": "Le marquage de tous les messages comme lus n'a pas abouti"
+  },
+  "bulkFailedPartial_one": {
+    "message": "$2. $1 message a été marqué comme lu."
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2. $1 messages ont été marqués comme lus."
+  },
+  "bulkLeft_one": {
+    "message": "Il reste $1 message non lu, peut-être tout juste arrivé. Vous pouvez réessayer."
+  },
+  "bulkLeft_other": {
+    "message": "Il reste $1 messages non lus, peut-être tout juste arrivés. Vous pouvez réessayer."
+  },
+  "bulkDone_one": {
+    "message": "$1 message marqué comme lu"
+  },
+  "bulkDone_other": {
+    "message": "$1 messages marqués comme lus"
+  },
+  "bulkNothing": {
+    "message": "Aucun message à marquer comme lu"
+  },
+  "openMessage": {
+    "message": "Ouvrir ce message"
+  },
+  "openMessageFrom": {
+    "message": "Ouvrir ce message ($1)"
+  },
+  "unknownSender": {
+    "message": "(expéditeur inconnu)"
+  },
+  "noSubject": {
+    "message": "(aucun objet)"
+  },
+  "markRead": {
+    "message": "Marquer comme lu"
+  },
+  "markReadNamed": {
+    "message": "Marquer « $1 » comme lu"
+  },
+  "checkedAgo": {
+    "message": "Vérifié $1"
+  },
+  "foldersFailed_one": {
+    "message": "$1 dossier n'a pas pu être lu : $2"
+  },
+  "foldersFailed_other": {
+    "message": "$1 dossiers n'ont pas pu être lus : $2"
+  },
+  "folderError": {
+    "message": "$1 : $2"
+  },
+  "checking": {
+    "message": "Vérification…"
+  },
+  "notSignedIn": {
+    "message": "Non connecté à Gmail"
+  },
+  "signedOutTitle": {
+    "message": "Chrome n'est pas connecté à Gmail."
+  },
+  "signedOutPopup": {
+    "message": "Une fois connecté, vos messages non lus s'afficheront ici."
+  },
+  "signIn": {
+    "message": "Se connecter à Gmail"
+  },
+  "noFoldersSummary": {
+    "message": "Aucun dossier suivi"
+  },
+  "noFoldersTitle": {
+    "message": "Vous n'avez choisi aucun dossier à suivre."
+  },
+  "noFoldersText": {
+    "message": "Dès que ce sera fait, les nouveaux messages s'afficheront ici."
+  },
+  "chooseFolders": {
+    "message": "Choisir les dossiers"
+  },
+  "unreadCount_one": {
+    "message": "$1 non lu"
+  },
+  "unreadCount_other": {
+    "message": "$1 non lus"
+  },
+  "noUnread": {
+    "message": "Aucun message non lu"
+  },
+  "openGmailOf": {
+    "message": "Ouvrir Gmail pour $1"
+  },
+  "noUnreadShort": {
+    "message": "Tout est lu"
+  },
+  "notTracked": {
+    "message": "Non suivi"
+  },
+  "markAllReadNamed_one": {
+    "message": "Marquer $1 message non lu de « $2 » comme lu"
+  },
+  "markAllReadNamed_other": {
+    "message": "Marquer les $1 messages non lus de « $2 » comme lus"
+  },
+  "toggleBox": {
+    "message": "Réduire ou développer « $1 »"
+  },
+  "boxNotTracked": {
+    "message": "Cette boîte aux lettres ne suit aucun dossier. Vous pouvez en activer dans les paramètres."
+  },
+  "boxNoUnread": {
+    "message": "Aucun message non lu dans les dossiers suivis."
+  },
+  "moreInGmail_one": {
+    "message": "Voir $1 autre message non lu dans Gmail"
+  },
+  "moreInGmail_other": {
+    "message": "Voir $1 autres messages non lus dans Gmail"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail : non connecté à Gmail"
+  },
+  "tooltipAccount_one": {
+    "message": "$2 : $1 non lu"
+  },
+  "tooltipAccount_other": {
+    "message": "$2 : $1 non lus"
+  },
+  "newMessages_one": {
+    "message": "$1 nouveau message"
+  },
+  "newMessages_other": {
+    "message": "$1 nouveaux messages"
+  },
+  "summaryLine": {
+    "message": "$1 : $2"
+  },
+  "contextLine": {
+    "message": "$1 | $2"
+  },
+  "bulkInterrupted": {
+    "message": "Interrompu en cours de route. Vous pouvez réessayer."
+  },
+  "bulkBusy": {
+    "message": "Cette boîte aux lettres est déjà en cours de marquage comme lue"
+  },
+  "bulkNoFolders": {
+    "message": "Cette boîte aux lettres ne suit aucun dossier"
+  },
+  "testMessage": {
+    "message": "Ceci est une notification de test. Si vous la voyez, les notifications fonctionnent."
+  },
+  "testContext": {
+    "message": "Notification de test"
+  },
+  "markReadFailedTitle": {
+    "message": "Impossible de marquer comme lu"
+  },
+  "notifReauth": {
+    "message": "Gmail vous demande de valider à nouveau. Cliquez sur cette notification pour ouvrir Gmail, validez, puis réessayez."
+  },
+  "messageGone": {
+    "message": "Ce message ne figure plus dans la liste"
+  },
+  "folder_inbox": {
+    "message": "Boîte de réception"
+  },
+  "folder_primary": {
+    "message": "Principale"
+  },
+  "folder_social": {
+    "message": "Réseaux sociaux"
+  },
+  "folder_promo": {
+    "message": "Promotions"
+  },
+  "folder_updates": {
+    "message": "Notifications"
+  },
+  "folder_forums": {
+    "message": "Forums"
+  },
+  "folder_starred": {
+    "message": "Messages suivis"
+  },
+  "folder_important": {
+    "message": "Important"
+  },
+  "folder_unread": {
+    "message": "Tous les non lus"
+  },
+  "folderHint_inbox": {
+    "message": "Messages non lus de votre boîte de réception"
+  },
+  "folderHint_starred": {
+    "message": "Messages suivis non lus"
+  },
+  "folderHint_important": {
+    "message": "Messages non lus que Gmail marque comme importants"
+  },
+  "folderHint_unread": {
+    "message": "Inclut les messages archivés et ceux de tous les libellés"
+  },
+  "errNetwork": {
+    "message": "Impossible de joindre Gmail. Vérifiez votre connexion réseau."
+  },
+  "errSignedOut": {
+    "message": "Ce compte n'est pas connecté à Gmail"
+  },
+  "errHttp": {
+    "message": "Gmail a renvoyé une erreur (HTTP $1)"
+  },
+  "errUnreadable": {
+    "message": "Lecture impossible"
+  },
+  "errNoToken": {
+    "message": "Jeton d'action Gmail introuvable. Ouvrez d'abord cette boîte Gmail une fois dans le navigateur."
+  },
+  "errNoKey": {
+    "message": "Impossible de lire la clé de compte Gmail. Ouvrez d'abord cette boîte Gmail une fois dans le navigateur."
+  },
+  "errNoThread": {
+    "message": "Ce message n'a pas d'identifiant et ne peut donc pas être modifié"
+  },
+  "errReauth": {
+    "message": "Gmail vous demande de valider à nouveau. Réessayez après la validation."
+  },
+  "errRejected": {
+    "message": "Gmail a refusé cette action (HTTP $1)"
+  },
+  "color_teal": {
+    "message": "Bleu canard"
+  },
+  "color_violet": {
+    "message": "Violet"
+  },
+  "color_magenta": {
+    "message": "Magenta"
+  },
+  "color_olive": {
+    "message": "Olive"
+  },
+  "color_cocoa": {
+    "message": "Cacao"
+  },
+  "color_slate": {
+    "message": "Ardoise"
+  },
+  "sound_chime": {
+    "message": "Deux tons"
+  },
+  "sound_ding": {
+    "message": "Ding"
+  },
+  "sound_drop": {
+    "message": "Goutte"
+  },
+  "sound_marimba": {
+    "message": "Marimba"
+  },
+  "sound_bell": {
+    "message": "Cloche"
+  },
+  "sound_tick": {
+    "message": "Tapotement"
+  },
+  "sound_none": {
+    "message": "Silencieux"
+  },
+  "sound_custom": {
+    "message": "Son personnalisé"
+  },
+  "optionsTitle": {
+    "message": "Paramètres de Pigeon Post for Gmail"
+  },
+  "optionsHeading": {
+    "message": "Paramètres des notifications de messages"
+  },
+  "checkingSignIn": {
+    "message": "Vérification de la connexion à Gmail…"
+  },
+  "foldersHeading": {
+    "message": "Messages pour lesquels vous êtes notifié"
+  },
+  "level_off": {
+    "message": "Désactivé"
+  },
+  "level_count": {
+    "message": "Compter"
+  },
+  "level_notify": {
+    "message": "Notifier"
+  },
+  "levelDesc_off": {
+    "message": "Non vérifié"
+  },
+  "levelDesc_count": {
+    "message": "Ajouté au nombre de non lus sur l'icône de la barre d'outils"
+  },
+  "levelDesc_notify": {
+    "message": "Compté, avec une notification sur le bureau"
+  },
+  "foldersNote": {
+    "message": "Le nombre à droite de chaque ligne est le nombre actuel de messages non lus. Comparez-le avec le menu de gauche de Gmail pour vérifier que vous avez choisi le bon dossier."
+  },
+  "badgeHeading": {
+    "message": "Nombre sur l'icône de la barre d'outils"
+  },
+  "badgeLegend": {
+    "message": "Affichage du nombre sur l'icône"
+  },
+  "badgeTotal": {
+    "message": "Total de toutes les boîtes, par ex. 28"
+  },
+  "badgeSplit": {
+    "message": "Chaque boîte séparément, par ex. 26/2"
+  },
+  "badgeHelp": {
+    "message": "Les nombres séparés suivent l'ordre des boîtes. L'icône ne peut afficher que des nombres à deux chiffres pour deux ou trois boîtes ; s'ils ne tiennent pas, elle affiche le total. Pointez sur l'icône pour voir le nombre de non lus de chaque boîte."
+  },
+  "deliveryHeading": {
+    "message": "Mode de notification"
+  },
+  "notifyToggle": {
+    "message": "Afficher les notifications sur le bureau"
+  },
+  "notifyHelp": {
+    "message": "Si cette option est désactivée, l'icône de la barre d'outils affiche toujours le nombre de non lus."
+  },
+  "volumeLabel": {
+    "message": "Volume du son"
+  },
+  "volumeHelp": {
+    "message": "Les notifications jouent le son propre à chaque boîte, défini à côté de son nom ci-dessus. Réglez le volume sur 0 pour couper le son."
+  },
+  "groupLabel": {
+    "message": "Quand plusieurs nouveaux messages arrivent en même temps"
+  },
+  "groupAll": {
+    "message": "Les regrouper en une seule notification"
+  },
+  "groupOver": {
+    "message": "Regrouper seulement au-delà de $1"
+  },
+  "groupEach": {
+    "message": "Une notification par message"
+  },
+  "openLegend": {
+    "message": "Quand vous cliquez sur une notification ou un message"
+  },
+  "openReuse": {
+    "message": "Passer à un onglet Gmail déjà ouvert"
+  },
+  "openNew": {
+    "message": "Ouvrir un nouvel onglet"
+  },
+  "pollHeading": {
+    "message": "Fréquence de vérification"
+  },
+  "pollLegend": {
+    "message": "Intervalle de vérification"
+  },
+  "pollHelp": {
+    "message": "Gmail n'avertit pas les extensions de lui-même, les messages sont donc vérifiés à intervalles réguliers. Plus l'intervalle est court, plus les notifications sont rapides."
+  },
+  "previewHeading": {
+    "message": "Aperçu"
+  },
+  "sendTest": {
+    "message": "Envoyer une notification de test"
+  },
+  "tabName": {
+    "message": "Onglet $1"
+  },
+  "saved": {
+    "message": "Enregistré"
+  },
+  "saveFailed": {
+    "message": "Impossible d'enregistrer : $1"
+  },
+  "remove": {
+    "message": "Supprimer"
+  },
+  "removeNamed": {
+    "message": "Supprimer « $1 »"
+  },
+  "currentUnread": {
+    "message": "Nombre actuel de non lus"
+  },
+  "levelLegend": {
+    "message": "Notifications pour « $1 »"
+  },
+  "loadingAccounts": {
+    "message": "Lecture des comptes Gmail auxquels vous êtes connecté…"
+  },
+  "signedOutOptions": {
+    "message": "Connectez-vous, puis revenez sur cette page pour choisir les dossiers qui vous envoient une notification."
+  },
+  "awayAccounts": {
+    "message": "Cet ordinateur n'est pas connecté à $1. Leurs paramètres sont conservés et s'appliqueront automatiquement dès que vous vous connecterez."
+  },
+  "connected": {
+    "message": "Connecté à $1. Les modifications sont enregistrées automatiquement et synchronisées avec les autres ordinateurs connectés au même compte Chrome."
+  },
+  "openThisGmail": {
+    "message": "Ouvrir ce Gmail"
+  },
+  "nameLabel": {
+    "message": "Nom"
+  },
+  "namePlaceholder": {
+    "message": "Ex. : Perso, Travail"
+  },
+  "colorLegend": {
+    "message": "Couleur"
+  },
+  "groupInbox": {
+    "message": "Boîte de réception et onglets"
+  },
+  "tabsSummary": {
+    "message": "Paramétrer les onglets de la boîte de réception séparément"
+  },
+  "primaryHint": {
+    "message": "Réglez uniquement celui-ci pour ne pas être notifié des promotions ni des réseaux sociaux"
+  },
+  "groupOther": {
+    "message": "Autres dossiers"
+  },
+  "soundCustomNamed": {
+    "message": "Personnalisé : $1"
+  },
+  "soundUpload": {
+    "message": "Importer un son…"
+  },
+  "soundLabel": {
+    "message": "Son"
+  },
+  "soundPreview": {
+    "message": "Écouter"
+  },
+  "soundPreviewNamed": {
+    "message": "Écouter le son de « $1 »"
+  },
+  "soundNotAudio": {
+    "message": "Choisissez un fichier audio, par exemple mp3, wav ou ogg."
+  },
+  "soundTooBig": {
+    "message": "Ce fichier dépasse 1 Mo. Choisissez un son plus court."
+  },
+  "soundMissing": {
+    "message": "Cet ordinateur ne dispose pas du son personnalisé de cette boîte, le son « $1 » est donc joué à la place. Importez-le à nouveau pour corriger ce problème."
+  },
+  "conflictText": {
+    "message": "Le dossier $1 est réglé sur $2, ce qui couvre déjà les messages de tous les onglets : les paramètres de $3 n'ont donc aucun effet."
+  },
+  "conflictHelp": {
+    "message": "Lorsqu'un message se trouve dans plusieurs dossiers, le réglage le plus élevé s'applique. Pour ne suivre que certains onglets, baissez le réglage de la boîte de réception."
+  },
+  "conflictFix": {
+    "message": "Régler la boîte de réception sur $1"
+  },
+  "filterLabels": {
+    "message": "Filtrer les libellés"
+  },
+  "groupLabels": {
+    "message": "Vos libellés"
+  },
+  "labelsEmpty": {
+    "message": "Aucun libellé lu pour cette boîte pour l'instant. Le bouton ci-dessous lit les noms des libellés dans le menu de gauche de Gmail."
+  },
+  "reading": {
+    "message": "Lecture…"
+  },
+  "readLabels": {
+    "message": "Lire les libellés depuis Gmail"
+  },
+  "rereadLabels": {
+    "message": "Relire les libellés"
+  },
+  "addLabelPlaceholder": {
+    "message": "Saisissez le nom d'un libellé Gmail. Pour un libellé imbriqué, écrivez « Parent/Enfant »"
+  },
+  "labelName": {
+    "message": "Nom du libellé"
+  },
+  "add": {
+    "message": "Ajouter"
+  },
+  "labelsSource": {
+    "message": "Liste tirée du menu de gauche de Gmail, mise à jour $1. Les libellés imbriqués et ceux sous « Plus » n'apparaissent qu'après avoir été développés une fois dans Gmail."
+  },
+  "addLabelManually": {
+    "message": "Libellé introuvable ? Saisissez son nom"
+  },
+  "readingLabels": {
+    "message": "Lecture des libellés depuis Gmail…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail n'a pas fini de se charger à temps. Réessayez dans un instant."
+  },
+  "labelsWrongAccount": {
+    "message": "Ce sont les libellés de $1, pas de cette boîte. Vérifiez le compte auquel Gmail est connecté."
+  },
+  "labelsFound_one": {
+    "message": "$1 libellé trouvé."
+  },
+  "labelsFound_other": {
+    "message": "$1 libellés trouvés."
+  },
+  "labelsNone": {
+    "message": "Aucun libellé trouvé dans le menu de gauche de Gmail. Si vos libellés sont sous « Plus », développez ce menu dans Gmail et relancez la lecture."
+  },
+  "labelsTabError": {
+    "message": "Impossible de lire l'onglet Gmail : $1"
+  },
+  "countError": {
+    "message": "Indisponible"
+  },
+  "quoteMore_one": {
+    "message": "$2, etc. ($1 dossier)"
+  },
+  "quoteMore_other": {
+    "message": "$2, etc. ($1 dossiers)"
+  },
+  "pvBadgeSignedOut": {
+    "message": "Lorsque vous n'êtes pas connecté à Gmail, l'icône affiche « ? »."
+  },
+  "pvBadgeStale": {
+    "message": "Recalcul des messages non lus avec les nouveaux paramètres…"
+  },
+  "pvBadgeEmpty": {
+    "message": "Aucun message non lu pour l'instant, l'icône n'affiche donc aucun nombre."
+  },
+  "pvBadgeSplit": {
+    "message": "Le « $1 » sur l'icône indique les messages non lus de $2, dans cet ordre."
+  },
+  "pvBadgeLong": {
+    "message": "Les nombres de chaque boîte sont trop longs pour tenir, l'icône affiche donc le total : $1."
+  },
+  "pvBadgeSingle": {
+    "message": "Une seule boîte suit des dossiers, l'icône affiche donc son nombre de non lus : $1."
+  },
+  "pvBadgeTotal": {
+    "message": "Le $1 sur l'icône correspond au total des messages non lus dans les dossiers réglés sur $2 et $3."
+  },
+  "pvFrom": {
+    "message": "Expéditeur"
+  },
+  "pvSubject": {
+    "message": "L'objet s'affiche sur cette ligne"
+  },
+  "pvEnvSignedOut": {
+    "message": "Une fois connecté à Gmail, un exemple de notification s'affichera ici."
+  },
+  "pvEnvOff": {
+    "message": "Les notifications sur le bureau sont désactivées. Seul le nombre sur l'icône est mis à jour."
+  },
+  "pvEnvNone": {
+    "message": "Aucun dossier n'est réglé sur $1, aucune notification ne s'affichera donc."
+  },
+  "pvEnvText": {
+    "message": "Quand un nouveau message arrive dans $1, une notification comme celle-ci s'affiche. La dernière ligne indique la boîte concernée."
+  },
+  "pvAccountsMulti": {
+    "message": "Quand vous cliquez sur l'icône, chaque boîte est listée séparément comme ceci et peut être réduite."
+  },
+  "pvAccountsSingle": {
+    "message": "Quand vous cliquez sur l'icône, la boîte est identifiée comme ceci."
+  },
+  "pvNotTracked": {
+    "message": "Cette boîte aux lettres ne suit aucun dossier."
+  },
+  "pvPollEvery": {
+    "message": "Intervalle de vérification : $1."
+  },
+  "pvGroupEach": {
+    "message": "Chaque nouveau message fait l'objet de sa propre notification."
+  },
+  "pvGroupAll": {
+    "message": "Quand plusieurs nouveaux messages arrivent ensemble, ils sont regroupés en une seule notification."
+  },
+  "pvGroupOver_one": {
+    "message": "Quand plus de $1 nouveau message arrive en même temps, ils sont regroupés en une seule notification."
+  },
+  "pvGroupOver_other": {
+    "message": "Quand plus de $1 nouveaux messages arrivent en même temps, ils sont regroupés en une seule notification."
+  },
+  "testContextLine": {
+    "message": "Notification de test | $1 | $2"
+  },
+  "testWhereMac": {
+    "message": "Réglages Système › Notifications › Google Chrome"
+  },
+  "testWhereWin": {
+    "message": "Paramètres › Système › Notifications › Google Chrome"
+  },
+  "testWhereOther": {
+    "message": "les paramètres de notification de votre système"
+  },
+  "testDenied": {
+    "message": "Les notifications de cette extension sont bloquées. Autorisez-les sur chrome://settings/content/notifications, puis réessayez."
+  },
+  "testSent": {
+    "message": "Envoyée. Si vous ne la voyez pas, autorisez les notifications dans $1 et vérifiez que le mode Ne pas déranger ou Concentration est désactivé."
+  },
+  "supportText": {
+    "message": "Si vous la trouvez utile, vous pouvez m'offrir un café."
+  },
+  "supportLink": {
+    "message": "Offrez-moi un café (PayPal)"
+  }
+}

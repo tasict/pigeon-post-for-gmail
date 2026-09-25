@@ -1,0 +1,650 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "Chrome에 로그인된 Gmail 계정의 새 메일을 확인합니다. 알림을 받을 폴더와 개수만 셀 폴더를 직접 선택할 수 있습니다."
+  },
+  "langTag": {
+    "message": "ko"
+  },
+  "listSeparator": {
+    "message": ", "
+  },
+  "quoted": {
+    "message": "'$1'"
+  },
+  "justNow": {
+    "message": "방금"
+  },
+  "loading": {
+    "message": "로드 중…"
+  },
+  "checkNow": {
+    "message": "지금 확인"
+  },
+  "settings": {
+    "message": "설정"
+  },
+  "stripLabel": {
+    "message": "메일함별 읽지 않은 메일 수입니다. 클릭하면 해당 메일함이 열립니다."
+  },
+  "markReadFailed": {
+    "message": "읽음으로 표시하지 못했습니다: $1"
+  },
+  "unknownError": {
+    "message": "알 수 없는 오류"
+  },
+  "reauthOpen": {
+    "message": "Gmail을 열어 다시 인증"
+  },
+  "markAllRead": {
+    "message": "모두 읽음으로 표시"
+  },
+  "bulkTooMany_other": {
+    "message": "읽지 않은 메일이 $1개로, 한 번에 처리할 수 있는 수를 초과합니다"
+  },
+  "bulkTooManyNote": {
+    "message": "각 폴더에서 한 번에 처리할 수 있는 메일은 최신 20개까지이며, $1에는 그보다 많은 메일이 있습니다. Gmail에서 이 읽지 않은 메일을 열어 직접 선택하여 처리하시겠습니까?"
+  },
+  "openInGmail": {
+    "message": "Gmail에서 열기"
+  },
+  "cancel": {
+    "message": "취소"
+  },
+  "bulkConfirm_other": {
+    "message": "읽지 않은 메일 $1개를 모두 읽음으로 표시하시겠습니까?"
+  },
+  "bulkScope": {
+    "message": "포함: $1"
+  },
+  "bulkProgress": {
+    "message": "읽음으로 표시하는 중: $1/$2"
+  },
+  "bulkKeepsRunning": {
+    "message": "이 창을 닫아도 계속 진행됩니다."
+  },
+  "bulkProgressLabel": {
+    "message": "읽음으로 표시 진행률"
+  },
+  "close": {
+    "message": "닫기"
+  },
+  "bulkFailed": {
+    "message": "모두 읽음으로 표시를 완료하지 못했습니다"
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2. 메일 $1개를 읽음으로 표시했습니다."
+  },
+  "bulkLeft_other": {
+    "message": "읽지 않은 메일이 $1개 남아 있습니다. 방금 도착한 메일일 수 있습니다. 다시 시도해 보세요."
+  },
+  "bulkDone_other": {
+    "message": "메일 $1개를 읽음으로 표시했습니다"
+  },
+  "bulkNothing": {
+    "message": "읽음으로 표시할 메일이 없습니다"
+  },
+  "openMessage": {
+    "message": "이 메일 열기"
+  },
+  "openMessageFrom": {
+    "message": "이 메일 열기($1)"
+  },
+  "unknownSender": {
+    "message": "(알 수 없는 보낸사람)"
+  },
+  "noSubject": {
+    "message": "(제목 없음)"
+  },
+  "markRead": {
+    "message": "읽음으로 표시"
+  },
+  "markReadNamed": {
+    "message": "'$1' 읽음으로 표시"
+  },
+  "checkedAgo": {
+    "message": "$1 확인함"
+  },
+  "foldersFailed_other": {
+    "message": "폴더 $1개를 읽지 못했습니다: $2"
+  },
+  "folderError": {
+    "message": "$1: $2"
+  },
+  "checking": {
+    "message": "확인 중…"
+  },
+  "notSignedIn": {
+    "message": "Gmail에 로그인되어 있지 않음"
+  },
+  "signedOutTitle": {
+    "message": "Chrome에서 Gmail에 로그인되어 있지 않습니다."
+  },
+  "signedOutPopup": {
+    "message": "로그인하면 읽지 않은 메일이 여기에 표시됩니다."
+  },
+  "signIn": {
+    "message": "Gmail에 로그인"
+  },
+  "noFoldersSummary": {
+    "message": "추적 중인 폴더 없음"
+  },
+  "noFoldersTitle": {
+    "message": "추적할 폴더를 아직 선택하지 않았습니다."
+  },
+  "noFoldersText": {
+    "message": "폴더를 선택하면 새 메일이 여기에 표시됩니다."
+  },
+  "chooseFolders": {
+    "message": "폴더 선택"
+  },
+  "unreadCount_other": {
+    "message": "읽지 않음 $1개"
+  },
+  "noUnread": {
+    "message": "읽지 않은 메일 없음"
+  },
+  "openGmailOf": {
+    "message": "$1의 Gmail 열기"
+  },
+  "noUnreadShort": {
+    "message": "모두 읽음"
+  },
+  "notTracked": {
+    "message": "추적 안 함"
+  },
+  "markAllReadNamed_other": {
+    "message": "'$2'의 읽지 않은 메일 $1개를 모두 읽음으로 표시"
+  },
+  "toggleBox": {
+    "message": "'$1' 접기/펼치기"
+  },
+  "boxNotTracked": {
+    "message": "이 메일함은 추적 중인 폴더가 없습니다. 설정에서 폴더를 켤 수 있습니다."
+  },
+  "boxNoUnread": {
+    "message": "추적 중인 폴더에 읽지 않은 메일이 없습니다."
+  },
+  "moreInGmail_other": {
+    "message": "Gmail에서 읽지 않은 메일 $1개 더 보기"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail: Gmail에 로그인되어 있지 않음"
+  },
+  "tooltipAccount_other": {
+    "message": "$2: 읽지 않음 $1개"
+  },
+  "newMessages_other": {
+    "message": "새 메일 $1개"
+  },
+  "summaryLine": {
+    "message": "$1: $2"
+  },
+  "contextLine": {
+    "message": "$1 | $2"
+  },
+  "bulkInterrupted": {
+    "message": "처리 도중 중단되었습니다. 다시 시도해 보세요."
+  },
+  "bulkBusy": {
+    "message": "이 메일함은 이미 읽음으로 표시하는 중입니다"
+  },
+  "bulkNoFolders": {
+    "message": "이 메일함은 추적 중인 폴더가 없습니다"
+  },
+  "testMessage": {
+    "message": "테스트 알림입니다. 이 알림이 보이면 알림이 정상적으로 작동하는 것입니다."
+  },
+  "testContext": {
+    "message": "테스트 알림"
+  },
+  "markReadFailedTitle": {
+    "message": "읽음으로 표시하지 못함"
+  },
+  "notifReauth": {
+    "message": "Gmail에서 다시 인증해야 합니다. 이 알림을 클릭해 Gmail을 열고 인증한 후 다시 시도하세요."
+  },
+  "messageGone": {
+    "message": "이 메일은 더 이상 목록에 없습니다"
+  },
+  "folder_inbox": {
+    "message": "받은편지함"
+  },
+  "folder_primary": {
+    "message": "기본"
+  },
+  "folder_social": {
+    "message": "소셜"
+  },
+  "folder_promo": {
+    "message": "프로모션"
+  },
+  "folder_updates": {
+    "message": "업데이트"
+  },
+  "folder_forums": {
+    "message": "포럼"
+  },
+  "folder_starred": {
+    "message": "별표편지함"
+  },
+  "folder_important": {
+    "message": "중요"
+  },
+  "folder_unread": {
+    "message": "읽지 않은 메일 전체"
+  },
+  "folderHint_inbox": {
+    "message": "받은편지함의 읽지 않은 메일"
+  },
+  "folderHint_starred": {
+    "message": "별표가 표시된 읽지 않은 메일"
+  },
+  "folderHint_important": {
+    "message": "Gmail이 중요로 표시한 읽지 않은 메일"
+  },
+  "folderHint_unread": {
+    "message": "보관처리된 메일과 모든 라벨의 메일 포함"
+  },
+  "errNetwork": {
+    "message": "Gmail에 연결할 수 없습니다. 네트워크 연결을 확인하세요."
+  },
+  "errSignedOut": {
+    "message": "이 계정은 Gmail에 로그인되어 있지 않습니다"
+  },
+  "errHttp": {
+    "message": "Gmail에서 오류를 반환했습니다(HTTP $1)"
+  },
+  "errUnreadable": {
+    "message": "읽을 수 없음"
+  },
+  "errNoToken": {
+    "message": "Gmail 작업 토큰을 찾을 수 없습니다. 먼저 브라우저에서 이 Gmail 메일함을 한 번 여세요."
+  },
+  "errNoKey": {
+    "message": "Gmail 계정 키를 읽을 수 없습니다. 먼저 브라우저에서 이 Gmail 메일함을 한 번 여세요."
+  },
+  "errNoThread": {
+    "message": "이 메일에 ID가 없어 변경할 수 없습니다"
+  },
+  "errReauth": {
+    "message": "Gmail에서 다시 인증해야 합니다. 인증한 후 다시 시도하세요."
+  },
+  "errRejected": {
+    "message": "Gmail에서 이 작업을 거부했습니다(HTTP $1)"
+  },
+  "color_teal": {
+    "message": "청록"
+  },
+  "color_violet": {
+    "message": "보라"
+  },
+  "color_magenta": {
+    "message": "마젠타"
+  },
+  "color_olive": {
+    "message": "올리브"
+  },
+  "color_cocoa": {
+    "message": "코코아"
+  },
+  "color_slate": {
+    "message": "청회색"
+  },
+  "sound_chime": {
+    "message": "2음"
+  },
+  "sound_ding": {
+    "message": "딩"
+  },
+  "sound_drop": {
+    "message": "물방울"
+  },
+  "sound_marimba": {
+    "message": "마림바"
+  },
+  "sound_bell": {
+    "message": "종소리"
+  },
+  "sound_tick": {
+    "message": "톡"
+  },
+  "sound_none": {
+    "message": "무음"
+  },
+  "sound_custom": {
+    "message": "사용자 지정 사운드"
+  },
+  "optionsTitle": {
+    "message": "Pigeon Post for Gmail 설정"
+  },
+  "optionsHeading": {
+    "message": "메일 알림 설정"
+  },
+  "checkingSignIn": {
+    "message": "Gmail 로그인 상태 확인 중…"
+  },
+  "foldersHeading": {
+    "message": "알림을 받을 메일"
+  },
+  "level_off": {
+    "message": "끄기"
+  },
+  "level_count": {
+    "message": "개수"
+  },
+  "level_notify": {
+    "message": "알림"
+  },
+  "levelDesc_off": {
+    "message": "확인하지 않음"
+  },
+  "levelDesc_count": {
+    "message": "툴바 아이콘의 읽지 않은 메일 수에 포함"
+  },
+  "levelDesc_notify": {
+    "message": "개수에 포함하고 데스크톱 알림도 표시"
+  },
+  "foldersNote": {
+    "message": "각 행 오른쪽의 숫자는 현재 읽지 않은 메일 수입니다. Gmail 왼쪽 메뉴와 비교해 올바른 폴더를 선택했는지 확인하세요."
+  },
+  "badgeHeading": {
+    "message": "툴바 아이콘의 숫자"
+  },
+  "badgeLegend": {
+    "message": "아이콘 숫자 표시 방식"
+  },
+  "badgeTotal": {
+    "message": "모든 메일함 합계(예: 28)"
+  },
+  "badgeSplit": {
+    "message": "메일함별로 따로(예: 26/2)"
+  },
+  "badgeHelp": {
+    "message": "따로 표시할 때는 메일함 순서대로 표시됩니다. 아이콘에는 메일함 2~3개의 두 자리 숫자까지만 들어가며, 들어가지 않으면 합계가 표시됩니다. 아이콘 위에 마우스를 올리면 메일함별 읽지 않은 메일 수를 볼 수 있습니다."
+  },
+  "deliveryHeading": {
+    "message": "알림 방식"
+  },
+  "notifyToggle": {
+    "message": "데스크톱 알림 표시"
+  },
+  "notifyHelp": {
+    "message": "꺼도 툴바 아이콘에는 읽지 않은 메일 수가 계속 표시됩니다."
+  },
+  "volumeLabel": {
+    "message": "알림음 볼륨"
+  },
+  "volumeHelp": {
+    "message": "알림이 표시되면 해당 메일함의 사운드가 재생되며, 사운드는 위에서 각 메일함 이름 옆에 설정합니다. 소리를 끄려면 볼륨을 0으로 설정하세요."
+  },
+  "groupLabel": {
+    "message": "새 메일 여러 개가 한꺼번에 도착하면"
+  },
+  "groupAll": {
+    "message": "알림 하나로 합치기"
+  },
+  "groupOver": {
+    "message": "$1개를 초과할 때만 합치기"
+  },
+  "groupEach": {
+    "message": "메일마다 알림"
+  },
+  "openLegend": {
+    "message": "알림이나 메일을 클릭하면"
+  },
+  "openReuse": {
+    "message": "열려 있는 Gmail 탭으로 전환"
+  },
+  "openNew": {
+    "message": "새 탭 열기"
+  },
+  "pollHeading": {
+    "message": "확인 주기"
+  },
+  "pollLegend": {
+    "message": "확인 간격"
+  },
+  "pollHelp": {
+    "message": "Gmail은 확장 프로그램에 새 메일을 직접 알려 주지 않으므로 일정 간격으로 확인합니다. 간격이 짧을수록 알림이 빨라집니다."
+  },
+  "previewHeading": {
+    "message": "미리보기"
+  },
+  "sendTest": {
+    "message": "테스트 알림 보내기"
+  },
+  "tabName": {
+    "message": "$1 탭"
+  },
+  "saved": {
+    "message": "저장됨"
+  },
+  "saveFailed": {
+    "message": "저장하지 못했습니다: $1"
+  },
+  "remove": {
+    "message": "삭제"
+  },
+  "removeNamed": {
+    "message": "'$1' 삭제"
+  },
+  "currentUnread": {
+    "message": "현재 읽지 않은 메일 수"
+  },
+  "levelLegend": {
+    "message": "'$1' 알림 설정"
+  },
+  "loadingAccounts": {
+    "message": "로그인된 Gmail 계정을 읽는 중…"
+  },
+  "signedOutOptions": {
+    "message": "로그인한 후 이 페이지로 돌아와 알림을 받을 폴더를 선택하세요."
+  },
+  "awayAccounts": {
+    "message": "이 컴퓨터에는 $1 계정이 로그인되어 있지 않습니다. 해당 계정의 설정은 유지되며 로그인하면 자동으로 적용됩니다."
+  },
+  "connected": {
+    "message": "$1에 연결되었습니다. 변경사항은 자동으로 저장되며 같은 Chrome 계정으로 로그인한 다른 컴퓨터에 동기화됩니다."
+  },
+  "openThisGmail": {
+    "message": "이 Gmail 열기"
+  },
+  "nameLabel": {
+    "message": "이름"
+  },
+  "namePlaceholder": {
+    "message": "예: 개인, 회사"
+  },
+  "colorLegend": {
+    "message": "색상"
+  },
+  "groupInbox": {
+    "message": "받은편지함 및 탭"
+  },
+  "tabsSummary": {
+    "message": "받은편지함 탭별로 따로 설정"
+  },
+  "primaryHint": {
+    "message": "이 항목만 설정하면 프로모션 및 소셜 메일 알림을 받지 않습니다"
+  },
+  "groupOther": {
+    "message": "기타 폴더"
+  },
+  "soundCustomNamed": {
+    "message": "사용자 지정: $1"
+  },
+  "soundUpload": {
+    "message": "사운드 업로드…"
+  },
+  "soundLabel": {
+    "message": "사운드"
+  },
+  "soundPreview": {
+    "message": "재생"
+  },
+  "soundPreviewNamed": {
+    "message": "'$1' 사운드 재생"
+  },
+  "soundNotAudio": {
+    "message": "mp3, wav, ogg 등의 오디오 파일을 선택하세요."
+  },
+  "soundTooBig": {
+    "message": "파일이 1MB를 초과합니다. 더 짧은 사운드를 선택하세요."
+  },
+  "soundMissing": {
+    "message": "이 컴퓨터에는 이 메일함의 사용자 지정 사운드가 없어 대신 '$1' 사운드가 재생됩니다. 다시 업로드하면 해결됩니다."
+  },
+  "conflictText": {
+    "message": "$1 설정이 $2(으)로 되어 있어 이미 모든 탭의 메일이 포함되므로 $3 설정은 적용되지 않습니다."
+  },
+  "conflictHelp": {
+    "message": "메일이 여러 폴더에 있으면 가장 높은 설정이 적용됩니다. 일부 탭만 추적하려면 받은편지함 설정을 낮추세요."
+  },
+  "conflictFix": {
+    "message": "받은편지함을 $1(으)로 변경"
+  },
+  "filterLabels": {
+    "message": "라벨 필터링"
+  },
+  "groupLabels": {
+    "message": "내 라벨"
+  },
+  "labelsEmpty": {
+    "message": "이 메일함의 라벨을 아직 읽어 오지 않았습니다. 아래 버튼을 누르면 Gmail 왼쪽 메뉴에서 라벨 이름을 읽어 옵니다."
+  },
+  "reading": {
+    "message": "읽는 중…"
+  },
+  "readLabels": {
+    "message": "Gmail에서 라벨 읽어 오기"
+  },
+  "rereadLabels": {
+    "message": "라벨 다시 읽어 오기"
+  },
+  "addLabelPlaceholder": {
+    "message": "Gmail의 라벨 이름을 입력하세요. 하위 라벨은 '상위/하위' 형식으로 입력"
+  },
+  "labelName": {
+    "message": "라벨 이름"
+  },
+  "add": {
+    "message": "추가"
+  },
+  "labelsSource": {
+    "message": "Gmail 왼쪽 메뉴에서 가져왔습니다($1 업데이트). 하위 라벨과 '더보기' 아래의 라벨은 Gmail에서 한 번 펼쳐야 표시됩니다."
+  },
+  "addLabelManually": {
+    "message": "라벨을 찾을 수 없나요? 이름을 직접 입력하세요"
+  },
+  "readingLabels": {
+    "message": "Gmail에서 라벨을 읽는 중…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail이 제시간에 로드되지 않았습니다. 잠시 후 다시 시도하세요."
+  },
+  "labelsWrongAccount": {
+    "message": "이 메일함이 아닌 $1 계정의 라벨입니다. Gmail에 로그인된 계정을 확인하세요."
+  },
+  "labelsFound_other": {
+    "message": "라벨 $1개를 찾았습니다."
+  },
+  "labelsNone": {
+    "message": "Gmail 왼쪽 메뉴에서 라벨을 찾지 못했습니다. 라벨이 '더보기' 아래에 있다면 Gmail에서 펼친 후 다시 읽어 오세요."
+  },
+  "labelsTabError": {
+    "message": "Gmail 탭을 읽을 수 없습니다: $1"
+  },
+  "countError": {
+    "message": "확인 불가"
+  },
+  "quoteMore_other": {
+    "message": "$2 등 폴더 $1개"
+  },
+  "pvBadgeSignedOut": {
+    "message": "Gmail에 로그인하지 않은 경우 아이콘에 '?'가 표시됩니다."
+  },
+  "pvBadgeStale": {
+    "message": "새 설정으로 읽지 않은 메일 수를 다시 계산하는 중…"
+  },
+  "pvBadgeEmpty": {
+    "message": "현재 읽지 않은 메일이 없어 아이콘에 숫자가 표시되지 않습니다."
+  },
+  "pvBadgeSplit": {
+    "message": "아이콘의 $1은(는) 순서대로 $2의 읽지 않은 메일 수입니다."
+  },
+  "pvBadgeLong": {
+    "message": "메일함별 숫자가 너무 길어 아이콘에 들어가지 않으므로 합계 $1이(가) 표시됩니다."
+  },
+  "pvBadgeSingle": {
+    "message": "폴더를 추적하는 메일함이 하나뿐이므로 아이콘에 해당 메일함의 읽지 않은 메일 수 $1이(가) 표시됩니다."
+  },
+  "pvBadgeTotal": {
+    "message": "아이콘의 $1은(는) $2 및 $3(으)로 설정된 폴더의 읽지 않은 메일 합계입니다."
+  },
+  "pvFrom": {
+    "message": "보낸사람"
+  },
+  "pvSubject": {
+    "message": "이 줄에 제목이 표시됩니다"
+  },
+  "pvEnvSignedOut": {
+    "message": "Gmail에 로그인하면 여기에 알림 예시가 표시됩니다."
+  },
+  "pvEnvOff": {
+    "message": "데스크톱 알림이 꺼져 있습니다. 아이콘 숫자만 업데이트됩니다."
+  },
+  "pvEnvNone": {
+    "message": "$1(으)로 설정된 폴더가 없어 알림이 표시되지 않습니다."
+  },
+  "pvEnvText": {
+    "message": "$1에 새 메일이 도착하면 이와 같은 알림이 표시됩니다. 마지막 줄에는 어느 메일함의 메일인지 표시됩니다."
+  },
+  "pvAccountsMulti": {
+    "message": "아이콘을 클릭하면 각 메일함이 이렇게 따로 표시되며 각각 접을 수 있습니다."
+  },
+  "pvAccountsSingle": {
+    "message": "아이콘을 클릭하면 메일함이 이렇게 표시됩니다."
+  },
+  "pvNotTracked": {
+    "message": "이 메일함은 추적 중인 폴더가 없습니다."
+  },
+  "pvPollEvery": {
+    "message": "$1마다 확인합니다."
+  },
+  "pvGroupEach": {
+    "message": "새 메일마다 개별 알림이 표시됩니다."
+  },
+  "pvGroupAll": {
+    "message": "새 메일 여러 개가 함께 도착하면 알림 하나로 합쳐집니다."
+  },
+  "pvGroupOver_other": {
+    "message": "새 메일이 한 번에 $1개를 초과하여 도착하면 알림 하나로 합쳐집니다."
+  },
+  "testContextLine": {
+    "message": "테스트 알림 | $1 | $2"
+  },
+  "testWhereMac": {
+    "message": "시스템 설정 › 알림 › Google Chrome"
+  },
+  "testWhereWin": {
+    "message": "설정 › 시스템 › 알림의 Google Chrome"
+  },
+  "testWhereOther": {
+    "message": "시스템 알림 설정"
+  },
+  "testDenied": {
+    "message": "이 확장 프로그램의 알림이 차단되어 있습니다. chrome://settings/content/notifications에서 허용한 후 다시 시도하세요."
+  },
+  "testSent": {
+    "message": "전송했습니다. 알림이 보이지 않으면 $1에서 알림을 허용하고 방해 금지 모드나 집중 모드가 꺼져 있는지 확인하세요."
+  },
+  "supportText": {
+    "message": "유용하다고 느끼셨다면 커피 한 잔 후원해 주시면 감사하겠습니다."
+  },
+  "supportLink": {
+    "message": "PayPal로 커피 한 잔 후원하기"
+  }
+}

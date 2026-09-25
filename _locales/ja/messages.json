@@ -1,0 +1,650 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "Chrome でログインしている Gmail アカウントの新着メールをチェックします。通知するフォルダと件数だけ数えるフォルダを選べます。"
+  },
+  "langTag": {
+    "message": "ja"
+  },
+  "listSeparator": {
+    "message": "、"
+  },
+  "quoted": {
+    "message": "「$1」"
+  },
+  "justNow": {
+    "message": "たった今"
+  },
+  "loading": {
+    "message": "読み込み中…"
+  },
+  "checkNow": {
+    "message": "今すぐチェック"
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "stripLabel": {
+    "message": "メールボックスごとの未読件数。クリックするとそのメールボックスを開きます"
+  },
+  "markReadFailed": {
+    "message": "既読にできませんでした: $1"
+  },
+  "unknownError": {
+    "message": "不明なエラー"
+  },
+  "reauthOpen": {
+    "message": "Gmail を開いて再認証"
+  },
+  "markAllRead": {
+    "message": "すべて既読にする"
+  },
+  "bulkTooMany_other": {
+    "message": "未読が $1 件あり、一度に処理できる件数を超えています"
+  },
+  "bulkTooManyNote": {
+    "message": "各フォルダで一度に処理できるのは最新の 20 件までで、$1 にはまだ残っています。Gmail でこれらの未読メールを表示して、まとめて選択・処理しますか？"
+  },
+  "openInGmail": {
+    "message": "Gmail で開く"
+  },
+  "cancel": {
+    "message": "キャンセル"
+  },
+  "bulkConfirm_other": {
+    "message": "未読メール $1 件をすべて既読にしますか？"
+  },
+  "bulkScope": {
+    "message": "対象: $1"
+  },
+  "bulkProgress": {
+    "message": "既読にしています: $1 / $2 件"
+  },
+  "bulkKeepsRunning": {
+    "message": "このウィンドウを閉じても処理は続きます。"
+  },
+  "bulkProgressLabel": {
+    "message": "既読処理の進捗状況"
+  },
+  "close": {
+    "message": "閉じる"
+  },
+  "bulkFailed": {
+    "message": "すべて既読にする処理が完了しませんでした"
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2。$1 件は既読になりました。"
+  },
+  "bulkLeft_other": {
+    "message": "未読が $1 件残っています。届いたばかりのメールかもしれません。もう一度お試しください。"
+  },
+  "bulkDone_other": {
+    "message": "$1 件を既読にしました"
+  },
+  "bulkNothing": {
+    "message": "既読にするメールはありません"
+  },
+  "openMessage": {
+    "message": "このメールを開く"
+  },
+  "openMessageFrom": {
+    "message": "このメールを開く（$1）"
+  },
+  "unknownSender": {
+    "message": "（不明な送信者）"
+  },
+  "noSubject": {
+    "message": "（件名なし）"
+  },
+  "markRead": {
+    "message": "既読にする"
+  },
+  "markReadNamed": {
+    "message": "「$1」を既読にする"
+  },
+  "checkedAgo": {
+    "message": "最終チェック：$1"
+  },
+  "foldersFailed_other": {
+    "message": "$1 個のフォルダを読み込めませんでした: $2"
+  },
+  "folderError": {
+    "message": "$1: $2"
+  },
+  "checking": {
+    "message": "チェックしています…"
+  },
+  "notSignedIn": {
+    "message": "Gmail にログインしていません"
+  },
+  "signedOutTitle": {
+    "message": "Chrome で Gmail にログインしていません。"
+  },
+  "signedOutPopup": {
+    "message": "ログインすると、ここに未読メールが表示されます。"
+  },
+  "signIn": {
+    "message": "Gmail にログイン"
+  },
+  "noFoldersSummary": {
+    "message": "追跡中のフォルダなし"
+  },
+  "noFoldersTitle": {
+    "message": "追跡するフォルダがまだ選択されていません。"
+  },
+  "noFoldersText": {
+    "message": "選択すると、新着メールがここに表示されます。"
+  },
+  "chooseFolders": {
+    "message": "フォルダを選択"
+  },
+  "unreadCount_other": {
+    "message": "未読 $1 件"
+  },
+  "noUnread": {
+    "message": "未読メールはありません"
+  },
+  "openGmailOf": {
+    "message": "$1 の Gmail を開く"
+  },
+  "noUnreadShort": {
+    "message": "未読なし"
+  },
+  "notTracked": {
+    "message": "追跡なし"
+  },
+  "markAllReadNamed_other": {
+    "message": "「$2」の未読メール $1 件をすべて既読にする"
+  },
+  "toggleBox": {
+    "message": "「$1」を折りたたむ / 展開する"
+  },
+  "boxNotTracked": {
+    "message": "このメールボックスでは追跡しているフォルダがありません。設定で有効にできます。"
+  },
+  "boxNoUnread": {
+    "message": "追跡中のフォルダに未読メールはありません。"
+  },
+  "moreInGmail_other": {
+    "message": "ほか $1 件の未読メールを Gmail で表示"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail: Gmail にログインしていません"
+  },
+  "tooltipAccount_other": {
+    "message": "$2: 未読 $1 件"
+  },
+  "newMessages_other": {
+    "message": "新着メール $1 件"
+  },
+  "summaryLine": {
+    "message": "$1: $2"
+  },
+  "contextLine": {
+    "message": "$1 | $2"
+  },
+  "bulkInterrupted": {
+    "message": "処理が途中で中断されました。もう一度お試しください"
+  },
+  "bulkBusy": {
+    "message": "このメールボックスは既読処理中です"
+  },
+  "bulkNoFolders": {
+    "message": "このメールボックスでは追跡しているフォルダがありません"
+  },
+  "testMessage": {
+    "message": "これはテスト通知です。表示されていれば、通知は正しく機能しています。"
+  },
+  "testContext": {
+    "message": "テスト通知"
+  },
+  "markReadFailedTitle": {
+    "message": "既読にできませんでした"
+  },
+  "notifReauth": {
+    "message": "Gmail で再認証が必要です。この通知をクリックして Gmail を開き、認証してからもう一度お試しください。"
+  },
+  "messageGone": {
+    "message": "このメールはもうリストにありません"
+  },
+  "folder_inbox": {
+    "message": "受信トレイ"
+  },
+  "folder_primary": {
+    "message": "メイン"
+  },
+  "folder_social": {
+    "message": "ソーシャル"
+  },
+  "folder_promo": {
+    "message": "プロモーション"
+  },
+  "folder_updates": {
+    "message": "新着"
+  },
+  "folder_forums": {
+    "message": "フォーラム"
+  },
+  "folder_starred": {
+    "message": "スター付き"
+  },
+  "folder_important": {
+    "message": "重要"
+  },
+  "folder_unread": {
+    "message": "すべての未読"
+  },
+  "folderHint_inbox": {
+    "message": "受信トレイの未読メール"
+  },
+  "folderHint_starred": {
+    "message": "スター付きの未読メール"
+  },
+  "folderHint_important": {
+    "message": "Gmail が重要と判断した未読メール"
+  },
+  "folderHint_unread": {
+    "message": "アーカイブ済みやラベル付きのメールも含みます"
+  },
+  "errNetwork": {
+    "message": "Gmail に接続できません。ネットワーク接続を確認してください"
+  },
+  "errSignedOut": {
+    "message": "このアカウントは Gmail にログインしていません"
+  },
+  "errHttp": {
+    "message": "Gmail がエラーを返しました（HTTP $1）"
+  },
+  "errUnreadable": {
+    "message": "読み込めません"
+  },
+  "errNoToken": {
+    "message": "Gmail の操作トークンが見つかりません。先にブラウザでこの Gmail のメールボックスを一度開いてください"
+  },
+  "errNoKey": {
+    "message": "Gmail のアカウントキーを読み込めません。先にブラウザでこの Gmail のメールボックスを一度開いてください"
+  },
+  "errNoThread": {
+    "message": "このメールには ID がないため、操作できません"
+  },
+  "errReauth": {
+    "message": "Gmail で再認証が必要です。認証してからもう一度お試しください"
+  },
+  "errRejected": {
+    "message": "Gmail がこの操作を拒否しました（HTTP $1）"
+  },
+  "color_teal": {
+    "message": "ティール"
+  },
+  "color_violet": {
+    "message": "バイオレット"
+  },
+  "color_magenta": {
+    "message": "マゼンタ"
+  },
+  "color_olive": {
+    "message": "オリーブ"
+  },
+  "color_cocoa": {
+    "message": "ココア"
+  },
+  "color_slate": {
+    "message": "スレート"
+  },
+  "sound_chime": {
+    "message": "ツートーン"
+  },
+  "sound_ding": {
+    "message": "ディン"
+  },
+  "sound_drop": {
+    "message": "しずく"
+  },
+  "sound_marimba": {
+    "message": "マリンバ"
+  },
+  "sound_bell": {
+    "message": "ベル"
+  },
+  "sound_tick": {
+    "message": "タップ"
+  },
+  "sound_none": {
+    "message": "無音"
+  },
+  "sound_custom": {
+    "message": "カスタムサウンド"
+  },
+  "optionsTitle": {
+    "message": "Pigeon Post for Gmail の設定"
+  },
+  "optionsHeading": {
+    "message": "メール通知の設定"
+  },
+  "checkingSignIn": {
+    "message": "Gmail のログイン状態を確認しています…"
+  },
+  "foldersHeading": {
+    "message": "通知するメール"
+  },
+  "level_off": {
+    "message": "オフ"
+  },
+  "level_count": {
+    "message": "カウント"
+  },
+  "level_notify": {
+    "message": "通知"
+  },
+  "levelDesc_off": {
+    "message": "チェックしない"
+  },
+  "levelDesc_count": {
+    "message": "ツールバー アイコンの未読件数に含める"
+  },
+  "levelDesc_notify": {
+    "message": "カウントし、デスクトップ通知も表示する"
+  },
+  "foldersNote": {
+    "message": "各行の右側の数字は現在の未読件数です。Gmail の左側のメニューと比べて、正しいフォルダを選んだか確認できます。"
+  },
+  "badgeHeading": {
+    "message": "ツールバー アイコンの数字"
+  },
+  "badgeLegend": {
+    "message": "アイコンの数字の表示方法"
+  },
+  "badgeTotal": {
+    "message": "すべてのメールボックスの合計（例: 28）"
+  },
+  "badgeSplit": {
+    "message": "メールボックスごとに表示（例: 26/2）"
+  },
+  "badgeHelp": {
+    "message": "個別の数字はメールボックスの順に並びます。アイコンに収まるのは 2〜3 個のメールボックスの 2 桁の数字までで、収まらない場合は合計を表示します。アイコンにカーソルを合わせると、メールボックスごとの未読件数を確認できます。"
+  },
+  "deliveryHeading": {
+    "message": "通知方法"
+  },
+  "notifyToggle": {
+    "message": "デスクトップ通知を表示する"
+  },
+  "notifyHelp": {
+    "message": "オフにしても、ツールバー アイコンには未読件数が表示されます。"
+  },
+  "volumeLabel": {
+    "message": "音量"
+  },
+  "volumeHelp": {
+    "message": "通知時には、メールボックスごとのサウンドが再生されます。サウンドは上の各メールボックス名の横で設定します。音量を 0 にすると再生されません。"
+  },
+  "groupLabel": {
+    "message": "複数の新着メールが同時に届いたとき"
+  },
+  "groupAll": {
+    "message": "1 つの通知にまとめる"
+  },
+  "groupOver": {
+    "message": "$1 件を超えたときだけまとめる"
+  },
+  "groupEach": {
+    "message": "メールごとに通知する"
+  },
+  "openLegend": {
+    "message": "通知やメールをクリックしたとき"
+  },
+  "openReuse": {
+    "message": "開いている Gmail タブに切り替える"
+  },
+  "openNew": {
+    "message": "新しいタブで開く"
+  },
+  "pollHeading": {
+    "message": "チェックの頻度"
+  },
+  "pollLegend": {
+    "message": "チェック間隔"
+  },
+  "pollHelp": {
+    "message": "Gmail は拡張機能に自動で通知しないため、定期的にメールをチェックします。間隔が短いほど、通知が早く届きます。"
+  },
+  "previewHeading": {
+    "message": "表示の例"
+  },
+  "sendTest": {
+    "message": "テスト通知を送信"
+  },
+  "tabName": {
+    "message": "$1 タブ"
+  },
+  "saved": {
+    "message": "保存しました"
+  },
+  "saveFailed": {
+    "message": "保存できませんでした: $1"
+  },
+  "remove": {
+    "message": "削除"
+  },
+  "removeNamed": {
+    "message": "「$1」を削除"
+  },
+  "currentUnread": {
+    "message": "現在の未読件数"
+  },
+  "levelLegend": {
+    "message": "「$1」の通知方法"
+  },
+  "loadingAccounts": {
+    "message": "ログインしている Gmail アカウントを読み込んでいます…"
+  },
+  "signedOutOptions": {
+    "message": "ログインしてからこのページに戻ると、通知するフォルダを選択できます。"
+  },
+  "awayAccounts": {
+    "message": "このパソコンでは $1 にログインしていません。これらのアカウントの設定は保持され、ログインすると自動的に適用されます。"
+  },
+  "connected": {
+    "message": "$1 に接続しました。変更は自動的に保存され、同じ Chrome アカウントでログインしている他のパソコンにも同期されます。"
+  },
+  "openThisGmail": {
+    "message": "この Gmail を開く"
+  },
+  "nameLabel": {
+    "message": "名前"
+  },
+  "namePlaceholder": {
+    "message": "例: 個人、仕事"
+  },
+  "colorLegend": {
+    "message": "色"
+  },
+  "groupInbox": {
+    "message": "受信トレイとタブ"
+  },
+  "tabsSummary": {
+    "message": "受信トレイのタブごとに設定する"
+  },
+  "primaryHint": {
+    "message": "これだけを設定すれば、プロモーションやソーシャルのメールは通知されません"
+  },
+  "groupOther": {
+    "message": "その他のフォルダ"
+  },
+  "soundCustomNamed": {
+    "message": "カスタム: $1"
+  },
+  "soundUpload": {
+    "message": "サウンドをアップロード…"
+  },
+  "soundLabel": {
+    "message": "サウンド"
+  },
+  "soundPreview": {
+    "message": "再生"
+  },
+  "soundPreviewNamed": {
+    "message": "「$1」のサウンドを再生"
+  },
+  "soundNotAudio": {
+    "message": "mp3、wav、ogg などの音声ファイルを選択してください。"
+  },
+  "soundTooBig": {
+    "message": "このファイルは 1 MB を超えています。もっと短いサウンドを選択してください。"
+  },
+  "soundMissing": {
+    "message": "このパソコンにはこのメールボックスのカスタム サウンドがないため、代わりに「$1」が再生されます。もう一度アップロードすると解決します。"
+  },
+  "conflictText": {
+    "message": "$1が$2に設定されていて、すべてのタブのメールが対象になっているため、$3の設定は反映されません。"
+  },
+  "conflictHelp": {
+    "message": "1 通のメールが複数のフォルダにある場合は、最も高い設定が適用されます。一部のタブだけを追跡するには、受信トレイの設定を下げてください。"
+  },
+  "conflictFix": {
+    "message": "受信トレイを$1に変更"
+  },
+  "filterLabels": {
+    "message": "ラベルを絞り込む"
+  },
+  "groupLabels": {
+    "message": "ラベル"
+  },
+  "labelsEmpty": {
+    "message": "このメールボックスのラベルはまだ読み込まれていません。下のボタンを押すと、Gmail の左側のメニューからラベル名を読み込みます。"
+  },
+  "reading": {
+    "message": "読み込み中…"
+  },
+  "readLabels": {
+    "message": "Gmail からラベルを読み込む"
+  },
+  "rereadLabels": {
+    "message": "ラベルを再読み込み"
+  },
+  "addLabelPlaceholder": {
+    "message": "Gmail のラベル名を入力（ネストしたラベルは「親/子」のように入力）"
+  },
+  "labelName": {
+    "message": "ラベル名"
+  },
+  "add": {
+    "message": "追加"
+  },
+  "labelsSource": {
+    "message": "Gmail の左側のメニューから取得（$1に更新）。ネストしたラベルや「もっと見る」内のラベルは、Gmail で一度展開すると表示されます。"
+  },
+  "addLabelManually": {
+    "message": "ラベルが見つからない場合は名前を入力"
+  },
+  "readingLabels": {
+    "message": "Gmail からラベルを読み込んでいます…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail の読み込みが時間内に完了しませんでした。しばらくしてからもう一度お試しください。"
+  },
+  "labelsWrongAccount": {
+    "message": "これはこのメールボックスではなく $1 のラベルです。Gmail でログインしているアカウントを確認してください。"
+  },
+  "labelsFound_other": {
+    "message": "$1 個のラベルが見つかりました。"
+  },
+  "labelsNone": {
+    "message": "Gmail の左側のメニューにラベルが見つかりません。ラベルが「もっと見る」内にある場合は、Gmail で展開してからもう一度読み込んでください。"
+  },
+  "labelsTabError": {
+    "message": "Gmail タブを読み込めませんでした: $1"
+  },
+  "countError": {
+    "message": "取得できません"
+  },
+  "quoteMore_other": {
+    "message": "$2など $1 個のフォルダ"
+  },
+  "pvBadgeSignedOut": {
+    "message": "Gmail にログインしていないときは、アイコンに「?」が表示されます。"
+  },
+  "pvBadgeStale": {
+    "message": "新しい設定で未読件数を再計算しています…"
+  },
+  "pvBadgeEmpty": {
+    "message": "現在未読メールがないため、アイコンに数字は表示されません。"
+  },
+  "pvBadgeSplit": {
+    "message": "アイコンの $1 は、$2の未読メールを順に表しています。"
+  },
+  "pvBadgeLong": {
+    "message": "メールボックスごとの数字が長すぎて収まらないため、アイコンには合計の $1 が表示されます。"
+  },
+  "pvBadgeSingle": {
+    "message": "フォルダを追跡しているメールボックスが 1 つだけのため、アイコンにはその未読件数 $1 が表示されます。"
+  },
+  "pvBadgeTotal": {
+    "message": "アイコンの $1 は、$2と$3に設定したフォルダの未読メールの合計です。"
+  },
+  "pvFrom": {
+    "message": "送信者"
+  },
+  "pvSubject": {
+    "message": "この行に件名が表示されます"
+  },
+  "pvEnvSignedOut": {
+    "message": "Gmail にログインすると、ここに通知の例が表示されます。"
+  },
+  "pvEnvOff": {
+    "message": "デスクトップ通知はオフです。アイコンの数字だけが更新されます。"
+  },
+  "pvEnvNone": {
+    "message": "$1に設定したフォルダがないため、通知は表示されません。"
+  },
+  "pvEnvText": {
+    "message": "$1に新着メールが届くと、このような通知が表示されます。最後の行には、どのメールボックス宛てかが表示されます。"
+  },
+  "pvAccountsMulti": {
+    "message": "アイコンをクリックすると、このようにメールボックスごとに表示され、個別に折りたたむことができます。"
+  },
+  "pvAccountsSingle": {
+    "message": "アイコンをクリックすると、メールボックスはこのように表示されます。"
+  },
+  "pvNotTracked": {
+    "message": "このメールボックスでは追跡しているフォルダがありません。"
+  },
+  "pvPollEvery": {
+    "message": "$1ごとにチェックします。"
+  },
+  "pvGroupEach": {
+    "message": "新着メールは 1 件ずつ通知されます。"
+  },
+  "pvGroupAll": {
+    "message": "複数の新着メールが同時に届いたときは、1 つの通知にまとめられます。"
+  },
+  "pvGroupOver_other": {
+    "message": "一度に $1 件を超える新着メールが届いたときは、1 つの通知にまとめられます。"
+  },
+  "testContextLine": {
+    "message": "テスト通知 | $1 | $2"
+  },
+  "testWhereMac": {
+    "message": "「システム設定 › 通知 › Google Chrome」"
+  },
+  "testWhereWin": {
+    "message": "「設定 › システム › 通知」の Google Chrome"
+  },
+  "testWhereOther": {
+    "message": "システムの通知設定"
+  },
+  "testDenied": {
+    "message": "この拡張機能の通知はブロックされています。chrome://settings/content/notifications で許可してから、もう一度お試しください。"
+  },
+  "testSent": {
+    "message": "送信しました。表示されない場合は、$1で通知を許可し、おやすみモードや集中モードがオフになっていることを確認してください。"
+  },
+  "supportText": {
+    "message": "便利だと感じたら、コーヒー1杯分の支援をいただけるとうれしいです。"
+  },
+  "supportLink": {
+    "message": "PayPal でコーヒーをおごる"
+  }
+}

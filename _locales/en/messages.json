@@ -1,0 +1,692 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "Checks for new mail in the Gmail accounts you're signed in to in Chrome. You choose which folders notify you and which only count."
+  },
+  "langTag": {
+    "message": "en"
+  },
+  "listSeparator": {
+    "message": ", "
+  },
+  "quoted": {
+    "message": "“$1”"
+  },
+  "justNow": {
+    "message": "just now"
+  },
+  "loading": {
+    "message": "Loading…"
+  },
+  "checkNow": {
+    "message": "Check now"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "stripLabel": {
+    "message": "Unread count for each mailbox. Click one to open it."
+  },
+  "markReadFailed": {
+    "message": "Couldn't mark as read: $1"
+  },
+  "unknownError": {
+    "message": "Unknown error"
+  },
+  "reauthOpen": {
+    "message": "Open Gmail to verify again"
+  },
+  "markAllRead": {
+    "message": "Mark all as read"
+  },
+  "bulkTooMany_one": {
+    "message": "There is $1 unread message, more than can be handled at once"
+  },
+  "bulkTooMany_other": {
+    "message": "There are $1 unread messages, more than can be handled at once"
+  },
+  "bulkTooManyNote": {
+    "message": "Only the newest 20 messages in each folder can be handled at once, and there are more in $1. Open these unread messages in Gmail to select and handle them yourself?"
+  },
+  "openInGmail": {
+    "message": "Open in Gmail"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "bulkConfirm_one": {
+    "message": "Mark $1 unread message as read?"
+  },
+  "bulkConfirm_other": {
+    "message": "Mark all $1 unread messages as read?"
+  },
+  "bulkScope": {
+    "message": "Includes: $1"
+  },
+  "bulkProgress": {
+    "message": "Marking as read: $1 of $2"
+  },
+  "bulkKeepsRunning": {
+    "message": "This keeps going even if you close this window."
+  },
+  "bulkProgressLabel": {
+    "message": "Mark as read progress"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "bulkFailed": {
+    "message": "Mark all as read didn't finish"
+  },
+  "bulkFailedPartial_one": {
+    "message": "$2. $1 message was marked as read."
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2. $1 messages were marked as read."
+  },
+  "bulkLeft_one": {
+    "message": "$1 unread message remains, possibly one that just arrived. You can try again."
+  },
+  "bulkLeft_other": {
+    "message": "$1 unread messages remain, possibly ones that just arrived. You can try again."
+  },
+  "bulkDone_one": {
+    "message": "Marked $1 message as read"
+  },
+  "bulkDone_other": {
+    "message": "Marked $1 messages as read"
+  },
+  "bulkNothing": {
+    "message": "Nothing to mark as read"
+  },
+  "openMessage": {
+    "message": "Open this message"
+  },
+  "openMessageFrom": {
+    "message": "Open this message ($1)"
+  },
+  "unknownSender": {
+    "message": "(unknown sender)"
+  },
+  "noSubject": {
+    "message": "(no subject)"
+  },
+  "markRead": {
+    "message": "Mark as read"
+  },
+  "markReadNamed": {
+    "message": "Mark “$1” as read"
+  },
+  "checkedAgo": {
+    "message": "Checked $1"
+  },
+  "foldersFailed_one": {
+    "message": "$1 folder couldn't be read: $2"
+  },
+  "foldersFailed_other": {
+    "message": "$1 folders couldn't be read: $2"
+  },
+  "folderError": {
+    "message": "$1: $2"
+  },
+  "checking": {
+    "message": "Checking…"
+  },
+  "notSignedIn": {
+    "message": "Not signed in to Gmail"
+  },
+  "signedOutTitle": {
+    "message": "Chrome isn't signed in to Gmail."
+  },
+  "signedOutPopup": {
+    "message": "Once you sign in, your unread mail is listed here."
+  },
+  "signIn": {
+    "message": "Sign in to Gmail"
+  },
+  "noFoldersSummary": {
+    "message": "No folders tracked"
+  },
+  "noFoldersTitle": {
+    "message": "You haven't chosen any folders to track."
+  },
+  "noFoldersText": {
+    "message": "Once you do, new mail shows up here."
+  },
+  "chooseFolders": {
+    "message": "Choose folders"
+  },
+  "unreadCount_one": {
+    "message": "$1 unread"
+  },
+  "unreadCount_other": {
+    "message": "$1 unread"
+  },
+  "noUnread": {
+    "message": "No unread mail"
+  },
+  "openGmailOf": {
+    "message": "Open Gmail for $1"
+  },
+  "noUnreadShort": {
+    "message": "All read"
+  },
+  "notTracked": {
+    "message": "Not tracked"
+  },
+  "markAllReadNamed_one": {
+    "message": "Mark $1 unread message in “$2” as read"
+  },
+  "markAllReadNamed_other": {
+    "message": "Mark all $1 unread messages in “$2” as read"
+  },
+  "toggleBox": {
+    "message": "Collapse or expand “$1”"
+  },
+  "boxNotTracked": {
+    "message": "This mailbox isn't tracking any folders. You can turn some on in Settings."
+  },
+  "boxNoUnread": {
+    "message": "No unread mail in tracked folders."
+  },
+  "moreInGmail_one": {
+    "message": "View $1 more unread message in Gmail"
+  },
+  "moreInGmail_other": {
+    "message": "View $1 more unread messages in Gmail"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail: not signed in to Gmail"
+  },
+  "tooltipAccount_one": {
+    "message": "$2: $1 unread"
+  },
+  "tooltipAccount_other": {
+    "message": "$2: $1 unread"
+  },
+  "newMessages_one": {
+    "message": "$1 new message"
+  },
+  "newMessages_other": {
+    "message": "$1 new messages"
+  },
+  "summaryLine": {
+    "message": "$1: $2"
+  },
+  "contextLine": {
+    "message": "$1 | $2"
+  },
+  "bulkInterrupted": {
+    "message": "Stopped partway through. You can try again."
+  },
+  "bulkBusy": {
+    "message": "This mailbox is already being marked as read"
+  },
+  "bulkNoFolders": {
+    "message": "This mailbox isn't tracking any folders"
+  },
+  "testMessage": {
+    "message": "This is a test notification. If you can see it, notifications are working."
+  },
+  "testContext": {
+    "message": "Test notification"
+  },
+  "markReadFailedTitle": {
+    "message": "Couldn't mark as read"
+  },
+  "notifReauth": {
+    "message": "Gmail needs you to verify again. Click this notification to open Gmail, verify, and try again."
+  },
+  "messageGone": {
+    "message": "This message is no longer in the list"
+  },
+  "folder_inbox": {
+    "message": "Inbox"
+  },
+  "folder_primary": {
+    "message": "Primary"
+  },
+  "folder_social": {
+    "message": "Social"
+  },
+  "folder_promo": {
+    "message": "Promotions"
+  },
+  "folder_updates": {
+    "message": "Updates"
+  },
+  "folder_forums": {
+    "message": "Forums"
+  },
+  "folder_starred": {
+    "message": "Starred"
+  },
+  "folder_important": {
+    "message": "Important"
+  },
+  "folder_unread": {
+    "message": "All unread"
+  },
+  "folderHint_inbox": {
+    "message": "Unread mail in your inbox"
+  },
+  "folderHint_starred": {
+    "message": "Starred mail that's unread"
+  },
+  "folderHint_important": {
+    "message": "Unread mail Gmail marks as important"
+  },
+  "folderHint_unread": {
+    "message": "Includes archived mail and mail under any label"
+  },
+  "errNetwork": {
+    "message": "Can't reach Gmail. Check your network connection."
+  },
+  "errSignedOut": {
+    "message": "This account isn't signed in to Gmail"
+  },
+  "errHttp": {
+    "message": "Gmail returned an error (HTTP $1)"
+  },
+  "errUnreadable": {
+    "message": "Couldn't read"
+  },
+  "errNoToken": {
+    "message": "Couldn't find Gmail's action token. Open this Gmail mailbox in the browser once first."
+  },
+  "errNoKey": {
+    "message": "Couldn't read Gmail's account key. Open this Gmail mailbox in the browser once first."
+  },
+  "errNoThread": {
+    "message": "This message has no ID, so it can't be changed"
+  },
+  "errReauth": {
+    "message": "Gmail needs you to verify again. Try again after verifying."
+  },
+  "errRejected": {
+    "message": "Gmail refused this action (HTTP $1)"
+  },
+  "color_teal": {
+    "message": "Teal"
+  },
+  "color_violet": {
+    "message": "Violet"
+  },
+  "color_magenta": {
+    "message": "Magenta"
+  },
+  "color_olive": {
+    "message": "Olive"
+  },
+  "color_cocoa": {
+    "message": "Cocoa"
+  },
+  "color_slate": {
+    "message": "Slate"
+  },
+  "sound_chime": {
+    "message": "Two-tone"
+  },
+  "sound_ding": {
+    "message": "Ding"
+  },
+  "sound_drop": {
+    "message": "Drop"
+  },
+  "sound_marimba": {
+    "message": "Marimba"
+  },
+  "sound_bell": {
+    "message": "Bell"
+  },
+  "sound_tick": {
+    "message": "Tap"
+  },
+  "sound_none": {
+    "message": "Silent"
+  },
+  "sound_custom": {
+    "message": "Custom sound"
+  },
+  "optionsTitle": {
+    "message": "Pigeon Post for Gmail settings"
+  },
+  "optionsHeading": {
+    "message": "Mail notification settings"
+  },
+  "checkingSignIn": {
+    "message": "Checking Gmail sign-in…"
+  },
+  "foldersHeading": {
+    "message": "Which mail to notify you about"
+  },
+  "level_off": {
+    "message": "Off"
+  },
+  "level_count": {
+    "message": "Count"
+  },
+  "level_notify": {
+    "message": "Notify"
+  },
+  "levelDesc_off": {
+    "message": "Not checked"
+  },
+  "levelDesc_count": {
+    "message": "Added to the unread count on the toolbar icon"
+  },
+  "levelDesc_notify": {
+    "message": "Counted, plus a desktop notification"
+  },
+  "foldersNote": {
+    "message": "The number at the right of each row is its current unread count. Compare it with Gmail's left menu to make sure you picked the right folder."
+  },
+  "badgeHeading": {
+    "message": "Number on the toolbar icon"
+  },
+  "badgeLegend": {
+    "message": "How the icon number is shown"
+  },
+  "badgeTotal": {
+    "message": "Total of all mailboxes, e.g. 28"
+  },
+  "badgeSplit": {
+    "message": "Each mailbox separately, e.g. 26/2"
+  },
+  "badgeHelp": {
+    "message": "Separate numbers follow mailbox order. The icon only fits two-digit numbers for two or three mailboxes; when they don't fit, it shows the total. Hover over the icon to see each mailbox's unread count."
+  },
+  "deliveryHeading": {
+    "message": "How you're notified"
+  },
+  "notifyToggle": {
+    "message": "Show desktop notifications"
+  },
+  "notifyHelp": {
+    "message": "When off, the toolbar icon still shows the unread count."
+  },
+  "volumeLabel": {
+    "message": "Sound volume"
+  },
+  "volumeHelp": {
+    "message": "Notifications play the mailbox's own sound, which you set next to each mailbox's name above. Set the volume to 0 for no sound."
+  },
+  "groupLabel": {
+    "message": "When several new messages arrive at once"
+  },
+  "groupAll": {
+    "message": "Combine into one notification"
+  },
+  "groupOver": {
+    "message": "Combine only when more than $1"
+  },
+  "groupEach": {
+    "message": "Notify for each message"
+  },
+  "openLegend": {
+    "message": "When you click a notification or message"
+  },
+  "openReuse": {
+    "message": "Switch to an open Gmail tab"
+  },
+  "openNew": {
+    "message": "Open a new tab"
+  },
+  "pollHeading": {
+    "message": "How often to check"
+  },
+  "pollLegend": {
+    "message": "Check interval"
+  },
+  "pollHelp": {
+    "message": "Gmail doesn't notify extensions on its own, so mail is checked on a schedule. Shorter intervals mean faster notifications."
+  },
+  "previewHeading": {
+    "message": "What you'll see"
+  },
+  "sendTest": {
+    "message": "Send test notification"
+  },
+  "tabName": {
+    "message": "$1 tab"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "saveFailed": {
+    "message": "Couldn't save: $1"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeNamed": {
+    "message": "Remove “$1”"
+  },
+  "currentUnread": {
+    "message": "Current unread count"
+  },
+  "levelLegend": {
+    "message": "Notifications for “$1”"
+  },
+  "loadingAccounts": {
+    "message": "Reading the Gmail accounts you're signed in to…"
+  },
+  "signedOutOptions": {
+    "message": "Sign in, then come back to this page to choose which folders notify you."
+  },
+  "awayAccounts": {
+    "message": "This computer isn't signed in to $1. Their settings are kept and apply automatically once you sign in."
+  },
+  "connected": {
+    "message": "Connected to $1. Changes save automatically and sync to other computers signed in to the same Chrome account."
+  },
+  "openThisGmail": {
+    "message": "Open this Gmail"
+  },
+  "nameLabel": {
+    "message": "Name"
+  },
+  "namePlaceholder": {
+    "message": "e.g. Personal, Work"
+  },
+  "colorLegend": {
+    "message": "Color"
+  },
+  "groupInbox": {
+    "message": "Inbox and tabs"
+  },
+  "tabsSummary": {
+    "message": "Set inbox tabs separately"
+  },
+  "primaryHint": {
+    "message": "Set only this one to skip notifications for promotions and social mail"
+  },
+  "groupOther": {
+    "message": "Other folders"
+  },
+  "soundCustomNamed": {
+    "message": "Custom: $1"
+  },
+  "soundUpload": {
+    "message": "Upload sound…"
+  },
+  "soundLabel": {
+    "message": "Sound"
+  },
+  "soundPreview": {
+    "message": "Play"
+  },
+  "soundPreviewNamed": {
+    "message": "Play the sound for “$1”"
+  },
+  "soundNotAudio": {
+    "message": "Choose an audio file, such as mp3, wav, or ogg."
+  },
+  "soundTooBig": {
+    "message": "This file is over 1 MB. Choose a shorter sound."
+  },
+  "soundMissing": {
+    "message": "This computer doesn't have this mailbox's custom sound, so “$1” plays instead. Upload it again to fix this."
+  },
+  "conflictText": {
+    "message": "$1 is set to $2, which already covers mail in every tab, so the settings for $3 have no effect."
+  },
+  "conflictHelp": {
+    "message": "When a message is in several folders, the highest setting applies. To track only some tabs, lower the inbox setting."
+  },
+  "conflictFix": {
+    "message": "Change inbox to $1"
+  },
+  "filterLabels": {
+    "message": "Filter labels"
+  },
+  "groupLabels": {
+    "message": "Your labels"
+  },
+  "labelsEmpty": {
+    "message": "No labels read for this mailbox yet. The button below reads label names from Gmail's left menu."
+  },
+  "reading": {
+    "message": "Reading…"
+  },
+  "readLabels": {
+    "message": "Read labels from Gmail"
+  },
+  "rereadLabels": {
+    "message": "Read labels again"
+  },
+  "addLabelPlaceholder": {
+    "message": "Enter a label name from Gmail. Write nested labels as “Parent/Child”"
+  },
+  "labelName": {
+    "message": "Label name"
+  },
+  "add": {
+    "message": "Add"
+  },
+  "labelsSource": {
+    "message": "Taken from Gmail's left menu, updated $1. Nested labels and labels under “More” only appear after you expand them once in Gmail."
+  },
+  "addLabelManually": {
+    "message": "Can't find a label? Enter its name"
+  },
+  "readingLabels": {
+    "message": "Reading labels from Gmail…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail didn't finish loading in time. Try again in a moment."
+  },
+  "labelsWrongAccount": {
+    "message": "These are labels for $1, not this mailbox. Check which account Gmail is signed in to."
+  },
+  "labelsFound_one": {
+    "message": "Found $1 label."
+  },
+  "labelsFound_other": {
+    "message": "Found $1 labels."
+  },
+  "labelsNone": {
+    "message": "No labels found in Gmail's left menu. If your labels are under “More”, expand it in Gmail and read again."
+  },
+  "labelsTabError": {
+    "message": "Couldn't read the Gmail tab: $1"
+  },
+  "countError": {
+    "message": "Unavailable"
+  },
+  "quoteMore_one": {
+    "message": "$2 and more ($1 folder)"
+  },
+  "quoteMore_other": {
+    "message": "$2 and more ($1 folders)"
+  },
+  "pvBadgeSignedOut": {
+    "message": "When you're not signed in to Gmail, the icon shows “?”."
+  },
+  "pvBadgeStale": {
+    "message": "Recounting unread mail with the new settings…"
+  },
+  "pvBadgeEmpty": {
+    "message": "No unread mail right now, so the icon shows no number."
+  },
+  "pvBadgeSplit": {
+    "message": "The $1 on the icon is unread mail for $2, in that order."
+  },
+  "pvBadgeLong": {
+    "message": "The numbers for each mailbox are too long to fit, so the icon shows the total, $1."
+  },
+  "pvBadgeSingle": {
+    "message": "Only one mailbox tracks folders, so the icon shows its unread count, $1."
+  },
+  "pvBadgeTotal": {
+    "message": "The $1 on the icon is the total unread mail in folders set to $2 and $3."
+  },
+  "pvFrom": {
+    "message": "Sender"
+  },
+  "pvSubject": {
+    "message": "The subject appears on this line"
+  },
+  "pvEnvSignedOut": {
+    "message": "After you sign in to Gmail, a sample notification appears here."
+  },
+  "pvEnvOff": {
+    "message": "Desktop notifications are off. Only the icon number updates."
+  },
+  "pvEnvNone": {
+    "message": "No folders are set to $1, so no notifications appear."
+  },
+  "pvEnvText": {
+    "message": "When new mail arrives in $1, you'll see a notification like this. The last line shows which mailbox it's for."
+  },
+  "pvAccountsMulti": {
+    "message": "When you click the icon, each mailbox is listed separately like this and can be collapsed."
+  },
+  "pvAccountsSingle": {
+    "message": "When you click the icon, the mailbox is labeled like this."
+  },
+  "pvNotTracked": {
+    "message": "This mailbox isn't tracking any folders."
+  },
+  "pvPollEvery": {
+    "message": "Checks every $1."
+  },
+  "pvGroupEach": {
+    "message": "Each new message gets its own notification."
+  },
+  "pvGroupAll": {
+    "message": "When several new messages arrive together, they're combined into one notification."
+  },
+  "pvGroupOver_one": {
+    "message": "When more than $1 new message arrives at once, they're combined into one notification."
+  },
+  "pvGroupOver_other": {
+    "message": "When more than $1 new messages arrive at once, they're combined into one notification."
+  },
+  "testContextLine": {
+    "message": "Test notification | $1 | $2"
+  },
+  "testWhereMac": {
+    "message": "System Settings › Notifications › Google Chrome"
+  },
+  "testWhereWin": {
+    "message": "Google Chrome under Settings › System › Notifications"
+  },
+  "testWhereOther": {
+    "message": "your system's notification settings"
+  },
+  "testDenied": {
+    "message": "Notifications for this extension are blocked. Allow them at chrome://settings/content/notifications and try again."
+  },
+  "testSent": {
+    "message": "Sent. If you don't see it, allow notifications in $1 and make sure Do Not Disturb or Focus is off."
+  },
+  "supportText": {
+    "message": "If you find it useful, I'd love it if you bought me a coffee."
+  },
+  "supportLink": {
+    "message": "Buy me a coffee (PayPal)"
+  }
+}

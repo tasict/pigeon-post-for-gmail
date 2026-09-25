@@ -1,0 +1,186 @@
+body { width: 390px; max-height: 590px; display: flex; flex-direction: column; font-size: 13.5px; }
+button { font: inherit; color: inherit; }
+.bar {
+  display: flex; align-items: center; gap: 2px;
+  padding: 10px 8px 10px 14px;
+  background: var(--sheet); border-bottom: 1px solid var(--rule);
+}
+.bar-text { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.35; }
+.bar-text strong { font-size: 15px; }
+.bar-text small { color: var(--muted); font-size: 12px; }
+.icon-btn {
+  display: grid; place-items: center; width: 32px; height: 32px;
+  border: 0; border-radius: 8px; background: none; color: var(--muted); cursor: pointer;
+}
+.icon-btn:hover { background: var(--wash); color: var(--ink); }
+.icon-btn.spin svg { animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Hover hints: "Check now" turns its arrow once; "Settings" slides both knobs across, as if adjusting them.
+   Knobs are filled with the button background so they hide the track behind them. */
+.icon-btn { --btn-bg: var(--sheet); }
+.icon-btn:hover { --btn-bg: var(--wash); }
+.knob { fill: var(--btn-bg); transition: transform .35s cubic-bezier(.34, 1.4, .5, 1); }
+@media (prefers-reduced-motion: no-preference) {
+  #refresh:is(:hover, :focus-visible):not(.spin) svg { animation: turn .6s cubic-bezier(.3, .7, .4, 1); }
+  #settings:is(:hover, :focus-visible) .knob-a { transform: translateX(-6px); }
+  #settings:is(:hover, :focus-visible) .knob-b { transform: translateX(6px); }
+}
+@keyframes turn { to { transform: rotate(360deg); } }
+.warning { margin: 0; padding: 6px 14px; background: var(--wash); color: var(--amber); font-size: 12.5px; }
+.warning-action {
+  padding: 0; border: 0; background: none; color: var(--blue); cursor: pointer;
+  font-size: inherit; text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* Top strip: one fixed-width chip per mailbox; click to open that mailbox.
+   Too many chips scroll sideways; the edges fade where more chips are hidden. */
+.strip {
+  --fade: 24px;
+  display: flex; gap: 5px;
+  padding: 6px 10px; background: var(--sheet); border-bottom: 1px solid var(--rule);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity; scroll-padding-inline: var(--fade);
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--fade-start, 0px), #000 calc(100% - var(--fade-end, 0px)), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 var(--fade-start, 0px), #000 calc(100% - var(--fade-end, 0px)), transparent);
+}
+.strip::-webkit-scrollbar { display: none; }
+.strip.more-before { --fade-start: var(--fade); }
+.strip.more-after { --fade-end: var(--fade); }
+@media (prefers-reduced-motion: no-preference) { .strip { scroll-behavior: smooth; } }
+.strip-item {
+  flex: none; display: inline-flex; align-items: center; gap: 5px; width: 96px;
+  height: 26px; padding: 0 8px 0 4px;
+  border: 1px solid color-mix(in srgb, var(--acct) 22%, transparent); border-radius: 999px;
+  background: var(--acct-wash); cursor: pointer; text-align: left;
+  scroll-snap-align: start;
+  transition: border-color .15s, background .15s;
+}
+.strip-item:hover { border-color: var(--acct); background: color-mix(in srgb, var(--acct) 14%, var(--acct-wash)); }
+.strip-item:active { transform: scale(.97); }
+.strip-item:focus-visible { outline-offset: -1px; }
+.strip-item .acct-mark { --size: 16px; }
+.strip-item .who { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11.5px; }
+.strip-item .n { flex: none; font-size: 13px; font-weight: 700; line-height: 1; color: var(--acct); }
+/* No unread mail: the chip stays in place but steps back */
+.strip-item:has(.n.zero) { border-color: var(--rule); background: var(--sheet); }
+.strip-item:has(.n.zero):hover { border-color: var(--acct); }
+.strip-item .n.zero { color: var(--muted); font-weight: 400; }
+
+main { flex: 1; overflow-y: auto; }
+
+/* Mailbox box: the left color bar and header tint show which mailbox it is */
+.box { border-left: 4px solid var(--acct); }
+.box + .box { border-top: 6px solid var(--paper); }
+.box-head {
+  position: sticky; top: 0; z-index: 1;
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px 8px 6px 6px; border-bottom: 1px solid var(--rule);
+  background: var(--acct-wash);
+}
+.box-open {
+  flex: 1; min-width: 0;
+  display: flex; align-items: center; gap: 10px;
+  padding: 3px 6px 3px 4px; border: 0; border-radius: 7px;
+  background: none; text-align: left; cursor: pointer;
+}
+.box-open:hover { background: color-mix(in srgb, var(--acct) 10%, transparent); }
+.box-open:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.box-open .who { min-width: 0; display: flex; flex-direction: column; line-height: 1.3; }
+.box-open .who strong, .box-open .who small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.box-open .who small { color: var(--muted); font-size: 11.5px; }
+.box-open .go { flex: none; color: var(--acct); opacity: .55; }
+.box-open:hover .go { opacity: 1; }
+.box-toggle, .box-count {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 8px; border: 0; border-radius: 7px; background: none;
+}
+.box-toggle { cursor: pointer; }
+.box-toggle:hover { background: color-mix(in srgb, var(--acct) 10%, transparent); }
+.n { font-size: 17px; font-weight: 700; color: var(--acct); }
+.n.zero { color: var(--muted); font-weight: 400; font-size: 13px; }
+.chev {
+  width: 8px; height: 8px; margin: 0 2px 3px;
+  border-right: 1.6px solid var(--muted); border-bottom: 1.6px solid var(--muted);
+  transform: rotate(45deg); transition: transform .15s;
+}
+.box.collapsed .chev { transform: rotate(-45deg); margin-bottom: 0; }
+.box.collapsed .box-body { display: none; }
+
+/* Message row: open the message on the left, mark as read on the right */
+.msg {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center;
+  border-bottom: 1px solid var(--rule); background: var(--sheet);
+  transition: opacity .18s, transform .18s;
+}
+.msg:hover { background: var(--wash); }
+.msg.leaving { opacity: 0; transform: translateX(24px); pointer-events: none; }
+.msg-open {
+  display: block; min-width: 0; padding: 10px 4px 10px 12px;
+  border: 0; background: none; text-align: left; cursor: pointer;
+}
+.msg .top { display: flex; gap: 8px; align-items: baseline; }
+.msg .from { flex: 1; min-width: 0; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.msg .time { flex: none; color: var(--muted); font-size: 12px; }
+.msg .subject, .msg .snippet { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.msg .snippet { color: var(--muted); font-size: 12.5px; }
+.msg .where { display: block; margin-top: 2px; color: var(--muted); font-size: 11.5px; }
+.msg-read {
+  display: grid; place-items: center; width: 34px; height: 34px; margin: 0 8px 0 2px;
+  border: 0; border-radius: 9px; background: none; cursor: pointer;
+  color: color-mix(in srgb, var(--muted) 65%, transparent);
+  transition: background .15s, color .15s;
+}
+.msg:hover .msg-read { color: var(--muted); }
+.msg-read:hover, .msg-read:focus-visible { background: var(--sheet); color: var(--green); box-shadow: 0 0 0 1px var(--rule); }
+.msg-read[aria-busy="true"] { color: var(--green); }
+
+/* Envelope icon: the unread dot uses the mailbox color; on hover, focus or while busy the flap opens along the top edge and the dot shrinks away. */
+.env .env-flap { transform-box: view-box; transform-origin: var(--hinge); transition: transform .22s cubic-bezier(.3, .7, .4, 1); }
+.env .env-dot { fill: var(--acct, var(--red)); stroke: none; transform-box: fill-box; transform-origin: center; transition: transform .18s, opacity .18s; }
+:is(.msg-read, .box-read):is(:hover, :focus-visible, [aria-busy="true"], [aria-expanded="true"]) .env-flap { transform: scaleY(-1); }
+:is(.msg-read, .box-read):is(:hover, :focus-visible, [aria-busy="true"], [aria-expanded="true"]) .env-dot { transform: scale(0); opacity: 0; }
+
+/* "Mark all as read" in the mailbox header */
+.box-read {
+  flex: none; display: grid; place-items: center; width: 32px; height: 32px;
+  border: 0; border-radius: 8px; background: none; color: var(--muted); cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.box-read:hover, .box-read:focus-visible, .box-read[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--acct) 12%, transparent); color: var(--acct);
+}
+
+/* Confirmation, progress and result: below the header, in the mailbox color */
+.bulk {
+  position: relative; padding: 10px 12px 12px;
+  background: var(--sheet); border-bottom: 1px solid var(--rule);
+  font-size: 12.5px; line-height: 1.5;
+}
+.bulk.enter { animation: bulk-in .18s ease-out; }
+@keyframes bulk-in { from { opacity: 0; transform: translateY(-6px); } }
+.bulk p { margin: 0; }
+.bulk-q { font-size: 13.5px; font-weight: 650; }
+.bulk-note { color: var(--muted); }
+.bulk.is-error .bulk-q { color: var(--amber); }
+.bulk-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.btn.acct { background: var(--acct); border-color: var(--acct); color: var(--on-acct); font-weight: 600; }
+.btn.acct:hover { opacity: .9; }
+.bulk-bar {
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 3px;
+  background: color-mix(in srgb, var(--acct) 18%, transparent);
+}
+.bulk-bar::after {
+  content: ""; display: block; width: var(--p, 0%); height: 100%;
+  background: var(--acct); transition: width .3s ease-out;
+}
+
+.more {
+  display: block; width: 100%; padding: 8px 14px 8px 12px; border: 0; border-bottom: 1px solid var(--rule);
+  background: var(--sheet); color: var(--blue); text-align: left; cursor: pointer; font-size: 12.5px;
+}
+.box-empty { margin: 0; padding: 14px 12px; background: var(--sheet); color: var(--muted); font-size: 12.5px; border-bottom: 1px solid var(--rule); }
+.state { padding: 36px 24px; text-align: center; color: var(--muted); }
+.state p { margin: 0 0 14px; }
+.state strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 14.5px; }

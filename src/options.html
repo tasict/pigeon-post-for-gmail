@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="optionsTitle">Pigeon Post for Gmail</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div>
+        <h1 data-i18n="optionsHeading"></h1>
+        <p id="connection" class="connection" data-i18n="checkingSignIn"></p>
+      </div>
+      <p id="saved" class="saved" role="status" aria-live="polite"></p>
+    </header>
+
+    <main class="main">
+      <section aria-labelledby="h-folders">
+        <h2 id="h-folders" data-i18n="foldersHeading"></h2>
+        <dl class="legend">
+          <div><dt><span class="chip off" data-i18n="level_off"></span></dt><dd data-i18n="levelDesc_off"></dd></div>
+          <div><dt><span class="chip count" data-i18n="level_count"></span></dt><dd data-i18n="levelDesc_count"></dd></div>
+          <div><dt><span class="chip notify" data-i18n="level_notify"></span></dt><dd data-i18n="levelDesc_notify"></dd></div>
+        </dl>
+        <p class="note" data-i18n="foldersNote"></p>
+        <div id="accounts"></div>
+      </section>
+
+      <section id="badge-section" aria-labelledby="h-badge" hidden>
+        <h2 id="h-badge" data-i18n="badgeHeading"></h2>
+        <fieldset class="field">
+          <legend class="visually-hidden" data-i18n="badgeLegend"></legend>
+          <label class="radio"><input type="radio" name="badgeMode" value="total"> <span data-i18n="badgeTotal"></span></label>
+          <label class="radio"><input type="radio" name="badgeMode" value="split"> <span data-i18n="badgeSplit"></span></label>
+        </fieldset>
+        <p class="field-help" data-i18n="badgeHelp"></p>
+      </section>
+
+      <section aria-labelledby="h-delivery">
+        <h2 id="h-delivery" data-i18n="deliveryHeading"></h2>
+        <div class="field">
+          <label class="switch">
+            <input type="checkbox" id="notify">
+            <span class="switch-track" aria-hidden="true"></span>
+            <span data-i18n="notifyToggle"></span>
+          </label>
+          <p class="field-help" data-i18n="notifyHelp"></p>
+        </div>
+        <div class="field">
+          <label for="volume" class="field-label" data-i18n="volumeLabel"></label>
+          <div class="volume">
+            <input type="range" id="volume" min="0" max="100" step="5">
+            <output id="volume-out" for="volume"></output>
+          </div>
+          <p class="field-help" data-i18n="volumeHelp"></p>
+        </div>
+        <div class="field">
+          <label for="groupAfter" class="field-label" data-i18n="groupLabel"></label>
+          <select id="groupAfter">
+            <option value="1" data-i18n="groupAll"></option>
+            <option value="3" data-i18n="groupOver" data-i18n-args="3"></option>
+            <option value="5" data-i18n="groupOver" data-i18n-args="5"></option>
+            <option value="99" data-i18n="groupEach"></option>
+          </select>
+        </div>
+        <fieldset class="field">
+          <legend class="field-label" data-i18n="openLegend"></legend>
+          <label class="radio"><input type="radio" name="reuseTab" value="true"> <span data-i18n="openReuse"></span></label>
+          <label class="radio"><input type="radio" name="reuseTab" value="false"> <span data-i18n="openNew"></span></label>
+        </fieldset>
+      </section>
+
+      <section aria-labelledby="h-poll">
+        <h2 id="h-poll" data-i18n="pollHeading"></h2>
+        <fieldset class="seg wide" id="poll">
+          <legend class="visually-hidden" data-i18n="pollLegend"></legend>
+        </fieldset>
+        <p class="field-help" data-i18n="pollHelp"></p>
+      </section>
+
+      <footer class="support">
+        <p data-i18n="supportText"></p>
+        <a href="https://paypal.me/tasict" target="_blank" rel="noopener noreferrer" data-i18n="supportLink"></a>
+      </footer>
+    </main>
+
+    <aside class="preview" aria-labelledby="h-preview">
+      <h2 id="h-preview" data-i18n="previewHeading"></h2>
+      <div class="toolbar" aria-hidden="true">
+        <span class="toolbar-dots"><i></i><i></i><i></i></span>
+        <span class="toolbar-url"></span>
+        <span class="toolbar-icon"><img id="pv-icon" src="../icons/toolbar32.png" alt=""><b id="pv-badge"></b></span>
+      </div>
+      <p id="pv-badge-text" class="pv-caption"></p>
+
+      <div id="pv-envelope" class="envelope">
+        <div class="envelope-inner">
+          <img src="../icons/icon48.png" alt="" class="envelope-icon">
+          <div class="envelope-text">
+            <strong id="pv-from"></strong>
+            <span id="pv-subject"></span>
+            <small id="pv-context"></small>
+          </div>
+        </div>
+      </div>
+      <p id="pv-envelope-text" class="pv-caption"></p>
+
+      <p id="pv-accounts-text" class="pv-caption tight"></p>
+      <div id="pv-accounts" class="pv-accounts"></div>
+      <div id="pv-plain" class="summary"></div>
+
+      <div class="test">
+        <button id="test" class="btn" data-i18n="sendTest"></button>
+        <p id="test-help" class="field-help" hidden></p>
+      </div>
+    </aside>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="feed-parser.js"></script>
+  <script src="gmail.js"></script>
+  <script src="settings.js"></script>
+  <script src="label-scan.js"></script>
+  <script src="sounds.js"></script>
+  <script src="ui.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

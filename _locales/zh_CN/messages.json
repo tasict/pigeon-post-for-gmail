@@ -1,0 +1,650 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "通过浏览器已登录的 Gmail 检查新邮件。由你决定哪些文件夹要通知、哪些只计数。"
+  },
+  "langTag": {
+    "message": "zh-Hans"
+  },
+  "listSeparator": {
+    "message": "、"
+  },
+  "quoted": {
+    "message": "“$1”"
+  },
+  "justNow": {
+    "message": "刚刚"
+  },
+  "loading": {
+    "message": "正在加载…"
+  },
+  "checkNow": {
+    "message": "立即检查"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "stripLabel": {
+    "message": "各邮箱的未读数，点击即可打开该邮箱"
+  },
+  "markReadFailed": {
+    "message": "无法标为已读：$1"
+  },
+  "unknownError": {
+    "message": "未知错误"
+  },
+  "reauthOpen": {
+    "message": "打开 Gmail 重新验证"
+  },
+  "markAllRead": {
+    "message": "全部标为已读"
+  },
+  "bulkTooMany_other": {
+    "message": "有 $1 封未读邮件，超出一次可处理的数量"
+  },
+  "bulkTooManyNote": {
+    "message": "每个文件夹一次只能处理最新的 20 封，$1还有更多。要在 Gmail 中列出这些未读邮件，自行全选处理吗？"
+  },
+  "openInGmail": {
+    "message": "在 Gmail 中打开"
+  },
+  "cancel": {
+    "message": "取消"
+  },
+  "bulkConfirm_other": {
+    "message": "将 $1 封未读邮件全部标为已读？"
+  },
+  "bulkScope": {
+    "message": "范围：$1"
+  },
+  "bulkProgress": {
+    "message": "正在标为已读：$1／$2 封"
+  },
+  "bulkKeepsRunning": {
+    "message": "关闭此窗口后仍会继续处理。"
+  },
+  "bulkProgressLabel": {
+    "message": "标为已读进度"
+  },
+  "close": {
+    "message": "关闭"
+  },
+  "bulkFailed": {
+    "message": "全部标为已读未完成"
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2。已将 $1 封标为已读。"
+  },
+  "bulkLeft_other": {
+    "message": "还有 $1 封未读，可能是刚收到的邮件，可以再试一次。"
+  },
+  "bulkDone_other": {
+    "message": "已将 $1 封标为已读"
+  },
+  "bulkNothing": {
+    "message": "没有需要标为已读的邮件"
+  },
+  "openMessage": {
+    "message": "打开这封邮件"
+  },
+  "openMessageFrom": {
+    "message": "打开这封邮件（$1）"
+  },
+  "unknownSender": {
+    "message": "(未知发件人)"
+  },
+  "noSubject": {
+    "message": "(无主题)"
+  },
+  "markRead": {
+    "message": "标为已读"
+  },
+  "markReadNamed": {
+    "message": "将“$1”标为已读"
+  },
+  "checkedAgo": {
+    "message": "$1检查"
+  },
+  "foldersFailed_other": {
+    "message": "有 $1 个文件夹读取失败：$2"
+  },
+  "folderError": {
+    "message": "$1：$2"
+  },
+  "checking": {
+    "message": "正在检查…"
+  },
+  "notSignedIn": {
+    "message": "尚未登录 Gmail"
+  },
+  "signedOutTitle": {
+    "message": "Chrome 当前未登录 Gmail。"
+  },
+  "signedOutPopup": {
+    "message": "登录后，这里会列出未读邮件。"
+  },
+  "signIn": {
+    "message": "登录 Gmail"
+  },
+  "noFoldersSummary": {
+    "message": "未跟踪任何文件夹"
+  },
+  "noFoldersTitle": {
+    "message": "你还没有选择要跟踪的文件夹。"
+  },
+  "noFoldersText": {
+    "message": "选好之后，新邮件会显示在这里。"
+  },
+  "chooseFolders": {
+    "message": "选择文件夹"
+  },
+  "unreadCount_other": {
+    "message": "$1 封未读"
+  },
+  "noUnread": {
+    "message": "没有未读邮件"
+  },
+  "openGmailOf": {
+    "message": "打开 $1 的 Gmail"
+  },
+  "noUnreadShort": {
+    "message": "没有未读"
+  },
+  "notTracked": {
+    "message": "未跟踪"
+  },
+  "markAllReadNamed_other": {
+    "message": "将“$2”中的 $1 封未读邮件全部标为已读"
+  },
+  "toggleBox": {
+    "message": "折叠或展开“$1”"
+  },
+  "boxNotTracked": {
+    "message": "这个邮箱没有跟踪任何文件夹，可以在设置页中开启。"
+  },
+  "boxNoUnread": {
+    "message": "跟踪的文件夹中没有未读邮件。"
+  },
+  "moreInGmail_other": {
+    "message": "在 Gmail 中查看另外 $1 封未读邮件"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail：尚未登录 Gmail"
+  },
+  "tooltipAccount_other": {
+    "message": "$2：$1 封未读"
+  },
+  "newMessages_other": {
+    "message": "$1 封新邮件"
+  },
+  "summaryLine": {
+    "message": "$1：$2"
+  },
+  "contextLine": {
+    "message": "$1｜$2"
+  },
+  "bulkInterrupted": {
+    "message": "处理中途被中断，可以再试一次"
+  },
+  "bulkBusy": {
+    "message": "这个邮箱正在标为已读"
+  },
+  "bulkNoFolders": {
+    "message": "这个邮箱没有跟踪任何文件夹"
+  },
+  "testMessage": {
+    "message": "这是一条测试通知。能看到它，说明通知设置正常。"
+  },
+  "testContext": {
+    "message": "测试通知"
+  },
+  "markReadFailedTitle": {
+    "message": "无法标为已读"
+  },
+  "notifReauth": {
+    "message": "Gmail 要求重新验证。点击此通知打开 Gmail 完成验证，然后再试一次。"
+  },
+  "messageGone": {
+    "message": "这封邮件已不在列表中"
+  },
+  "folder_inbox": {
+    "message": "收件箱"
+  },
+  "folder_primary": {
+    "message": "主要"
+  },
+  "folder_social": {
+    "message": "社交"
+  },
+  "folder_promo": {
+    "message": "推广"
+  },
+  "folder_updates": {
+    "message": "动态"
+  },
+  "folder_forums": {
+    "message": "论坛"
+  },
+  "folder_starred": {
+    "message": "已加星标"
+  },
+  "folder_important": {
+    "message": "重要"
+  },
+  "folder_unread": {
+    "message": "所有未读"
+  },
+  "folderHint_inbox": {
+    "message": "收件箱中的未读邮件"
+  },
+  "folderHint_starred": {
+    "message": "已加星标的未读邮件"
+  },
+  "folderHint_important": {
+    "message": "Gmail 判断为重要的未读邮件"
+  },
+  "folderHint_unread": {
+    "message": "包括已归档邮件和任何标签下的未读邮件"
+  },
+  "errNetwork": {
+    "message": "无法连接 Gmail，请检查网络"
+  },
+  "errSignedOut": {
+    "message": "这个账号未登录 Gmail"
+  },
+  "errHttp": {
+    "message": "Gmail 返回错误（HTTP $1）"
+  },
+  "errUnreadable": {
+    "message": "无法读取"
+  },
+  "errNoToken": {
+    "message": "找不到 Gmail 的操作令牌，请先在浏览器中打开一次这个 Gmail 邮箱"
+  },
+  "errNoKey": {
+    "message": "无法读取 Gmail 的账号密钥，请先在浏览器中打开一次这个 Gmail 邮箱"
+  },
+  "errNoThread": {
+    "message": "这封邮件缺少 ID，无法操作"
+  },
+  "errReauth": {
+    "message": "Gmail 要求重新验证，验证完成后再试一次"
+  },
+  "errRejected": {
+    "message": "Gmail 拒绝了此操作（HTTP $1）"
+  },
+  "color_teal": {
+    "message": "青绿"
+  },
+  "color_violet": {
+    "message": "紫"
+  },
+  "color_magenta": {
+    "message": "品红"
+  },
+  "color_olive": {
+    "message": "橄榄"
+  },
+  "color_cocoa": {
+    "message": "可可"
+  },
+  "color_slate": {
+    "message": "石板灰"
+  },
+  "sound_chime": {
+    "message": "双音"
+  },
+  "sound_ding": {
+    "message": "叮"
+  },
+  "sound_drop": {
+    "message": "水滴"
+  },
+  "sound_marimba": {
+    "message": "木琴"
+  },
+  "sound_bell": {
+    "message": "铃声"
+  },
+  "sound_tick": {
+    "message": "轻点"
+  },
+  "sound_none": {
+    "message": "静音"
+  },
+  "sound_custom": {
+    "message": "自定义音效"
+  },
+  "optionsTitle": {
+    "message": "Pigeon Post for Gmail 设置"
+  },
+  "optionsHeading": {
+    "message": "邮件通知设置"
+  },
+  "checkingSignIn": {
+    "message": "正在确认 Gmail 登录状态…"
+  },
+  "foldersHeading": {
+    "message": "要通知哪些邮件"
+  },
+  "level_off": {
+    "message": "关"
+  },
+  "level_count": {
+    "message": "计数"
+  },
+  "level_notify": {
+    "message": "通知"
+  },
+  "levelDesc_off": {
+    "message": "不检查"
+  },
+  "levelDesc_count": {
+    "message": "计入工具栏图标上的未读数"
+  },
+  "levelDesc_notify": {
+    "message": "计数，并弹出桌面通知"
+  },
+  "foldersNote": {
+    "message": "每行右侧的数字是当前未读数，可以对照 Gmail 左侧菜单，确认选对了文件夹。"
+  },
+  "badgeHeading": {
+    "message": "工具栏图标上的数字"
+  },
+  "badgeLegend": {
+    "message": "图标数字的显示方式"
+  },
+  "badgeTotal": {
+    "message": "所有邮箱合计，例如 28"
+  },
+  "badgeSplit": {
+    "message": "各邮箱分开显示，例如 26/2"
+  },
+  "badgeHelp": {
+    "message": "分开显示时按邮箱顺序排列。图标只能容纳两三个邮箱的两位数，放不下时改为显示合计。将鼠标悬停在图标上，也会逐一列出各邮箱的未读数。"
+  },
+  "deliveryHeading": {
+    "message": "通知方式"
+  },
+  "notifyToggle": {
+    "message": "弹出桌面通知"
+  },
+  "notifyHelp": {
+    "message": "关闭后，工具栏图标仍会显示未读数。"
+  },
+  "volumeLabel": {
+    "message": "提示音音量"
+  },
+  "volumeHelp": {
+    "message": "弹出通知时播放该邮箱的提示音，提示音在上方各邮箱名称旁设置。音量设为 0 则不播放。"
+  },
+  "groupLabel": {
+    "message": "一次收到多封新邮件时"
+  },
+  "groupAll": {
+    "message": "合并为一条通知"
+  },
+  "groupOver": {
+    "message": "超过 $1 封才合并"
+  },
+  "groupEach": {
+    "message": "每封单独通知"
+  },
+  "openLegend": {
+    "message": "点击通知或邮件时"
+  },
+  "openReuse": {
+    "message": "切换到已打开的 Gmail 标签页"
+  },
+  "openNew": {
+    "message": "打开新标签页"
+  },
+  "pollHeading": {
+    "message": "检查频率"
+  },
+  "pollLegend": {
+    "message": "检查间隔"
+  },
+  "pollHelp": {
+    "message": "Gmail 不会主动通知扩展程序，只能定时检查。间隔越短，通知越及时。"
+  },
+  "previewHeading": {
+    "message": "效果预览"
+  },
+  "sendTest": {
+    "message": "发送测试通知"
+  },
+  "tabName": {
+    "message": "$1标签页"
+  },
+  "saved": {
+    "message": "已保存"
+  },
+  "saveFailed": {
+    "message": "保存失败：$1"
+  },
+  "remove": {
+    "message": "移除"
+  },
+  "removeNamed": {
+    "message": "移除“$1”"
+  },
+  "currentUnread": {
+    "message": "当前未读数"
+  },
+  "levelLegend": {
+    "message": "“$1”的通知方式"
+  },
+  "loadingAccounts": {
+    "message": "正在读取你已登录的 Gmail 账号…"
+  },
+  "signedOutOptions": {
+    "message": "登录后回到此页面，即可选择要通知的文件夹。"
+  },
+  "awayAccounts": {
+    "message": "这台电脑未登录 $1。这些账号的设置会保留，登录后自动应用。"
+  },
+  "connected": {
+    "message": "已连接 $1。更改会自动保存，并同步到登录同一 Chrome 账号的其他电脑。"
+  },
+  "openThisGmail": {
+    "message": "打开这个 Gmail"
+  },
+  "nameLabel": {
+    "message": "名称"
+  },
+  "namePlaceholder": {
+    "message": "例如：个人、工作"
+  },
+  "colorLegend": {
+    "message": "颜色"
+  },
+  "groupInbox": {
+    "message": "收件箱与标签页"
+  },
+  "tabsSummary": {
+    "message": "按收件箱标签页分别设置"
+  },
+  "primaryHint": {
+    "message": "只设置这一项，就能避开推广和社交邮件的通知"
+  },
+  "groupOther": {
+    "message": "其他文件夹"
+  },
+  "soundCustomNamed": {
+    "message": "自定义：$1"
+  },
+  "soundUpload": {
+    "message": "上传音频…"
+  },
+  "soundLabel": {
+    "message": "提示音"
+  },
+  "soundPreview": {
+    "message": "试听"
+  },
+  "soundPreviewNamed": {
+    "message": "试听“$1”的提示音"
+  },
+  "soundNotAudio": {
+    "message": "请选择音频文件，例如 mp3、wav 或 ogg。"
+  },
+  "soundTooBig": {
+    "message": "文件超过 1 MB，请换一个短一些的声音。"
+  },
+  "soundMissing": {
+    "message": "这台电脑上没有这个邮箱的自定义提示音，将改为播放“$1”。重新上传即可解决。"
+  },
+  "conflictText": {
+    "message": "$1设为$2，已涵盖所有标签页中的邮件，因此$3的设置不起作用。"
+  },
+  "conflictHelp": {
+    "message": "同一封邮件位于多个文件夹时，以最高的设置为准。如果只想跟踪部分标签页，请调低收件箱的设置。"
+  },
+  "conflictFix": {
+    "message": "将收件箱改为$1"
+  },
+  "filterLabels": {
+    "message": "筛选标签"
+  },
+  "groupLabels": {
+    "message": "你的标签"
+  },
+  "labelsEmpty": {
+    "message": "尚未读取这个邮箱的标签。点击下方按钮，将从 Gmail 左侧菜单读取标签名称。"
+  },
+  "reading": {
+    "message": "正在读取…"
+  },
+  "readLabels": {
+    "message": "从 Gmail 读取标签"
+  },
+  "rereadLabels": {
+    "message": "重新读取标签"
+  },
+  "addLabelPlaceholder": {
+    "message": "输入 Gmail 中的标签名称，子标签写成“上级/子标签”"
+  },
+  "labelName": {
+    "message": "标签名称"
+  },
+  "add": {
+    "message": "添加"
+  },
+  "labelsSource": {
+    "message": "列表取自 Gmail 左侧菜单，$1更新。子标签和收在“更多”中的标签，需要先在 Gmail 中展开一次才会出现。"
+  },
+  "addLabelManually": {
+    "message": "找不到标签？手动输入名称"
+  },
+  "readingLabels": {
+    "message": "正在从 Gmail 读取标签…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail 未能及时加载完成，请稍后再试。"
+  },
+  "labelsWrongAccount": {
+    "message": "读取到的是 $1 的标签，不是这个邮箱的。请确认 Gmail 登录的账号。"
+  },
+  "labelsFound_other": {
+    "message": "找到 $1 个标签。"
+  },
+  "labelsNone": {
+    "message": "Gmail 左侧菜单中没有找到标签。如果标签收在“更多”下面，请在 Gmail 中展开后再读取一次。"
+  },
+  "labelsTabError": {
+    "message": "无法读取 Gmail 标签页：$1"
+  },
+  "countError": {
+    "message": "无法读取"
+  },
+  "quoteMore_other": {
+    "message": "$2等 $1 个文件夹"
+  },
+  "pvBadgeSignedOut": {
+    "message": "未登录 Gmail 时，图标会显示“?”。"
+  },
+  "pvBadgeStale": {
+    "message": "正在按新设置重新计算未读数…"
+  },
+  "pvBadgeEmpty": {
+    "message": "目前没有未读邮件，图标不显示数字。"
+  },
+  "pvBadgeSplit": {
+    "message": "图标上的 $1，依次是$2的未读邮件。"
+  },
+  "pvBadgeLong": {
+    "message": "各邮箱的数字连起来太长，图标放不下，改为显示合计 $1。"
+  },
+  "pvBadgeSingle": {
+    "message": "只有一个邮箱跟踪了文件夹，图标显示它的未读数 $1。"
+  },
+  "pvBadgeTotal": {
+    "message": "图标上的 $1，是设为$2和$3的文件夹中未读邮件的合计。"
+  },
+  "pvFrom": {
+    "message": "发件人"
+  },
+  "pvSubject": {
+    "message": "邮件主题会显示在这一行"
+  },
+  "pvEnvSignedOut": {
+    "message": "登录 Gmail 后，这里会显示通知的样式。"
+  },
+  "pvEnvOff": {
+    "message": "桌面通知已关闭，只会更新图标上的数字。"
+  },
+  "pvEnvNone": {
+    "message": "没有文件夹设为$1，因此不会弹出通知。"
+  },
+  "pvEnvText": {
+    "message": "$1收到新邮件时，会弹出这样的通知，最后一行标明是哪个邮箱。"
+  },
+  "pvAccountsMulti": {
+    "message": "点击图标后，各邮箱会像这样分开列出，并可分别折叠。"
+  },
+  "pvAccountsSingle": {
+    "message": "点击图标后，邮箱会像这样标示。"
+  },
+  "pvNotTracked": {
+    "message": "这个邮箱没有跟踪任何文件夹。"
+  },
+  "pvPollEvery": {
+    "message": "每$1检查一次。"
+  },
+  "pvGroupEach": {
+    "message": "每封新邮件单独通知。"
+  },
+  "pvGroupAll": {
+    "message": "同时收到多封新邮件时，合并为一条通知。"
+  },
+  "pvGroupOver_other": {
+    "message": "一次收到超过 $1 封新邮件时，合并为一条通知。"
+  },
+  "testContextLine": {
+    "message": "测试通知｜$1｜$2"
+  },
+  "testWhereMac": {
+    "message": "“系统设置 › 通知 › Google Chrome”"
+  },
+  "testWhereWin": {
+    "message": "“设置 › 系统 › 通知”中的 Google Chrome"
+  },
+  "testWhereOther": {
+    "message": "系统的通知设置"
+  },
+  "testDenied": {
+    "message": "此扩展程序的通知已被屏蔽。请在 chrome://settings/content/notifications 中允许后再试一次。"
+  },
+  "testSent": {
+    "message": "已发送。如果没有看到，请在$1中允许通知，并确认未开启勿扰或专注模式。"
+  },
+  "supportText": {
+    "message": "如果你觉得好用，希望你能赞助我喝杯咖啡。"
+  },
+  "supportLink": {
+    "message": "通过 PayPal 请我喝咖啡"
+  }
+}

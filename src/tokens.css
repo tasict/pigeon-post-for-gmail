@@ -1,0 +1,98 @@
+/* Shared design tokens: cool stationery paper, blue-black ink, airmail red and blue. */
+:root {
+  color-scheme: light dark;
+  --paper: #f3f5f9;
+  --sheet: #ffffff;
+  --ink: #1a2233;
+  --muted: #5c6578;
+  --rule: #dce1e9;
+  --wash: #e9edf4;
+  --blue: #1e47a8;
+  --red: #d2382c;
+  --green: #2b7955;
+  --amber: #a86400;
+  --focus: #1e47a8;
+  --on-color: #ffffff;
+  --font: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei UI", "Microsoft JhengHei", "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #151b27;
+    --sheet: #1c2332;
+    --ink: #e6e9f0;
+    --muted: #9aa3b5;
+    --rule: #2d3649;
+    --wash: #252e40;
+    --blue: #8ea9ff;
+    --red: #ff7d70;
+    --green: #6fcb9d;
+    --amber: #f0b35a;
+    --focus: #8ea9ff;
+    --on-color: #151b27;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 14px/1.6 var(--font);
+  font-feature-settings: "tnum";
+}
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 32px; padding: 4px 14px;
+  border: 1px solid var(--rule); border-radius: 8px;
+  background: var(--sheet); color: var(--ink);
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--muted); }
+.btn.solid { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.btn.solid:hover { opacity: .9; }
+.link-btn {
+  padding: 0; border: 0; background: none; color: var(--blue);
+  cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Mailbox colors: avoid the red of "notify" and the blue of "count" */
+[data-acct="teal"] { --acct: #0f7f74; --acct-wash: #e2f2ef; }
+[data-acct="violet"] { --acct: #6a48bd; --acct-wash: #ece7f8; }
+[data-acct="magenta"] { --acct: #b3366d; --acct-wash: #f7e5ed; }
+[data-acct="olive"] { --acct: #5b7520; --acct-wash: #ebf0de; }
+[data-acct="cocoa"] { --acct: #7a5236; --acct-wash: #f1e9e2; }
+[data-acct="slate"] { --acct: #4b5a73; --acct-wash: #e6eaf0; }
+:root { --on-acct: #ffffff; }
+@media (prefers-color-scheme: dark) {
+  [data-acct="teal"] { --acct: #4fcfbd; --acct-wash: #183330; }
+  [data-acct="violet"] { --acct: #b39bff; --acct-wash: #28233d; }
+  [data-acct="magenta"] { --acct: #ff8dbd; --acct-wash: #3a2330; }
+  [data-acct="olive"] { --acct: #b3d468; --acct-wash: #29301b; }
+  [data-acct="cocoa"] { --acct: #deb08a; --acct-wash: #352a22; }
+  [data-acct="slate"] { --acct: #a9b7cf; --acct-wash: #262e3c; }
+  :root { --on-acct: #151b27; }
+}
+
+/* Mailbox mark: a solid rounded square with the name's initial, echoing the rounded square of the toolbar icon. */
+.acct-mark {
+  --size: 24px;
+  flex: none;
+  display: inline-grid; place-items: center;
+  width: var(--size); height: var(--size);
+  border-radius: calc(var(--size) * .28);
+  background: var(--acct, var(--muted));
+  color: var(--on-acct);
+  font-size: calc(var(--size) * .5); font-weight: 650; line-height: 1;
+}
+.acct-mark.lg { --size: 36px; }
+.acct-mark.sm { --size: 18px; }

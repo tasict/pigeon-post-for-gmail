@@ -1,0 +1,692 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "Busca correo nuevo en tus cuentas de Gmail abiertas en Chrome. Tú eliges qué carpetas avisan y cuáles solo se cuentan."
+  },
+  "langTag": {
+    "message": "es"
+  },
+  "listSeparator": {
+    "message": ", "
+  },
+  "quoted": {
+    "message": "«$1»"
+  },
+  "justNow": {
+    "message": "ahora mismo"
+  },
+  "loading": {
+    "message": "Cargando…"
+  },
+  "checkNow": {
+    "message": "Comprobar ahora"
+  },
+  "settings": {
+    "message": "Configuración"
+  },
+  "stripLabel": {
+    "message": "Mensajes no leídos de cada buzón. Haz clic en uno para abrirlo."
+  },
+  "markReadFailed": {
+    "message": "No se pudo marcar como leído: $1"
+  },
+  "unknownError": {
+    "message": "Error desconocido"
+  },
+  "reauthOpen": {
+    "message": "Abrir Gmail para volver a verificar"
+  },
+  "markAllRead": {
+    "message": "Marcar todo como leído"
+  },
+  "bulkTooMany_one": {
+    "message": "Hay $1 mensaje no leído, más de los que se pueden gestionar a la vez"
+  },
+  "bulkTooMany_other": {
+    "message": "Hay $1 mensajes no leídos, más de los que se pueden gestionar a la vez"
+  },
+  "bulkTooManyNote": {
+    "message": "Solo se pueden gestionar a la vez los 20 mensajes más recientes de cada carpeta, y hay más en $1. ¿Quieres abrir estos mensajes no leídos en Gmail para seleccionarlos y gestionarlos tú?"
+  },
+  "openInGmail": {
+    "message": "Abrir en Gmail"
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "bulkConfirm_one": {
+    "message": "¿Marcar $1 mensaje no leído como leído?"
+  },
+  "bulkConfirm_other": {
+    "message": "¿Marcar los $1 mensajes no leídos como leídos?"
+  },
+  "bulkScope": {
+    "message": "Incluye: $1"
+  },
+  "bulkProgress": {
+    "message": "Marcando como leídos: $1 de $2"
+  },
+  "bulkKeepsRunning": {
+    "message": "Esto continuará aunque cierres esta ventana."
+  },
+  "bulkProgressLabel": {
+    "message": "Progreso de marcar como leídos"
+  },
+  "close": {
+    "message": "Cerrar"
+  },
+  "bulkFailed": {
+    "message": "No se terminó de marcar todo como leído"
+  },
+  "bulkFailedPartial_one": {
+    "message": "$2. Se marcó $1 mensaje como leído."
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2. Se marcaron $1 mensajes como leídos."
+  },
+  "bulkLeft_one": {
+    "message": "Queda $1 mensaje no leído, quizá uno que acaba de llegar. Puedes volver a intentarlo."
+  },
+  "bulkLeft_other": {
+    "message": "Quedan $1 mensajes no leídos, quizá algunos que acaban de llegar. Puedes volver a intentarlo."
+  },
+  "bulkDone_one": {
+    "message": "Se marcó $1 mensaje como leído"
+  },
+  "bulkDone_other": {
+    "message": "Se marcaron $1 mensajes como leídos"
+  },
+  "bulkNothing": {
+    "message": "No hay nada que marcar como leído"
+  },
+  "openMessage": {
+    "message": "Abrir este mensaje"
+  },
+  "openMessageFrom": {
+    "message": "Abrir este mensaje ($1)"
+  },
+  "unknownSender": {
+    "message": "(remitente desconocido)"
+  },
+  "noSubject": {
+    "message": "(sin asunto)"
+  },
+  "markRead": {
+    "message": "Marcar como leído"
+  },
+  "markReadNamed": {
+    "message": "Marcar «$1» como leído"
+  },
+  "checkedAgo": {
+    "message": "Comprobado $1"
+  },
+  "foldersFailed_one": {
+    "message": "No se pudo leer $1 carpeta: $2"
+  },
+  "foldersFailed_other": {
+    "message": "No se pudieron leer $1 carpetas: $2"
+  },
+  "folderError": {
+    "message": "$1: $2"
+  },
+  "checking": {
+    "message": "Comprobando…"
+  },
+  "notSignedIn": {
+    "message": "No has iniciado sesión en Gmail"
+  },
+  "signedOutTitle": {
+    "message": "Chrome no ha iniciado sesión en Gmail."
+  },
+  "signedOutPopup": {
+    "message": "Cuando inicies sesión, tu correo no leído aparecerá aquí."
+  },
+  "signIn": {
+    "message": "Iniciar sesión en Gmail"
+  },
+  "noFoldersSummary": {
+    "message": "No se sigue ninguna carpeta"
+  },
+  "noFoldersTitle": {
+    "message": "No has elegido ninguna carpeta para seguir."
+  },
+  "noFoldersText": {
+    "message": "Cuando lo hagas, el correo nuevo aparecerá aquí."
+  },
+  "chooseFolders": {
+    "message": "Elegir carpetas"
+  },
+  "unreadCount_one": {
+    "message": "$1 no leído"
+  },
+  "unreadCount_other": {
+    "message": "$1 no leídos"
+  },
+  "noUnread": {
+    "message": "No hay correo no leído"
+  },
+  "openGmailOf": {
+    "message": "Abrir Gmail de $1"
+  },
+  "noUnreadShort": {
+    "message": "Todo leído"
+  },
+  "notTracked": {
+    "message": "Sin seguimiento"
+  },
+  "markAllReadNamed_one": {
+    "message": "Marcar como leído $1 mensaje no leído en «$2»"
+  },
+  "markAllReadNamed_other": {
+    "message": "Marcar como leídos los $1 mensajes no leídos en «$2»"
+  },
+  "toggleBox": {
+    "message": "Contraer o expandir «$1»"
+  },
+  "boxNotTracked": {
+    "message": "Este buzón no sigue ninguna carpeta. Puedes activar algunas en Configuración."
+  },
+  "boxNoUnread": {
+    "message": "No hay correo no leído en las carpetas seguidas."
+  },
+  "moreInGmail_one": {
+    "message": "Ver $1 mensaje no leído más en Gmail"
+  },
+  "moreInGmail_other": {
+    "message": "Ver $1 mensajes no leídos más en Gmail"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail: no has iniciado sesión en Gmail"
+  },
+  "tooltipAccount_one": {
+    "message": "$2: $1 no leído"
+  },
+  "tooltipAccount_other": {
+    "message": "$2: $1 no leídos"
+  },
+  "newMessages_one": {
+    "message": "$1 mensaje nuevo"
+  },
+  "newMessages_other": {
+    "message": "$1 mensajes nuevos"
+  },
+  "summaryLine": {
+    "message": "$1: $2"
+  },
+  "contextLine": {
+    "message": "$1 | $2"
+  },
+  "bulkInterrupted": {
+    "message": "Se detuvo a medias. Puedes volver a intentarlo."
+  },
+  "bulkBusy": {
+    "message": "Ya se está marcando como leído este buzón"
+  },
+  "bulkNoFolders": {
+    "message": "Este buzón no sigue ninguna carpeta"
+  },
+  "testMessage": {
+    "message": "Esta es una notificación de prueba. Si la ves, las notificaciones funcionan."
+  },
+  "testContext": {
+    "message": "Notificación de prueba"
+  },
+  "markReadFailedTitle": {
+    "message": "No se pudo marcar como leído"
+  },
+  "notifReauth": {
+    "message": "Gmail necesita que vuelvas a verificar tu identidad. Haz clic en esta notificación para abrir Gmail, verificar y volver a intentarlo."
+  },
+  "messageGone": {
+    "message": "Este mensaje ya no está en la lista"
+  },
+  "folder_inbox": {
+    "message": "Recibidos"
+  },
+  "folder_primary": {
+    "message": "Principal"
+  },
+  "folder_social": {
+    "message": "Social"
+  },
+  "folder_promo": {
+    "message": "Promociones"
+  },
+  "folder_updates": {
+    "message": "Notificaciones"
+  },
+  "folder_forums": {
+    "message": "Foros"
+  },
+  "folder_starred": {
+    "message": "Destacados"
+  },
+  "folder_important": {
+    "message": "Importantes"
+  },
+  "folder_unread": {
+    "message": "Todos los no leídos"
+  },
+  "folderHint_inbox": {
+    "message": "Correo no leído en Recibidos"
+  },
+  "folderHint_starred": {
+    "message": "Correo destacado que no se ha leído"
+  },
+  "folderHint_important": {
+    "message": "Correo no leído que Gmail marca como importante"
+  },
+  "folderHint_unread": {
+    "message": "Incluye el correo archivado y el de cualquier etiqueta"
+  },
+  "errNetwork": {
+    "message": "No se puede conectar con Gmail. Comprueba tu conexión a la red."
+  },
+  "errSignedOut": {
+    "message": "Esta cuenta no ha iniciado sesión en Gmail"
+  },
+  "errHttp": {
+    "message": "Gmail devolvió un error (HTTP $1)"
+  },
+  "errUnreadable": {
+    "message": "No se pudo leer"
+  },
+  "errNoToken": {
+    "message": "No se encontró el token de acción de Gmail. Primero abre este buzón de Gmail en el navegador una vez."
+  },
+  "errNoKey": {
+    "message": "No se pudo leer la clave de cuenta de Gmail. Primero abre este buzón de Gmail en el navegador una vez."
+  },
+  "errNoThread": {
+    "message": "Este mensaje no tiene ID, así que no se puede modificar"
+  },
+  "errReauth": {
+    "message": "Gmail necesita que vuelvas a verificar tu identidad. Inténtalo de nuevo después de verificar."
+  },
+  "errRejected": {
+    "message": "Gmail rechazó esta acción (HTTP $1)"
+  },
+  "color_teal": {
+    "message": "Verde azulado"
+  },
+  "color_violet": {
+    "message": "Violeta"
+  },
+  "color_magenta": {
+    "message": "Magenta"
+  },
+  "color_olive": {
+    "message": "Oliva"
+  },
+  "color_cocoa": {
+    "message": "Cacao"
+  },
+  "color_slate": {
+    "message": "Pizarra"
+  },
+  "sound_chime": {
+    "message": "Dos tonos"
+  },
+  "sound_ding": {
+    "message": "Din"
+  },
+  "sound_drop": {
+    "message": "Gota"
+  },
+  "sound_marimba": {
+    "message": "Marimba"
+  },
+  "sound_bell": {
+    "message": "Campana"
+  },
+  "sound_tick": {
+    "message": "Toque"
+  },
+  "sound_none": {
+    "message": "Silencio"
+  },
+  "sound_custom": {
+    "message": "Sonido personalizado"
+  },
+  "optionsTitle": {
+    "message": "Configuración de Pigeon Post for Gmail"
+  },
+  "optionsHeading": {
+    "message": "Configuración de notificaciones de correo"
+  },
+  "checkingSignIn": {
+    "message": "Comprobando el inicio de sesión en Gmail…"
+  },
+  "foldersHeading": {
+    "message": "Sobre qué correo notificarte"
+  },
+  "level_off": {
+    "message": "Desactivado"
+  },
+  "level_count": {
+    "message": "Contar"
+  },
+  "level_notify": {
+    "message": "Notificar"
+  },
+  "levelDesc_off": {
+    "message": "No se comprueba"
+  },
+  "levelDesc_count": {
+    "message": "Se suma al número de no leídos del icono de la barra de herramientas"
+  },
+  "levelDesc_notify": {
+    "message": "Se cuenta y además muestra una notificación de escritorio"
+  },
+  "foldersNote": {
+    "message": "El número a la derecha de cada fila es su cantidad actual de no leídos. Compáralo con el menú izquierdo de Gmail para asegurarte de que elegiste la carpeta correcta."
+  },
+  "badgeHeading": {
+    "message": "Número en el icono de la barra de herramientas"
+  },
+  "badgeLegend": {
+    "message": "Cómo se muestra el número del icono"
+  },
+  "badgeTotal": {
+    "message": "Total de todos los buzones, p. ej., 28"
+  },
+  "badgeSplit": {
+    "message": "Cada buzón por separado, p. ej., 26/2"
+  },
+  "badgeHelp": {
+    "message": "Los números separados siguen el orden de los buzones. El icono solo admite números de dos cifras para dos o tres buzones; si no caben, muestra el total. Coloca el cursor sobre el icono para ver los no leídos de cada buzón."
+  },
+  "deliveryHeading": {
+    "message": "Cómo recibes las notificaciones"
+  },
+  "notifyToggle": {
+    "message": "Mostrar notificaciones de escritorio"
+  },
+  "notifyHelp": {
+    "message": "Si está desactivado, el icono de la barra de herramientas sigue mostrando el número de no leídos."
+  },
+  "volumeLabel": {
+    "message": "Volumen del sonido"
+  },
+  "volumeHelp": {
+    "message": "Las notificaciones reproducen el sonido de cada buzón, que se configura junto a su nombre más arriba. Pon el volumen en 0 para no oír nada."
+  },
+  "groupLabel": {
+    "message": "Cuando llegan varios mensajes nuevos a la vez"
+  },
+  "groupAll": {
+    "message": "Agrupar en una notificación"
+  },
+  "groupOver": {
+    "message": "Agrupar solo si son más de $1"
+  },
+  "groupEach": {
+    "message": "Notificar cada mensaje"
+  },
+  "openLegend": {
+    "message": "Al hacer clic en una notificación o un mensaje"
+  },
+  "openReuse": {
+    "message": "Cambiar a una pestaña de Gmail abierta"
+  },
+  "openNew": {
+    "message": "Abrir una pestaña nueva"
+  },
+  "pollHeading": {
+    "message": "Con qué frecuencia comprobar"
+  },
+  "pollLegend": {
+    "message": "Intervalo de comprobación"
+  },
+  "pollHelp": {
+    "message": "Gmail no avisa a las extensiones por sí solo, así que el correo se comprueba periódicamente. Cuanto más corto sea el intervalo, más rápidas serán las notificaciones."
+  },
+  "previewHeading": {
+    "message": "Lo que verás"
+  },
+  "sendTest": {
+    "message": "Enviar notificación de prueba"
+  },
+  "tabName": {
+    "message": "Pestaña $1"
+  },
+  "saved": {
+    "message": "Guardado"
+  },
+  "saveFailed": {
+    "message": "No se pudo guardar: $1"
+  },
+  "remove": {
+    "message": "Quitar"
+  },
+  "removeNamed": {
+    "message": "Quitar «$1»"
+  },
+  "currentUnread": {
+    "message": "No leídos actuales"
+  },
+  "levelLegend": {
+    "message": "Notificaciones de «$1»"
+  },
+  "loadingAccounts": {
+    "message": "Leyendo las cuentas de Gmail con las que iniciaste sesión…"
+  },
+  "signedOutOptions": {
+    "message": "Inicia sesión y vuelve a esta página para elegir qué carpetas te notifican."
+  },
+  "awayAccounts": {
+    "message": "Este dispositivo no ha iniciado sesión en $1. Su configuración se conserva y se aplicará automáticamente cuando inicies sesión."
+  },
+  "connected": {
+    "message": "Conectado a $1. Los cambios se guardan automáticamente y se sincronizan con otros dispositivos que usen la misma cuenta de Chrome."
+  },
+  "openThisGmail": {
+    "message": "Abrir este Gmail"
+  },
+  "nameLabel": {
+    "message": "Nombre"
+  },
+  "namePlaceholder": {
+    "message": "p. ej., Personal, Trabajo"
+  },
+  "colorLegend": {
+    "message": "Color"
+  },
+  "groupInbox": {
+    "message": "Recibidos y pestañas"
+  },
+  "tabsSummary": {
+    "message": "Configurar las pestañas de Recibidos por separado"
+  },
+  "primaryHint": {
+    "message": "Configura solo esta para no recibir notificaciones de promociones ni redes sociales"
+  },
+  "groupOther": {
+    "message": "Otras carpetas"
+  },
+  "soundCustomNamed": {
+    "message": "Personalizado: $1"
+  },
+  "soundUpload": {
+    "message": "Subir sonido…"
+  },
+  "soundLabel": {
+    "message": "Sonido"
+  },
+  "soundPreview": {
+    "message": "Reproducir"
+  },
+  "soundPreviewNamed": {
+    "message": "Reproducir el sonido de «$1»"
+  },
+  "soundNotAudio": {
+    "message": "Elige un archivo de audio, como mp3, wav u ogg."
+  },
+  "soundTooBig": {
+    "message": "Este archivo supera 1 MB. Elige un sonido más corto."
+  },
+  "soundMissing": {
+    "message": "Este dispositivo no tiene el sonido personalizado de este buzón, así que se reproduce «$1» en su lugar. Vuelve a subirlo para solucionarlo."
+  },
+  "conflictText": {
+    "message": "$1 está en $2, que ya incluye el correo de todas las pestañas, así que la configuración de $3 no tiene efecto."
+  },
+  "conflictHelp": {
+    "message": "Si un mensaje está en varias carpetas, se aplica la opción más alta. Para seguir solo algunas pestañas, baja la opción de Recibidos."
+  },
+  "conflictFix": {
+    "message": "Cambiar Recibidos a $1"
+  },
+  "filterLabels": {
+    "message": "Filtrar etiquetas"
+  },
+  "groupLabels": {
+    "message": "Tus etiquetas"
+  },
+  "labelsEmpty": {
+    "message": "Todavía no se han leído las etiquetas de este buzón. El botón de abajo lee los nombres de las etiquetas del menú izquierdo de Gmail."
+  },
+  "reading": {
+    "message": "Leyendo…"
+  },
+  "readLabels": {
+    "message": "Leer etiquetas de Gmail"
+  },
+  "rereadLabels": {
+    "message": "Volver a leer etiquetas"
+  },
+  "addLabelPlaceholder": {
+    "message": "Escribe el nombre de una etiqueta de Gmail. Escribe las etiquetas anidadas como «Superior/Secundaria»"
+  },
+  "labelName": {
+    "message": "Nombre de la etiqueta"
+  },
+  "add": {
+    "message": "Añadir"
+  },
+  "labelsSource": {
+    "message": "Tomado del menú izquierdo de Gmail, actualizado $1. Las etiquetas anidadas y las que están en «Más» solo aparecen después de expandirlas una vez en Gmail."
+  },
+  "addLabelManually": {
+    "message": "¿No encuentras una etiqueta? Escribe su nombre"
+  },
+  "readingLabels": {
+    "message": "Leyendo etiquetas de Gmail…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail no terminó de cargarse a tiempo. Vuelve a intentarlo en un momento."
+  },
+  "labelsWrongAccount": {
+    "message": "Estas son las etiquetas de $1, no de este buzón. Comprueba con qué cuenta has iniciado sesión en Gmail."
+  },
+  "labelsFound_one": {
+    "message": "Se encontró $1 etiqueta."
+  },
+  "labelsFound_other": {
+    "message": "Se encontraron $1 etiquetas."
+  },
+  "labelsNone": {
+    "message": "No se encontraron etiquetas en el menú izquierdo de Gmail. Si tus etiquetas están en «Más», expándelo en Gmail y vuelve a leerlas."
+  },
+  "labelsTabError": {
+    "message": "No se pudo leer la pestaña de Gmail: $1"
+  },
+  "countError": {
+    "message": "No disponible"
+  },
+  "quoteMore_one": {
+    "message": "$2 y más ($1 carpeta)"
+  },
+  "quoteMore_other": {
+    "message": "$2 y más ($1 carpetas)"
+  },
+  "pvBadgeSignedOut": {
+    "message": "Si no has iniciado sesión en Gmail, el icono muestra «?»."
+  },
+  "pvBadgeStale": {
+    "message": "Volviendo a contar el correo no leído con la nueva configuración…"
+  },
+  "pvBadgeEmpty": {
+    "message": "Ahora no hay correo no leído, así que el icono no muestra ningún número."
+  },
+  "pvBadgeSplit": {
+    "message": "El $1 del icono es el correo no leído de $2, en ese orden."
+  },
+  "pvBadgeLong": {
+    "message": "Los números de cada buzón son demasiado largos para caber, así que el icono muestra el total, $1."
+  },
+  "pvBadgeSingle": {
+    "message": "Solo un buzón sigue carpetas, así que el icono muestra sus no leídos, $1."
+  },
+  "pvBadgeTotal": {
+    "message": "El $1 del icono es el total de correo no leído en las carpetas configuradas como $2 y $3."
+  },
+  "pvFrom": {
+    "message": "Remitente"
+  },
+  "pvSubject": {
+    "message": "El asunto aparece en esta línea"
+  },
+  "pvEnvSignedOut": {
+    "message": "Cuando inicies sesión en Gmail, aquí aparecerá una notificación de ejemplo."
+  },
+  "pvEnvOff": {
+    "message": "Las notificaciones de escritorio están desactivadas. Solo se actualiza el número del icono."
+  },
+  "pvEnvNone": {
+    "message": "Ninguna carpeta está configurada como $1, así que no aparecerán notificaciones."
+  },
+  "pvEnvText": {
+    "message": "Cuando llegue correo nuevo a $1, verás una notificación como esta. La última línea indica de qué buzón es."
+  },
+  "pvAccountsMulti": {
+    "message": "Al hacer clic en el icono, cada buzón aparece por separado así y se puede contraer."
+  },
+  "pvAccountsSingle": {
+    "message": "Al hacer clic en el icono, el buzón se identifica así."
+  },
+  "pvNotTracked": {
+    "message": "Este buzón no sigue ninguna carpeta."
+  },
+  "pvPollEvery": {
+    "message": "Comprueba cada $1."
+  },
+  "pvGroupEach": {
+    "message": "Cada mensaje nuevo tiene su propia notificación."
+  },
+  "pvGroupAll": {
+    "message": "Cuando llegan varios mensajes nuevos juntos, se agrupan en una notificación."
+  },
+  "pvGroupOver_one": {
+    "message": "Cuando llega más de $1 mensaje nuevo a la vez, se agrupan en una notificación."
+  },
+  "pvGroupOver_other": {
+    "message": "Cuando llegan más de $1 mensajes nuevos a la vez, se agrupan en una notificación."
+  },
+  "testContextLine": {
+    "message": "Notificación de prueba | $1 | $2"
+  },
+  "testWhereMac": {
+    "message": "Ajustes del Sistema › Notificaciones › Google Chrome"
+  },
+  "testWhereWin": {
+    "message": "Google Chrome en Configuración › Sistema › Notificaciones"
+  },
+  "testWhereOther": {
+    "message": "la configuración de notificaciones del sistema"
+  },
+  "testDenied": {
+    "message": "Las notificaciones de esta extensión están bloqueadas. Permítelas en chrome://settings/content/notifications y vuelve a intentarlo."
+  },
+  "testSent": {
+    "message": "Enviada. Si no la ves, permite las notificaciones en $1 y asegúrate de que No molestar o Concentración estén desactivados."
+  },
+  "supportText": {
+    "message": "Si te resulta útil, me encantaría que me invitaras a un café."
+  },
+  "supportLink": {
+    "message": "Invítame a un café (PayPal)"
+  }
+}

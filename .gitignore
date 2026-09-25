@@ -1,0 +1,27 @@
+# Build output (scripts/pack.sh)
+dist/
+payload/
+*.zip
+*.crx
+
+# Extension signing key: never commit
+*.pem
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Tooling
+node_modules/
+*.log
+.claude/
+
+# Private notes
+README.zh-TW.md
+CLAUDE.md
+CLAUDE.local.md

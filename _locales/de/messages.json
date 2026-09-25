@@ -1,0 +1,692 @@
+{
+  "extName": {
+    "message": "Pigeon Post for Gmail"
+  },
+  "extDescription": {
+    "message": "Prüft deine in Chrome angemeldeten Gmail-Konten auf neue E-Mails. Du wählst, welche Ordner benachrichtigen und welche nur zählen."
+  },
+  "langTag": {
+    "message": "de"
+  },
+  "listSeparator": {
+    "message": ", "
+  },
+  "quoted": {
+    "message": "„$1“"
+  },
+  "justNow": {
+    "message": "gerade eben"
+  },
+  "loading": {
+    "message": "Wird geladen…"
+  },
+  "checkNow": {
+    "message": "Jetzt prüfen"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "stripLabel": {
+    "message": "Ungelesene pro Postfach. Klicke auf eines, um es zu öffnen."
+  },
+  "markReadFailed": {
+    "message": "Konnte nicht als gelesen markiert werden: $1"
+  },
+  "unknownError": {
+    "message": "Unbekannter Fehler"
+  },
+  "reauthOpen": {
+    "message": "Gmail öffnen und erneut bestätigen"
+  },
+  "markAllRead": {
+    "message": "Alle als gelesen markieren"
+  },
+  "bulkTooMany_one": {
+    "message": "Es gibt $1 ungelesene E-Mail, mehr als auf einmal verarbeitet werden kann"
+  },
+  "bulkTooMany_other": {
+    "message": "Es gibt $1 ungelesene E-Mails, mehr als auf einmal verarbeitet werden können"
+  },
+  "bulkTooManyNote": {
+    "message": "Pro Ordner lassen sich nur die neuesten 20 E-Mails auf einmal verarbeiten, in $1 sind es mehr. Diese ungelesenen E-Mails in Gmail öffnen, um sie selbst auszuwählen und zu bearbeiten?"
+  },
+  "openInGmail": {
+    "message": "In Gmail öffnen"
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "bulkConfirm_one": {
+    "message": "$1 ungelesene E-Mail als gelesen markieren?"
+  },
+  "bulkConfirm_other": {
+    "message": "Alle $1 ungelesenen E-Mails als gelesen markieren?"
+  },
+  "bulkScope": {
+    "message": "Umfasst: $1"
+  },
+  "bulkProgress": {
+    "message": "Wird als gelesen markiert: $1 von $2"
+  },
+  "bulkKeepsRunning": {
+    "message": "Das läuft weiter, auch wenn du dieses Fenster schließt."
+  },
+  "bulkProgressLabel": {
+    "message": "Fortschritt beim Markieren als gelesen"
+  },
+  "close": {
+    "message": "Schließen"
+  },
+  "bulkFailed": {
+    "message": "„Alle als gelesen markieren“ wurde nicht abgeschlossen"
+  },
+  "bulkFailedPartial_one": {
+    "message": "$2. $1 E-Mail wurde als gelesen markiert."
+  },
+  "bulkFailedPartial_other": {
+    "message": "$2. $1 E-Mails wurden als gelesen markiert."
+  },
+  "bulkLeft_one": {
+    "message": "$1 ungelesene E-Mail ist noch übrig, vielleicht gerade eingegangen. Du kannst es noch einmal versuchen."
+  },
+  "bulkLeft_other": {
+    "message": "$1 ungelesene E-Mails sind noch übrig, vielleicht gerade eingegangen. Du kannst es noch einmal versuchen."
+  },
+  "bulkDone_one": {
+    "message": "$1 E-Mail als gelesen markiert"
+  },
+  "bulkDone_other": {
+    "message": "$1 E-Mails als gelesen markiert"
+  },
+  "bulkNothing": {
+    "message": "Nichts als gelesen zu markieren"
+  },
+  "openMessage": {
+    "message": "Diese E-Mail öffnen"
+  },
+  "openMessageFrom": {
+    "message": "Diese E-Mail öffnen ($1)"
+  },
+  "unknownSender": {
+    "message": "(unbekannter Absender)"
+  },
+  "noSubject": {
+    "message": "(kein Betreff)"
+  },
+  "markRead": {
+    "message": "Als gelesen markieren"
+  },
+  "markReadNamed": {
+    "message": "„$1“ als gelesen markieren"
+  },
+  "checkedAgo": {
+    "message": "Geprüft: $1"
+  },
+  "foldersFailed_one": {
+    "message": "$1 Ordner konnte nicht gelesen werden: $2"
+  },
+  "foldersFailed_other": {
+    "message": "$1 Ordner konnten nicht gelesen werden: $2"
+  },
+  "folderError": {
+    "message": "$1: $2"
+  },
+  "checking": {
+    "message": "Wird geprüft…"
+  },
+  "notSignedIn": {
+    "message": "Nicht bei Gmail angemeldet"
+  },
+  "signedOutTitle": {
+    "message": "Chrome ist nicht bei Gmail angemeldet."
+  },
+  "signedOutPopup": {
+    "message": "Sobald du dich anmeldest, werden hier deine ungelesenen E-Mails aufgelistet."
+  },
+  "signIn": {
+    "message": "Bei Gmail anmelden"
+  },
+  "noFoldersSummary": {
+    "message": "Keine Ordner überwacht"
+  },
+  "noFoldersTitle": {
+    "message": "Du hast noch keine Ordner zum Überwachen ausgewählt."
+  },
+  "noFoldersText": {
+    "message": "Danach erscheinen neue E-Mails hier."
+  },
+  "chooseFolders": {
+    "message": "Ordner auswählen"
+  },
+  "unreadCount_one": {
+    "message": "$1 ungelesen"
+  },
+  "unreadCount_other": {
+    "message": "$1 ungelesen"
+  },
+  "noUnread": {
+    "message": "Keine ungelesenen E-Mails"
+  },
+  "openGmailOf": {
+    "message": "Gmail für $1 öffnen"
+  },
+  "noUnreadShort": {
+    "message": "Alles gelesen"
+  },
+  "notTracked": {
+    "message": "Nicht überwacht"
+  },
+  "markAllReadNamed_one": {
+    "message": "$1 ungelesene E-Mail in „$2“ als gelesen markieren"
+  },
+  "markAllReadNamed_other": {
+    "message": "Alle $1 ungelesenen E-Mails in „$2“ als gelesen markieren"
+  },
+  "toggleBox": {
+    "message": "„$1“ ein- oder ausklappen"
+  },
+  "boxNotTracked": {
+    "message": "Dieses Postfach überwacht keine Ordner. Du kannst sie in den Einstellungen aktivieren."
+  },
+  "boxNoUnread": {
+    "message": "Keine ungelesenen E-Mails in überwachten Ordnern."
+  },
+  "moreInGmail_one": {
+    "message": "$1 weitere ungelesene E-Mail in Gmail ansehen"
+  },
+  "moreInGmail_other": {
+    "message": "$1 weitere ungelesene E-Mails in Gmail ansehen"
+  },
+  "tooltipSignedOut": {
+    "message": "Pigeon Post for Gmail: nicht bei Gmail angemeldet"
+  },
+  "tooltipAccount_one": {
+    "message": "$2: $1 ungelesen"
+  },
+  "tooltipAccount_other": {
+    "message": "$2: $1 ungelesen"
+  },
+  "newMessages_one": {
+    "message": "$1 neue E-Mail"
+  },
+  "newMessages_other": {
+    "message": "$1 neue E-Mails"
+  },
+  "summaryLine": {
+    "message": "$1: $2"
+  },
+  "contextLine": {
+    "message": "$1 | $2"
+  },
+  "bulkInterrupted": {
+    "message": "Mittendrin abgebrochen. Du kannst es noch einmal versuchen."
+  },
+  "bulkBusy": {
+    "message": "Dieses Postfach wird bereits als gelesen markiert"
+  },
+  "bulkNoFolders": {
+    "message": "Dieses Postfach überwacht keine Ordner"
+  },
+  "testMessage": {
+    "message": "Das ist eine Testbenachrichtigung. Wenn du sie siehst, funktionieren Benachrichtigungen."
+  },
+  "testContext": {
+    "message": "Testbenachrichtigung"
+  },
+  "markReadFailedTitle": {
+    "message": "Konnte nicht als gelesen markiert werden"
+  },
+  "notifReauth": {
+    "message": "Gmail möchte, dass du dich erneut bestätigst. Klicke auf diese Benachrichtigung, um Gmail zu öffnen, bestätige und versuche es noch einmal."
+  },
+  "messageGone": {
+    "message": "Diese E-Mail ist nicht mehr in der Liste"
+  },
+  "folder_inbox": {
+    "message": "Posteingang"
+  },
+  "folder_primary": {
+    "message": "Allgemein"
+  },
+  "folder_social": {
+    "message": "Soziale Netzwerke"
+  },
+  "folder_promo": {
+    "message": "Werbung"
+  },
+  "folder_updates": {
+    "message": "Benachrichtigungen"
+  },
+  "folder_forums": {
+    "message": "Foren"
+  },
+  "folder_starred": {
+    "message": "Markiert"
+  },
+  "folder_important": {
+    "message": "Wichtig"
+  },
+  "folder_unread": {
+    "message": "Alle ungelesenen"
+  },
+  "folderHint_inbox": {
+    "message": "Ungelesene E-Mails im Posteingang"
+  },
+  "folderHint_starred": {
+    "message": "Markierte E-Mails, die ungelesen sind"
+  },
+  "folderHint_important": {
+    "message": "Ungelesene E-Mails, die Gmail als wichtig einstuft"
+  },
+  "folderHint_unread": {
+    "message": "Einschließlich archivierter E-Mails und E-Mails unter beliebigen Labels"
+  },
+  "errNetwork": {
+    "message": "Gmail ist nicht erreichbar. Prüfe deine Netzwerkverbindung."
+  },
+  "errSignedOut": {
+    "message": "Dieses Konto ist nicht bei Gmail angemeldet"
+  },
+  "errHttp": {
+    "message": "Gmail hat einen Fehler zurückgegeben (HTTP $1)"
+  },
+  "errUnreadable": {
+    "message": "Konnte nicht gelesen werden"
+  },
+  "errNoToken": {
+    "message": "Das Aktionstoken von Gmail wurde nicht gefunden. Öffne dieses Gmail-Postfach zuerst einmal im Browser."
+  },
+  "errNoKey": {
+    "message": "Der Kontoschlüssel von Gmail konnte nicht gelesen werden. Öffne dieses Gmail-Postfach zuerst einmal im Browser."
+  },
+  "errNoThread": {
+    "message": "Diese E-Mail hat keine ID und kann daher nicht geändert werden"
+  },
+  "errReauth": {
+    "message": "Gmail möchte, dass du dich erneut bestätigst. Versuche es danach noch einmal."
+  },
+  "errRejected": {
+    "message": "Gmail hat diese Aktion abgelehnt (HTTP $1)"
+  },
+  "color_teal": {
+    "message": "Blaugrün"
+  },
+  "color_violet": {
+    "message": "Violett"
+  },
+  "color_magenta": {
+    "message": "Magenta"
+  },
+  "color_olive": {
+    "message": "Oliv"
+  },
+  "color_cocoa": {
+    "message": "Kakao"
+  },
+  "color_slate": {
+    "message": "Schiefer"
+  },
+  "sound_chime": {
+    "message": "Zweiklang"
+  },
+  "sound_ding": {
+    "message": "Ding"
+  },
+  "sound_drop": {
+    "message": "Tropfen"
+  },
+  "sound_marimba": {
+    "message": "Marimba"
+  },
+  "sound_bell": {
+    "message": "Glocke"
+  },
+  "sound_tick": {
+    "message": "Tippen"
+  },
+  "sound_none": {
+    "message": "Lautlos"
+  },
+  "sound_custom": {
+    "message": "Eigener Ton"
+  },
+  "optionsTitle": {
+    "message": "Pigeon Post for Gmail – Einstellungen"
+  },
+  "optionsHeading": {
+    "message": "Einstellungen für E-Mail-Benachrichtigungen"
+  },
+  "checkingSignIn": {
+    "message": "Gmail-Anmeldung wird geprüft…"
+  },
+  "foldersHeading": {
+    "message": "Über welche E-Mails du benachrichtigt wirst"
+  },
+  "level_off": {
+    "message": "Aus"
+  },
+  "level_count": {
+    "message": "Zählen"
+  },
+  "level_notify": {
+    "message": "Benachrichtigen"
+  },
+  "levelDesc_off": {
+    "message": "Wird nicht geprüft"
+  },
+  "levelDesc_count": {
+    "message": "Zählt zur Ungelesen-Zahl am Symbol in der Symbolleiste"
+  },
+  "levelDesc_notify": {
+    "message": "Wird gezählt, dazu eine Desktopbenachrichtigung"
+  },
+  "foldersNote": {
+    "message": "Die Zahl rechts in jeder Zeile ist die aktuelle Anzahl ungelesener E-Mails. Vergleiche sie mit dem linken Menü in Gmail, um sicherzugehen, dass du den richtigen Ordner gewählt hast."
+  },
+  "badgeHeading": {
+    "message": "Zahl am Symbol in der Symbolleiste"
+  },
+  "badgeLegend": {
+    "message": "Anzeige der Zahl am Symbol"
+  },
+  "badgeTotal": {
+    "message": "Summe aller Postfächer, z. B. 28"
+  },
+  "badgeSplit": {
+    "message": "Jedes Postfach einzeln, z. B. 26/2"
+  },
+  "badgeHelp": {
+    "message": "Einzelne Zahlen folgen der Reihenfolge der Postfächer. Das Symbol fasst zweistellige Zahlen nur für zwei oder drei Postfächer; passen sie nicht, wird die Summe angezeigt. Bewege den Mauszeiger auf das Symbol, um die Ungelesenen jedes Postfachs zu sehen."
+  },
+  "deliveryHeading": {
+    "message": "Wie du benachrichtigt wirst"
+  },
+  "notifyToggle": {
+    "message": "Desktopbenachrichtigungen anzeigen"
+  },
+  "notifyHelp": {
+    "message": "Wenn deaktiviert, zeigt das Symbol in der Symbolleiste trotzdem die Anzahl ungelesener E-Mails."
+  },
+  "volumeLabel": {
+    "message": "Lautstärke"
+  },
+  "volumeHelp": {
+    "message": "Benachrichtigungen spielen den Ton des jeweiligen Postfachs ab, den du oben neben dem Namen des Postfachs festlegst. Stelle die Lautstärke auf 0, um keinen Ton abzuspielen."
+  },
+  "groupLabel": {
+    "message": "Wenn mehrere neue E-Mails gleichzeitig eingehen"
+  },
+  "groupAll": {
+    "message": "In einer Benachrichtigung zusammenfassen"
+  },
+  "groupOver": {
+    "message": "Erst ab mehr als $1 zusammenfassen"
+  },
+  "groupEach": {
+    "message": "Für jede E-Mail benachrichtigen"
+  },
+  "openLegend": {
+    "message": "Beim Klick auf eine Benachrichtigung oder E-Mail"
+  },
+  "openReuse": {
+    "message": "Zu einem geöffneten Gmail-Tab wechseln"
+  },
+  "openNew": {
+    "message": "Neuen Tab öffnen"
+  },
+  "pollHeading": {
+    "message": "Wie oft geprüft wird"
+  },
+  "pollLegend": {
+    "message": "Prüfintervall"
+  },
+  "pollHelp": {
+    "message": "Gmail benachrichtigt Erweiterungen nicht von selbst, deshalb wird regelmäßig geprüft. Kürzere Intervalle bedeuten schnellere Benachrichtigungen."
+  },
+  "previewHeading": {
+    "message": "Was du siehst"
+  },
+  "sendTest": {
+    "message": "Testbenachrichtigung senden"
+  },
+  "tabName": {
+    "message": "Tab $1"
+  },
+  "saved": {
+    "message": "Gespeichert"
+  },
+  "saveFailed": {
+    "message": "Konnte nicht gespeichert werden: $1"
+  },
+  "remove": {
+    "message": "Entfernen"
+  },
+  "removeNamed": {
+    "message": "„$1“ entfernen"
+  },
+  "currentUnread": {
+    "message": "Aktuell ungelesen"
+  },
+  "levelLegend": {
+    "message": "Benachrichtigungen für „$1“"
+  },
+  "loadingAccounts": {
+    "message": "Gmail-Konten, mit denen du angemeldet bist, werden gelesen…"
+  },
+  "signedOutOptions": {
+    "message": "Melde dich an und kehre dann zu dieser Seite zurück, um festzulegen, welche Ordner dich benachrichtigen."
+  },
+  "awayAccounts": {
+    "message": "Dieser Computer ist nicht bei $1 angemeldet. Die Einstellungen bleiben erhalten und gelten automatisch, sobald du dich anmeldest."
+  },
+  "connected": {
+    "message": "Verbunden mit $1. Änderungen werden automatisch gespeichert und mit anderen Computern synchronisiert, die im selben Chrome-Konto angemeldet sind."
+  },
+  "openThisGmail": {
+    "message": "Dieses Gmail öffnen"
+  },
+  "nameLabel": {
+    "message": "Name"
+  },
+  "namePlaceholder": {
+    "message": "z. B. Privat, Arbeit"
+  },
+  "colorLegend": {
+    "message": "Farbe"
+  },
+  "groupInbox": {
+    "message": "Posteingang und Tabs"
+  },
+  "tabsSummary": {
+    "message": "Posteingangstabs einzeln festlegen"
+  },
+  "primaryHint": {
+    "message": "Nur diesen festlegen, um keine Benachrichtigungen für Werbung und soziale Netzwerke zu erhalten"
+  },
+  "groupOther": {
+    "message": "Weitere Ordner"
+  },
+  "soundCustomNamed": {
+    "message": "Eigener Ton: $1"
+  },
+  "soundUpload": {
+    "message": "Ton hochladen…"
+  },
+  "soundLabel": {
+    "message": "Ton"
+  },
+  "soundPreview": {
+    "message": "Abspielen"
+  },
+  "soundPreviewNamed": {
+    "message": "Ton für „$1“ abspielen"
+  },
+  "soundNotAudio": {
+    "message": "Wähle eine Audiodatei aus, z. B. mp3, wav oder ogg."
+  },
+  "soundTooBig": {
+    "message": "Diese Datei ist größer als 1 MB. Wähle einen kürzeren Ton."
+  },
+  "soundMissing": {
+    "message": "Der eigene Ton dieses Postfachs fehlt auf diesem Computer, daher wird stattdessen „$1“ abgespielt. Lade ihn erneut hoch, um das zu beheben."
+  },
+  "conflictText": {
+    "message": "$1 ist auf $2 gesetzt und erfasst damit bereits E-Mails in allen Tabs. Die Einstellungen für $3 haben daher keine Wirkung."
+  },
+  "conflictHelp": {
+    "message": "Liegt eine E-Mail in mehreren Ordnern, gilt die höchste Einstellung. Um nur einige Tabs zu überwachen, setze den Posteingang niedriger."
+  },
+  "conflictFix": {
+    "message": "Posteingang auf $1 setzen"
+  },
+  "filterLabels": {
+    "message": "Labels filtern"
+  },
+  "groupLabels": {
+    "message": "Deine Labels"
+  },
+  "labelsEmpty": {
+    "message": "Für dieses Postfach wurden noch keine Labels gelesen. Die Schaltfläche unten liest die Labelnamen aus dem linken Menü von Gmail."
+  },
+  "reading": {
+    "message": "Wird gelesen…"
+  },
+  "readLabels": {
+    "message": "Labels aus Gmail lesen"
+  },
+  "rereadLabels": {
+    "message": "Labels erneut lesen"
+  },
+  "addLabelPlaceholder": {
+    "message": "Labelnamen aus Gmail eingeben. Verschachtelte Labels als „Übergeordnet/Unterlabel“"
+  },
+  "labelName": {
+    "message": "Labelname"
+  },
+  "add": {
+    "message": "Hinzufügen"
+  },
+  "labelsSource": {
+    "message": "Aus dem linken Menü von Gmail, aktualisiert $1. Verschachtelte Labels und Labels unter „Mehr“ erscheinen erst, nachdem du sie in Gmail einmal aufgeklappt hast."
+  },
+  "addLabelManually": {
+    "message": "Label nicht gefunden? Namen eingeben"
+  },
+  "readingLabels": {
+    "message": "Labels werden aus Gmail gelesen…"
+  },
+  "labelsTimeout": {
+    "message": "Gmail wurde nicht rechtzeitig geladen. Versuche es gleich noch einmal."
+  },
+  "labelsWrongAccount": {
+    "message": "Das sind Labels von $1, nicht von diesem Postfach. Prüfe, mit welchem Konto Gmail angemeldet ist."
+  },
+  "labelsFound_one": {
+    "message": "$1 Label gefunden."
+  },
+  "labelsFound_other": {
+    "message": "$1 Labels gefunden."
+  },
+  "labelsNone": {
+    "message": "Im linken Menü von Gmail wurden keine Labels gefunden. Wenn deine Labels unter „Mehr“ liegen, klappe es in Gmail auf und lies erneut."
+  },
+  "labelsTabError": {
+    "message": "Gmail-Tab konnte nicht gelesen werden: $1"
+  },
+  "countError": {
+    "message": "Nicht verfügbar"
+  },
+  "quoteMore_one": {
+    "message": "$2 und weitere ($1 Ordner)"
+  },
+  "quoteMore_other": {
+    "message": "$2 und weitere ($1 Ordner)"
+  },
+  "pvBadgeSignedOut": {
+    "message": "Wenn du nicht bei Gmail angemeldet bist, zeigt das Symbol „?“."
+  },
+  "pvBadgeStale": {
+    "message": "Ungelesene werden mit den neuen Einstellungen neu gezählt…"
+  },
+  "pvBadgeEmpty": {
+    "message": "Gerade keine ungelesenen E-Mails, daher zeigt das Symbol keine Zahl."
+  },
+  "pvBadgeSplit": {
+    "message": "Die $1 am Symbol sind die Ungelesenen von $2, in dieser Reihenfolge."
+  },
+  "pvBadgeLong": {
+    "message": "Die Zahlen der einzelnen Postfächer sind zu lang, daher zeigt das Symbol die Summe: $1."
+  },
+  "pvBadgeSingle": {
+    "message": "Nur ein Postfach überwacht Ordner, daher zeigt das Symbol dessen Ungelesene: $1."
+  },
+  "pvBadgeTotal": {
+    "message": "Die $1 am Symbol ist die Summe der Ungelesenen in Ordnern mit $2 und $3."
+  },
+  "pvFrom": {
+    "message": "Absender"
+  },
+  "pvSubject": {
+    "message": "Hier steht der Betreff"
+  },
+  "pvEnvSignedOut": {
+    "message": "Nachdem du dich bei Gmail angemeldet hast, erscheint hier eine Beispielbenachrichtigung."
+  },
+  "pvEnvOff": {
+    "message": "Desktopbenachrichtigungen sind deaktiviert. Nur die Zahl am Symbol wird aktualisiert."
+  },
+  "pvEnvNone": {
+    "message": "Kein Ordner ist auf $1 gesetzt, daher erscheinen keine Benachrichtigungen."
+  },
+  "pvEnvText": {
+    "message": "Wenn neue E-Mails in $1 eingehen, siehst du eine Benachrichtigung wie diese. Die letzte Zeile zeigt das zugehörige Postfach."
+  },
+  "pvAccountsMulti": {
+    "message": "Beim Klick auf das Symbol wird jedes Postfach so einzeln aufgelistet und lässt sich einklappen."
+  },
+  "pvAccountsSingle": {
+    "message": "Beim Klick auf das Symbol wird das Postfach so gekennzeichnet."
+  },
+  "pvNotTracked": {
+    "message": "Dieses Postfach überwacht keine Ordner."
+  },
+  "pvPollEvery": {
+    "message": "Prüfintervall: $1."
+  },
+  "pvGroupEach": {
+    "message": "Jede neue E-Mail erhält eine eigene Benachrichtigung."
+  },
+  "pvGroupAll": {
+    "message": "Gehen mehrere neue E-Mails gleichzeitig ein, werden sie in einer Benachrichtigung zusammengefasst."
+  },
+  "pvGroupOver_one": {
+    "message": "Gehen mehr als $1 neue E-Mail gleichzeitig ein, werden sie in einer Benachrichtigung zusammengefasst."
+  },
+  "pvGroupOver_other": {
+    "message": "Gehen mehr als $1 neue E-Mails gleichzeitig ein, werden sie in einer Benachrichtigung zusammengefasst."
+  },
+  "testContextLine": {
+    "message": "Testbenachrichtigung | $1 | $2"
+  },
+  "testWhereMac": {
+    "message": "Systemeinstellungen › Mitteilungen › Google Chrome"
+  },
+  "testWhereWin": {
+    "message": "Einstellungen › System › Benachrichtigungen › Google Chrome"
+  },
+  "testWhereOther": {
+    "message": "den Benachrichtigungseinstellungen deines Systems"
+  },
+  "testDenied": {
+    "message": "Benachrichtigungen für diese Erweiterung sind blockiert. Erlaube sie unter chrome://settings/content/notifications und versuche es noch einmal."
+  },
+  "testSent": {
+    "message": "Gesendet. Falls du sie nicht siehst, erlaube Benachrichtigungen in $1 und prüfe, ob „Nicht stören“ oder der Fokus-Modus aus ist."
+  },
+  "supportText": {
+    "message": "Wenn du sie nützlich findest, würde ich mich über einen Kaffee freuen."
+  },
+  "supportLink": {
+    "message": "Spendier mir einen Kaffee (PayPal)"
+  }
+}
