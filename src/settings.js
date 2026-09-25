@@ -22,8 +22,8 @@ const Settings = (() => {
     volume: 70
   };
 
-  // Sound ids. The sounds themselves are in sounds.js; custom is a file the user uploaded, kept on this computer only.
-  const SOUND_IDS = ['none', 'chime', 'ding', 'drop', 'marimba', 'bell', 'tick', 'custom'];
+  // Sound ids. The sounds themselves are in sounds.js.
+  const SOUND_IDS = ['none', 'chime', 'ding', 'drop', 'marimba', 'bell', 'tick', 'pop', 'harp', 'glass', 'knock', 'coo', 'sparkle'];
   const DEFAULT_SOUND = 'chime';
 
   // Mailbox colors avoid red and blue, which stand for "notify" and "count".

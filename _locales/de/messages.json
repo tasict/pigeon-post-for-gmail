@@ -344,11 +344,26 @@
   "sound_tick": {
     "message": "Tippen"
   },
+  "sound_pop": {
+    "message": "Plopp"
+  },
+  "sound_harp": {
+    "message": "Harfe"
+  },
+  "sound_glass": {
+    "message": "Glas"
+  },
+  "sound_knock": {
+    "message": "Klopfen"
+  },
+  "sound_coo": {
+    "message": "Taubengurren"
+  },
+  "sound_sparkle": {
+    "message": "Funkeln"
+  },
   "sound_none": {
     "message": "Lautlos"
-  },
-  "sound_custom": {
-    "message": "Eigener Ton"
   },
   "optionsTitle": {
     "message": "Pigeon Post for Gmail – Einstellungen"
@@ -506,12 +521,6 @@
   "groupOther": {
     "message": "Weitere Ordner"
   },
-  "soundCustomNamed": {
-    "message": "Eigener Ton: $1"
-  },
-  "soundUpload": {
-    "message": "Ton hochladen…"
-  },
   "soundLabel": {
     "message": "Ton"
   },
@@ -520,15 +529,6 @@
   },
   "soundPreviewNamed": {
     "message": "Ton für „$1“ abspielen"
-  },
-  "soundNotAudio": {
-    "message": "Wähle eine Audiodatei aus, z. B. mp3, wav oder ogg."
-  },
-  "soundTooBig": {
-    "message": "Diese Datei ist größer als 1 MB. Wähle einen kürzeren Ton."
-  },
-  "soundMissing": {
-    "message": "Der eigene Ton dieses Postfachs fehlt auf diesem Computer, daher wird stattdessen „$1“ abgespielt. Lade ihn erneut hoch, um das zu beheben."
   },
   "conflictText": {
     "message": "$1 ist auf $2 gesetzt und erfasst damit bereits E-Mails in allen Tabs. Die Einstellungen für $3 haben daher keine Wirkung."

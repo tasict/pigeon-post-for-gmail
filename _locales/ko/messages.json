@@ -311,11 +311,26 @@
   "sound_tick": {
     "message": "톡"
   },
+  "sound_pop": {
+    "message": "뽁"
+  },
+  "sound_harp": {
+    "message": "하프"
+  },
+  "sound_glass": {
+    "message": "유리잔"
+  },
+  "sound_knock": {
+    "message": "노크"
+  },
+  "sound_coo": {
+    "message": "비둘기 구구"
+  },
+  "sound_sparkle": {
+    "message": "반짝"
+  },
   "sound_none": {
     "message": "무음"
-  },
-  "sound_custom": {
-    "message": "사용자 지정 사운드"
   },
   "optionsTitle": {
     "message": "Pigeon Post for Gmail 설정"
@@ -473,12 +488,6 @@
   "groupOther": {
     "message": "기타 폴더"
   },
-  "soundCustomNamed": {
-    "message": "사용자 지정: $1"
-  },
-  "soundUpload": {
-    "message": "사운드 업로드…"
-  },
   "soundLabel": {
     "message": "사운드"
   },
@@ -487,15 +496,6 @@
   },
   "soundPreviewNamed": {
     "message": "'$1' 사운드 재생"
-  },
-  "soundNotAudio": {
-    "message": "mp3, wav, ogg 등의 오디오 파일을 선택하세요."
-  },
-  "soundTooBig": {
-    "message": "파일이 1MB를 초과합니다. 더 짧은 사운드를 선택하세요."
-  },
-  "soundMissing": {
-    "message": "이 컴퓨터에는 이 메일함의 사용자 지정 사운드가 없어 대신 '$1' 사운드가 재생됩니다. 다시 업로드하면 해결됩니다."
   },
   "conflictText": {
     "message": "$1 설정이 $2(으)로 되어 있어 이미 모든 탭의 메일이 포함되므로 $3 설정은 적용되지 않습니다."

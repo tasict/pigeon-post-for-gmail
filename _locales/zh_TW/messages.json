@@ -311,11 +311,26 @@
   "sound_tick": {
     "message": "輕點"
   },
+  "sound_pop": {
+    "message": "啵"
+  },
+  "sound_harp": {
+    "message": "豎琴"
+  },
+  "sound_glass": {
+    "message": "玻璃杯"
+  },
+  "sound_knock": {
+    "message": "敲門"
+  },
+  "sound_coo": {
+    "message": "鴿子咕咕"
+  },
+  "sound_sparkle": {
+    "message": "閃爍"
+  },
   "sound_none": {
     "message": "無聲"
-  },
-  "sound_custom": {
-    "message": "自訂音檔"
   },
   "optionsTitle": {
     "message": "Pigeon Post for Gmail 設定"
@@ -473,12 +488,6 @@
   "groupOther": {
     "message": "其他收件夾"
   },
-  "soundCustomNamed": {
-    "message": "自訂：$1"
-  },
-  "soundUpload": {
-    "message": "上傳音檔…"
-  },
   "soundLabel": {
     "message": "音效"
   },
@@ -487,15 +496,6 @@
   },
   "soundPreviewNamed": {
     "message": "試聽「$1」的音效"
-  },
-  "soundNotAudio": {
-    "message": "請選擇音訊檔，例如 mp3、wav 或 ogg。"
-  },
-  "soundTooBig": {
-    "message": "音檔超過 1 MB，請換一個短一點的聲音。"
-  },
-  "soundMissing": {
-    "message": "這台電腦沒有這個信箱的自訂音檔，會改播「$1」。重新上傳即可。"
   },
   "conflictText": {
     "message": "$1設為$2，已經涵蓋所有分頁的信，所以$3的設定沒有作用。"

@@ -311,11 +311,26 @@
   "sound_tick": {
     "message": "タップ"
   },
+  "sound_pop": {
+    "message": "ポン"
+  },
+  "sound_harp": {
+    "message": "ハープ"
+  },
+  "sound_glass": {
+    "message": "グラス"
+  },
+  "sound_knock": {
+    "message": "ノック"
+  },
+  "sound_coo": {
+    "message": "ハトの声"
+  },
+  "sound_sparkle": {
+    "message": "キラキラ"
+  },
   "sound_none": {
     "message": "無音"
-  },
-  "sound_custom": {
-    "message": "カスタムサウンド"
   },
   "optionsTitle": {
     "message": "Pigeon Post for Gmail の設定"
@@ -473,12 +488,6 @@
   "groupOther": {
     "message": "その他のフォルダ"
   },
-  "soundCustomNamed": {
-    "message": "カスタム: $1"
-  },
-  "soundUpload": {
-    "message": "サウンドをアップロード…"
-  },
   "soundLabel": {
     "message": "サウンド"
   },
@@ -487,15 +496,6 @@
   },
   "soundPreviewNamed": {
     "message": "「$1」のサウンドを再生"
-  },
-  "soundNotAudio": {
-    "message": "mp3、wav、ogg などの音声ファイルを選択してください。"
-  },
-  "soundTooBig": {
-    "message": "このファイルは 1 MB を超えています。もっと短いサウンドを選択してください。"
-  },
-  "soundMissing": {
-    "message": "このパソコンにはこのメールボックスのカスタム サウンドがないため、代わりに「$1」が再生されます。もう一度アップロードすると解決します。"
   },
   "conflictText": {
     "message": "$1が$2に設定されていて、すべてのタブのメールが対象になっているため、$3の設定は反映されません。"

@@ -344,11 +344,26 @@
   "sound_tick": {
     "message": "Tapotement"
   },
+  "sound_pop": {
+    "message": "Pop"
+  },
+  "sound_harp": {
+    "message": "Harpe"
+  },
+  "sound_glass": {
+    "message": "Verre"
+  },
+  "sound_knock": {
+    "message": "Toc toc"
+  },
+  "sound_coo": {
+    "message": "Roucoulement"
+  },
+  "sound_sparkle": {
+    "message": "Étincelle"
+  },
   "sound_none": {
     "message": "Silencieux"
-  },
-  "sound_custom": {
-    "message": "Son personnalisé"
   },
   "optionsTitle": {
     "message": "Paramètres de Pigeon Post for Gmail"
@@ -506,12 +521,6 @@
   "groupOther": {
     "message": "Autres dossiers"
   },
-  "soundCustomNamed": {
-    "message": "Personnalisé : $1"
-  },
-  "soundUpload": {
-    "message": "Importer un son…"
-  },
   "soundLabel": {
     "message": "Son"
   },
@@ -520,15 +529,6 @@
   },
   "soundPreviewNamed": {
     "message": "Écouter le son de « $1 »"
-  },
-  "soundNotAudio": {
-    "message": "Choisissez un fichier audio, par exemple mp3, wav ou ogg."
-  },
-  "soundTooBig": {
-    "message": "Ce fichier dépasse 1 Mo. Choisissez un son plus court."
-  },
-  "soundMissing": {
-    "message": "Cet ordinateur ne dispose pas du son personnalisé de cette boîte, le son « $1 » est donc joué à la place. Importez-le à nouveau pour corriger ce problème."
   },
   "conflictText": {
     "message": "Le dossier $1 est réglé sur $2, ce qui couvre déjà les messages de tous les onglets : les paramètres de $3 n'ont donc aucun effet."

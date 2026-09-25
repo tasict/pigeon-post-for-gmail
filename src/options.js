@@ -17,8 +17,6 @@ const S = {
   counts: new Map(),  // `${email}|${folderId}` → { fullcount } | { error } | 'pending'
   filter: {},         // label filter text { email: string }
   labelStatus: {},    // result message of reading labels { email: { text, tone } }
-  customSounds: {},   // custom sound files on this computer { email: { name, data } }
-  soundNote: {},      // sound-related notes { email: string }
   changedAt: 0
 };
 
@@ -184,8 +182,7 @@ function accountSection(acc) {
           ))
         ),
         soundPicker(acc)
-      ),
-      h('p', { class: 'sound-note', dataset: { soundNote: acc.email }, hidden: true })
+      )
     ),
     h('div', { class: 'sheet' },
       h('div', { class: 'group' },
@@ -208,68 +205,30 @@ function accountSection(acc) {
 
 /* ---------- Sounds ---------- */
 
-const MAX_SOUND_BYTES = 1024 * 1024;
-
-function soundOptions(email, current) {
-  const custom = S.customSounds[email];
+function soundOptions(current) {
   return [
     h('option', { value: 'none', text: Sounds.NAMES.none, selected: current === 'none' }),
-    Sounds.LIST.map(snd => h('option', { value: snd.id, text: snd.name, selected: current === snd.id })),
-    (custom || current === 'custom') && h('option', { value: 'custom', text: custom ? t('soundCustomNamed', custom.name) : Sounds.NAMES.custom, selected: current === 'custom' }),
-    h('option', { value: '__upload', text: t('soundUpload') })
+    Sounds.LIST.map(snd => h('option', { value: snd.id, text: snd.name, selected: current === snd.id }))
   ];
 }
 
 function soundPicker(acc) {
   const id = identities()[acc.email];
-  const file = h('input', { type: 'file', accept: 'audio/*', hidden: true, onchange: e => uploadSound(acc.email, e.target) });
   const select = h('select', {
     'aria-label': t('soundLabel'),
     onchange: e => {
-      if (e.target.value === '__upload') {
-        e.target.value = identities()[acc.email].sound;
-        file.click();
-        return;
-      }
       setIdentity(acc.email, { sound: e.target.value });
       previewSound(acc.email);
     }
-  }, soundOptions(acc.email, id.sound));
+  }, soundOptions(id.sound));
   return h('div', { class: 'sound', dataset: { sound: acc.email } },
     h('label', {}, t('soundLabel'), select),
-    h('button', { class: 'btn', type: 'button', text: t('soundPreview'), 'aria-label': t('soundPreviewNamed', id.label), onclick: () => previewSound(acc.email) }),
-    file
+    h('button', { class: 'btn', type: 'button', text: t('soundPreview'), 'aria-label': t('soundPreviewNamed', id.label), onclick: () => previewSound(acc.email) })
   );
 }
 
 function previewSound(email) {
-  const id = identities()[email];
-  Sounds.play(id.sound, S.settings.volume || 60, S.customSounds[email]?.data);
-}
-
-// Custom sound files stay on this computer (chrome.storage.local); other computers play the default sound instead.
-async function uploadSound(email, input) {
-  const f = input.files?.[0];
-  input.value = '';
-  if (!f) return;
-  if (!f.type.startsWith('audio/')) return setSoundNote(email, t('soundNotAudio'));
-  if (f.size > MAX_SOUND_BYTES) return setSoundNote(email, t('soundTooBig'));
-  const data = await new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = () => reject(reader.error);
-    reader.readAsDataURL(f);
-  });
-  S.customSounds = { ...S.customSounds, [email]: { name: f.name, data } };
-  await chrome.storage.local.set({ customSounds: S.customSounds });
-  setSoundNote(email, '');
-  setIdentity(email, { sound: 'custom' });
-  previewSound(email);
-}
-
-function setSoundNote(email, text) {
-  S.soundNote[email] = text;
-  paintIdentities();
+  Sounds.play(identities()[email].sound, S.settings.volume || 60);
 }
 
 // Name, color or sound changed: update this mailbox's mark on the settings page and in the preview.
@@ -290,14 +249,7 @@ function paintIdentities() {
     mark.dataset.acct = id.color;
     mark.textContent = id.initial;
     const select = section.querySelector('.sound select');
-    if (select) {
-      select.replaceChildren(...soundOptions(email, id.sound).flat().filter(Boolean));
-      select.value = id.sound;
-    }
-    const note = section.querySelector('.sound-note');
-    const missing = id.sound === 'custom' && !S.customSounds[email];
-    note.textContent = S.soundNote[email] || (missing ? t('soundMissing', Sounds.NAMES[Settings.DEFAULT_SOUND]) : '');
-    note.hidden = !note.textContent;
+    if (select && select.value !== id.sound) select.value = id.sound;
     const radio = section.querySelector(`.swatches input[value="${id.color}"]`);
     if (radio && !radio.checked) radio.checked = true;
     const nick = section.querySelector('.mark input[type="text"]');
@@ -667,7 +619,7 @@ function renderPreview() {
         count.length > 0 && h('li', {}, h('span', { class: 'chip count', text: LEVEL_TEXT.count }), h('span', { text: list(count.map(displayName)) })),
         !tracked && h('li', { class: 'none', text: t('pvNotTracked') }),
         notify.length > 0 && h('li', {}, h('span', { class: 'chip sound', text: t('soundLabel') }),
-          h('span', { text: !s.volume || id.sound === 'none' ? Sounds.NAMES.none : id.sound === 'custom' ? (S.customSounds[acc.email]?.name ?? Sounds.NAMES[Settings.DEFAULT_SOUND]) : Sounds.NAMES[id.sound] }))
+          h('span', { text: !s.volume || id.sound === 'none' ? Sounds.NAMES.none : Sounds.NAMES[id.sound] }))
       )
     ));
   }
@@ -786,11 +738,10 @@ document.addEventListener('visibilitychange', () => {
 (async () => {
   S.settings = await Settings.get();
   const [local, { state = null }] = await Promise.all([
-    chrome.storage.local.get({ gmailLabels: {}, customSounds: {} }),
+    chrome.storage.local.get({ gmailLabels: {} }),
     chrome.storage.session.get('state')
   ]);
   S.gmailLabels = local.gmailLabels;
-  S.customSounds = local.customSounds;
   S.state = state;
   renderGeneral();
   renderAccounts();

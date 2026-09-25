@@ -13,7 +13,7 @@ for (const f of fs.readdirSync(src)) {
 ['inbox','primary','social','promo','updates','forums','starred','important','unread'].forEach(id => used.add(`folder_${id}`));
 ['inbox','starred','important','unread'].forEach(id => used.add(`folderHint_${id}`));
 ['teal','violet','magenta','olive','cocoa','slate'].forEach(id => used.add(`color_${id}`));
-['chime','ding','drop','marimba','bell','tick','none','custom'].forEach(id => used.add(`sound_${id}`));
+['chime','ding','drop','marimba','bell','tick','pop','harp','glass','knock','coo','sparkle','none'].forEach(id => used.add(`sound_${id}`));
 ['off','count','notify'].forEach(id => used.add(`level_${id}`));
 ['langTag','listSeparator','quoted','justNow','extName','extDescription'].forEach(k => used.add(k));
 used.delete('key');

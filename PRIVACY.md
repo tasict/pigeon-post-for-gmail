@@ -1,6 +1,6 @@
 # Privacy Policy — Pigeon Post for Gmail
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifications for the Gmail accounts you are already signed in to in Chrome. This policy explains what data the extension handles and what it does with it.
 
@@ -20,7 +20,6 @@ Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifica
 | Gmail label names (read from Gmail's left-hand menu) | To let you pick labels in the settings page | `chrome.storage.local` (your computer) |
 | Gmail's `GMAIL_AT` cookie | Used as the action token when you click "Mark as read". It is read at the moment of the action and sent only to `mail.google.com` | Not stored |
 | Your settings (which folders to watch, colors, sounds, volume) | To remember your preferences | `chrome.storage.sync` |
-| Custom notification sounds you upload | To play them | `chrome.storage.local` (your computer only; not synced) |
 
 The extension never reads the full body of your messages, and it never sends, deletes or modifies messages. The one exception is marking them as read when you ask it to.
 
@@ -55,7 +54,7 @@ Questions about this policy: tasict+webstore@gmail.com
 
 # 隱私權政策（繁體中文）
 
-最後更新：2026-09-25
+最後更新：2026-09-26
 
 Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已登入的 Gmail 帳號，顯示未讀數與桌面通知。
 
@@ -70,7 +69,7 @@ Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已
 - **已通知過的郵件 ID**：避免重複通知。
 - **Gmail 標籤名稱**：供設定頁選擇。
 - **Gmail 的 `GMAIL_AT` cookie**：在你按「標為已讀」時當作操作權杖，只送往 `mail.google.com`，不另外儲存。
-- **你的設定與自訂音效**：存在你的 Chrome 設定檔。
+- **你的設定**：存在你的 Chrome 設定檔。
 
 本擴充功能不讀取郵件全文。除了在你要求時把郵件標為已讀，不會寄出、刪除或修改任何郵件。
 不出售、不轉移、不分享任何使用者資料。移除本擴充功能即刪除它在本機儲存的所有資料。

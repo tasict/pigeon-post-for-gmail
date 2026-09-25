@@ -311,11 +311,26 @@
   "sound_tick": {
     "message": "轻点"
   },
+  "sound_pop": {
+    "message": "啵"
+  },
+  "sound_harp": {
+    "message": "竖琴"
+  },
+  "sound_glass": {
+    "message": "玻璃杯"
+  },
+  "sound_knock": {
+    "message": "敲门"
+  },
+  "sound_coo": {
+    "message": "鸽子咕咕"
+  },
+  "sound_sparkle": {
+    "message": "闪烁"
+  },
   "sound_none": {
     "message": "静音"
-  },
-  "sound_custom": {
-    "message": "自定义音效"
   },
   "optionsTitle": {
     "message": "Pigeon Post for Gmail 设置"
@@ -473,12 +488,6 @@
   "groupOther": {
     "message": "其他文件夹"
   },
-  "soundCustomNamed": {
-    "message": "自定义：$1"
-  },
-  "soundUpload": {
-    "message": "上传音频…"
-  },
   "soundLabel": {
     "message": "提示音"
   },
@@ -487,15 +496,6 @@
   },
   "soundPreviewNamed": {
     "message": "试听“$1”的提示音"
-  },
-  "soundNotAudio": {
-    "message": "请选择音频文件，例如 mp3、wav 或 ogg。"
-  },
-  "soundTooBig": {
-    "message": "文件超过 1 MB，请换一个短一些的声音。"
-  },
-  "soundMissing": {
-    "message": "这台电脑上没有这个邮箱的自定义提示音，将改为播放“$1”。重新上传即可解决。"
   },
   "conflictText": {
     "message": "$1设为$2，已涵盖所有标签页中的邮件，因此$3的设置不起作用。"

@@ -125,9 +125,8 @@ async function ensureOffscreen() {
 async function playSounds(fresh, settings, accounts) {
   if (!settings.volume) return;
   const ids = Settings.identities(settings, accounts.map(a => a.email));
-  const { customSounds = {} } = await chrome.storage.local.get('customSounds');
   const queue = [...new Set(fresh.map(m => m.email))].slice(0, 3)
-    .map(email => ({ sound: ids[email]?.sound ?? Settings.DEFAULT_SOUND, data: customSounds[email]?.data ?? null }))
+    .map(email => ({ sound: ids[email]?.sound ?? Settings.DEFAULT_SOUND }))
     .filter(item => item.sound !== 'none');
   if (!queue.length) return;
   try {
@@ -356,8 +355,8 @@ async function sendTestNotification(sample) {
 }
 
 chrome.runtime.onInstalled.addListener(details => {
-  // Older versions kept the check result in storage.local; it now lives in session storage.
-  chrome.storage.local.remove('state');
+  // Older versions kept the check result in storage.local (it now lives in session storage) and uploaded sound files there.
+  chrome.storage.local.remove(['state', 'customSounds']);
   scheduleAlarm();
   poll('installed');
   if (details.reason === 'install') chrome.runtime.openOptionsPage();
