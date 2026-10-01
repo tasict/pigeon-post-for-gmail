@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.0 — 2026-10-01
+
+### Added
+
+- A tip on the settings page and in the popup that shows how to pin Pigeon Post to the Chrome toolbar. It goes away once the icon is pinned, or when you choose "Hide".
+
+### Changed
+
+- When Gmail asks you to verify again before marking mail as read, the popup now shows a notice on that mailbox, naming the account, with a button that opens the verification page. Before, a short warning at the top did not say which mailbox needed it and disappeared on the next refresh. The notification sent after a failed "Mark as read" names the account too.
+- The result shown after marking a whole mailbox as read now fades out on its own after a few seconds. It waits while the pointer or keyboard focus is on it.
+
 ## 0.5.0 — 2026-09-26
 
 ### Added

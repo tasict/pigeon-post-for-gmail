@@ -3,9 +3,12 @@ const { t, tn, list } = I18n;
 const $ = sel => document.querySelector(sel);
 
 I18n.apply();
+$('.bar').after(UI.pinHint());
 
 // bulk: per-mailbox progress of "mark all as read" (written to session storage by the background); confirming: the mailbox being confirmed.
-const P = { state: null, settings: null, collapsed: {}, bulk: {}, confirming: null, entering: null };
+// reauth: mailboxes Gmail asked to verify again (email → verification URL, also written by the background).
+// dismiss: timers that fade out a finished bulk result (email → timer); fading: mailboxes whose result is fading out.
+const P = { state: null, settings: null, collapsed: {}, bulk: {}, reauth: {}, confirming: null, entering: null, dismiss: {}, fading: new Set() };
 
 const SVG = 'http://www.w3.org/2000/svg';
 function icon(paths, size = 16) {
@@ -52,6 +55,11 @@ function openAndClose(url) {
   chrome.runtime.sendMessage({ type: 'openUrl', url }).then(() => window.close());
 }
 
+// Opens the verification page for this mailbox; the background clears its notice.
+function openReauth(email, url) {
+  chrome.runtime.sendMessage({ type: 'openReauth', email, url }).then(() => window.close());
+}
+
 function stateBox(title, text, action) {
   return h('div', { class: 'state' },
     h('p', {}, h('strong', { text: title }), text),
@@ -67,12 +75,11 @@ function setCollapsed(email, value) {
   box?.querySelector('.box-toggle')?.setAttribute('aria-expanded', String(!value));
 }
 
-function showWarning(text, title = '', action = null) {
+function showWarning(text, title = '') {
   const w = $('#warning');
   w.hidden = !text;
   w.textContent = text;
   w.title = title;
-  if (action) w.append(' ', h('button', { class: 'warning-action', type: 'button', text: action.label, onclick: action.run }));
 }
 
 async function markRead(row, m) {
@@ -83,8 +90,14 @@ async function markRead(row, m) {
   if (!r?.ok) {
     row.classList.remove('leaving');
     btn.removeAttribute('aria-busy');
-    showWarning(t('markReadFailed', r?.error || t('unknownError')), '',
-      r?.reauthUrl ? { label: t('reauthOpen'), run: () => openAndClose(r.reauthUrl) } : null);
+    if (r?.reauthUrl) {
+      // The notice stays on this mailbox's box (a warning would be cleared by the next render); move focus to its button.
+      P.reauth = { ...P.reauth, [m.email]: r.reauthUrl };
+      render();
+      document.querySelector(`[data-focus="reauth:${CSS.escape(m.email)}"]`)?.focus();
+      return;
+    }
+    showWarning(t('markReadFailed', r?.error || t('unknownError')));
   }
 }
 
@@ -117,10 +130,36 @@ function markAllRead(email) {
 }
 
 function clearBulk(email) {
+  clearTimeout(P.dismiss[email]);
+  delete P.dismiss[email];
+  P.fading.delete(email);
   const { [email]: _, ...rest } = P.bulk;
   P.bulk = rest;
   render();
   chrome.runtime.sendMessage({ type: 'clearBulk', email }).catch(() => {});
+}
+
+// A finished result fades out on its own; a longer one (with a note) stays longer.
+// The timer waits while the pointer or focus is on the panel, so it never disappears mid-read or under a click.
+const DISMISS_MS = 4000;
+const DISMISS_NOTE_MS = 8000;
+const FADE_MS = 500;
+function scheduleDismiss(email, delay) {
+  if (P.dismiss[email]) return;
+  P.dismiss[email] = setTimeout(() => {
+    delete P.dismiss[email];
+    if (P.bulk[email]?.phase !== 'done') return;
+    const panel = document.querySelector(`.bulk[data-done="${CSS.escape(email)}"]`);
+    if (panel?.matches(':hover, :focus-within')) return scheduleDismiss(email, 1500);
+    P.fading.add(email);
+    if (panel) {
+      // Pin the current height so it can shrink to zero after the fade.
+      panel.style.height = `${panel.offsetHeight}px`;
+      panel.offsetHeight;
+      panel.classList.add('fading');
+    }
+    P.dismiss[email] = setTimeout(() => clearBulk(email), FADE_MS);
+  }, delay);
 }
 
 // The confirmation, progress and result panel below a mailbox header.
@@ -177,7 +216,7 @@ function bulkPanel(acc, id, total, folders) {
       h('p', { class: 'bulk-q', text: t('bulkFailed') }),
       h('p', { class: 'bulk-note', text: job.done ? tn('bulkFailedPartial', job.done, job.error || t('unknownError')) : job.error || t('unknownError') }),
       h('div', { class: 'bulk-acts' },
-        job.reauthUrl && h('button', { class: 'btn acct', type: 'button', text: t('reauthOpen'), onclick: () => openAndClose(job.reauthUrl) }),
+        job.reauthUrl && h('button', { class: 'btn acct', type: 'button', text: t('reauthOpen'), onclick: () => openReauth(email, job.reauthUrl) }),
         close
       )
     );
@@ -185,10 +224,25 @@ function bulkPanel(acc, id, total, folders) {
 
   let note = '';
   if (job.left) note = tn('bulkLeft', job.left);
-  return h('div', { class: 'bulk is-done', role: 'status' },
+  scheduleDismiss(email, note ? DISMISS_NOTE_MS : DISMISS_MS);
+  return h('div', { class: `bulk is-done${P.fading.has(email) ? ' fading' : ''}`, role: 'status', dataset: { done: email } },
     h('p', { class: 'bulk-q', text: job.done ? tn('bulkDone', job.done) : t('bulkNothing') }),
     note && h('p', { class: 'bulk-note', text: note }),
     h('div', { class: 'bulk-acts' }, close)
+  );
+}
+
+// Shown below a mailbox header when Gmail asked this mailbox to verify again; visible even when the box is collapsed.
+function reauthPanel(acc) {
+  const email = acc.email;
+  // A failed bulk job already offers the same button.
+  if (!P.reauth[email] || P.bulk[email]?.reauthUrl) return null;
+  return h('div', { class: 'bulk is-error', role: 'alert' },
+    h('p', { class: 'bulk-q', text: t('reauthNeeded') }),
+    h('p', { class: 'bulk-note', text: t('reauthNeededNote', email) }),
+    h('div', { class: 'bulk-acts' },
+      h('button', { class: 'btn acct', type: 'button', dataset: { focus: `reauth:${email}` }, text: t('reauthOpen'), onclick: () => openReauth(email) })
+    )
   );
 }
 
@@ -324,7 +378,7 @@ function render() {
       body.append(h('button', { class: 'more', type: 'button', text: tn('moreInGmail', hidden), onclick: () => openAndClose(Gmail.gmailUrl(acc.index)) }));
     }
     content.append(h('section', { class: `box${collapsed ? ' collapsed' : ''}`, dataset: { email: acc.email, acct: id.color }, 'aria-label': id.label },
-      head, bulkPanel(acc, id, total, accFolders), body));
+      head, reauthPanel(acc), bulkPanel(acc, id, total, accFolders), body));
   }
   if (focusKey) document.querySelector(`[data-focus="${CSS.escape(focusKey)}"]`)?.focus();
 }
@@ -358,15 +412,16 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'session' && changes.state) { P.state = changes.state.newValue; render(); }
   if (area === 'sync') Settings.get().then(s => { P.settings = s; render(); });
   if (area === 'session' && changes.bulk) { P.bulk = changes.bulk.newValue || {}; render(); }
+  if (area === 'session' && changes.reauth) { P.reauth = changes.reauth.newValue || {}; render(); }
 });
 
 (async () => {
-  const [{ collapsed = {} }, { state, bulk = {} }, settings] = await Promise.all([
+  const [{ collapsed = {} }, { state, bulk = {}, reauth = {} }, settings] = await Promise.all([
     chrome.storage.local.get('collapsed'),
-    chrome.storage.session.get(['state', 'bulk']),
+    chrome.storage.session.get(['state', 'bulk', 'reauth']),
     Settings.get()
   ]);
-  Object.assign(P, { state, settings, collapsed, bulk });
+  Object.assign(P, { state, settings, collapsed, bulk, reauth });
   render();
   // Check now if the last result is older than one poll interval.
   if (!state || Date.now() - state.lastCheck > settings.pollSeconds * 1000) refresh();

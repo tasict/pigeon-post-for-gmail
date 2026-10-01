@@ -38,6 +38,12 @@
   "reauthOpen": {
     "message": "Ouvrir Gmail pour valider à nouveau"
   },
+  "reauthNeeded": {
+    "message": "Validation requise"
+  },
+  "reauthNeededNote": {
+    "message": "Gmail vous demande de valider à nouveau $1. Vous pourrez ensuite marquer les messages de cette boîte comme lus."
+  },
   "markAllRead": {
     "message": "Tout marquer comme lu"
   },
@@ -237,7 +243,7 @@
     "message": "Impossible de marquer comme lu"
   },
   "notifReauth": {
-    "message": "Gmail vous demande de valider à nouveau. Cliquez sur cette notification pour ouvrir Gmail, validez, puis réessayez."
+    "message": "Gmail vous demande de valider à nouveau $1. Cliquez sur cette notification pour ouvrir Gmail, validez, puis réessayez."
   },
   "messageGone": {
     "message": "Ce message ne figure plus dans la liste"
@@ -694,5 +700,14 @@
   },
   "supportCard": {
     "message": "Le bubble tea se paie par carte, sans compte PayPal."
+  },
+  "pinHintTitle": {
+    "message": "Épinglez Pigeon Post à la barre d’outils"
+  },
+  "pinHintSteps": {
+    "message": "Chrome range les nouvelles extensions dans le menu $1 en haut à droite. Ouvrez-le et cliquez sur $2 à côté de Pigeon Post for Gmail pour voir les messages non lus d’un coup d’œil."
+  },
+  "pinHintHide": {
+    "message": "Ne plus afficher"
   }
 }

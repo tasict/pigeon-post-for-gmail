@@ -38,6 +38,12 @@
   "reauthOpen": {
     "message": "開啟 Gmail 重新驗證"
   },
+  "reauthNeeded": {
+    "message": "需要重新驗證"
+  },
+  "reauthNeededNote": {
+    "message": "Gmail 要求 $1 重新驗證，完成後才能把這個信箱的信標為已讀。"
+  },
   "markAllRead": {
     "message": "全部標為已讀"
   },
@@ -204,7 +210,7 @@
     "message": "無法標為已讀"
   },
   "notifReauth": {
-    "message": "Gmail 要求重新驗證。點這則通知開啟 Gmail 完成驗證，再試一次。"
+    "message": "Gmail 要求 $1 重新驗證。點這則通知開啟 Gmail 完成驗證，再試一次。"
   },
   "messageGone": {
     "message": "這封信已經不在清單裡"
@@ -652,5 +658,14 @@
   },
   "supportCard": {
     "message": "珍奶贊助直接刷卡，不需要 PayPal 帳號。"
+  },
+  "pinHintTitle": {
+    "message": "把 Pigeon Post 固定到工具列"
+  },
+  "pinHintSteps": {
+    "message": "Chrome 會把新安裝的擴充功能收在右上角的 $1 選單裡。打開選單，按下 Pigeon Post for Gmail 旁的 $2，就能隨時看到未讀數。"
+  },
+  "pinHintHide": {
+    "message": "不再顯示"
   }
 }

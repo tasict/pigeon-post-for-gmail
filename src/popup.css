@@ -27,11 +27,9 @@ button { font: inherit; color: inherit; }
   #settings:is(:hover, :focus-visible) .knob-b { transform: translateX(6px); }
 }
 @keyframes turn { to { transform: rotate(360deg); } }
+.pin-hint { flex: none; padding: 9px 14px 10px 12px; border-width: 0 0 1px 3px; font-size: 12.5px; line-height: 1.5; gap: 8px; }
+.pin-hint-icon { width: 16px; height: 16px; }
 .warning { margin: 0; padding: 6px 14px; background: var(--wash); color: var(--amber); font-size: 12.5px; }
-.warning-action {
-  padding: 0; border: 0; background: none; color: var(--blue); cursor: pointer;
-  font-size: inherit; text-decoration: underline; text-underline-offset: 3px;
-}
 
 /* Top strip: one fixed-width chip per mailbox; click to open that mailbox.
    Too many chips scroll sideways; the edges fade where more chips are hidden. */
@@ -167,6 +165,9 @@ main { flex: 1; overflow-y: auto; }
 .bulk-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .btn.acct { background: var(--acct); border-color: var(--acct); color: var(--on-acct); font-weight: 600; }
 .btn.acct:hover { opacity: .9; }
+/* A finished result fades, then folds away (timing matches FADE_MS in popup.js) */
+.bulk.is-done { overflow: hidden; transition: opacity .3s ease-out, height .2s ease-in .3s, padding .2s ease-in .3s, border-width .2s ease-in .3s; }
+.bulk.is-done.fading { opacity: 0; height: 0 !important; padding-top: 0; padding-bottom: 0; border-bottom-width: 0; pointer-events: none; }
 .bulk-bar {
   position: absolute; left: 0; right: 0; bottom: -1px; height: 3px;
   background: color-mix(in srgb, var(--acct) 18%, transparent);

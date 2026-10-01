@@ -137,12 +137,37 @@ async function playSounds(fresh, settings, accounts) {
 
 /* ---------- Mark as read ---------- */
 
+// Mailboxes Gmail asked to verify again, kept in session storage under reauth (email → verification URL) so the popup can point at them.
+// An entry is cleared when an action on that mailbox succeeds or the user opens its verification page.
+let reauthWrite = Promise.resolve();
+function updateReauth(change) {
+  reauthWrite = reauthWrite.catch(() => {}).then(async () => {
+    const { reauth = {} } = await chrome.storage.session.get('reauth');
+    const next = { ...reauth };
+    for (const [email, url] of Object.entries(change)) {
+      if (url) next[email] = url;
+      else delete next[email];
+    }
+    if (JSON.stringify(next) !== JSON.stringify(reauth)) await chrome.storage.session.set({ reauth: next });
+  });
+  return reauthWrite;
+}
+
 // Remove from the view first, then check again to confirm Gmail's state. Bulk callers run the final check themselves.
 async function markRead(messages, { recheck = true } = {}) {
   const results = await Promise.allSettled(messages.map(m => GmailActions.run(m, 'read')));
   const done = messages.filter((m, i) => results[i].status === 'fulfilled').map(m => m.key);
   const failed = results.find(r => r.status === 'rejected');
-  const reauthUrl = results.find(r => r.reason?.reauthUrl)?.reason.reauthUrl ?? null;
+  const reauthAt = results.findIndex(r => r.reason?.reauthUrl);
+  const reauthUrl = reauthAt >= 0 ? results[reauthAt].reason.reauthUrl : null;
+  const reauthEmail = reauthAt >= 0 ? messages[reauthAt].email : null;
+  const reauthChange = {};
+  messages.forEach((m, i) => {
+    const r = results[i];
+    if (r.status === 'fulfilled') reauthChange[m.email] ??= null;
+    else if (r.reason?.reauthUrl) reauthChange[m.email] = r.reason.reauthUrl;
+  });
+  await updateReauth(reauthChange);
   if (done.length) {
     const { state } = await chrome.storage.session.get('state');
     if (state) {
@@ -155,7 +180,7 @@ async function markRead(messages, { recheck = true } = {}) {
     }
     if (recheck) setTimeout(() => poll('action'), 2500);
   }
-  return failed ? { ok: false, done, error: failed.reason?.message || String(failed.reason), reauthUrl } : { ok: true, done };
+  return failed ? { ok: false, done, error: failed.reason?.message || String(failed.reason), reauthUrl, reauthEmail } : { ok: true, done };
 }
 
 /* ---------- Mark a whole mailbox as read ---------- */
@@ -401,7 +426,7 @@ chrome.notifications.onButtonClicked.addListener(async id => {
     type: 'basic',
     iconUrl: ICON,
     title: t('markReadFailedTitle'),
-    message: result.reauthUrl ? t('notifReauth') : result.error,
+    message: result.reauthUrl ? t('notifReauth', result.reauthEmail) : result.error,
     silent: true,
     priority: 1
   });
@@ -427,6 +452,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         return { ok: true };
       case 'poll':
         return poll('manual');
+      case 'openReauth': {
+        // Fall back to the URL the caller holds (from a bulk result) when the stored entry is already gone.
+        const { reauth = {} } = await chrome.storage.session.get('reauth');
+        await openUrl(reauth[msg.email] || msg.url);
+        await updateReauth({ [msg.email]: null });
+        return { ok: true };
+      }
       case 'openUrl':
         await openUrl(msg.url);
         return { ok: true };

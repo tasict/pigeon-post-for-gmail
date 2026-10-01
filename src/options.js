@@ -3,6 +3,7 @@ const { t, tn, list, quote } = I18n;
 const $ = sel => document.querySelector(sel);
 
 I18n.apply();
+$('.masthead').after(UI.pinHint());
 
 const LEVEL_TEXT = Object.fromEntries(Settings.LEVELS.map(lv => [lv, t(`level_${lv}`)]));
 const RANK = { off: 0, count: 1, notify: 2 };

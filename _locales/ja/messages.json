@@ -38,6 +38,12 @@
   "reauthOpen": {
     "message": "Gmail を開いて再認証"
   },
+  "reauthNeeded": {
+    "message": "再認証が必要です"
+  },
+  "reauthNeededNote": {
+    "message": "$1 は Gmail で再認証が必要です。認証が済むと、このメールボックスのメールを既読にできます。"
+  },
   "markAllRead": {
     "message": "すべて既読にする"
   },
@@ -204,7 +210,7 @@
     "message": "既読にできませんでした"
   },
   "notifReauth": {
-    "message": "Gmail で再認証が必要です。この通知をクリックして Gmail を開き、認証してからもう一度お試しください。"
+    "message": "$1 は Gmail で再認証が必要です。この通知をクリックして Gmail を開き、認証してからもう一度お試しください。"
   },
   "messageGone": {
     "message": "このメールはもうリストにありません"
@@ -652,5 +658,14 @@
   },
   "supportCard": {
     "message": "タピオカはクレジットカードで支払えます。PayPal アカウントは不要です。"
+  },
+  "pinHintTitle": {
+    "message": "Pigeon Post をツールバーに固定"
+  },
+  "pinHintSteps": {
+    "message": "Chrome は新しい拡張機能を右上の $1 メニューにまとめます。メニューを開いて Pigeon Post for Gmail の横の $2 をクリックすると、未読数がいつでも見えるようになります。"
+  },
+  "pinHintHide": {
+    "message": "今後表示しない"
   }
 }

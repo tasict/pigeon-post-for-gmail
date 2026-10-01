@@ -38,6 +38,12 @@
   "reauthOpen": {
     "message": "Gmail öffnen und erneut bestätigen"
   },
+  "reauthNeeded": {
+    "message": "Bestätigung nötig"
+  },
+  "reauthNeededNote": {
+    "message": "Gmail möchte, dass du $1 erneut bestätigst. Danach kannst du die Nachrichten in diesem Postfach als gelesen markieren."
+  },
   "markAllRead": {
     "message": "Alle als gelesen markieren"
   },
@@ -237,7 +243,7 @@
     "message": "Konnte nicht als gelesen markiert werden"
   },
   "notifReauth": {
-    "message": "Gmail möchte, dass du dich erneut bestätigst. Klicke auf diese Benachrichtigung, um Gmail zu öffnen, bestätige und versuche es noch einmal."
+    "message": "Gmail möchte, dass du $1 erneut bestätigst. Klicke auf diese Benachrichtigung, um Gmail zu öffnen, bestätige und versuche es noch einmal."
   },
   "messageGone": {
     "message": "Diese E-Mail ist nicht mehr in der Liste"
@@ -694,5 +700,14 @@
   },
   "supportCard": {
     "message": "Den Bubble Tea bezahlst du per Karte, ohne PayPal-Konto."
+  },
+  "pinHintTitle": {
+    "message": "Pigeon Post an die Symbolleiste anpinnen"
+  },
+  "pinHintSteps": {
+    "message": "Chrome legt neue Erweiterungen im Menü $1 oben rechts ab. Öffne es und klicke neben Pigeon Post for Gmail auf $2, dann siehst du die ungelesenen Nachrichten auf einen Blick."
+  },
+  "pinHintHide": {
+    "message": "Nicht mehr anzeigen"
   }
 }

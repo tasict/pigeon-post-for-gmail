@@ -38,6 +38,12 @@
   "reauthOpen": {
     "message": "Open Gmail to verify again"
   },
+  "reauthNeeded": {
+    "message": "Verification needed"
+  },
+  "reauthNeededNote": {
+    "message": "Gmail wants you to verify $1 again. Messages in this mailbox can be marked as read after that."
+  },
   "markAllRead": {
     "message": "Mark all as read"
   },
@@ -237,7 +243,7 @@
     "message": "Couldn't mark as read"
   },
   "notifReauth": {
-    "message": "Gmail needs you to verify again. Click this notification to open Gmail, verify, and try again."
+    "message": "Gmail needs you to verify $1 again. Click this notification to open Gmail, verify, and try again."
   },
   "messageGone": {
     "message": "This message is no longer in the list"
@@ -694,5 +700,14 @@
   },
   "supportCard": {
     "message": "Boba is paid by card. No PayPal account needed."
+  },
+  "pinHintTitle": {
+    "message": "Pin Pigeon Post to your toolbar"
+  },
+  "pinHintSteps": {
+    "message": "Chrome keeps new extensions in the $1 menu at the top right. Open it and click $2 next to Pigeon Post for Gmail to see the unread count at a glance."
+  },
+  "pinHintHide": {
+    "message": "Hide"
   }
 }

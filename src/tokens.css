@@ -96,3 +96,18 @@ button, input, select { font: inherit; color: inherit; }
 }
 .acct-mark.lg { --size: 36px; }
 .acct-mark.sm { --size: 18px; }
+
+/* Pin tip: shown until the toolbar icon is pinned. Key glyphs sit in small keycaps, like the toolbar buttons they stand for. */
+.pin-hint {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: 10px;
+  background: var(--sheet); border: 1px solid var(--rule); border-left: 3px solid var(--blue);
+}
+.pin-hint-icon { width: 18px; height: 18px; margin-top: 2px; color: var(--blue); transform: rotate(30deg); }
+.pin-hint-text strong { display: block; font-weight: 650; }
+.pin-hint-text span { color: var(--muted); }
+.key-glyph {
+  display: inline-block; width: 1.5em; height: 1.35em; padding: .15em .25em; margin: 0 .15em;
+  vertical-align: -.35em; border: 1px solid var(--rule); border-radius: 5px;
+  background: var(--wash); color: var(--ink);
+}
+.pin-hint-hide { white-space: nowrap; font-size: 12.5px; }

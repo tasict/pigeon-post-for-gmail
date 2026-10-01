@@ -38,6 +38,12 @@
   "reauthOpen": {
     "message": "Abrir Gmail para volver a verificar"
   },
+  "reauthNeeded": {
+    "message": "Hace falta verificar"
+  },
+  "reauthNeededNote": {
+    "message": "Gmail necesita que vuelvas a verificar $1. Después podrás marcar como leídos los mensajes de este buzón."
+  },
   "markAllRead": {
     "message": "Marcar todo como leído"
   },
@@ -237,7 +243,7 @@
     "message": "No se pudo marcar como leído"
   },
   "notifReauth": {
-    "message": "Gmail necesita que vuelvas a verificar tu identidad. Haz clic en esta notificación para abrir Gmail, verificar y volver a intentarlo."
+    "message": "Gmail necesita que vuelvas a verificar $1. Haz clic en esta notificación para abrir Gmail, verificar y volver a intentarlo."
   },
   "messageGone": {
     "message": "Este mensaje ya no está en la lista"
@@ -694,5 +700,14 @@
   },
   "supportCard": {
     "message": "El bubble tea se paga con tarjeta, sin cuenta de PayPal."
+  },
+  "pinHintTitle": {
+    "message": "Fija Pigeon Post en la barra de herramientas"
+  },
+  "pinHintSteps": {
+    "message": "Chrome guarda las extensiones nuevas en el menú $1 de arriba a la derecha. Ábrelo y pulsa $2 junto a Pigeon Post for Gmail para ver los no leídos de un vistazo."
+  },
+  "pinHintHide": {
+    "message": "No volver a mostrar"
   }
 }
