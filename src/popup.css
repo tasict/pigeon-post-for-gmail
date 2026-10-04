@@ -140,6 +140,24 @@ main { flex: 1; overflow-y: auto; }
 :is(.msg-read, .box-read):is(:hover, :focus-visible, [aria-busy="true"], [aria-expanded="true"]) .env-flap { transform: scaleY(-1); }
 :is(.msg-read, .box-read):is(:hover, :focus-visible, [aria-busy="true"], [aria-expanded="true"]) .env-dot { transform: scale(0); opacity: 0; }
 
+/* Reconnecting: a chip in the mailbox header while a background Gmail tab renews the session.
+   The plug and socket meet, a spark shows, and they part again; --phase keeps the loop going across re-renders. */
+.reconnect {
+  flex: none; display: inline-flex; align-items: center; gap: 4px;
+  height: 22px; padding: 0 8px 0 3px; border-radius: 999px;
+  background: var(--sheet); color: var(--acct);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acct) 30%, transparent);
+  font-size: 11.5px; font-weight: 600; line-height: 1; white-space: nowrap;
+}
+.plug { flex: none; overflow: visible; }
+.plug :is(.plug-l, .plug-r, .plug-spark) { animation: var(--loop) cubic-bezier(.45, 0, .3, 1) var(--phase) infinite; }
+.plug .plug-l { animation-name: plug-l; }
+.plug .plug-r { animation-name: plug-r; }
+.plug .plug-spark { opacity: 0; transform-box: view-box; transform-origin: 10px 10px; animation-name: plug-spark; }
+@keyframes plug-l { 0%, 100% { transform: translateX(-2px); } 42%, 72% { transform: none; } }
+@keyframes plug-r { 0%, 100% { transform: translateX(2px); } 42%, 72% { transform: none; } }
+@keyframes plug-spark { 0%, 40%, 74%, 100% { opacity: 0; transform: scale(.3); } 52% { opacity: 1; transform: scale(1); } }
+
 /* "Mark all as read" in the mailbox header */
 .box-read {
   flex: none; display: grid; place-items: center; width: 32px; height: 32px;

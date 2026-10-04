@@ -50,6 +50,7 @@ The project site lives in `site/`: static HTML, one folder per language (`site/i
 
 - Unread mail comes from Gmail's Atom feed (`https://mail.google.com/mail/u/N/feed/atom[/label]`), fetched with the browser's existing Gmail cookies.
 - "Mark as read" calls the same internal endpoint that the Gmail web app uses, with the `GMAIL_AT` cookie as the action token. This interface is undocumented and may break if Gmail changes.
+- Gmail gates that endpoint: the token goes stale when Gmail has not been opened for a while, and Gmail sometimes asks to verify again. So the action is sent from an open Gmail tab of that account when there is one, and anything that fails is retried once from a Gmail tab opened in the background, which renews the session. The tab closes a few seconds later.
 
 ## Support
 

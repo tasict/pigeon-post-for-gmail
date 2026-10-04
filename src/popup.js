@@ -7,8 +7,13 @@ $('.bar').after(UI.pinHint());
 
 // bulk: per-mailbox progress of "mark all as read" (written to session storage by the background); confirming: the mailbox being confirmed.
 // reauth: mailboxes Gmail asked to verify again (email → verification URL, also written by the background).
+// reconnecting: mailboxes whose Gmail session is being renewed in a background tab (email → start time, written by the background).
+// pending: keys of messages being marked as read, kept hidden across re-renders until the result is in.
 // dismiss: timers that fade out a finished bulk result (email → timer); fading: mailboxes whose result is fading out.
-const P = { state: null, settings: null, collapsed: {}, bulk: {}, reauth: {}, confirming: null, entering: null, dismiss: {}, fading: new Set() };
+const P = {
+  state: null, settings: null, collapsed: {}, bulk: {}, reauth: {}, reconnecting: {}, pending: new Set(),
+  confirming: null, entering: null, dismiss: {}, fading: new Set()
+};
 
 const SVG = 'http://www.w3.org/2000/svg';
 function icon(paths, size = 16) {
@@ -31,14 +36,17 @@ function icon(paths, size = 16) {
 }
 const openIcon = () => icon(['M8 4H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3', 'M11 4h5v5', 'M16 4l-7 7'], 14);
 
+// Icons whose parts are animated by CSS; the markup is fixed and holds no outside data.
+function markupIcon(cls, markup, size, style = '') {
+  const tpl = document.createElement('template');
+  tpl.innerHTML = `<svg class="${cls}" viewBox="0 0 20 20" width="${size}" height="${size}" aria-hidden="true" style="${style}"
+    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${markup}</svg>`;
+  return tpl.content.firstElementChild;
+}
+
 // Read icon: a closed envelope with an unread dot in the mailbox color; on hover or press the flap opens and the dot disappears.
 // hinge is the axis the flap turns on (the top edge of the envelope).
-function envelopeIcon(markup, hinge, size) {
-  const t = document.createElement('template');
-  t.innerHTML = `<svg class="env" viewBox="0 0 20 20" width="${size}" height="${size}" aria-hidden="true" style="--hinge: ${hinge}"
-    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${markup}</svg>`;
-  return t.content.firstElementChild;
-}
+const envelopeIcon = (markup, hinge, size) => markupIcon('env', markup, size, `--hinge: ${hinge}`);
 const readIcon = () => envelopeIcon(
   '<rect x="2.75" y="7" width="14.5" height="9.5" rx="1.6"/>' +
   '<path class="env-flap" d="M3.3 7.6L10 12.1l6.7-4.5"/>' +
@@ -50,6 +58,15 @@ const readAllIcon = () => envelopeIcon(
   '<path class="env-flap" d="M3.3 8.6l5.2 3.7 5.2-3.7"/>' +
   '<circle class="env-dot" cx="14" cy="7.4" r="2.2"/>',
   '8.5px 8px', 20);
+
+// Reconnecting icon: a plug and a socket that keep coming together, with a spark where they meet.
+// Drawn plugged in, which is also what shows when motion is reduced.
+const plugIcon = () => markupIcon('plug',
+  '<g class="plug-l"><path d="M3.6 10H1.4"/><path d="M8.6 6.5v7H7.1a3.5 3.5 0 0 1 0-7z"/><path d="M8.6 8.6h2.8M8.6 11.4h2.8"/></g>' +
+  '<g class="plug-r"><path d="M11.4 6.5v7h1.5a3.5 3.5 0 0 0 0-7z"/><path d="M16.4 10h2.2"/></g>' +
+  '<path class="plug-spark" d="M10 4.3V2.7M10 15.7v1.6M7.7 4.8l-.9-1.2M12.3 4.8l.9-1.2"/>',
+  18);
+const RECONNECT_LOOP_MS = 1400;
 
 function openAndClose(url) {
   chrome.runtime.sendMessage({ type: 'openUrl', url }).then(() => window.close());
@@ -83,13 +100,17 @@ function showWarning(text, title = '') {
 }
 
 async function markRead(row, m) {
-  const btn = row.querySelector('.msg-read');
-  btn.setAttribute('aria-busy', 'true');
+  // The row stays hidden even if the list is re-rendered meanwhile (for example when the reconnecting notice appears).
+  // On success it stays pending until the new state drops the message (see render).
+  P.pending.add(m.key);
+  row.querySelector('.msg-read').setAttribute('aria-busy', 'true');
   row.classList.add('leaving');
   const r = await chrome.runtime.sendMessage({ type: 'markRead', keys: [m.key] }).catch(e => ({ ok: false, error: e.message }));
   if (!r?.ok) {
-    row.classList.remove('leaving');
-    btn.removeAttribute('aria-busy');
+    P.pending.delete(m.key);
+    const live = document.querySelector(`.msg[data-key="${CSS.escape(m.key)}"]`);
+    live?.classList.remove('leaving');
+    live?.querySelector('.msg-read').removeAttribute('aria-busy');
     if (r?.reauthUrl) {
       // The notice stays on this mailbox's box (a warning would be cleared by the next render); move focus to its button.
       P.reauth = { ...P.reauth, [m.email]: r.reauthUrl };
@@ -246,8 +267,19 @@ function reauthPanel(acc) {
   );
 }
 
+// Shown in a mailbox header while a background Gmail tab renews the mailbox's session.
+// The animation is offset by the time already spent, so re-rendering the list does not restart it.
+function reconnectBadge(acc) {
+  const since = P.reconnecting[acc.email];
+  if (!since) return null;
+  const phase = (Date.now() - since) % RECONNECT_LOOP_MS;
+  return h('span', { class: 'reconnect', role: 'status', title: t('reconnectingNote'), style: `--loop: ${RECONNECT_LOOP_MS}ms; --phase: -${phase}ms` },
+    plugIcon(), h('span', { text: t('reconnecting') }));
+}
+
 function messageRow(m) {
-  const row = h('div', { class: 'msg', dataset: { key: m.key } });
+  const pending = P.pending.has(m.key);
+  const row = h('div', { class: `msg${pending ? ' leaving' : ''}`, dataset: { key: m.key } });
   row.append(
     h('button', {
       class: 'msg-open', type: 'button', title: m.authorEmail ? t('openMessageFrom', m.authorEmail) : t('openMessage'),
@@ -263,7 +295,7 @@ function messageRow(m) {
     ),
     h('button', {
       class: 'msg-read', type: 'button', title: t('markRead'), 'aria-label': t('markReadNamed', m.title || t('noSubject')),
-      onclick: () => markRead(row, m)
+      'aria-busy': pending ? 'true' : null, onclick: () => markRead(row, m)
     }, readIcon())
   );
   return row;
@@ -312,6 +344,8 @@ function render() {
     return;
   }
 
+  // A message that has left the list is done; if a later check brings it back, it shows again.
+  for (const key of P.pending) if (!state.messages.some(m => m.key === key)) P.pending.delete(key);
   $('#summary').textContent = state.total ? tn('unreadCount', state.total) : t('noUnread');
   const ids = Settings.identities(settings, state.accounts.map(a => a.email));
   const multi = state.accounts.length > 1;
@@ -355,6 +389,7 @@ function render() {
         h('span', { class: 'who' }, h('strong', { text: id.label }), id.name && h('small', { text: acc.email })),
         h('span', { class: 'go' }, openIcon())
       ),
+      reconnectBadge(acc),
       canReadAll && h('button', {
         class: 'box-read', type: 'button', dataset: { focus: `bulk-open:${acc.email}` },
         title: t('markAllRead'), 'aria-label': tn('markAllReadNamed', total, id.label),
@@ -413,15 +448,16 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync') Settings.get().then(s => { P.settings = s; render(); });
   if (area === 'session' && changes.bulk) { P.bulk = changes.bulk.newValue || {}; render(); }
   if (area === 'session' && changes.reauth) { P.reauth = changes.reauth.newValue || {}; render(); }
+  if (area === 'session' && changes.reconnecting) { P.reconnecting = changes.reconnecting.newValue || {}; render(); }
 });
 
 (async () => {
-  const [{ collapsed = {} }, { state, bulk = {}, reauth = {} }, settings] = await Promise.all([
+  const [{ collapsed = {} }, { state, bulk = {}, reauth = {}, reconnecting = {} }, settings] = await Promise.all([
     chrome.storage.local.get('collapsed'),
-    chrome.storage.session.get(['state', 'bulk', 'reauth']),
+    chrome.storage.session.get(['state', 'bulk', 'reauth', 'reconnecting']),
     Settings.get()
   ]);
-  Object.assign(P, { state, settings, collapsed, bulk, reauth });
+  Object.assign(P, { state, settings, collapsed, bulk, reauth, reconnecting });
   render();
   // Check now if the last result is older than one poll interval.
   if (!state || Date.now() - state.lastCheck > settings.pollSeconds * 1000) refresh();

@@ -12,9 +12,10 @@ const PROBE_MS = 15 * 60 * 1000;
 
 // Without a valid session Gmail answers 401 with "WWW-Authenticate: Basic", which makes Chrome show a password dialog.
 // Account discovery always hits a /u/N that does not exist, so the extension's own Gmail requests never answer the challenge.
-// The request ends as a 401, which is treated as "this account is not signed in". Requests from Gmail tabs are not affected.
+// The request ends as a 401, which is treated as "this account is not signed in".
+// Requests from the user's Gmail tabs are not affected; the background tabs opened to mark mail as read never show the dialog either.
 chrome.webRequest.onAuthRequired.addListener(
-  details => (details.initiator === self.location.origin || (details.tabId === -1 && !details.initiator) ? { cancel: true } : {}),
+  details => (details.initiator === self.location.origin || (details.tabId === -1 && !details.initiator) || GmailActions.ownsTab(details.tabId) ? { cancel: true } : {}),
   { urls: ['https://mail.google.com/mail/u/*'] },
   ['blocking']
 );
@@ -153,9 +154,25 @@ function updateReauth(change) {
   return reauthWrite;
 }
 
+// Mailboxes being reconnected right now (a background Gmail tab is renewing the session), kept in session storage under reconnecting
+// (email → start time) so the popup can show it. Counted per mailbox, since overlapping actions share one tab.
+// The counts live in memory only, so a stale entry left by a terminated service worker is cleared when it starts again.
+const reconnects = new Map(); // email → { n, at }
+let reconnectWrite = chrome.storage.session.remove('reconnecting').catch(() => {});
+function setReconnecting(email, busy) {
+  const entry = reconnects.get(email) || { n: 0, at: Date.now() };
+  entry.n += busy ? 1 : -1;
+  if (entry.n > 0) reconnects.set(email, entry);
+  else reconnects.delete(email);
+  if (busy ? entry.n !== 1 : entry.n !== 0) return;
+  const reconnecting = Object.fromEntries([...reconnects].map(([e, { at }]) => [e, at]));
+  reconnectWrite = reconnectWrite.catch(() => {}).then(() => chrome.storage.session.set({ reconnecting }));
+}
+
 // Remove from the view first, then check again to confirm Gmail's state. Bulk callers run the final check themselves.
 async function markRead(messages, { recheck = true } = {}) {
-  const results = await Promise.allSettled(messages.map(m => GmailActions.run(m, 'read')));
+  const emailOf = index => messages.find(m => m.index === index)?.email;
+  const results = await GmailActions.runAll(messages, 'read', { onReconnect: (index, busy) => setReconnecting(emailOf(index), busy) });
   const done = messages.filter((m, i) => results[i].status === 'fulfilled').map(m => m.key);
   const failed = results.find(r => r.status === 'rejected');
   const reauthAt = results.findIndex(r => r.reason?.reauthUrl);

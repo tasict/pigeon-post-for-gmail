@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "$1 は Gmail で再認証が必要です。認証が済むと、このメールボックスのメールを既読にできます。"
   },
+  "reconnecting": {
+    "message": "再接続中"
+  },
+  "reconnectingNote": {
+    "message": "Gmail に再接続しています。バックグラウンドで Gmail のタブを開き、終わったら自動で閉じます。"
+  },
   "markAllRead": {
     "message": "すべて既読にする"
   },

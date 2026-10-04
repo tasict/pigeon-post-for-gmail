@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "Gmail 要求 $1 重新驗證，完成後才能把這個信箱的信標為已讀。"
   },
+  "reconnecting": {
+    "message": "重新連線中"
+  },
+  "reconnectingNote": {
+    "message": "Gmail 需要重新連線：已在背景開啟 Gmail 分頁，完成後會自動關閉。"
+  },
   "markAllRead": {
     "message": "全部標為已讀"
   },

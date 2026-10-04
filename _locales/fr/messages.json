@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "Gmail vous demande de valider à nouveau $1. Vous pourrez ensuite marquer les messages de cette boîte comme lus."
   },
+  "reconnecting": {
+    "message": "Reconnexion"
+  },
+  "reconnectingNote": {
+    "message": "Gmail a besoin d’une nouvelle session. Pigeon Post a ouvert Gmail dans un onglet en arrière-plan et le fermera une fois terminé."
+  },
   "markAllRead": {
     "message": "Tout marquer comme lu"
   },

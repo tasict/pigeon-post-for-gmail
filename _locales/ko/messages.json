@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "$1 계정은 Gmail에서 다시 인증해야 합니다. 인증 후 이 메일함의 메일을 읽음으로 표시할 수 있습니다."
   },
+  "reconnecting": {
+    "message": "다시 연결 중"
+  },
+  "reconnectingNote": {
+    "message": "Gmail에 다시 연결하는 중입니다. 백그라운드에서 Gmail 탭을 열고, 끝나면 자동으로 닫습니다."
+  },
   "markAllRead": {
     "message": "모두 읽음으로 표시"
   },

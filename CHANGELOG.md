@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- While Gmail is being reconnected in a background tab, the mailbox header in the popup shows "Reconnecting" with a small plug that keeps plugging in. Hover over it to see why a Gmail tab opened.
+
+### Changed
+
+- "Mark as read" and "Mark all as read" fail less often. If a Gmail tab for that account is open, the action is sent from it, the same way Gmail sends its own. If the action still fails, for example because Gmail asks you to verify again or you have not opened Gmail for a while, Pigeon Post opens Gmail in a background tab to renew your session, tries once more and closes the tab a few seconds later.
+
 ## 0.6.0 — 2026-10-01
 
 ### Added

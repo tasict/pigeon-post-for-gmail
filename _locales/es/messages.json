@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "Gmail necesita que vuelvas a verificar $1. Después podrás marcar como leídos los mensajes de este buzón."
   },
+  "reconnecting": {
+    "message": "Reconectando"
+  },
+  "reconnectingNote": {
+    "message": "Gmail necesita una sesión nueva. Pigeon Post abrió Gmail en una pestaña en segundo plano y la cerrará al terminar."
+  },
   "markAllRead": {
     "message": "Marcar todo como leído"
   },

@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "Gmail möchte, dass du $1 erneut bestätigst. Danach kannst du die Nachrichten in diesem Postfach als gelesen markieren."
   },
+  "reconnecting": {
+    "message": "Verbinde neu"
+  },
+  "reconnectingNote": {
+    "message": "Gmail braucht eine neue Sitzung. Pigeon Post hat Gmail in einem Hintergrund-Tab geöffnet und schließt ihn, sobald es fertig ist."
+  },
   "markAllRead": {
     "message": "Alle als gelesen markieren"
   },

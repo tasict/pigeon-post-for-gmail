@@ -1,6 +1,6 @@
 # Privacy Policy — Pigeon Post for Gmail
 
-Last updated: 2026-09-26
+Last updated: 2026-10-04
 
 Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifications for the Gmail accounts you are already signed in to in Chrome. This policy explains what data the extension handles and what it does with it.
 
@@ -23,6 +23,8 @@ Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifica
 
 The extension never reads the full body of your messages, and it never sends, deletes or modifies messages. The one exception is marking them as read when you ask it to.
 
+"Mark as read" is sent from an open Gmail tab of that account when there is one. If it fails, the extension opens Gmail in a background tab, which renews your Gmail session, tries once more, and closes the tab.
+
 `chrome.storage.sync` is synced by Chrome to your Google account if you have Chrome Sync turned on. Google handles that sync, not the developer.
 
 ## Sharing
@@ -38,7 +40,7 @@ The extension does not sell, transfer or share any user data. The developer cann
 | `notifications` | Show desktop notifications |
 | `storage` | Store settings and state described above |
 | `cookies` | Read Gmail's action token (`GMAIL_AT`) for "Mark as read" |
-| `scripting` | Read label names from an open Gmail tab for the settings page |
+| `scripting` | Read label names from an open Gmail tab for the settings page; send "Mark as read" from a Gmail tab |
 | `offscreen` | Play notification sounds (a background service worker cannot play audio) |
 | `webRequest`, `webRequestAuthProvider` | Stop Chrome from showing a username/password prompt when the extension checks an account that is not signed in |
 
@@ -54,7 +56,7 @@ Questions about this policy: tasict+webstore@gmail.com
 
 # 隱私權政策（繁體中文）
 
-最後更新：2026-09-26
+最後更新：2026-10-04
 
 Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已登入的 Gmail 帳號，顯示未讀數與桌面通知。
 
@@ -72,6 +74,7 @@ Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已
 - **你的設定**：存在你的 Chrome 設定檔。
 
 本擴充功能不讀取郵件全文。除了在你要求時把郵件標為已讀，不會寄出、刪除或修改任何郵件。
+「標為已讀」會從已開著的該信箱 Gmail 分頁送出；失敗時，本擴充功能會在背景開啟 Gmail 分頁以更新登入狀態，重試一次後關閉該分頁。
 不出售、不轉移、不分享任何使用者資料。移除本擴充功能即刪除它在本機儲存的所有資料。
 
 聯絡：tasict+webstore@gmail.com

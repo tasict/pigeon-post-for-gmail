@@ -44,6 +44,12 @@
   "reauthNeededNote": {
     "message": "Gmail wants you to verify $1 again. Messages in this mailbox can be marked as read after that."
   },
+  "reconnecting": {
+    "message": "Reconnecting"
+  },
+  "reconnectingNote": {
+    "message": "Gmail needs a fresh session. Pigeon Post opened Gmail in a background tab and closes it when done."
+  },
   "markAllRead": {
     "message": "Mark all as read"
   },
