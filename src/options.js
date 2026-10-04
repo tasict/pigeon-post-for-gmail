@@ -13,6 +13,8 @@ const S = {
   settings: null,
   accounts: null,     // null while detecting
   gmailLabels: {},    // labels read from Gmail's left-hand menu by the content script
+  avatars: {},        // profile photos read from Gmail { email: { url, src } }
+  photoStatus: null,  // reading missing photos: { busy } | { failed }
   state: null,        // result of the background's latest check
   manual: {},         // labels added by hand in this session that are not in Gmail's menu { email: Set }
   counts: new Map(),  // `${email}|${folderId}` → { fullcount } | { error } | 'pending'
@@ -22,7 +24,7 @@ const S = {
 };
 
 function identities() {
-  return Settings.identities(S.settings, (S.accounts ?? S.state?.accounts ?? []).map(a => a.email));
+  return Settings.identities(S.settings, (S.accounts ?? S.state?.accounts ?? []).map(a => a.email), S.avatars);
 }
 
 const keyOf = (email, folderId) => `${email}|${folderId}`;
@@ -242,13 +244,12 @@ function setIdentity(email, patch) {
 
 function paintIdentities() {
   const all = identities();
+  renderMarkStyle();
   for (const [email, id] of Object.entries(all)) {
     const section = document.querySelector(`.account[data-email="${CSS.escape(email)}"]`);
     if (!section) continue;
     section.dataset.acct = id.color;
-    const mark = section.querySelector('.account-head .acct-mark');
-    mark.dataset.acct = id.color;
-    mark.textContent = id.initial;
+    section.querySelector('.account-head .acct-mark').replaceWith(accountMark(id, 'lg'));
     const select = section.querySelector('.sound select');
     if (select && select.value !== id.sound) select.value = id.sound;
     const radio = section.querySelector(`.swatches input[value="${id.color}"]`);
@@ -256,6 +257,51 @@ function paintIdentities() {
     const nick = section.querySelector('.mark input[type="text"]');
     if (nick && document.activeElement !== nick && nick.value !== id.name) nick.value = id.name;
   }
+}
+
+/* ---------- Mailbox icon ---------- */
+
+// Each choice shows the mailboxes as they would look with it; a mailbox whose photo has not been read yet keeps its initial.
+function renderMarkStyle() {
+  document.querySelectorAll('input[name="markStyle"]').forEach(r => { r.checked = r.value === S.settings.markStyle; });
+  const emails = (S.accounts ?? S.state?.accounts ?? []).map(a => a.email);
+  for (const box of document.querySelectorAll('.mark-samples')) {
+    const ids = Settings.identities({ ...S.settings, markStyle: box.dataset.samples }, emails, S.avatars);
+    box.replaceChildren(...emails.slice(0, 4).map(email => accountMark(ids[email], 'sm')));
+  }
+  renderMarkStatus();
+}
+
+function renderMarkStatus() {
+  const node = $('#mark-status');
+  const missing = S.settings.markStyle === 'photo' ? (S.accounts ?? []).filter(a => !S.avatars[a.email]?.src) : [];
+  const st = S.photoStatus;
+  node.hidden = !missing.length;
+  node.classList.toggle('warn', !!st?.failed);
+  if (!missing.length) return;
+  const who = list(missing.map(a => a.email));
+  node.replaceChildren(
+    h('p', { role: 'status', text: st?.busy ? t('photosReading') : st?.failed ? t('photosNotFound', who) : t('photosMissing', who) }),
+    h('button', { class: 'btn', type: 'button', text: st?.busy ? t('reading') : t('readPhotos'), disabled: !!st?.busy, onclick: readAvatars })
+  );
+}
+
+// Reads the missing photos the same way as labels: from open Gmail tabs first, otherwise from a Gmail tab opened in the background.
+async function readAvatars() {
+  const stored = async () => (await chrome.storage.local.get({ avatars: {} })).avatars;
+  S.photoStatus = { busy: true };
+  renderMarkStatus();
+  try {
+    for (const acc of S.accounts ?? []) {
+      if ((await stored())[acc.email]?.src) continue;
+      await scanOpenGmailTabs(acc.index);
+      if (!(await stored())[acc.email]?.src) await scanNewTab(acc.index, { needAvatar: true });
+    }
+  } catch { /* whatever is still missing is reported below */ }
+  S.avatars = await stored();
+  S.photoStatus = (S.accounts ?? []).some(a => !S.avatars[a.email]?.src) ? { failed: true } : null;
+  paintIdentities();
+  renderPreview();
 }
 
 // The inbox already contains every tab; a tab set lower than the inbox has no effect, so warn about it.
@@ -378,6 +424,7 @@ async function scanOpenGmailTabs(index) {
     if (index != null && tabIndex(tab.url) !== index) continue;
     try {
       const r = await scanTab(tab.id);
+      if (S.settings.markStyle === 'photo') await saveScannedAvatar(r).catch(() => {});
       await saveScannedLabels(r);
       if (!best || r.labels.length > best.labels.length) best = r;
     } catch { /* the tab is still loading or cannot be accessed */ }
@@ -388,7 +435,8 @@ async function scanOpenGmailTabs(index) {
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // With no Gmail tab open, open one in the background and close it after reading.
-async function scanNewTab(index) {
+// needAvatar waits for the profile photo instead of the labels.
+async function scanNewTab(index, { needAvatar = false } = {}) {
   const tab = await chrome.tabs.create({ url: Gmail.gmailUrl(index), active: false });
   let last = null;
   let readySince = 0;
@@ -400,14 +448,17 @@ async function scanNewTab(index) {
       } catch {
         continue;
       }
-      if (last.labels.length) break;
+      if (needAvatar ? last.avatar : last.labels.length) break;
       if (last.navReady && !readySince) readySince = i;
       if (readySince && i - readySince >= 3) break;
     }
   } finally {
     chrome.tabs.remove(tab.id).catch(() => {});
   }
-  if (last) await saveScannedLabels(last);
+  if (last) {
+    if (S.settings.markStyle === 'photo') await saveScannedAvatar(last).catch(() => {});
+    await saveScannedLabels(last);
+  }
   return last;
 }
 
@@ -666,6 +717,7 @@ function renderGeneral() {
   $('#groupAfter').value = String([1, 3, 5, 99].reduce((best, v) => Math.abs(v - s.groupAfter) < Math.abs(best - s.groupAfter) ? v : best, 3));
   document.querySelectorAll('input[name="reuseTab"]').forEach(r => { r.checked = r.value === String(s.reuseTab); });
   document.querySelectorAll('input[name="badgeMode"]').forEach(r => { r.checked = r.value === s.badgeMode; });
+  renderMarkStyle();
   $('#volume').value = s.volume;
   $('#volume-out').textContent = s.volume;
   const poll = $('#poll');
@@ -685,6 +737,14 @@ document.querySelectorAll('input[name="badgeMode"]').forEach(r => r.addEventList
   S.settings = { ...S.settings, badgeMode: r.value };
   renderPreview();
   save({ badgeMode: r.value });
+}));
+document.querySelectorAll('input[name="markStyle"]').forEach(r => r.addEventListener('change', () => {
+  S.settings = { ...S.settings, markStyle: r.value };
+  paintIdentities();
+  renderPreview();
+  save({ markStyle: r.value });
+  // Photos are read only once this is chosen; take them from the Gmail tabs already open.
+  if (r.value === 'photo') scanOpenGmailTabs().catch(() => {});
 }));
 $('#test').addEventListener('click', sendTest);
 $('#volume').addEventListener('input', e => { $('#volume-out').textContent = e.target.value; });
@@ -713,6 +773,11 @@ chrome.storage.onChanged.addListener((changes, area) => {
     S.gmailLabels = changes.gmailLabels.newValue || {};
     (S.accounts ?? []).forEach(a => fillLabels(a));
   }
+  if (area === 'local' && changes.avatars) {
+    S.avatars = changes.avatars.newValue || {};
+    paintIdentities();
+    renderPreview();
+  }
   if (area === 'session' && changes.state) {
     S.state = changes.state.newValue;
     absorbState();
@@ -739,10 +804,11 @@ document.addEventListener('visibilitychange', () => {
 (async () => {
   S.settings = await Settings.get();
   const [local, { state = null }] = await Promise.all([
-    chrome.storage.local.get({ gmailLabels: {} }),
+    chrome.storage.local.get({ gmailLabels: {}, avatars: {} }),
     chrome.storage.session.get('state')
   ]);
   S.gmailLabels = local.gmailLabels;
+  S.avatars = local.avatars;
   S.state = state;
   renderGeneral();
   renderAccounts();

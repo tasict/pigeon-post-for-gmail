@@ -210,6 +210,11 @@ select {
 }
 .radio { display: flex; align-items: center; gap: 8px; margin: 4px 0; cursor: pointer; }
 .radio input { accent-color: var(--ink); margin: 0; }
+.mark-samples { display: inline-flex; gap: 4px; margin-left: 2px; }
+.mark-status { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 10px; }
+.mark-status p { flex: 1 1 260px; margin: 0; color: var(--muted); font-size: 13px; }
+.mark-status.warn p { color: var(--amber); }
+.mark-status .btn { min-height: 30px; padding: 2px 12px; font-size: 13px; }
 .switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 600; position: relative; }
 .switch input { position: absolute; opacity: 0; width: 36px; height: 20px; margin: 0; cursor: pointer; }
 .switch-track {

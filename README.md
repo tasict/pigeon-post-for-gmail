@@ -12,14 +12,14 @@ A Chrome extension that shows unread counts and desktop notifications for the Gm
 - **Per-folder control**: each inbox, inbox tab, system folder or label is set to *Off*, *Count* (included in the badge number) or *Notify* (counted and shows a desktop notification).
 - **Labels read from Gmail**: the settings page lists your real Gmail labels, so you never type label names by hand.
 - **Live preview**: the settings page shows the badge and a sample notification built from your real mail as you change settings.
-- **Tell accounts apart**: each mailbox gets its own name, color and sound, with an optional per-account badge (e.g. `26/2`).
+- **Tell accounts apart**: each mailbox gets its own name, color and sound, is shown with its first letter or your Google Account photo, and can have its own number on the badge (e.g. `26/2`).
 - **Mark as read** from the popup or directly from a notification, or clear a whole mailbox at once.
 - **Settings sync** across computers through Chrome Sync.
 - Available in English, 繁體中文, 简体中文, 日本語, 한국어, Español, Français and Deutsch.
 
 ## Privacy
 
-Everything runs locally in your browser. The extension talks only to `mail.google.com`, has no server, and sends nothing to the developer or any third party. Message subjects and snippets are kept in memory only. See [PRIVACY.md](PRIVACY.md).
+Everything runs locally in your browser. The extension talks only to Google (`mail.google.com`, plus Google's image server for your account photo if you choose to show it), has no server, and sends nothing to the developer or any third party. Message subjects and snippets are kept in memory only. See [PRIVACY.md](PRIVACY.md).
 
 ## Install
 

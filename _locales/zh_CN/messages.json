@@ -392,6 +392,33 @@
   "badgeHelp": {
     "message": "分开显示时按邮箱顺序排列。图标只能容纳两三个邮箱的两位数，放不下时改为显示合计。将鼠标悬停在图标上，也会逐一列出各邮箱的未读数。"
   },
+  "markHeading": {
+    "message": "邮箱图标"
+  },
+  "markLegend": {
+    "message": "每个邮箱前显示的图标"
+  },
+  "markInitial": {
+    "message": "邮箱颜色加名称首字"
+  },
+  "markPhoto": {
+    "message": "Google 账号头像"
+  },
+  "markHelp": {
+    "message": "头像取自 Gmail 右上角的账号按钮，只保存在这台电脑上。尚未读取到头像的邮箱先显示首字。"
+  },
+  "photosMissing": {
+    "message": "还没有 $1 的头像。下次在 Gmail 打开该邮箱时会自动读取，也可以现在读取。"
+  },
+  "photosReading": {
+    "message": "正在从 Gmail 读取头像…"
+  },
+  "photosNotFound": {
+    "message": "无法读取 $1 的头像。请确认此浏览器已登录该账号的 Gmail，然后重试。"
+  },
+  "readPhotos": {
+    "message": "从 Gmail 读取"
+  },
   "deliveryHeading": {
     "message": "通知方式"
   },

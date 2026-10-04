@@ -19,9 +19,13 @@ const UI = (() => {
     return node;
   }
 
-  // Mailbox mark. id comes from Settings.identities().
+  // Mailbox mark. id comes from Settings.identities(). A profile photo replaces the initial; if the photo cannot be shown, the initial comes back.
   function accountMark(id, size = '') {
-    return h('span', { class: `acct-mark ${size}`.trim(), dataset: { acct: id.color }, 'aria-hidden': 'true', text: id.initial });
+    const cls = `acct-mark ${size}`.trim();
+    if (!id.photo) return h('span', { class: cls, dataset: { acct: id.color }, 'aria-hidden': 'true', text: id.initial });
+    const mark = h('span', { class: `${cls} photo`, dataset: { acct: id.color }, 'aria-hidden': 'true' });
+    mark.append(h('img', { src: id.photo, alt: '', onerror: () => { mark.classList.remove('photo'); mark.textContent = id.initial; } }));
+    return mark;
   }
 
   // Chrome's puzzle-piece and pin icons (Material Icons), so the steps match what the user sees on the toolbar.

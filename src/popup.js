@@ -11,7 +11,7 @@ $('.bar').after(UI.pinHint());
 // pending: keys of messages being marked as read, kept hidden across re-renders until the result is in.
 // dismiss: timers that fade out a finished bulk result (email → timer); fading: mailboxes whose result is fading out.
 const P = {
-  state: null, settings: null, collapsed: {}, bulk: {}, reauth: {}, reconnecting: {}, pending: new Set(),
+  state: null, settings: null, avatars: {}, collapsed: {}, bulk: {}, reauth: {}, reconnecting: {}, pending: new Set(),
   confirming: null, entering: null, dismiss: {}, fading: new Set()
 };
 
@@ -347,7 +347,7 @@ function render() {
   // A message that has left the list is done; if a later check brings it back, it shows again.
   for (const key of P.pending) if (!state.messages.some(m => m.key === key)) P.pending.delete(key);
   $('#summary').textContent = state.total ? tn('unreadCount', state.total) : t('noUnread');
-  const ids = Settings.identities(settings, state.accounts.map(a => a.email));
+  const ids = Settings.identities(settings, state.accounts.map(a => a.email), P.avatars);
   const multi = state.accounts.length > 1;
 
   // With several mailboxes, show a chip for each one with its unread count; clicking opens that mailbox.
@@ -446,18 +446,19 @@ $('#settings').addEventListener('click', () => chrome.runtime.openOptionsPage())
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'session' && changes.state) { P.state = changes.state.newValue; render(); }
   if (area === 'sync') Settings.get().then(s => { P.settings = s; render(); });
+  if (area === 'local' && changes.avatars) { P.avatars = changes.avatars.newValue || {}; render(); }
   if (area === 'session' && changes.bulk) { P.bulk = changes.bulk.newValue || {}; render(); }
   if (area === 'session' && changes.reauth) { P.reauth = changes.reauth.newValue || {}; render(); }
   if (area === 'session' && changes.reconnecting) { P.reconnecting = changes.reconnecting.newValue || {}; render(); }
 });
 
 (async () => {
-  const [{ collapsed = {} }, { state, bulk = {}, reauth = {}, reconnecting = {} }, settings] = await Promise.all([
-    chrome.storage.local.get('collapsed'),
+  const [{ collapsed = {}, avatars = {} }, { state, bulk = {}, reauth = {}, reconnecting = {} }, settings] = await Promise.all([
+    chrome.storage.local.get(['collapsed', 'avatars']),
     chrome.storage.session.get(['state', 'bulk', 'reauth', 'reconnecting']),
     Settings.get()
   ]);
-  Object.assign(P, { state, settings, collapsed, bulk, reauth, reconnecting });
+  Object.assign(P, { state, settings, avatars, collapsed, bulk, reauth, reconnecting });
   render();
   // Check now if the last result is older than one poll interval.
   if (!state || Date.now() - state.lastCheck > settings.pollSeconds * 1000) refresh();

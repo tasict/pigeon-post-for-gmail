@@ -7,7 +7,7 @@ Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifica
 ## Summary
 
 - The extension has **no server**. It does not send any data to the developer or to any third party.
-- It talks only to `https://mail.google.com`, using the Gmail session you already have in Chrome.
+- It talks only to Google: to `https://mail.google.com`, using the Gmail session you already have in Chrome, and, only if you choose your Google Account photo as the mailbox icon, to Google's image server (`googleusercontent.com`) to download that photo, without cookies.
 - There are no analytics, no ads, no tracking and no remote code.
 
 ## Data the extension handles
@@ -18,6 +18,7 @@ Pigeon Post for Gmail ("the extension") shows unread counts and desktop notifica
 | Sender, subject and snippet of **unread** messages (from Gmail's Atom feed) | To show them in the popup and in notifications | `chrome.storage.session`: kept in memory only, never written to disk, cleared when the browser closes |
 | Message IDs of messages already notified | So you are not notified twice for the same message | `chrome.storage.local` (your computer) |
 | Gmail label names (read from Gmail's left-hand menu) | To let you pick labels in the settings page | `chrome.storage.local` (your computer) |
+| Your Google Account profile photo (read from the account button at the top right of Gmail), only if you choose it as the mailbox icon | To show it in front of the mailbox in the popup and the settings page | `chrome.storage.local` (your computer) |
 | Gmail's `GMAIL_AT` cookie | Used as the action token when you click "Mark as read". It is read at the moment of the action and sent only to `mail.google.com` | Not stored |
 | Your settings (which folders to watch, colors, sounds, volume) | To remember your preferences | `chrome.storage.sync` |
 
@@ -40,7 +41,7 @@ The extension does not sell, transfer or share any user data. The developer cann
 | `notifications` | Show desktop notifications |
 | `storage` | Store settings and state described above |
 | `cookies` | Read Gmail's action token (`GMAIL_AT`) for "Mark as read" |
-| `scripting` | Read label names from an open Gmail tab for the settings page; send "Mark as read" from a Gmail tab |
+| `scripting` | Read label names, and your profile photo if you chose it as the mailbox icon, from an open Gmail tab for the settings page; send "Mark as read" from a Gmail tab |
 | `offscreen` | Play notification sounds (a background service worker cannot play audio) |
 | `webRequest`, `webRequestAuthProvider` | Stop Chrome from showing a username/password prompt when the extension checks an account that is not signed in |
 
@@ -61,7 +62,7 @@ Questions about this policy: tasict+webstore@gmail.com
 Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已登入的 Gmail 帳號，顯示未讀數與桌面通知。
 
 - 本擴充功能**沒有伺服器**，不會把任何資料傳給開發者或任何第三方。
-- 只與 `https://mail.google.com` 連線，使用你在 Chrome 中已有的 Gmail 登入狀態。
+- 只與 Google 連線：使用你在 Chrome 中已有的 Gmail 登入狀態連線 `https://mail.google.com`；只有在你選擇以 Google 帳號頭像作為信箱圖示時，才會從 Google 的圖片伺服器（`googleusercontent.com`）下載頭像，不帶 cookie。
 - 沒有分析、沒有廣告、沒有追蹤，也不載入遠端程式碼。
 
 處理的資料：
@@ -70,6 +71,7 @@ Pigeon Post for Gmail（下稱「本擴充功能」）使用你在 Chrome 中已
 - **未讀郵件的寄件者、主旨與摘要**：用來顯示清單與通知，只存在記憶體（`chrome.storage.session`），關閉瀏覽器即清除。
 - **已通知過的郵件 ID**：避免重複通知。
 - **Gmail 標籤名稱**：供設定頁選擇。
+- **Google 帳號頭像**：只有在你選擇以頭像作為信箱圖示時，才從 Gmail 右上角的帳號按鈕讀取，存在本機，顯示在清單與設定頁的信箱前。
 - **Gmail 的 `GMAIL_AT` cookie**：在你按「標為已讀」時當作操作權杖，只送往 `mail.google.com`，不另外儲存。
 - **你的設定**：存在你的 Chrome 設定檔。
 

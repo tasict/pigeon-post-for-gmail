@@ -392,6 +392,33 @@
   "badgeHelp": {
     "message": "個別の数字はメールボックスの順に並びます。アイコンに収まるのは 2〜3 個のメールボックスの 2 桁の数字までで、収まらない場合は合計を表示します。アイコンにカーソルを合わせると、メールボックスごとの未読件数を確認できます。"
   },
+  "markHeading": {
+    "message": "メールボックスのアイコン"
+  },
+  "markLegend": {
+    "message": "各メールボックスの前に表示するアイコン"
+  },
+  "markInitial": {
+    "message": "メールボックスの色と名前の頭文字"
+  },
+  "markPhoto": {
+    "message": "Google アカウントの写真"
+  },
+  "markHelp": {
+    "message": "写真は Gmail 右上のアカウント ボタンから取得し、このパソコンにのみ保存します。写真を取得するまでは頭文字を表示します。"
+  },
+  "photosMissing": {
+    "message": "$1 の写真はまだありません。次に Gmail でそのメールボックスを開くと取得されます。今すぐ取得することもできます。"
+  },
+  "photosReading": {
+    "message": "Gmail から写真を読み込み中…"
+  },
+  "photosNotFound": {
+    "message": "$1 の写真を読み込めませんでした。このブラウザでそのアカウントの Gmail にログインしていることを確認して、もう一度お試しください。"
+  },
+  "readPhotos": {
+    "message": "Gmail から読み込む"
+  },
   "deliveryHeading": {
     "message": "通知方法"
   },

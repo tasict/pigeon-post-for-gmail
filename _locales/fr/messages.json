@@ -425,6 +425,33 @@
   "badgeHelp": {
     "message": "Les nombres séparés suivent l'ordre des boîtes. L'icône ne peut afficher que des nombres à deux chiffres pour deux ou trois boîtes ; s'ils ne tiennent pas, elle affiche le total. Pointez sur l'icône pour voir le nombre de non lus de chaque boîte."
   },
+  "markHeading": {
+    "message": "Icône de la boîte"
+  },
+  "markLegend": {
+    "message": "Icône affichée devant chaque boîte"
+  },
+  "markInitial": {
+    "message": "Initiale sur la couleur de la boîte"
+  },
+  "markPhoto": {
+    "message": "Photo du compte Google"
+  },
+  "markHelp": {
+    "message": "La photo provient du bouton du compte, en haut à droite de Gmail, et n'est conservée que sur cet ordinateur. Tant que sa photo n'a pas été lue, une boîte affiche son initiale."
+  },
+  "photosMissing": {
+    "message": "Pas encore de photo pour $1. Elle sera lue la prochaine fois que vous ouvrirez cette boîte dans Gmail, ou vous pouvez la lire maintenant."
+  },
+  "photosReading": {
+    "message": "Lecture des photos depuis Gmail…"
+  },
+  "photosNotFound": {
+    "message": "Impossible de lire la photo de $1. Vérifiez que ce compte est connecté à Gmail dans ce navigateur, puis réessayez."
+  },
+  "readPhotos": {
+    "message": "Lire depuis Gmail"
+  },
   "deliveryHeading": {
     "message": "Mode de notification"
   },

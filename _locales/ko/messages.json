@@ -392,6 +392,33 @@
   "badgeHelp": {
     "message": "따로 표시할 때는 메일함 순서대로 표시됩니다. 아이콘에는 메일함 2~3개의 두 자리 숫자까지만 들어가며, 들어가지 않으면 합계가 표시됩니다. 아이콘 위에 마우스를 올리면 메일함별 읽지 않은 메일 수를 볼 수 있습니다."
   },
+  "markHeading": {
+    "message": "메일함 아이콘"
+  },
+  "markLegend": {
+    "message": "각 메일함 앞에 표시할 아이콘"
+  },
+  "markInitial": {
+    "message": "메일함 색상과 이름 첫 글자"
+  },
+  "markPhoto": {
+    "message": "Google 계정 사진"
+  },
+  "markHelp": {
+    "message": "사진은 Gmail 오른쪽 위의 계정 버튼에서 가져오며 이 컴퓨터에만 저장됩니다. 사진을 가져오기 전까지는 첫 글자를 표시합니다."
+  },
+  "photosMissing": {
+    "message": "$1의 사진이 아직 없습니다. 다음에 Gmail에서 해당 메일함을 열면 가져오며, 지금 가져올 수도 있습니다."
+  },
+  "photosReading": {
+    "message": "Gmail에서 사진을 읽는 중…"
+  },
+  "photosNotFound": {
+    "message": "$1의 사진을 읽지 못했습니다. 이 브라우저에서 해당 계정의 Gmail에 로그인되어 있는지 확인한 후 다시 시도하세요."
+  },
+  "readPhotos": {
+    "message": "Gmail에서 읽어 오기"
+  },
   "deliveryHeading": {
     "message": "알림 방식"
   },

@@ -425,6 +425,33 @@
   "badgeHelp": {
     "message": "Separate numbers follow mailbox order. The icon only fits two-digit numbers for two or three mailboxes; when they don't fit, it shows the total. Hover over the icon to see each mailbox's unread count."
   },
+  "markHeading": {
+    "message": "Mailbox icon"
+  },
+  "markLegend": {
+    "message": "Icon shown in front of each mailbox"
+  },
+  "markInitial": {
+    "message": "First letter on the mailbox color"
+  },
+  "markPhoto": {
+    "message": "Google Account photo"
+  },
+  "markHelp": {
+    "message": "The photo comes from the account button in the top right of Gmail and is kept only on this computer. A mailbox shows its first letter until its photo has been read."
+  },
+  "photosMissing": {
+    "message": "No photo yet for $1. It's read the next time you open that mailbox in Gmail, or you can read it now."
+  },
+  "photosReading": {
+    "message": "Reading photos from Gmail…"
+  },
+  "photosNotFound": {
+    "message": "Couldn't read the photo for $1. Make sure that account is signed in to Gmail in this browser, then try again."
+  },
+  "readPhotos": {
+    "message": "Read from Gmail"
+  },
   "deliveryHeading": {
     "message": "How you're notified"
   },

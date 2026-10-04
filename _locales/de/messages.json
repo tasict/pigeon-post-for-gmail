@@ -425,6 +425,33 @@
   "badgeHelp": {
     "message": "Einzelne Zahlen folgen der Reihenfolge der Postfächer. Das Symbol fasst zweistellige Zahlen nur für zwei oder drei Postfächer; passen sie nicht, wird die Summe angezeigt. Bewege den Mauszeiger auf das Symbol, um die Ungelesenen jedes Postfachs zu sehen."
   },
+  "markHeading": {
+    "message": "Postfachsymbol"
+  },
+  "markLegend": {
+    "message": "Symbol vor jedem Postfach"
+  },
+  "markInitial": {
+    "message": "Anfangsbuchstabe auf der Postfachfarbe"
+  },
+  "markPhoto": {
+    "message": "Foto des Google-Kontos"
+  },
+  "markHelp": {
+    "message": "Das Foto stammt von der Kontoschaltfläche oben rechts in Gmail und wird nur auf diesem Computer gespeichert. Bis sein Foto gelesen ist, zeigt ein Postfach seinen Anfangsbuchstaben."
+  },
+  "photosMissing": {
+    "message": "Für $1 gibt es noch kein Foto. Es wird gelesen, sobald du das Postfach das nächste Mal in Gmail öffnest, oder du liest es jetzt."
+  },
+  "photosReading": {
+    "message": "Fotos werden aus Gmail gelesen…"
+  },
+  "photosNotFound": {
+    "message": "Das Foto für $1 konnte nicht gelesen werden. Prüfe, ob das Konto in diesem Browser bei Gmail angemeldet ist, und versuche es noch einmal."
+  },
+  "readPhotos": {
+    "message": "Aus Gmail lesen"
+  },
   "deliveryHeading": {
     "message": "Wie du benachrichtigt wirst"
   },

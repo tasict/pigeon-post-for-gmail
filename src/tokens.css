@@ -96,6 +96,9 @@ button, input, select { font: inherit; color: inherit; }
 }
 .acct-mark.lg { --size: 36px; }
 .acct-mark.sm { --size: 18px; }
+/* With a Google Account photo the mark turns round, as Google shows it, inside a thin ring in the mailbox color. */
+.acct-mark.photo { padding: max(1px, calc(var(--size) * .07)); border-radius: 50%; }
+.acct-mark.photo img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: var(--sheet); }
 
 /* Pin tip: shown until the toolbar icon is pinned. Key glyphs sit in small keycaps, like the toolbar buttons they stand for. */
 .pin-hint {

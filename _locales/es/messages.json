@@ -425,6 +425,33 @@
   "badgeHelp": {
     "message": "Los números separados siguen el orden de los buzones. El icono solo admite números de dos cifras para dos o tres buzones; si no caben, muestra el total. Coloca el cursor sobre el icono para ver los no leídos de cada buzón."
   },
+  "markHeading": {
+    "message": "Icono del buzón"
+  },
+  "markLegend": {
+    "message": "Icono que aparece delante de cada buzón"
+  },
+  "markInitial": {
+    "message": "Inicial sobre el color del buzón"
+  },
+  "markPhoto": {
+    "message": "Foto de la cuenta de Google"
+  },
+  "markHelp": {
+    "message": "La foto se toma del botón de cuenta, arriba a la derecha en Gmail, y solo se guarda en este ordenador. Hasta tener su foto, cada buzón muestra su inicial."
+  },
+  "photosMissing": {
+    "message": "Aún no hay foto de $1. Se leerá la próxima vez que abras ese buzón en Gmail, o puedes leerla ahora."
+  },
+  "photosReading": {
+    "message": "Leyendo fotos de Gmail…"
+  },
+  "photosNotFound": {
+    "message": "No se pudo leer la foto de $1. Comprueba que esa cuenta tiene la sesión iniciada en Gmail en este navegador y vuelve a intentarlo."
+  },
+  "readPhotos": {
+    "message": "Leer de Gmail"
+  },
   "deliveryHeading": {
     "message": "Cómo recibes las notificaciones"
   },

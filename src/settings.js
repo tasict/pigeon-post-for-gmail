@@ -18,6 +18,8 @@ const Settings = (() => {
     accounts: {},
     // Toolbar badge number: total adds up all mailboxes, split shows each one (e.g. 3/12).
     badgeMode: 'total',
+    // Icon in front of each mailbox: initial is the first letter on the mailbox color, photo is the Google Account photo once it has been read from Gmail.
+    markStyle: 'initial',
     // Notification volume 0–100; each mailbox's sound is stored in accounts[email].sound.
     volume: 70
   };
@@ -54,6 +56,7 @@ const Settings = (() => {
       watch,
       accounts,
       badgeMode: s.badgeMode === 'split' ? 'split' : 'total',
+      markStyle: s.markStyle === 'photo' ? 'photo' : 'initial',
       volume: Math.max(0, Math.min(100, Number.isFinite(Number(s.volume)) ? Number(s.volume) : DEFAULTS.volume)),
       pollSeconds: POLL_CHOICES.includes(Number(s.pollSeconds)) ? Number(s.pollSeconds) : DEFAULTS.pollSeconds,
       groupAfter: Math.max(1, parseInt(s.groupAfter, 10) || DEFAULTS.groupAfter),
@@ -98,15 +101,18 @@ const Settings = (() => {
     return ((h ^ (h >>> 16)) >>> 0) % COLOR_IDS.length;
   }
 
-  // Builds each mailbox's identity { email, name, label, color, initial }.
-  function identities(settings, emails) {
+  // Builds each mailbox's identity { email, name, label, color, initial, photo }.
+  // avatars is chrome.storage.local's avatars { [email]: { src } }; photo is set only when the photo icon is chosen and this mailbox has one.
+  function identities(settings, emails, avatars = {}) {
     const out = {};
     for (const email of emails) {
       const own = settings.accounts[email] || {};
       const color = own.color || COLOR_IDS[hashColor(email)];
       const name = own.name || '';
       const label = name || email;
-      out[email] = { email, name, label, color, sound: own.sound || DEFAULT_SOUND, initial: [...label][0].toUpperCase() };
+      const src = avatars[email]?.src;
+      const photo = settings.markStyle === 'photo' && typeof src === 'string' && src.startsWith('data:image/') ? src : '';
+      out[email] = { email, name, label, color, sound: own.sound || DEFAULT_SOUND, initial: [...label][0].toUpperCase(), photo };
     }
     return out;
   }

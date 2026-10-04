@@ -60,8 +60,8 @@
       "priv_p": "Pigeon Post uses the Gmail session you already have in Chrome. There's no account to create and nothing extra to sign in to.",
       "facts": [
         [
-          "Talks only to mail.google.com",
-          "No server, no analytics, no ads and no tracking. Nothing is ever sent to the developer."
+          "Talks only to Google",
+          "It connects to Gmail, plus Google's image server if you choose to show your account photo. No server, no analytics, no ads and no tracking. Nothing is ever sent to the developer."
         ],
         [
           "Mail stays in memory",
@@ -166,8 +166,8 @@
       "priv_p": "Pigeon Post 直接使用你在 Chrome 已登入的 Gmail，不必註冊帳號，也不必另外登入。",
       "facts": [
         [
-          "只與 mail.google.com 連線",
-          "沒有伺服器、沒有分析、沒有廣告、沒有追蹤。任何資料都不會傳給開發者。"
+          "只與 Google 連線",
+          "連線對象是 Gmail；選擇顯示帳號頭像時，另會從 Google 的圖片伺服器下載頭像。沒有伺服器、沒有分析、沒有廣告、沒有追蹤。任何資料都不會傳給開發者。"
         ],
         [
           "郵件只存在記憶體",
@@ -272,8 +272,8 @@
       "priv_p": "Pigeon Post 直接使用你在 Chrome 中已登录的 Gmail，无需注册账号，也无需另外登录。",
       "facts": [
         [
-          "只连接 mail.google.com",
-          "没有服务器、没有统计分析、没有广告、没有跟踪。任何数据都不会发送给开发者。"
+          "只连接 Google",
+          "连接对象是 Gmail；选择显示账号头像时，还会从 Google 的图片服务器下载头像。没有服务器、没有统计分析、没有广告、没有跟踪。任何数据都不会发送给开发者。"
         ],
         [
           "邮件只保存在内存中",
@@ -379,8 +379,8 @@
       "priv_p": "Pigeon Post は Chrome でログイン済みの Gmail をそのまま使います。アカウント登録も追加のログインも必要ありません。",
       "facts": [
         [
-          "通信先は mail.google.com だけ",
-          "サーバーも、アクセス解析も、広告も、トラッキングもありません。開発者には何も送信されません。"
+          "通信先は Google だけ",
+          "通信先は Gmail と、アカウントの写真を表示する場合のみ Google の画像サーバーです。サーバーも、アクセス解析も、広告も、トラッキングもありません。開発者には何も送信されません。"
         ],
         [
           "メールはメモリ上だけに",
@@ -485,8 +485,8 @@
       "priv_p": "Pigeon Post는 Chrome에 이미 로그인된 Gmail을 그대로 사용합니다. 계정을 만들거나 따로 로그인할 필요가 없습니다.",
       "facts": [
         [
-          "mail.google.com하고만 통신",
-          "서버, 분석, 광고, 추적이 없습니다. 개발자에게 아무것도 전송되지 않습니다."
+          "Google하고만 통신",
+          "Gmail과 통신하며, 계정 사진을 표시하도록 선택한 경우에만 Google 이미지 서버에서 사진을 받아 옵니다. 서버, 분석, 광고, 추적이 없습니다. 개발자에게 아무것도 전송되지 않습니다."
         ],
         [
           "메일은 메모리에만",
@@ -591,8 +591,8 @@
       "priv_p": "Pigeon Post usa la sesión de Gmail que ya tienes en Chrome. No hay que crear ninguna cuenta ni iniciar sesión en nada más.",
       "facts": [
         [
-          "Solo se comunica con mail.google.com",
-          "Sin servidor, sin analíticas, sin anuncios y sin rastreo. Nunca se envía nada al desarrollador."
+          "Solo se comunica con Google",
+          "Se conecta a Gmail y, si eliges mostrar la foto de tu cuenta, al servidor de imágenes de Google. Sin servidor, sin analíticas, sin anuncios y sin rastreo. Nunca se envía nada al desarrollador."
         ],
         [
           "El correo se queda en memoria",
@@ -697,8 +697,8 @@
       "priv_p": "Pigeon Post utilise la session Gmail que vous avez déjà dans Chrome. Aucun compte à créer, aucune connexion supplémentaire.",
       "facts": [
         [
-          "Ne communique qu’avec mail.google.com",
-          "Pas de serveur, pas de statistiques, pas de publicité, pas de pistage. Rien n’est jamais envoyé au développeur."
+          "Ne communique qu’avec Google",
+          "Il se connecte à Gmail et, si vous choisissez d’afficher la photo de votre compte, au serveur d’images de Google. Pas de serveur, pas de statistiques, pas de publicité, pas de pistage. Rien n’est jamais envoyé au développeur."
         ],
         [
           "Les messages restent en mémoire",
@@ -803,8 +803,8 @@
       "priv_p": "Pigeon Post nutzt die Gmail-Sitzung, die du in Chrome schon hast. Kein Konto anlegen, keine zusätzliche Anmeldung.",
       "facts": [
         [
-          "Spricht nur mit mail.google.com",
-          "Kein Server, keine Analyse, keine Werbung, kein Tracking. An den Entwickler wird nie etwas gesendet."
+          "Spricht nur mit Google",
+          "Es verbindet sich mit Gmail und, wenn du dein Kontofoto anzeigen lässt, mit Googles Bildserver. Kein Server, keine Analyse, keine Werbung, kein Tracking. An den Entwickler wird nie etwas gesendet."
         ],
         [
           "E-Mails bleiben im Arbeitsspeicher",

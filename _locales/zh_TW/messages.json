@@ -392,6 +392,33 @@
   "badgeHelp": {
     "message": "分開顯示時依信箱順序排列。圖示只放得下兩三個信箱的兩位數，放不下時改顯示加總。滑鼠移到圖示上，也會逐一列出各信箱的未讀數。"
   },
+  "markHeading": {
+    "message": "信箱圖示"
+  },
+  "markLegend": {
+    "message": "每個信箱前顯示的圖示"
+  },
+  "markInitial": {
+    "message": "信箱顏色加名稱首字"
+  },
+  "markPhoto": {
+    "message": "Google 帳號頭像"
+  },
+  "markHelp": {
+    "message": "頭像取自 Gmail 右上角的帳號按鈕，只存在這台電腦。還沒讀到頭像的信箱先顯示首字。"
+  },
+  "photosMissing": {
+    "message": "還沒有 $1 的頭像。下次在 Gmail 開啟該信箱時會自動讀取，也可以現在讀取。"
+  },
+  "photosReading": {
+    "message": "正在從 Gmail 讀取頭像…"
+  },
+  "photosNotFound": {
+    "message": "讀不到 $1 的頭像。請確認這個瀏覽器已登入該帳號的 Gmail，再試一次。"
+  },
+  "readPhotos": {
+    "message": "從 Gmail 讀取"
+  },
   "deliveryHeading": {
     "message": "通知方式"
   },
