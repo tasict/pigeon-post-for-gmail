@@ -8,6 +8,7 @@ const { text: T, samples: SAMPLES } = JSON.parse(fs.readFileSync(path.join(__dir
 
 const BASE = 'https://tasict.github.io/pigeon-post-for-gmail/';
 const REPO = 'https://github.com/tasict/pigeon-post-for-gmail';
+const STORE = 'https://chromewebstore.google.com/detail/pigeon-post-for-gmail/adflaplgialinhjpiiggopbhebjjiddd';
 const PRIVACY = `${REPO}/blob/master/PRIVACY.md`;
 const RAW_PRIVACY = 'https://raw.githubusercontent.com/tasict/pigeon-post-for-gmail/master/PRIVACY.md';
 const PAYPAL = 'https://paypal.me/tasict';
@@ -92,8 +93,7 @@ function page([code, d, htmlLang, native, og, folder], kind) {
   const steps = t.steps.map(([h, p]) => `<li><h3>${e(h)}</h3><p>${e(p)}</p></li>`).join('');
   const note = (from, subject, context) =>
     `<div class="note"><img src="${a}icon128.png" alt=""><strong>${e(from)}</strong><span class="subject">${e(subject)}</span><small>${e(context)}</small><span class="act">${e(m.markRead)}</span></div>`;
-  const storeButton = `<a class="btn" data-store hidden><img src="${a}icon128.png" alt="" width="22" height="22">${e(t.cta)}</a>
-      <span class="soon" data-store-soon>${e(t.soon)}</span>`;
+  const storeButton = `<a class="btn" href="${STORE}"><img src="${a}icon128.png" alt="" width="22" height="22">${e(t.cta)}</a>`;
   const desc = m.extDescription;
 
   let main;
@@ -106,7 +106,7 @@ function page([code, d, htmlLang, native, og, folder], kind) {
         <h1 id="hero-title">${e(t.h1).replace(/\n/g, '<br>')}</h1>
         <p class="lede">${e(t.lede)}</p>
         <div class="actions">
-          ${storeButton.replace('\n      ', '\n          ')}
+          ${storeButton}
           <a href="${REPO}">${e(t.github)}</a>
         </div>
         <p class="fine">${e(t.fine)}</p>
@@ -262,6 +262,7 @@ ${main}
           <a class="tip" href="${PAYPAL}">${e(t.paypal)}</a>
         </div>`}
         <ul>
+          <li><a href="${STORE}">${e(t.store)}</a></li>
           <li><a href="privacy.html">${e(t.privacy)}</a></li>
           <li><a href="${REPO}">${e(t.source)}</a></li>
           <li><a href="${REPO}/issues">${e(t.issues)}</a></li>

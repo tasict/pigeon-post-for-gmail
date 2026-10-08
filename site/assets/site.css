@@ -95,7 +95,6 @@ p { margin: 0; }
 }
 .btn:hover { opacity: .9; }
 .btn img { width: 22px; height: 22px; }
-.soon { color: var(--muted); font-size: 15px; }
 .fine { margin-top: 18px; font-size: 14.5px; color: var(--muted); }
 
 .hero-shot { position: relative; margin: 0; height: 0; min-height: 100%; }
