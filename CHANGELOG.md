@@ -1,10 +1,14 @@
 # Changelog
 
-## Unreleased
+## 0.7.0 — 2026-11-13
 
 ### Added
 
 - A "Mailbox icon" setting: show each mailbox with its first letter on the mailbox color, as before, or with its Google Account photo. The photo is read from the account button in Gmail and kept only on this computer. Until a mailbox's photo has been read, it keeps its first letter, and the settings page offers to read the missing photos from Gmail.
+
+### Fixed
+
+- "Mark as read" stopped working: after a change on Gmail's side it always failed with "Couldn't find Gmail's action token", after briefly opening Gmail in a background tab.
 
 ## 0.6.1 — 2026-10-04
 
