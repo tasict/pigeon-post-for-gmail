@@ -1,7 +1,7 @@
 // Actions on messages (currently: mark as read).
 // The Gmail feed is read-only. Changing state goes through the Gmail web app's internal endpoint, which needs two values:
-// - at: the per-account action token from the GMAIL_AT cookie (path /mail/u/N), read right before every action.
-// - ik: the account key, found as ID_KEY on the /mail/u/N/s/ page and cached for 5 minutes.
+// - at: the per-account action token from the GMAIL_AT cookie (path /mail/u/N/, formerly /mail/u/N), read right before every action.
+// - ik: the account key, found as ID_KEY on the page /mail/u/N/s/ redirects to, and cached for 5 minutes.
 // This interface is undocumented, and Gmail gates it: the token goes stale when the Gmail page has not been opened for a while,
 // and Gmail sometimes asks for re-verification instead of acting. So each action gets up to two rounds:
 // 1. Sent from an open Gmail tab of that account (a same-origin request, like Gmail's own), or from here when none is open.
@@ -42,11 +42,12 @@ const GmailActions = (() => {
   /* ---------- Requests ---------- */
   // These two run either here or inside a Gmail tab (injected with chrome.scripting), so they use nothing outside their own body.
 
-  // Reads ID_KEY from the /mail/u/N/s/ page. Gmail sometimes answers with a meta refresh redirect page first.
+  // Reads ID_KEY from the /mail/u/N/s/ page. Gmail answers with meta refresh redirect pages first
+  // (currently /mail/mu/ and then /mail/mu/mp/<n>/), so a few hops are followed.
   async function fetchKey(origin, index) {
     try {
       let url = `${origin}/mail/u/${index}/s/`;
-      for (let hop = 0; hop < 3; hop++) {
+      for (let hop = 0; hop < 5; hop++) {
         const res = await fetch(url, { credentials: 'include' });
         if (!res.ok) break;
         const html = await res.text();
@@ -86,8 +87,9 @@ const GmailActions = (() => {
     }
   }
 
+  // The URL ends with a slash so it path-matches the cookie both at /mail/u/N/ (current) and at /mail/u/N (older Gmail).
   async function getAt(index) {
-    const cookie = await chrome.cookies.get({ url: `${ORIGIN}/mail/u/${index}`, name: 'GMAIL_AT' });
+    const cookie = await chrome.cookies.get({ url: `${ORIGIN}/mail/u/${index}/`, name: 'GMAIL_AT' });
     return cookie?.value || null;
   }
 
