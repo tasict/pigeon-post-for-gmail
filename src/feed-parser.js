@@ -14,6 +14,17 @@ const FeedParser = (() => {
     });
   }
 
+  // Marketing mail pads its preview text with characters that take up space but show nothing
+  // (non-breaking and zero-width spaces, soft hyphens, combining grapheme joiners), which leaves a blank line ending in "…".
+  // Collapse any run of them that contains a space into one space, and drop a summary made of nothing else.
+  // Runs without a space are kept, so emoji sequences (ZWJ) and words that use ZWNJ stay intact. Bidi marks are left alone.
+  const FILLER = '\\u00ad\\u034f\\u115f\\u1160\\u17b4\\u17b5\\u180e\\u200b-\\u200d\\u2060-\\u2064\\u3164\\uffa0';
+  const PADDING = new RegExp(`[\\s${FILLER}]*\\s[\\s${FILLER}]*`, 'g');
+  const BLANK = new RegExp(`^[\\s${FILLER}]*$`);
+  function tidy(s) {
+    return BLANK.test(s) ? '' : s.replace(PADDING, ' ').trim();
+  }
+
   function tag(xml, name) {
     const re = new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)</${name}>`, 'i');
     const m = xml.match(re);
@@ -34,7 +45,7 @@ const FeedParser = (() => {
       entries.push({
         id: tag(e, 'id'),
         title: tag(e, 'title'),
-        summary: tag(e, 'summary'),
+        summary: tidy(tag(e, 'summary')),
         link: link ? decode(link[1]) : '',
         modified: tag(e, 'modified'),
         issued: tag(e, 'issued'),
