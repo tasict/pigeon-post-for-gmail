@@ -32,9 +32,11 @@ button { font: inherit; color: inherit; }
 .warning { margin: 0; padding: 6px 14px; background: var(--wash); color: var(--amber); font-size: 12.5px; }
 
 /* Top strip: one fixed-width chip per mailbox; click to open that mailbox.
-   Too many chips scroll sideways; the edges fade where more chips are hidden. */
+   Too many chips scroll sideways; the edges fade where more chips are hidden.
+   flex: none, because overflow-x lets a flex item shrink below its content: a long list would squeeze the strip and cut the chips in half. */
 .strip {
   --fade: 24px;
+  flex: none;
   display: flex; gap: 5px;
   padding: 6px 10px; background: var(--sheet); border-bottom: 1px solid var(--rule);
   overflow-x: auto; overscroll-behavior-x: contain;
