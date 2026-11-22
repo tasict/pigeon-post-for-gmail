@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.1 — 2026-11-22
+
+### Fixed
+
+- With several mailboxes and a long list of unread mail, the row of mailbox chips at the top of the popup was squeezed and the chips were cut in half.
+- A message whose preview text was padded with invisible characters, as some newsletters and booking confirmations do, showed a blank preview line ending in "…". The padding is now removed, and a preview with nothing else in it is left out.
+
 ## 0.7.0 — 2026-11-13
 
 ### Added
